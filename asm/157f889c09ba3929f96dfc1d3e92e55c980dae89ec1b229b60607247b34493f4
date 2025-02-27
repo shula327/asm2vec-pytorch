@@ -1,0 +1,20 @@
+ .name fcn.000440b0
+ .offset 00000000000440b0
+ .file bash
+ push r12
+ mov edx, CONST
+ mov r12d, esi
+ lea rsi, qword [rip + CONST]
+ push rbp
+ mov ebp, edi
+ xor edi, edi
+ sub rsp, CONST
+ call CONST
+ add rsp, CONST
+ mov edx, r12d
+ mov esi, ebp
+ mov rdi, rax
+ pop rbp
+ xor eax, eax
+ pop r12
+ jmp CONST

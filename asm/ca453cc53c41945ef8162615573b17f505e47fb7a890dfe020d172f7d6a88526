@@ -1,0 +1,40 @@
+ .name fcn.0002bba0
+ .offset 000000000002bba0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, qword [rdi + CONST]
+ test rbx, rbx
+ cjmp LABEL8
+ jmp LABEL9
+LABEL17:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL9
+LABEL8:
+ mov rdi, qword [rbx + CONST]
+ mov rsi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL17
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL9:
+ mov edi, CONST
+ call CONST
+ mov rdx, qword [r12 + CONST]
+ mov qword [rax + CONST], rbp
+ mov qword [rax], rdx
+ pop rbx
+ mov qword [r12 + CONST], rax
+ pop rbp
+ mov eax, CONST
+ pop r12
+ ret

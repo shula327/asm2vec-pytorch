@@ -1,0 +1,17 @@
+ .name fcn.00006780
+ .offset 0000000000006780
+ .file diff3
+ push rbp
+ mov rbp, rdi
+ mov rdi, rsi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ add rsp, CONST
+ mov rdx, rbx
+ mov rsi, rbp
+ pop rbx
+ mov rdi, rax
+ pop rbp
+ jmp CONST

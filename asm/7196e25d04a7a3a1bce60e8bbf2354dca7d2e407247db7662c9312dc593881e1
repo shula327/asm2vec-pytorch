@@ -1,0 +1,27 @@
+ .name fcn.00029d30
+ .offset 0000000000029d30
+ .file find
+ push rbp
+ mov rbp, rdi
+ mov rdi, qword [rdi + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rax, qword [rbp + CONST]
+ lea rdx, qword [rbp + CONST]
+ cmp rax, rdx
+ cjmp LABEL9
+ mov rdi, qword [rax + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+LABEL9:
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

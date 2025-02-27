@@ -1,0 +1,19 @@
+ .name fcn.00025900
+ .offset 0000000000025900
+ .file grep
+ endbr64
+ push rbx
+ mov rbx, rdi
+ call CONST
+LABEL12:
+ cmp rax, CONST
+ cjmp LABEL5
+ cmp byte [rbx + rax + CONST], CONST
+ lea rdx, [rax + CONST]
+ cjmp LABEL8
+LABEL5:
+ pop rbx
+ ret
+LABEL8:
+ mov rax, rdx
+ jmp LABEL12

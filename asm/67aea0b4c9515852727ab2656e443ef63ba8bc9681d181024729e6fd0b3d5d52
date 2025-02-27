@@ -1,0 +1,21 @@
+ .name fcn.00002c50
+ .offset 0000000000002c50
+ .file toe
+ endbr64
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov rsi, qword [rsi + CONST]
+ mov rdi, qword [rdi + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL10
+ mov eax, dword [rbp]
+ sub eax, dword [rbx]
+LABEL10:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

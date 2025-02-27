@@ -1,0 +1,53 @@
+ .name fcn.00021d30
+ .offset 0000000000021d30
+ .file dpkg
+ mov eax, dword [rip + CONST]
+ push rbp
+ test eax, eax
+ mov rax, qword [rip + CONST]
+ cjmp LABEL4
+ test rax, rax
+ mov rax, qword [rip + CONST]
+ cjmp LABEL7
+ cmp dword [rax + CONST], CONST
+ mov rax, qword [rip + CONST]
+ cjmp LABEL10
+ call qword [rax + CONST]
+ lea rcx, qword [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ lea rdx, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL10:
+ cmp dword [rax + CONST], CONST
+ mov rax, qword [rip + CONST]
+ cjmp LABEL20
+ mov r8d, dword [rax + CONST]
+ lea rcx, qword [rip + CONST]
+ xor eax, eax
+ lea rdx, qword [rip + CONST]
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL4:
+ mov rbp, qword [rax + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+LABEL44:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ mov edi, CONST
+ call CONST
+LABEL20:
+ mov rdi, qword [rax + CONST]
+ mov esi, CONST
+ call CONST
+LABEL7:
+ mov rbp, qword [rax + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ jmp LABEL44

@@ -1,0 +1,15 @@
+ .name fcn.000220a0
+ .offset 00000000000220a0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ call CONST
+ lea rdx, [rip + CONST]
+ lea rcx, [rip + CONST]
+ mov dword [rip + CONST], CONST
+ mov qword [rax + CONST], rdx
+ mov qword [rax + CONST], CONST
+ mov dword [rax + CONST], CONST
+ mov qword [rax + CONST], rcx
+ add rsp, CONST
+ ret

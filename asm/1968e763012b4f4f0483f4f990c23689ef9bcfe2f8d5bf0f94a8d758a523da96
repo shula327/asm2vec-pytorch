@@ -1,0 +1,40 @@
+ .name fcn.00009d20
+ .offset 0000000000009d20
+ .file gzip
+ lea rax, qword [rip + CONST]
+ lea rdx, qword [rax + CONST]
+ nop
+LABEL7:
+ xor edi, edi
+ add rax, CONST
+ mov word [rax + CONST], di
+ cmp rax, rdx
+ cjmp LABEL7
+ lea rax, qword [rip + CONST]
+ lea rdx, qword [rax + CONST]
+ nop word [rax + rax]
+LABEL15:
+ xor esi, esi
+ add rax, CONST
+ mov word [rax + CONST], si
+ cmp rax, rdx
+ cjmp LABEL15
+ lea rax, qword [rip + CONST]
+ lea rdx, qword [rax + CONST]
+ nop word [rax + rax]
+LABEL23:
+ xor ecx, ecx
+ add rax, CONST
+ mov word [rax + CONST], cx
+ cmp rax, rdx
+ cjmp LABEL23
+ mov eax, CONST
+ mov qword [rip + CONST], CONST
+ mov word [rip + CONST], ax
+ mov qword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov byte [rip + CONST], CONST
+ mov byte [rip + CONST], CONST
+ ret

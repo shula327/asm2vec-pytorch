@@ -1,0 +1,30 @@
+ .name fcn.0000b680
+ .offset 000000000000b680
+ .file dpkg
+ endbr64
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ mov rbp, qword [rsi]
+ mov rbx, qword [rsi + CONST]
+ lea edx, [rax + CONST]
+ mov dword [rip + CONST], edx
+ test eax, eax
+ cjmp LABEL10
+ xor edx, edx
+ lea rsi, [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ mov esi, dword [rbx]
+ mov rdi, rbp
+ call CONST
+ sub dword [rip + CONST], CONST
+LABEL10:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

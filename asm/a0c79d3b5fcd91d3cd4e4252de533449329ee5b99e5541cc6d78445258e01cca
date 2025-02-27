@@ -1,0 +1,15 @@
+ .name fcn.00008450
+ .offset 0000000000008450
+ .file install
+ endbr64
+ push rbx
+ lea r8, [rip + CONST]
+ mov rbx, rdi
+ xor esi, esi
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov edi, CONST
+ call CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

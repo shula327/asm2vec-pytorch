@@ -1,0 +1,15 @@
+ .name fcn.000032a0
+ .offset 00000000000032a0
+ .file bunzip2
+ push r12
+ lea rsi, [rip + CONST]
+ call CONST
+ test rax, rax
+ setne r12b
+ cjmp LABEL5
+ mov rdi, rax
+ call CONST
+LABEL5:
+ mov eax, r12d
+ pop r12
+ ret

@@ -1,0 +1,30 @@
+ .name fcn.000df070
+ .offset 00000000000df070
+ .file perl5.30.0
+ mov rax, qword [rdi + CONST]
+ mov rdi, qword [rax + CONST]
+ lea rax, qword [rip + CONST]
+ cmp rdi, rax
+ cjmp LABEL4
+ lea rax, qword [rip + CONST]
+ cmp rdi, rax
+ cjmp LABEL7
+ jmp LABEL8
+LABEL18:
+ shr esi, CONST
+ cjmp LABEL8
+LABEL7:
+ movzx eax, sil
+ lea edx, dword [rax + rax]
+ shr eax, CONST
+ movzx ecx, byte [rdi + rax + CONST]
+ mov eax, edx
+ and eax, CONST
+ bt ecx, eax
+ cjmp LABEL18
+LABEL4:
+ mov eax, CONST
+ ret
+LABEL8:
+ xor eax, eax
+ ret

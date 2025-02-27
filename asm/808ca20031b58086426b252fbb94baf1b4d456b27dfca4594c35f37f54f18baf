@@ -1,0 +1,22 @@
+ .name fcn.000070a0
+ .offset 00000000000070a0
+ .file setpriv
+ endbr64
+ push rbx
+ mov rbx, rdi
+ jmp LABEL3
+LABEL9:
+ cmp eax, CONST
+ cjmp LABEL5
+LABEL3:
+ mov rdi, rbx
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL9
+ mov eax, CONST
+ pop rbx
+ ret
+LABEL5:
+ xor eax, eax
+ pop rbx
+ ret

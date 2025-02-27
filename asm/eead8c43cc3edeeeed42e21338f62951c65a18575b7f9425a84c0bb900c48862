@@ -1,0 +1,56 @@
+ .name fcn.0001d430
+ .offset 000000000001d430
+ .file dpkg
+LABEL38:
+ push rbx
+ lea rax, [rip + CONST]
+ lea rbx, [rip + CONST]
+ jmp LABEL3
+LABEL11:
+ mov rax, qword [rbx + CONST]
+LABEL3:
+ mov rdi, qword [rax]
+ add rbx, CONST
+ call CONST
+ mov rax, qword [rbx + CONST]
+ mov qword [rax], CONST
+ cmp qword [rbx], CONST
+ cjmp LABEL11
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov byte [rip + CONST], CONST
+ pop rbx
+ ret
+ endbr64
+ sub rsp, CONST
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL20
+LABEL44:
+ mov eax, dword [rip + CONST]
+ cmp eax, CONST
+ cjmp LABEL23
+ cmp eax, CONST
+ cjmp LABEL25
+ call CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL23:
+ call CONST
+LABEL25:
+ call CONST
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL36
+ add rsp, CONST
+ jmp LABEL38
+LABEL36:
+ add rsp, CONST
+ ret
+LABEL20:
+ mov rdi, qword [rip + CONST]
+ mov esi, CONST
+ call CONST
+ jmp LABEL44

@@ -1,0 +1,65 @@
+ .name sym._obstack_begin_1
+ .offset 0000000000025470
+ .file grep
+ endbr64
+ push r12
+ movq xmm0, rcx
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov qword [rdi + CONST], r9
+ mov qword [rsp + CONST], r8
+ or byte [rdi + CONST], CONST
+ movhps xmm0, qword [rsp + CONST]
+ movups xmmword [rdi + CONST], xmm0
+ test rdx, rdx
+ cjmp LABEL13
+ mov rbp, rdx
+ lea r12, [rdx + CONST]
+LABEL51:
+ test rsi, rsi
+ mov eax, CONST
+ mov qword [rbx + CONST], r12
+ cmove rsi, rax
+ mov qword [rbx], rsi
+ test byte [rbx + CONST], CONST
+ cjmp LABEL22
+ mov rdi, r9
+ call rcx
+LABEL54:
+ mov qword [rbx + CONST], rax
+ test rax, rax
+ cjmp LABEL27
+ movq xmm0, rbp
+ lea rdx, [rax + r12 + CONST]
+ pxor xmm1, xmm1
+ punpcklqdq xmm0, xmm0
+ psubq xmm1, xmm0
+ movq xmm0, rdx
+ mov rdx, qword [rbx]
+ punpcklqdq xmm0, xmm0
+ add rdx, rax
+ pand xmm0, xmm1
+ movups xmmword [rbx + CONST], xmm0
+ mov qword [rax], rdx
+ mov qword [rbx + CONST], rdx
+ mov qword [rax + CONST], CONST
+ mov eax, CONST
+ and byte [rbx + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL13:
+ mov r12d, CONST
+ mov ebp, CONST
+ jmp LABEL51
+LABEL22:
+ mov rdi, rsi
+ call rcx
+ jmp LABEL54
+LABEL27:
+ call qword [rip + CONST]
+ nop dword [rax]

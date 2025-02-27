@@ -1,0 +1,16 @@
+ .name fcn.0000f3e0
+ .offset 000000000000f3e0
+ .file install
+LABEL7:
+ call CONST
+ push rbx
+ mov rbx, rdi
+ mov rdi, rsi
+ mov rsi, qword [rbx + CONST]
+ call qword [rbx + CONST]
+ cmp qword [rbx + CONST], rax
+ cjmp LABEL7
+ shl rax, CONST
+ add rax, qword [rbx]
+ pop rbx
+ ret

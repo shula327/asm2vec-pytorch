@@ -1,0 +1,35 @@
+ .name fcn.00120560
+ .offset 0000000000120560
+ .file perl5.30.0
+ push r13
+ push r12
+ mov r12, rsi
+ mov esi, CONST
+ push rbp
+ mov rbp, rdi
+ call CONST
+ test al, al
+ cjmp LABEL8
+ pop rbp
+ mov eax, CONST
+ pop r12
+ pop r13
+ ret
+LABEL8:
+ mov rdi, rbp
+ call CONST
+ mov rdx, r12
+ mov rdi, rbp
+ mov r8d, CONST
+ mov r13, rax
+ mov rsi, rax
+ lea rcx, qword [rip + CONST]
+ call CONST
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ pop rbp
+ mov eax, CONST
+ pop r12
+ pop r13
+ ret

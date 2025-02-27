@@ -1,0 +1,35 @@
+ .name fcn.000a9280
+ .offset 00000000000a9280
+ .file perl5.30.0
+ push r12
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ push rbx
+ mov ebx, esi
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ mov dword [rax + CONST], ebx
+ mov rdx, rax
+ mov r12, rax
+ mov dword [rax], CONST
+ call CONST
+ test ebx, ebx
+ cjmp LABEL15
+ mov qword [r12 + CONST], CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL15:
+ movsxd rdi, ebx
+ shl rdi, CONST
+ call CONST
+ pop rbx
+ pop rbp
+ mov qword [r12 + CONST], rax
+ mov rax, r12
+ pop r12
+ ret

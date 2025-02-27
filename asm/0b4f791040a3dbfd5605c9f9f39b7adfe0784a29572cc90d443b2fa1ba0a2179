@@ -1,0 +1,81 @@
+ .name fcn.0000c130
+ .offset 000000000000c130
+ .file localedef
+ push r12
+ push rbp
+ mov ebp, esi
+ push rbx
+ mov edx, dword [rdi + CONST]
+ mov eax, ebp
+ mov rbx, rdi
+ mov esi, dword [rdi + CONST]
+ mov r12, qword [rdi + CONST]
+ lea ecx, dword [rdx + rsi]
+ shr eax, cl
+ cmp rax, qword [rdi + CONST]
+ cjmp LABEL12
+ mov rcx, qword [rdi + CONST]
+ mov r8d, dword [rcx + rax*CONST]
+ cmp r8d, -1
+ cjmp LABEL12
+ mov eax, CONST
+ mov ecx, edx
+ mov r9d, ebp
+ mov edi, eax
+ shl edi, cl
+ mov ecx, esi
+ shr r9d, cl
+ sub edi, CONST
+ mov ecx, edx
+ mov rdx, qword [rbx + CONST]
+ and edi, r9d
+ shl r8d, cl
+ lea ecx, dword [rdi + r8]
+ mov edx, dword [rdx + rcx*CONST]
+ cmp edx, -1
+ cjmp LABEL12
+ mov ecx, esi
+ shl eax, cl
+ shl edx, cl
+ sub eax, CONST
+ and eax, ebp
+ add edx, eax
+ mov rax, qword [rbx + CONST]
+ mov eax, dword [rax + rdx*CONST]
+ mov edx, CONST
+ cmp rax, rdx
+ cjmp LABEL12
+ cmp rax, r12
+ cjmp LABEL12
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ mov rdi, qword [rbx]
+ mov rdx, r12
+ cmp qword [rbx + CONST], r12
+ cjmp LABEL54
+LABEL74:
+ lea rax, qword [rdx + CONST]
+ mov esi, ebp
+ mov qword [rbx + CONST], rax
+ mov dword [rdi + rdx*CONST], ebp
+ lea rdi, qword [rbx + CONST]
+ mov edx, r12d
+ call CONST
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL54:
+ lea rax, qword [r12 + r12]
+ lea rsi, qword [r12*CONST]
+ mov qword [rbx + CONST], rax
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ mov qword [rbx], rax
+ mov rdi, rax
+ jmp LABEL74

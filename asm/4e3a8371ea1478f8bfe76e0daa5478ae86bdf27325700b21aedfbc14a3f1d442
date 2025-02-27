@@ -1,0 +1,270 @@
+ .name sym.Perl_reg_numbered_buff_length
+ .offset 00000000000b0240
+ .file perl5.30.0
+ endbr64
+ push r14
+ push r13
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rdi
+ push rbx
+ cmp byte [rsi + CONST], CONST
+ mov rdx, qword [rsi]
+ cjmp LABEL10
+ mov rdx, qword [rdx + CONST]
+LABEL10:
+ lea eax, [rcx + CONST]
+ cmp eax, CONST
+ cjmp LABEL14
+ mov eax, dword [rdx + CONST]
+ shr eax, CONST
+ and eax, CONST
+ cjmp LABEL18
+LABEL121:
+ test al, al
+ cjmp LABEL20
+ cmp ecx, CONST
+ cjmp LABEL22
+LABEL125:
+ cmp ecx, CONST
+ cjmp LABEL24
+LABEL126:
+ mov rax, qword [rdx + CONST]
+ xor r13d, r13d
+ mov rcx, qword [rax + CONST]
+ cmp rcx, CONST
+ cjmp LABEL29
+ mov r13, qword [rdx + CONST]
+ mov esi, ecx
+ mov eax, r13d
+ sub r13d, ecx
+ test r13d, r13d
+ cjmp LABEL35
+LABEL175:
+ test byte [rdx + CONST], CONST
+ cjmp LABEL29
+ sub eax, esi
+ movsxd r14, esi
+ sub r14, qword [rdx + CONST]
+ add r14, qword [rdx + CONST]
+ movsxd rbx, eax
+ mov r13, rbx
+ test rbx, rbx
+ cjmp LABEL45
+LABEL189:
+ mov rax, r14
+ mov rcx, r14
+ mov rdx, r14
+ mov rbp, r14
+ shr rax, CONST
+ shr rcx, CONST
+ and edx, CONST
+ lea r12, [r14 + rbx]
+ or rax, r14
+ or rax, rcx
+ and eax, CONST
+ add rax, CONST
+ shl rax, CONST
+ sub rax, rdx
+ cmp rbx, rax
+ cjmp LABEL61
+ test rdx, rdx
+ cjmp LABEL63
+ jmp LABEL64
+LABEL69:
+ add rbp, CONST
+ test bpl, CONST
+ cjmp LABEL64
+LABEL63:
+ cmp byte [rbp], CONST
+ cjmp LABEL69
+LABEL200:
+ mov rbx, rbp
+ sub rbx, r14
+ lea r14, [rip + CONST]
+ cmp rbp, r12
+ cjmp LABEL74
+ jmp LABEL75
+LABEL91:
+ sub rax, rbp
+ add rax, CONST
+LABEL209:
+ test rax, rax
+ cjmp LABEL29
+ add rbp, rax
+ add rbx, CONST
+ cmp rbp, r12
+ cjmp LABEL75
+LABEL74:
+ mov rax, rbp
+ xor edx, edx
+LABEL96:
+ movzx ecx, byte [rax]
+ add rdx, r14
+ movzx ecx, byte [r14 + rcx]
+ movzx edx, byte [rcx + rdx + CONST]
+ test rdx, rdx
+ cjmp LABEL91
+ add rax, CONST
+ cmp r12, rax
+ cjmp LABEL94
+ cmp rdx, CONST
+ cjmp LABEL96
+LABEL94:
+ cmp byte [rbp], CONST
+ cjmp LABEL98
+LABEL75:
+ cmp r12, rbp
+ cjmp LABEL100
+LABEL29:
+ pop rbx
+ mov eax, r13d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL18:
+ mov rax, qword [rbp + CONST]
+ test rax, rax
+ cjmp LABEL20
+ mov r8, qword [rax + CONST]
+ mov rdi, qword [rbp + CONST]
+ mov rdi, qword [rdi + r8*CONST]
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL20
+ cmp rdi, rsi
+ cjmp LABEL20
+ mov eax, dword [rax + CONST]
+ shr eax, CONST
+ and eax, CONST
+ jmp LABEL121
+LABEL14:
+ cmp ecx, CONST
+ cjmp LABEL22
+ cmp ecx, CONST
+ cjmp LABEL125
+ cjmp LABEL126
+LABEL24:
+ cmp dword [rdx + CONST], ecx
+ cjmp LABEL128
+LABEL20:
+ mov esi, CONST
+ mov rdi, rbp
+ xor r13d, r13d
+ call CONST
+ test al, al
+ cjmp LABEL29
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ pop rbx
+ mov eax, r13d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL22:
+ mov rax, qword [rdx + CONST]
+ xor r13d, r13d
+ mov rax, qword [rax]
+ cmp rax, CONST
+ cjmp LABEL29
+ mov r13d, eax
+ test eax, eax
+ cjmp LABEL152
+LABEL35:
+ xor r13d, r13d
+ pop rbx
+ pop rbp
+ mov eax, r13d
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL128:
+ mov rax, qword [rdx + CONST]
+ movsxd rcx, ecx
+ lea rcx, [rcx + rcx*CONST]
+ lea rax, [rax + rcx*CONST]
+ mov rcx, qword [rax]
+ mov esi, ecx
+ cmp ecx, CONST
+ cjmp LABEL20
+ mov r13, qword [rax + CONST]
+ mov eax, r13d
+ cmp r13d, CONST
+ cjmp LABEL20
+ sub r13d, ecx
+ test r13d, r13d
+ cjmp LABEL175
+ pop rbx
+ mov eax, r13d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL152:
+ xor esi, esi
+ jmp LABEL175
+LABEL45:
+ mov rdi, r14
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL189
+LABEL100:
+ mov r13d, ebx
+ jmp LABEL29
+LABEL61:
+ cmp r12, rbp
+ cjmp LABEL193
+ jmp LABEL100
+LABEL199:
+ add rbp, CONST
+ cmp r12, rbp
+ cjmp LABEL100
+LABEL193:
+ cmp byte [rbp], CONST
+ cjmp LABEL199
+ jmp LABEL200
+LABEL98:
+ mov rax, r12
+ sub rax, rbp
+ cmp rax, CONST
+ cjmp LABEL75
+ xor edx, edx
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ jmp LABEL209
+LABEL64:
+ movabs rdx, CONST
+ jmp LABEL211
+LABEL218:
+ add rbp, CONST
+ lea rax, [rbp + CONST]
+ cmp r12, rax
+ cjmp LABEL61
+LABEL211:
+ mov rax, qword [rbp]
+ test rax, rdx
+ cjmp LABEL218
+ movabs rdx, CONST
+ shr rax, CONST
+ and rax, rdx
+ lea rdx, [rax + CONST]
+ xor rax, rdx
+ movabs rdx, CONST
+ add rax, CONST
+ shr rax, CONST
+ imul rax, rdx
+ shr rax, CONST
+ add rax, CONST
+ shr rax, CONST
+ sub eax, CONST
+ add rbp, rax
+ jmp LABEL200

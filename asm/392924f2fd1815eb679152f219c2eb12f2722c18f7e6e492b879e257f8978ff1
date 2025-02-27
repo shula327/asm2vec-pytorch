@@ -1,0 +1,47 @@
+ .name fcn.000053b0
+ .offset 00000000000053b0
+ .file ptx
+ lea rax, qword [rdi + CONST]
+ push r13
+ mov edx, CONST
+ cmp byte [rip + CONST], CONST
+ push r12
+ lea r12, qword [rdi + CONST]
+ push rbp
+ mov rbp, qword [rdi]
+ mov qword [rdi + CONST], rax
+ lea rax, qword [rip + CONST]
+ cmove rax, rdx
+ mov qword [rdi + CONST], CONST
+ mov qword [rdi + CONST], CONST
+ mov qword [rdi + CONST], rax
+ mov rdi, rbp
+ call CONST
+ mov rdx, r12
+ mov rdi, rbp
+ mov rsi, rax
+ call CONST
+ test rax, rax
+ cjmp LABEL21
+ pop rbp
+ mov rdi, r12
+ pop r12
+ pop r13
+ jmp CONST
+LABEL21:
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov rbp, rax
+ call CONST
+ mov r8, rbp
+ mov rcx, r13
+ xor esi, esi
+ mov rdx, rax
+ mov edi, CONST
+ xor eax, eax
+ call CONST
+ nop

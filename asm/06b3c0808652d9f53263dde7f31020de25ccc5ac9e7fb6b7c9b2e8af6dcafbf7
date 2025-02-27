@@ -1,0 +1,68 @@
+ .name fcn.000205d0
+ .offset 00000000000205d0
+ .file dpkg
+ endbr64
+ push r13
+ push r12
+ push rbp
+ mov r13d, dword [rsi + CONST]
+ mov rbp, rsi
+ cmp r13d, CONST
+ cjmp LABEL7
+ cjmp LABEL8
+ and ecx, CONST
+ mov r12, rdi
+ cjmp LABEL11
+ mov rdi, rsi
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ pop rbp
+ mov rdx, r13
+ mov rdi, r12
+ mov rsi, rax
+ pop r12
+ pop r13
+ jmp CONST
+LABEL11:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov rdi, r12
+ mov rdx, r13
+ mov rsi, rax
+ call CONST
+ pop rbp
+ mov rdi, r12
+ mov esi, CONST
+ pop r12
+ pop r13
+ jmp CONST
+LABEL7:
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL8:
+ mov rsi, rdx
+ mov rdi, rbp
+ mov edx, CONST
+ call CONST
+ mov r9d, r13d
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST

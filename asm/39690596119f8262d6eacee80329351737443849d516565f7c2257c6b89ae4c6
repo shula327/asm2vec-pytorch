@@ -1,0 +1,66 @@
+ .name fcn.00022c10
+ .offset 0000000000022c10
+ .file grep
+ push r12
+ push rbp
+ lea rbp, qword [rdi + CONST]
+ push rbx
+ mov eax, dword [rdi + CONST]
+ mov r12d, eax
+ and r12d, CONST
+ cjmp LABEL7
+ mov rbx, rdi
+ test ah, CONST
+ cjmp LABEL10
+ mov esi, dword [rdi + CONST]
+ mov rdi, rbp
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL16
+ mov dword [rbx + CONST], CONST
+LABEL54:
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL21
+LABEL38:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL7:
+ xor r12d, r12d
+ jmp LABEL28
+LABEL21:
+ mov rdi, rbp
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL33
+ nop word cs:[rax + rax]
+LABEL28:
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL38
+ mov rdi, rbp
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL28
+LABEL33:
+ call CONST
+ jmp LABEL28
+LABEL10:
+ mov edi, dword [rdi + CONST]
+ xor r12d, r12d
+ call CONST
+ test eax, eax
+ setne r12b
+ jmp LABEL28
+LABEL16:
+ call CONST
+ mov dword [rbx + CONST], CONST
+ jmp LABEL54

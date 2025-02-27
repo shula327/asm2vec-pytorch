@@ -1,0 +1,241 @@
+ .name fcn.00017900
+ .offset 0000000000017900
+ .file dpkg
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, esi
+ mov esi, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ call CONST
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rax, qword [rbp + CONST]
+ mov rdx, qword [rax + CONST]
+ test rdx, rdx
+ cjmp LABEL27
+ mov qword [rdx + CONST], CONST
+LABEL27:
+ cmp qword [rbp + CONST], CONST
+ mov qword [rax + CONST], CONST
+ cjmp LABEL31
+ mov eax, dword [rbp + CONST]
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL35
+ mov eax, dword [rip + CONST]
+ cmp eax, CONST
+ cjmp LABEL38
+ cmp ebx, CONST
+ cjmp LABEL40
+ cmp eax, CONST
+ cjmp LABEL38
+LABEL72:
+ mov r12, rsp
+ xor esi, esi
+ mov rdi, rbp
+ mov rdx, r12
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL49
+ test eax, eax
+ cjmp LABEL51
+ test ebx, ebx
+ cjmp LABEL53
+ mov rdi, r12
+ mov byte [rip + CONST], CONST
+ mov qword [rip + CONST], CONST
+ mov qword [rip + CONST], CONST
+ call CONST
+LABEL80:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL61
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL38:
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL72
+ mov dword [rip + CONST], CONST
+ jmp LABEL72
+LABEL49:
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL76
+ mov rdi, rbp
+ call CONST
+ cmp rbp, rax
+ cjmp LABEL80
+LABEL76:
+ mov rdi, r12
+ call CONST
+LABEL40:
+ mov rdi, rbp
+ call CONST
+ jmp LABEL80
+LABEL51:
+ cmp qword [rsp], CONST
+ cjmp LABEL87
+LABEL166:
+ mov rdi, rbp
+ call CONST
+ cmp rbp, rax
+ cjmp LABEL80
+ lea rdi, [rbp + CONST]
+ mov esi, CONST
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rcx, r13
+ mov rdx, r12
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ lea rdx, [rbp + CONST]
+ mov rsi, rbp
+ lea rdi, [rip + CONST]
+ call CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rbx, qword [rbp + CONST]
+ test rbx, rbx
+ cjmp LABEL118
+ lea r13, [rip + CONST]
+ nop word [rax + rax]
+LABEL133:
+ mov esi, CONST
+ mov rdi, r13
+ call CONST
+ mov r12, qword [rbx + CONST]
+ mov rdi, r12
+ call CONST
+ mov rsi, r12
+ mov rdi, r13
+ mov rdx, rax
+ call CONST
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL133
+LABEL118:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL143
+LABEL178:
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ jmp LABEL80
+LABEL87:
+ mov rdi, r12
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov r14, qword [rsp + CONST]
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov r13, rax
+ call CONST
+ mov rdx, r14
+ mov rsi, r13
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov rdi, r12
+ call CONST
+ jmp LABEL166
+LABEL31:
+ mov rdi, rbp
+ call CONST
+ jmp LABEL80
+LABEL143:
+ mov rax, qword [rip + CONST]
+ xor ecx, ecx
+ lea rsi, [rip + CONST]
+ mov rdi, rbp
+ mov dword [rip + CONST], CONST
+ lea rdx, [rax + CONST]
+ xor eax, eax
+ call CONST
+ jmp LABEL178
+LABEL35:
+ mov rdi, rbp
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ mov rbx, rax
+ call CONST
+ mov r9, rbx
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL61:
+ call CONST
+LABEL53:
+ mov dword [rip + CONST], CONST
+ mov rdi, r12
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov r13, qword [rsp + CONST]
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov rbp, rax
+ call CONST
+ mov rdx, r13
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov rdi, r12
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST

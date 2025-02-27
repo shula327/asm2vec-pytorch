@@ -1,0 +1,36 @@
+ .name fcn.000088e0
+ .offset 00000000000088e0
+ .file find
+ test byte [rip + CONST], CONST
+ cjmp LABEL1
+ sub rsp, CONST
+ cmp edi, -CONST
+ cjmp LABEL4
+ test edi, edi
+ cjmp LABEL6
+LABEL4:
+ mov eax, dword [rip + CONST]
+ mov dword [rip + CONST], edi
+ test eax, eax
+ cjmp LABEL10
+LABEL21:
+ add rsp, CONST
+ ret
+LABEL1:
+ ret
+LABEL10:
+ cmp edi, -CONST
+ cjmp LABEL15
+ call CONST
+ mov dword [rip + CONST], eax
+ add rsp, CONST
+ ret
+LABEL15:
+ mov dword [rip + CONST], CONST
+ jmp LABEL21
+LABEL6:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST

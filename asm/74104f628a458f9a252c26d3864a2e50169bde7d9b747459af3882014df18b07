@@ -1,0 +1,17 @@
+ .name fcn.00004e50
+ .offset 0000000000004e50
+ .file newgrp
+ cmp byte [rip + CONST], CONST
+ push rbp
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ mov rbp, qword [rip + CONST]
+ cjmp LABEL5
+ lea rsi, qword [rip + CONST]
+LABEL5:
+ xor edi, edi
+ call CONST
+ mov rsi, rbp
+ pop rbp
+ mov rdi, rax
+ jmp CONST

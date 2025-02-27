@@ -1,0 +1,25 @@
+ .name fcn.00012090
+ .offset 0000000000012090
+ .file dpkg
+ test rdi, rdi
+ cjmp LABEL1
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ nop
+LABEL14:
+ mov rbp, rbx
+ mov rbx, qword [rbx]
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ test rbx, rbx
+ cjmp LABEL14
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL1:
+ ret

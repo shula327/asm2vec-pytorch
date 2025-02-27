@@ -1,0 +1,52 @@
+ .name fcn.000057f0
+ .offset 00000000000057f0
+ .file cksum
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ call CONST
+ mov rdi, rbp
+ test eax, eax
+ cjmp LABEL8
+ call CONST
+ test eax, eax
+ cjmp LABEL11
+LABEL34:
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+ call CONST
+ mov rdi, rbp
+ mov r12d, dword [rax]
+ mov rbx, rax
+ call CONST
+ test r12d, r12d
+ cjmp LABEL22
+LABEL42:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL11:
+ mov rdi, rbp
+ call CONST
+ xor esi, esi
+ mov edx, CONST
+ mov edi, eax
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL34
+LABEL15:
+ mov rdi, rbp
+LABEL8:
+ pop rbx
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL22:
+ mov dword [rbx], r12d
+ mov eax, CONST
+ jmp LABEL42

@@ -1,0 +1,45 @@
+ .name fcn.000198a0
+ .offset 00000000000198a0
+ .file install
+ endbr64
+ push r15
+ mov r15, rsi
+ push r14
+ mov r14, r8
+ push r13
+ mov r13, rdi
+ mov rdi, r15
+ push r12
+ mov r12, rcx
+ mov rcx, r8
+ push rbp
+ mov rbp, rdx
+ mov rdx, r12
+ push rbx
+ mov rsi, rbp
+ mov rbx, r9
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL20
+LABEL39:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL20:
+ mov rdx, rax
+ mov rsi, r15
+ mov rdi, r13
+ call CONST
+ mov rdx, r14
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ call rbx
+ mov rax, CONST
+ jmp LABEL39

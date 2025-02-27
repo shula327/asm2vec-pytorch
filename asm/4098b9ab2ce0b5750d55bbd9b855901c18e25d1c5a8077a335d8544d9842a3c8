@@ -1,0 +1,29 @@
+ .name fcn.000b1810
+ .offset 00000000000b1810
+ .file perl5.30.0
+ push rbp
+ pxor xmm0, xmm0
+ mov eax, CONST
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdx
+ lea rdx, qword [rdx + CONST]
+ mov rsi, rbx
+ sub rsp, CONST
+ movups xmmword [rdx + CONST], xmm0
+ mov qword [rdx], CONST
+ mov word [rdx + CONST], ax
+ mov byte [rdx + CONST], CONST
+ mov dword [rdx + CONST], CONST
+ movups xmmword [rdx + CONST], xmm0
+ movups xmmword [rdx + CONST], xmm0
+ call CONST
+ cmp dword [rbp], CONST
+ sbb eax, eax
+ not eax
+ and eax, CONST
+ mov dword [rbx + CONST], eax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

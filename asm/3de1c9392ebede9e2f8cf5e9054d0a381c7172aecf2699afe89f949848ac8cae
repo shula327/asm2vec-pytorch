@@ -1,0 +1,93 @@
+ .name sym.Perl_sv_free_arenas
+ .offset 000000000010df20
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rdi, qword [rdi + CONST]
+ test rdi, rdi
+ cjmp LABEL7
+ mov eax, dword [rdi + CONST]
+ mov rbx, qword [rdi]
+ and eax, CONST
+ mov edx, eax
+ test rbx, rbx
+ cjmp LABEL13
+ jmp LABEL14
+LABEL20:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL17
+LABEL13:
+ mov eax, dword [rbx + CONST]
+ test eax, CONST
+ cjmp LABEL20
+ test edx, edx
+ cjmp LABEL22
+ call CONST
+ mov eax, dword [rbx + CONST]
+LABEL22:
+ mov rdi, rbx
+ and eax, CONST
+ mov rbx, qword [rdi]
+ mov edx, eax
+ test rbx, rbx
+ cjmp LABEL13
+LABEL14:
+ test eax, eax
+ cjmp LABEL32
+ mov r12, qword [rbp + CONST]
+ test r12, r12
+ cjmp LABEL35
+ nop dword [rax]
+LABEL56:
+ lea rax, [rbp + CONST]
+ lea rdx, [rbp + CONST]
+ mov qword [rbp + CONST], CONST
+ nop dword [rax]
+LABEL44:
+ mov qword [rax], CONST
+ sub rax, CONST
+ cmp rax, rdx
+ cjmp LABEL44
+ mov qword [rbp + CONST], CONST
+ pop rbx
+ mov qword [rbp + CONST], CONST
+ pop rbp
+ pop r12
+ ret
+LABEL17:
+ test edx, edx
+ cjmp LABEL7
+LABEL32:
+ call CONST
+LABEL7:
+ mov r12, qword [rbp + CONST]
+ test r12, r12
+ cjmp LABEL56
+ nop dword [rax]
+LABEL35:
+ mov edx, dword [r12 + CONST]
+ lea eax, [rdx + CONST]
+ test edx, edx
+ cjmp LABEL61
+ lea rax, [rax + rax*CONST]
+ lea rbx, [r12 + rax*CONST]
+ nop dword [rax]
+LABEL70:
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov rax, rbx
+ sub rbx, CONST
+ cmp r12, rax
+ cjmp LABEL70
+LABEL61:
+ mov rbx, qword [r12]
+ mov rdi, r12
+ call CONST
+ test rbx, rbx
+ cjmp LABEL56
+ mov r12, rbx
+ jmp LABEL35

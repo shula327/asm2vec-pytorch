@@ -1,0 +1,15 @@
+ .name fcn.00017010
+ .offset 0000000000017010
+ .file dpkg
+ endbr64
+ cmp qword [rip + CONST], CONST
+ cjmp LABEL2
+ sub rsp, CONST
+ call CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov qword [rip + CONST], CONST
+ add rsp, CONST
+ ret
+LABEL2:
+ ret

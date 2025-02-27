@@ -1,0 +1,23 @@
+ .name fcn.00030b50
+ .offset 0000000000030b50
+ .file bash
+ push rbp
+ mov esi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+ cmp byte [rax], CONST
+ mov rbp, rax
+ cjmp LABEL7
+LABEL14:
+ mov rdi, rbp
+ pop rbp
+ jmp CONST
+LABEL7:
+ mov esi, CONST
+ mov rdi, rax
+ call CONST
+ jmp LABEL14
+LABEL4:
+ pop rbp
+ ret

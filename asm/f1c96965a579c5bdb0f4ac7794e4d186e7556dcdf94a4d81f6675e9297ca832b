@@ -1,0 +1,41 @@
+ .name fcn.000d7600
+ .offset 00000000000d7600
+ .file bash
+ movsxd r8, dword [rsi]
+ movzx eax, byte [rdi + r8]
+ mov r9, r8
+ test al, al
+ cjmp LABEL4
+ cmp al, CONST
+ cjmp LABEL4
+ and edx, CONST
+ jmp LABEL8
+LABEL18:
+ movsxd r8, ecx
+ movzx eax, byte [rdi + r8]
+ test al, al
+ cjmp LABEL12
+LABEL27:
+ cmp al, CONST
+ cjmp LABEL12
+ mov r9d, ecx
+LABEL8:
+ lea ecx, dword [r9 + CONST]
+ cmp al, CONST
+ cjmp LABEL18
+ test dl, dl
+ cjmp LABEL18
+ cmp byte [rdi + r8 + CONST], CONST
+ cjmp LABEL18
+ lea ecx, dword [r9 + CONST]
+ movsxd r8, ecx
+ movzx eax, byte [rdi + r8]
+ test al, al
+ cjmp LABEL27
+LABEL12:
+ mov dword [rsi], ecx
+ ret
+LABEL4:
+ mov ecx, r9d
+ mov dword [rsi], ecx
+ ret

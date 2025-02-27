@@ -1,0 +1,72 @@
+ .name fcn.0000dc10
+ .offset 000000000000dc10
+ .file install
+ push r15
+ push r14
+ push r13
+ mov r13, rsi
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ mov rdi, rax
+ mov rbp, rax
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL14
+LABEL38:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL14:
+ mov esi, CONST
+ movzx r15d, word [rbp]
+ mov r12, rax
+ mov word [rbp], si
+ call CONST
+ mov esi, CONST
+ mov rdi, rbx
+ mov dword [rax], CONST
+ mov r14, rax
+ call CONST
+ test rax, rax
+ cjmp LABEL34
+LABEL61:
+ mov rdx, rax
+LABEL60:
+ mov word [rbp], r15w
+ cmp r12, rdx
+ cjmp LABEL38
+ add rbx, r13
+ mov rax, rbx
+ sub rax, rbp
+ cmp rax, rdx
+ cjmp LABEL43
+ lea rdx, qword [rax + CONST]
+LABEL56:
+ mov byte [rbx], CONST
+ mov byte [rbp + rdx], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL43:
+ lea rbx, qword [rbp + rdx + CONST]
+ jmp LABEL56
+LABEL34:
+ mov ecx, dword [r14]
+ mov edx, CONST
+ test ecx, ecx
+ cjmp LABEL60
+ jmp LABEL61

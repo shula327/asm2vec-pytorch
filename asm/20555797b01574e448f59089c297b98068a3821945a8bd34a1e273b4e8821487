@@ -1,0 +1,28 @@
+ .name fcn.000ad0f0
+ .offset 00000000000ad0f0
+ .file bash
+ push r13
+ push r12
+ mov r12, rdi
+ mov rdi, rsi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov ebx, edx
+ sub rsp, CONST
+ call CONST
+ mov rdi, r12
+ lea r13, qword [rbp + rax*CONST]
+ call CONST
+ add rsp, CONST
+ mov r9d, ebx
+ mov rdx, r12
+ pop rbx
+ lea rcx, qword [r12 + rax*CONST]
+ mov rsi, r13
+ mov rdi, rbp
+ xor r8d, r8d
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

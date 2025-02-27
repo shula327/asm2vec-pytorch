@@ -1,0 +1,33 @@
+ .name fcn.00057260
+ .offset 0000000000057260
+ .file bash
+ push r12
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov ebx, dword [rip + CONST]
+ mov r12, rax
+ lea eax, dword [rbx + CONST]
+ cmp eax, CONST
+ cjmp LABEL8
+ nop dword [rax]
+LABEL22:
+ call CONST
+ call CONST
+ mov dword [rip + CONST], CONST
+ mov rcx, rax
+ mov rax, r12
+ shl rax, cl
+ sar r12, cl
+ cmp ebx, CONST
+ mov ebx, dword [rip + CONST]
+ cmove r12, rax
+ lea eax, dword [rbx + CONST]
+ cmp eax, CONST
+ cjmp LABEL22
+LABEL8:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret

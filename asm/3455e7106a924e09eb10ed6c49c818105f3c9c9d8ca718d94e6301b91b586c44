@@ -1,0 +1,55 @@
+ .name fcn.0001c500
+ .offset 000000000001c500
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ cmp qword [rsi], CONST
+ cjmp LABEL6
+ mov rbp, rsi
+ lea rax, [rsi + CONST]
+ xor esi, esi
+ nop word [rax + rax]
+LABEL15:
+ add rax, CONST
+ mov ebx, esi
+ lea esi, [rsi + CONST]
+ cmp qword [rax + CONST], CONST
+ cjmp LABEL15
+ mov rdi, r12
+ call CONST
+ mov r8d, dword [r12 + CONST]
+ movsxd rax, ebx
+ mov rdi, qword [r12 + CONST]
+ lea rsi, [rax*CONST + CONST]
+ movsxd rax, r8d
+ lea rcx, [rdi + rax*CONST]
+ xor eax, eax
+ nop word cs:[rax + rax]
+LABEL30:
+ mov rdx, qword [rbp + rax]
+ mov qword [rcx + rax], rdx
+ add rax, CONST
+ cmp rsi, rax
+ cjmp LABEL30
+ lea eax, [r8 + rbx + CONST]
+ mov dword [r12 + CONST], eax
+ cdqe
+ mov qword [rdi + rax*CONST], CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL6:
+ xor esi, esi
+ call CONST
+ mov eax, dword [r12 + CONST]
+ mov rdi, qword [r12 + CONST]
+ cdqe
+ mov qword [rdi + rax*CONST], CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret

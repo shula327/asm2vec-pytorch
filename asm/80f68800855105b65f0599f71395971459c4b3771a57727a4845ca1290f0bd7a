@@ -1,0 +1,40 @@
+ .name fcn.0000462c
+ .offset 000000000000462c
+ .file diff3
+LABEL11:
+ mov rax, qword [r15 + CONST]
+ mov rsi, qword [r15 + CONST]
+ lea rdx, qword [rax + r12]
+ mov rdi, r14
+ mov rcx, rbx
+ mov r8d, CONST
+ add rsi, r12
+ add r12, CONST
+ call CONST
+ mov r14, rax
+ cmp rbp, r12
+ cjmp LABEL11
+ mov rax, qword [rsp + CONST]
+ mov qword [rax], r15
+ lea rax, qword [r15 + CONST]
+ mov qword [rsp + CONST], rax
+ cmp rbx, r14
+ ja CONST
+ mov rax, qword [rsp + CONST]
+ mov qword [rax], CONST
+ mov rax, qword [rsp + CONST]
+ mov qword [rax], r15
+ mov rax, qword [rsp + CONST]
+ mov rbx, qword [rsp + CONST]
+ xor rbx, qword fs:[CONST]
+ cjmp LABEL25
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL25:
+ call CONST

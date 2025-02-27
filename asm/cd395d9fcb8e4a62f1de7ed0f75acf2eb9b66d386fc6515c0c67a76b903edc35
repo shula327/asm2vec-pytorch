@@ -1,0 +1,96 @@
+ .name fcn.0000f590
+ .offset 000000000000f590
+ .file install
+ movaps xmm1, xmm0
+ test sil, sil
+ cjmp LABEL2
+ test rdi, rdi
+ cjmp LABEL4
+ pxor xmm0, xmm0
+ cvtsi2ss xmm0, rdi
+LABEL78:
+ divss xmm0, xmm1
+ xor r8d, r8d
+ comiss xmm0, dword [rip + CONST]
+ cjmp LABEL10
+ comiss xmm0, dword [rip + CONST]
+ cjmp LABEL12
+ subss xmm0, dword [rip + CONST]
+ cvttss2si rdi, xmm0
+ btc rdi, CONST
+ nop dword [rax]
+LABEL2:
+ cmp rdi, CONST
+ mov r8d, CONST
+ movabs r9, CONST
+ cmovae r8, rdi
+ or r8, CONST
+ cmp r8, CONST
+ cjmp LABEL23
+ nop word [rax + rax]
+LABEL57:
+ mov rax, r8
+ mov rcx, r8
+ mul r9
+ mov rax, rdx
+ and rdx, CONST
+ shr rax, CONST
+ add rax, rdx
+ sub rcx, rax
+ mov rax, rcx
+ cmp r8, CONST
+ cjmp LABEL35
+ test rcx, rcx
+ cjmp LABEL37
+ mov edi, CONST
+ mov esi, CONST
+ mov ecx, CONST
+ jmp LABEL41
+LABEL52:
+ add rdi, CONST
+ test rdx, rdx
+ cjmp LABEL37
+LABEL41:
+ add rcx, CONST
+ mov rax, r8
+ xor edx, edx
+ add rsi, rdi
+ div rcx
+ mov rax, rdx
+ cmp r8, rsi
+ cjmp LABEL52
+LABEL35:
+ test rax, rax
+ cjmp LABEL54
+LABEL37:
+ add r8, CONST
+ cmp r8, CONST
+ cjmp LABEL57
+LABEL23:
+ xor r8d, r8d
+ mov rax, r8
+ ret
+LABEL54:
+ mov rax, r8
+ shr rax, CONST
+ setne al
+ bt r8, CONST
+ movzx eax, al
+ cjmp LABEL23
+ test rax, rax
+ cjmp LABEL23
+LABEL10:
+ mov rax, r8
+ ret
+LABEL4:
+ mov rax, rdi
+ and edi, CONST
+ pxor xmm0, xmm0
+ shr rax, CONST
+ or rax, rdi
+ cvtsi2ss xmm0, rax
+ addss xmm0, xmm0
+ jmp LABEL78
+LABEL12:
+ cvttss2si rdi, xmm0
+ jmp LABEL2

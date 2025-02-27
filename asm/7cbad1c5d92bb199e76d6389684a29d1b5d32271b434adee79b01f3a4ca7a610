@@ -1,0 +1,25 @@
+ .name fcn.0000d880
+ .offset 000000000000d880
+ .file find
+LABEL9:
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+LABEL14:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL7
+ mov rsi, rbp
+ call LABEL9
+LABEL7:
+ mov rdi, rbx
+ call rbp
+ mov rbx, qword [rbx + CONST]
+ test rbx, rbx
+ cjmp LABEL14
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

@@ -1,0 +1,33 @@
+ .name fcn.00002ef0
+ .offset 0000000000002ef0
+ .file taskset
+ push r12
+ mov edx, CONST
+ mov r12d, edi
+ push rbp
+ sub rsp, CONST
+ test esi, esi
+ cjmp LABEL6
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+LABEL22:
+ test r12d, r12d
+ cjmp LABEL12
+LABEL25:
+ mov edx, r12d
+ mov rsi, rbp
+ mov edi, CONST
+ xor eax, eax
+ call CONST
+LABEL6:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ jmp LABEL22
+LABEL12:
+ call CONST
+ mov r12d, eax
+ jmp LABEL25

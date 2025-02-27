@@ -1,0 +1,21 @@
+ .name fcn.0001be80
+ .offset 000000000001be80
+ .file install
+ endbr64
+ cmp edi, CONST
+ cjmp LABEL2
+ cjmp LABEL3
+ xor eax, eax
+ cmp edi, CONST
+ cjmp LABEL6
+ cmp edi, CONST
+ setne al
+ ret
+LABEL3:
+ cmp edi, CONST
+ setne al
+ ret
+LABEL2:
+ xor eax, eax
+LABEL6:
+ ret

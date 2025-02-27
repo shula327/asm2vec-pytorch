@@ -1,0 +1,20 @@
+ .name fcn.00015ec0
+ .offset 0000000000015ec0
+ .file install
+ endbr64
+ push r12
+ xor esi, esi
+ xor edi, edi
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL7
+LABEL13:
+ mov rax, r12
+ pop r12
+ ret
+LABEL7:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL13
+ call CONST

@@ -1,0 +1,36 @@
+ .name fcn.0000cf70
+ .offset 000000000000cf70
+ .file install
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ call CONST
+ sub rax, rbp
+ lea rdi, [rax + CONST]
+ mov r12, rax
+ cmp rdi, CONST
+ cjmp LABEL10
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL14
+LABEL10:
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, rbx
+ call CONST
+ mov rdx, qword [rip + CONST]
+ mov qword [rax], rdx
+ movzx edx, byte [rip + CONST]
+ mov byte [rax + CONST], dl
+ mov rax, rbx
+LABEL29:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL14:
+ xor eax, eax
+ jmp LABEL29

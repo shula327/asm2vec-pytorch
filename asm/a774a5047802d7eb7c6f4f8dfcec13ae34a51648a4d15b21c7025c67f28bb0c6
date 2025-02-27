@@ -1,0 +1,135 @@
+ .name fcn.00013510
+ .offset 0000000000013510
+ .file install
+LABEL122:
+ push r14
+ mov r14d, edi
+ mov rdi, rsi
+ push r13
+ mov r13, rcx
+ push r12
+ mov r12d, edx
+ push rbp
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ mov rcx, rsp
+ mov esi, r14d
+ mov edi, CONST
+ mov r8d, CONST
+ mov rdx, rax
+ mov rbp, rax
+ call CONST
+ test eax, eax
+ cjmp LABEL21
+LABEL69:
+ mov rdi, rbp
+ call CONST
+ mov rdi, r13
+ call CONST
+ lea rcx, [rsp + CONST]
+ mov r8d, CONST
+ mov esi, r12d
+ mov rdx, rax
+ mov edi, CONST
+ mov rbp, rax
+ call CONST
+ test eax, eax
+ cjmp LABEL34
+LABEL61:
+ mov rax, qword [rsp + CONST]
+ xor r12d, r12d
+ cmp qword [rsp + CONST], rax
+ cjmp LABEL38
+ mov rax, qword [rsp + CONST]
+ cmp qword [rsp], rax
+ sete r12b
+LABEL38:
+ mov rdi, rbp
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL46
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL34:
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rdx, [rip + CONST]
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ jmp LABEL61
+LABEL21:
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rdx, [rip + CONST]
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ jmp LABEL69
+LABEL46:
+ call CONST
+ endbr64
+ push r15
+ mov r15, rsi
+ push r14
+ mov r14, rcx
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov ebx, edx
+ sub rsp, CONST
+ mov dword [rsp + CONST], edi
+ mov rdi, rsi
+ call CONST
+ mov rdi, r14
+ mov rbp, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdi, r12
+ mov r13, rax
+ call CONST
+ cmp r13, rax
+ cjmp LABEL95
+LABEL110:
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL95:
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL110
+ mov edi, dword [rsp + CONST]
+ add rsp, CONST
+ mov rcx, r14
+ mov edx, ebx
+ mov rsi, r15
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp LABEL122

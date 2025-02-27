@@ -1,0 +1,45 @@
+ .name fcn.0000e320
+ .offset 000000000000e320
+ .file install
+ endbr64
+ mov rcx, rdx
+ test rdi, rdi
+ cjmp LABEL3
+ test rsi, rsi
+ mov edi, CONST
+ cmovne rdi, rsi
+LABEL13:
+ cmp rdi, rcx
+ cmovbe rcx, rdi
+ mov r8, rcx
+LABEL33:
+ mov rax, r8
+ ret
+LABEL3:
+ test rsi, rsi
+ cjmp LABEL13
+ mov r8, rsi
+ mov rax, rdi
+LABEL36:
+ xor edx, edx
+ div r8
+ test rdx, rdx
+ cjmp LABEL19
+ mov rax, rdi
+ xor edx, edx
+ div r8
+ mov r8, rsi
+ imul r8, rax
+ mov r9, rax
+ cmp r8, rcx
+ cjmp LABEL13
+ mov rax, r8
+ xor edx, edx
+ div rsi
+ cmp rax, r9
+ cjmp LABEL13
+ jmp LABEL33
+LABEL19:
+ mov rax, r8
+ mov r8, rdx
+ jmp LABEL36

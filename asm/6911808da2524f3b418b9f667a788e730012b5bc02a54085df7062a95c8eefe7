@@ -1,0 +1,39 @@
+ .name sym.Perl_pad_findmy_sv
+ .offset 00000000000a7df0
+ .file perl5.30.0
+ endbr64
+ push r12
+ mov r12d, edx
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov eax, dword [rsi + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL12
+ mov rax, qword [rsi]
+ mov rsi, qword [rsi + CONST]
+ mov rdx, qword [rax + CONST]
+ mov qword [rsp], rdx
+LABEL31:
+ mov ecx, r12d
+ mov rdi, rbp
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL22
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ mov rdx, rsp
+ call CONST
+ mov rdx, qword [rsp]
+ mov rsi, rax
+ jmp LABEL31
+LABEL22:
+ call CONST

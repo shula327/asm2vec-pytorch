@@ -1,0 +1,40 @@
+ .name fcn.00028780
+ .offset 0000000000028780
+ .file dpkg
+ endbr64
+ mov r8, qword [rdi]
+ test r8, r8
+ cjmp LABEL3
+ movsxd rax, dword [rdi + CONST]
+ lea rcx, [rip + CONST]
+ nop word [rax + rax]
+LABEL24:
+ cmp eax, CONST
+ cjmp LABEL8
+ mov rdx, qword [rcx + rax*CONST]
+ test rdx, rdx
+ cjmp LABEL11
+ add eax, CONST
+ lea r8, [rdx + CONST]
+ mov dword [rdi + CONST], eax
+LABEL3:
+ mov rax, qword [r8 + CONST]
+ test rax, rax
+ cjmp LABEL17
+LABEL30:
+ mov qword [rdi], rax
+LABEL8:
+ mov rax, r8
+ ret
+LABEL11:
+ lea edx, [rax + CONST]
+ add rax, CONST
+ mov dword [rdi + CONST], edx
+ jmp LABEL24
+LABEL17:
+ mov rdx, qword [r8]
+ mov rcx, qword [rdx]
+ lea rdx, [rcx + CONST]
+ test rcx, rcx
+ cmovne rax, rdx
+ jmp LABEL30

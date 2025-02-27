@@ -1,0 +1,57 @@
+ .name fcn.0002c400
+ .offset 000000000002c400
+ .file dpkg
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL6
+ call CONST
+ mov qword [rip + CONST], CONST
+LABEL6:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov r12, qword [rip + CONST]
+ mov rdi, r12
+ call CONST
+ mov rsi, r12
+ lea rdi, [rip + CONST]
+ mov rdx, rax
+ call CONST
+ mov esi, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rsi, rbp
+ lea rdi, [rip + CONST]
+ mov rdx, rax
+ call CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, qword [rip + CONST]
+ lea rsi, [rip + CONST]
+ call CONST
+ mov qword [rip + CONST], rax
+ test rax, rax
+ cjmp LABEL34
+LABEL41:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL34:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL41
+ mov rbp, qword [rip + CONST]
+ lea rsi, [rip + CONST]
+ mov edx, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST

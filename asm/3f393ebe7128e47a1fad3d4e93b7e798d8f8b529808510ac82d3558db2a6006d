@@ -1,0 +1,37 @@
+ .name fcn.00032c30
+ .offset 0000000000032c30
+ .file bash
+ push rax
+ pop rax
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL10
+ call CONST
+LABEL30:
+ call CONST
+ mov edi, dword [rip + CONST]
+ call CONST
+LABEL10:
+ mov edi, dword [rip + CONST]
+ mov rdx, rax
+ lea rsi, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL21
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL21
+ mov dword [rip + CONST], CONST
+LABEL21:
+ cmp dword [rip + CONST], CONST
+ sbb eax, eax
+ and al, CONST
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ jmp LABEL30

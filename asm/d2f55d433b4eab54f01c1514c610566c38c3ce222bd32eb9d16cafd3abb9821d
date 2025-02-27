@@ -1,0 +1,49 @@
+ .name sym.Perl_mro_register
+ .offset 00000000000ef880
+ .file perl5.30.0
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ mov rbx, rsi
+ call CONST
+ sub rsp, CONST
+ mov rcx, qword [rbx + CONST]
+ xor edx, edx
+ mov rbp, rax
+ mov eax, dword [rbx + CONST]
+ movzx r9d, word [rbx + CONST]
+ mov rdi, r12
+ mov rsi, qword [r12 + CONST]
+ movzx r8d, word [rbx + CONST]
+ push rax
+ push rbp
+ push CONST
+ call CONST
+ add rsp, CONST
+ test rax, rax
+ cjmp LABEL22
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL22:
+ mov edx, dword [rbp + CONST]
+ cmp edx, CONST
+ cjmp LABEL29
+ sub edx, CONST
+ mov dword [rbp + CONST], edx
+LABEL42:
+ mov rcx, qword [rbx + CONST]
+ movzx edx, word [rbx + CONST]
+ mov rdi, r12
+ xor eax, eax
+ movzx r8d, word [rbx + CONST]
+ lea rsi, [rip + CONST]
+ call CONST
+LABEL29:
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+ jmp LABEL42

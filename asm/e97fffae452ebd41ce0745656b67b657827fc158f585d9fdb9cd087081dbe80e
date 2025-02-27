@@ -1,0 +1,38 @@
+ .name fcn.00004df0
+ .offset 0000000000004df0
+ .file newgrp
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rsi]
+ test rdi, rdi
+ cjmp LABEL6
+ mov rbx, rsi
+ jmp LABEL8
+LABEL16:
+ test eax, eax
+ cjmp LABEL10
+LABEL8:
+ add rbx, CONST
+ mov rsi, rbp
+ call CONST
+ mov rdi, qword [rbx]
+ test rdi, rdi
+ cjmp LABEL16
+ test eax, eax
+ sete al
+LABEL29:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL10:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL6:
+ xor eax, eax
+ jmp LABEL29

@@ -1,0 +1,43 @@
+ .name fcn.0001f040
+ .offset 000000000001f040
+ .file grep
+ endbr64
+ mov eax, dword [rip + CONST]
+ push r12
+ mov r12, qword [rip + CONST]
+ push rbp
+ push rbx
+ cmp eax, CONST
+ cjmp LABEL7
+ sub eax, CONST
+ lea rbx, [r12 + CONST]
+ shl rax, CONST
+ lea rbp, [r12 + rax + CONST]
+ nop dword [rax + rax]
+LABEL17:
+ mov rdi, qword [rbx]
+ add rbx, CONST
+ call CONST
+ cmp rbx, rbp
+ cjmp LABEL17
+LABEL7:
+ mov rdi, qword [r12 + CONST]
+ lea rbx, [rip + CONST]
+ cmp rdi, rbx
+ cjmp LABEL21
+ call CONST
+ mov qword [rip + CONST], rbx
+ mov qword [rip + CONST], CONST
+LABEL21:
+ lea rbx, [rip + CONST]
+ cmp r12, rbx
+ cjmp LABEL27
+ mov rdi, r12
+ call CONST
+ mov qword [rip + CONST], rbx
+LABEL27:
+ mov dword [rip + CONST], CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret

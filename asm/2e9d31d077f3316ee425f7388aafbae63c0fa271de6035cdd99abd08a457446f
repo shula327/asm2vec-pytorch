@@ -1,0 +1,19 @@
+ .name fcn.0001a7c0
+ .offset 000000000001a7c0
+ .file grep
+ endbr64
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ mov qword [rax + CONST], rbp
+ mov qword [rax], rdx
+ mov qword [rbx + CONST], rax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

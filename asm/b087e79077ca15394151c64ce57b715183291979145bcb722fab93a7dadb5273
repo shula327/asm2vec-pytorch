@@ -1,0 +1,120 @@
+ .name fcn.000b24e0
+ .offset 00000000000b24e0
+ .file perl5.30.0
+ push r15
+ push r14
+ mov r14, rdi
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rcx
+ sub rsp, CONST
+ movzx eax, byte [rcx + CONST]
+ cmp al, CONST
+ cjmp LABEL12
+ movzx r12d, byte [rcx]
+ mov ecx, r12d
+ and ecx, CONST
+LABEL102:
+ lea r15, qword [rip + CONST]
+ cmp byte [r15 + rax], CONST
+ cjmp LABEL18
+ cmp word [rbx + CONST], CONST
+ cjmp LABEL20
+LABEL18:
+ add rsi, CONST
+ mov rdx, rbx
+ mov rdi, r14
+ mov byte [rsp + CONST], cl
+ call CONST
+ movzx ecx, byte [rsp + CONST]
+ mov r13, rax
+ xor eax, eax
+ cmp byte [rbx + CONST], CONST
+ cjmp LABEL30
+ mov eax, r12d
+ mov esi, r12d
+ and eax, CONST
+ and esi, CONST
+ mov edx, eax
+ or edx, CONST
+ cmp sil, CONST
+ cmove eax, edx
+LABEL30:
+ or byte [rbp], al
+ test cl, cl
+ cjmp LABEL41
+ movzx eax, byte [rbx + CONST]
+ cmp byte [r15 + rax], CONST
+ cjmp LABEL44
+LABEL59:
+ mov rsi, qword [rbp + CONST]
+LABEL67:
+ add rsp, CONST
+ lea r8, qword [rbp + CONST]
+ mov rdx, r13
+ mov rdi, r14
+ pop rbx
+ xor ecx, ecx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST
+LABEL44:
+ cmp word [rbx + CONST], CONST
+ cjmp LABEL59
+ nop word [rax + rax]
+LABEL41:
+ and r12d, CONST
+ cjmp LABEL59
+ mov edx, dword [rbp + CONST]
+ or edx, dword [rbx + CONST]
+ mov dword [rbp + CONST], edx
+ mov rsi, qword [rbp + CONST]
+ cjmp LABEL67
+ xor ebx, ebx
+ mov r15d, CONST
+ jmp LABEL70
+LABEL85:
+ add ebx, CONST
+ cmp ebx, CONST
+ cjmp LABEL67
+ mov edx, dword [rbp + CONST]
+LABEL70:
+ mov ecx, ebx
+ mov r12d, r15d
+ mov r8d, r15d
+ shl r12d, cl
+ lea ecx, dword [rbx + CONST]
+ shl r8d, cl
+ mov eax, r12d
+ or eax, r8d
+ and edx, eax
+ cmp edx, eax
+ cjmp LABEL85
+ mov rcx, -1
+ xor edx, edx
+ mov rdi, r14
+ not r12d
+ mov dword [rsp + CONST], r8d
+ call CONST
+ mov r8d, dword [rsp + CONST]
+ and r12d, dword [rbp + CONST]
+ mov qword [rbp + CONST], rax
+ mov rsi, rax
+ not r8d
+ and r12d, r8d
+ mov dword [rbp + CONST], r12d
+ jmp LABEL85
+LABEL12:
+ xor ecx, ecx
+ xor r12d, r12d
+ jmp LABEL102
+LABEL20:
+ mov r13, qword [rbx + CONST]
+ mov eax, r12d
+ jmp LABEL30

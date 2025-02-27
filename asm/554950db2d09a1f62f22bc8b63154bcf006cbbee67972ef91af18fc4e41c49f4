@@ -1,0 +1,23 @@
+ .name fcn.0001bdd0
+ .offset 000000000001bdd0
+ .file grep
+ endbr64
+ movzx ecx, byte [rdi]
+ xor edx, edx
+ test cl, cl
+ cjmp LABEL4
+ nop dword [rax]
+LABEL15:
+ mov rax, rdx
+ add rdi, CONST
+ shl rax, CONST
+ sub rax, rdx
+ xor edx, edx
+ add rax, rcx
+ movzx ecx, byte [rdi]
+ div rsi
+ test cl, cl
+ cjmp LABEL15
+LABEL4:
+ mov rax, rdx
+ ret

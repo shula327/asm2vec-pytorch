@@ -1,0 +1,38 @@
+ .name fcn.000be9b0
+ .offset 00000000000be9b0
+ .file bash
+ push r12
+ mov esi, CONST
+ mov r12, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ cmp byte [rax], CONST
+ cjmp LABEL5
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL9
+ cmp r12, rax
+ cjmp LABEL5
+ sub rax, CONST
+ cmp r12, rax
+ cjmp LABEL14
+ jmp LABEL15
+LABEL20:
+ sub rax, CONST
+ cmp r12, rax
+ cjmp LABEL15
+LABEL14:
+ cmp byte [rax], CONST
+ cjmp LABEL20
+LABEL9:
+ lea r12, qword [rax + CONST]
+LABEL5:
+ mov rax, r12
+ pop r12
+ ret
+LABEL15:
+ cmp byte [rax], CONST
+ cjmp LABEL9
+ mov rax, r12
+ pop r12
+ ret

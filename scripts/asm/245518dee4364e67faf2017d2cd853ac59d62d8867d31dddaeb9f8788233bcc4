@@ -1,0 +1,28 @@
+ .name fcn.0000b450
+ .offset 000000000000b450
+ .file grep
+LABEL8:
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov rdi, qword [rdi]
+ test rdi, rdi
+ cjmp LABEL7
+ call LABEL8
+LABEL7:
+ mov rdi, qword [rbp + CONST]
+ test rdi, rdi
+ cjmp LABEL11
+ mov rsi, rbx
+ call LABEL8
+LABEL11:
+ mov rdx, qword [rbx]
+ mov rax, qword [rbp + CONST]
+ mov qword [rdx + CONST], rax
+ mov qword [rbx], rax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

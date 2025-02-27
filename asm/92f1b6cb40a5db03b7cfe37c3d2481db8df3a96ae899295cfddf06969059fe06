@@ -1,0 +1,76 @@
+ .name sym.Perl_magic_getnkeys
+ .offset 00000000000e98c0
+ .file perl5.30.0
+ endbr64
+ push r13
+ xor edx, edx
+ mov r13, rsi
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword [rsi]
+ mov r12, qword [rax + CONST]
+ test r12, r12
+ cjmp LABEL12
+ mov rsi, r12
+ call CONST
+ test byte [r12 + CONST], CONST
+ cjmp LABEL16
+ mov rdx, qword [r12]
+ mov rax, qword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL20
+LABEL25:
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL22
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL25
+ mov ebx, dword [rdx + CONST]
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ sub ebx, eax
+ nop dword [rax]
+LABEL46:
+ movsxd rdx, ebx
+LABEL12:
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL16:
+ mov rax, qword [r12]
+ cmp qword [rax + CONST], CONST
+ mov ebx, dword [rax + CONST]
+ cjmp LABEL46
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ sub ebx, eax
+ jmp LABEL46
+LABEL22:
+ xor ebx, ebx
+ jmp LABEL53
+LABEL60:
+ add ebx, CONST
+LABEL53:
+ xor edx, edx
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL60
+ movsxd rdx, ebx
+ jmp LABEL12
+LABEL20:
+ mov ebx, dword [rdx + CONST]
+ jmp LABEL46

@@ -1,0 +1,23 @@
+ .name fcn.00017540
+ .offset 0000000000017540
+ .file dpkg-query
+ mov eax, dword [rdi + CONST]
+ add esi, CONST
+ mov edx, eax
+ sub edx, dword [rdi + CONST]
+ cmp edx, esi
+ cjmp LABEL5
+ ret
+LABEL5:
+ add eax, esi
+ push rbx
+ mov rbx, rdi
+ add eax, eax
+ mov dword [rdi + CONST], eax
+ cdqe
+ mov rdi, qword [rdi + CONST]
+ lea rsi, qword [rax*CONST]
+ call CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

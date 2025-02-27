@@ -1,0 +1,28 @@
+ .name fcn.000097a0
+ .offset 00000000000097a0
+ .file dpkg-query
+ push rbp
+ mov rbp, rsi
+ call CONST
+ test eax, eax
+ cjmp LABEL4
+ mov edi, eax
+ call CONST
+ test eax, eax
+ cjmp LABEL8
+ pop rbp
+ ret
+LABEL4:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+LABEL21:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL8:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ jmp LABEL21

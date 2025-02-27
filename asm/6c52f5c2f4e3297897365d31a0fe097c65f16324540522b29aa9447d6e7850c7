@@ -1,0 +1,90 @@
+ .name fcn.000284b0
+ .offset 00000000000284b0
+ .file find
+ mov rax, qword [rsi + CONST]
+ cmp qword [rsi + CONST], rax
+ cjmp LABEL2
+ mov r8, qword [rsi + CONST]
+ cmp dword [rsi + CONST], CONST
+ movzx ecx, byte [r8 + rax]
+ mov byte [rdi], cl
+ cjmp LABEL7
+ cmp rax, qword [rsi + CONST]
+ cjmp LABEL7
+ mov r9, qword [rsi + CONST]
+ cmp dword [r9 + rax*CONST], -1
+ cjmp LABEL12
+LABEL7:
+ cmp cl, CONST
+ cjmp LABEL14
+ cmp cl, CONST
+ cjmp LABEL16
+ cmp cl, CONST
+ cjmp LABEL18
+ cmp cl, CONST
+ cjmp LABEL20
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL14:
+ and edx, CONST
+ cjmp LABEL12
+ lea rdx, qword [rax + CONST]
+ cmp rdx, qword [rsi + CONST]
+ cjmp LABEL28
+LABEL12:
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL20:
+ cmp cl, CONST
+ cjmp LABEL12
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL2:
+ mov byte [rdi + CONST], CONST
+ xor eax, eax
+ ret
+LABEL16:
+ lea rcx, qword [rax + CONST]
+ cmp rcx, qword [rsi + CONST]
+ cjmp LABEL42
+ movzx eax, byte [r8 + rax + CONST]
+ mov byte [rdi], al
+ cmp al, CONST
+ cjmp LABEL46
+ cmp al, CONST
+ cjmp LABEL48
+ cmp al, CONST
+ cjmp LABEL50
+LABEL42:
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ mov byte [rdi], CONST
+ ret
+LABEL18:
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL28:
+ mov qword [rsi + CONST], rdx
+ movzx eax, byte [r8 + rax + CONST]
+ mov byte [rdi + CONST], CONST
+ mov byte [rdi], al
+ mov eax, CONST
+ ret
+LABEL50:
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL48:
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret
+LABEL46:
+ and edx, CONST
+ cjmp LABEL42
+ mov byte [rdi + CONST], CONST
+ mov eax, CONST
+ ret

@@ -1,0 +1,27 @@
+ .name fcn.00029a50
+ .offset 0000000000029a50
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov r8, rdi
+ mov rdx, rsi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rsi, r8
+ mov rdi, rsp
+ add dword [rip + CONST], CONST
+ mov qword [rsp], CONST
+ call CONST
+ mov rsi, qword [rip + CONST]
+ mov rdi, qword [rsp]
+ call qword [rip + CONST]
+ mov rdi, qword [rsp]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL19
+ add rsp, CONST
+ ret
+LABEL19:
+ call CONST

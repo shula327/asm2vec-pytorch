@@ -1,0 +1,36 @@
+ .name fcn.000a9410
+ .offset 00000000000a9410
+ .file bash
+ xor eax, eax
+ xor ecx, ecx
+ jmp LABEL2
+LABEL20:
+ mov ecx, r8d
+LABEL24:
+ mov byte [rdi + rax], dl
+ add rax, CONST
+ cmp byte [rdi + rsi + CONST], CONST
+ lea r8d, dword [r9 + CONST]
+ cjmp LABEL8
+LABEL2:
+ mov r9d, eax
+ mov r8d, eax
+ test rdi, rdi
+ cjmp LABEL12
+ movsxd rdx, ecx
+ movzx edx, byte [rdi + rdx]
+ test dl, dl
+ cjmp LABEL8
+ lea r8d, dword [rcx + CONST]
+ movsxd rsi, r8d
+ cmp dl, CONST
+ cjmp LABEL20
+ add ecx, CONST
+ movzx edx, byte [rdi + rsi]
+ movsxd rsi, ecx
+ jmp LABEL24
+LABEL8:
+ movsxd r8, r8d
+ mov byte [rdi + r8], CONST
+LABEL12:
+ ret

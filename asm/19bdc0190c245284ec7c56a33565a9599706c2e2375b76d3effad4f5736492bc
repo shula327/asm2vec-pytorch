@@ -1,0 +1,47 @@
+ .name fcn.000aa230
+ .offset 00000000000aa230
+ .file perl5.30.0
+ sub rsp, CONST
+ mov r10, rsi
+ mov r11, rdi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rax, qword [rsi + CONST]
+ lea rdx, qword [rsp + CONST]
+ lea rsi, qword [rsp + CONST]
+ mov rax, qword [rax]
+ mov qword [rax + CONST], CONST
+ mov rdi, qword [r10 + CONST]
+ call CONST
+ test al, al
+ mov rax, qword [r10 + CONST]
+ mov rax, qword [rax]
+ cjmp LABEL16
+LABEL25:
+ mov qword [rax + CONST], -1
+ xor eax, eax
+LABEL33:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL21
+ add rsp, CONST
+ ret
+LABEL16:
+ cmp qword [rsp + CONST], CONST
+ cjmp LABEL25
+ cmp qword [rsp + CONST], -1
+ cjmp LABEL25
+ mov qword [rax + CONST], -1
+ mov eax, dword [r11 + CONST]
+ test eax, eax
+ cjmp LABEL31
+ mov eax, CONST
+ jmp LABEL33
+LABEL31:
+ xor eax, eax
+ cmp dword [r10 + CONST], CONST
+ sete al
+ jmp LABEL33
+LABEL21:
+ call CONST

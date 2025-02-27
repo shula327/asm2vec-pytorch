@@ -1,0 +1,61 @@
+ .name sym.Perl_pp_runcv
+ .offset 000000000013ef10
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ push rbx
+ mov rax, qword [rdi + CONST]
+ mov rbx, rdi
+ mov rbp, qword [rdi]
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL8
+ xor esi, esi
+ call CONST
+ mov r12, rax
+ mov rax, qword [rbx + CONST]
+ sub rax, rbp
+ test rax, rax
+ cjmp LABEL15
+LABEL45:
+ mov rax, qword [r12]
+ test byte [rax + CONST], CONST
+ cjmp LABEL18
+ lea rax, [rbx + CONST]
+ test byte [r12 + CONST], CONST
+ cjmp LABEL21
+LABEL18:
+ mov rsi, r12
+ mov rdi, rbx
+ call CONST
+ mov rdi, rbx
+ mov rsi, rax
+ call CONST
+LABEL21:
+ mov qword [rbp + CONST], rax
+ mov rax, qword [rbx + CONST]
+ add rbp, CONST
+ mov qword [rbx], rbp
+ pop rbx
+ mov rax, qword [rax]
+ pop rbp
+ pop r12
+ ret
+LABEL8:
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, CONST
+ call CONST
+ mov r12, rax
+ mov rax, qword [rbx + CONST]
+ sub rax, rbp
+ test rax, rax
+ cjmp LABEL45
+LABEL15:
+ mov rdx, rbp
+ mov rsi, rbp
+ mov ecx, CONST
+ mov rdi, rbx
+ call CONST
+ mov rbp, rax
+ jmp LABEL45

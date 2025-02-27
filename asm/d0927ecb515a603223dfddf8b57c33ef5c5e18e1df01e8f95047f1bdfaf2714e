@@ -1,0 +1,20 @@
+ .name sym.Perl_save_I8
+ .offset 0000000000140dd0
+ .file perl5.30.0
+ endbr64
+ movsxd rcx, dword [rdi + CONST]
+ mov rdx, qword [rdi + CONST]
+ mov rax, rcx
+ lea rcx, [rdx + rcx*CONST]
+ mov qword [rcx], rsi
+ movsx rdx, byte [rsi]
+ add eax, CONST
+ shl rdx, CONST
+ or rdx, CONST
+ mov qword [rcx + CONST], rdx
+ mov dword [rdi + CONST], eax
+ cmp dword [rdi + CONST], eax
+ cjmp LABEL13
+ ret
+LABEL13:
+ jmp CONST

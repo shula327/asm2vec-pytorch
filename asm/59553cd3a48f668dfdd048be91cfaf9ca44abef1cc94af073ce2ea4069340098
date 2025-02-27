@@ -1,0 +1,28 @@
+ .name fcn.00005ec0
+ .offset 0000000000005ec0
+ .file setpriv
+ endbr64
+ push r13
+ mov r13, rdi
+ push r12
+ mov r12, rsi
+ sub rsp, CONST
+ call CONST
+ mov edx, CONST
+ mov ecx, CONST
+ add rdx, rax
+ cmp rdx, rcx
+ cjmp LABEL11
+ add rsp, CONST
+ pop r12
+ pop r13
+ ret
+LABEL11:
+ call CONST
+ mov edi, dword [rip + CONST]
+ mov rcx, r13
+ mov rdx, r12
+ mov dword [rax], CONST
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ call CONST

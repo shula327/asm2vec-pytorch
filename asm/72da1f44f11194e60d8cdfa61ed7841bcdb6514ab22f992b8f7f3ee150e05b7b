@@ -1,0 +1,27 @@
+ .name fcn.0007da50
+ .offset 000000000007da50
+ .file bash
+ push r12
+ mov r12d, edx
+ push rbp
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov edx, r12d
+ mov rdi, rbx
+ mov rbp, rax
+ mov rsi, rax
+ call CONST
+ test rbp, rbp
+ cjmp LABEL12
+ mov rdi, rbp
+ call CONST
+LABEL12:
+ test rbx, rbx
+ cjmp LABEL16
+ and dword [rbx + CONST], CONST
+LABEL16:
+ pop rbx
+ pop rbp
+ pop r12
+ ret

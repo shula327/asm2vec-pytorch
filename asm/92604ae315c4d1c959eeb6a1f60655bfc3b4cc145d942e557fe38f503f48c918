@@ -1,0 +1,22 @@
+ .name fcn.00015e30
+ .offset 0000000000015e30
+ .file install
+ endbr64
+ sub rsp, CONST
+ or esi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ add rsp, CONST
+ ret
+LABEL5:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL10
+ call CONST
+LABEL10:
+ lea rcx, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST

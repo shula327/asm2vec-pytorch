@@ -1,0 +1,68 @@
+ .name fcn.00002db0
+ .offset 0000000000002db0
+ .file nproc
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ movsx eax, byte [rdi]
+ test al, al
+ cjmp LABEL6
+ cmp al, CONST
+ cjmp LABEL8
+LABEL22:
+ cmp al, CONST
+ cjmp LABEL10
+LABEL6:
+ xor eax, eax
+LABEL37:
+ mov rsi, qword [rsp + CONST]
+ xor rsi, qword fs:[CONST]
+ cjmp LABEL14
+ add rsp, CONST
+ ret
+LABEL10:
+ movsx eax, byte [rdi + CONST]
+ add rdi, CONST
+ test al, al
+ cjmp LABEL6
+ cmp al, CONST
+ cjmp LABEL22
+LABEL8:
+ cmp al, CONST
+ cjmp LABEL10
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL6
+ mov edx, CONST
+ mov rsi, rsp
+ mov qword [rsp], CONST
+ call CONST
+ mov rdx, qword [rsp]
+ test rdx, rdx
+ cjmp LABEL6
+ movzx ecx, byte [rdx]
+ test cl, cl
+ cjmp LABEL37
+ add rdx, CONST
+ cmp cl, CONST
+ cjmp LABEL40
+LABEL49:
+ cmp cl, CONST
+ cjmp LABEL6
+LABEL51:
+ mov qword [rsp], rdx
+ movzx ecx, byte [rdx]
+ add rdx, CONST
+ test cl, cl
+ cjmp LABEL37
+ cmp cl, CONST
+ cjmp LABEL49
+LABEL40:
+ cmp cl, CONST
+ cjmp LABEL51
+ cmp cl, CONST
+ cjmp LABEL37
+ jmp LABEL6
+LABEL14:
+ call CONST

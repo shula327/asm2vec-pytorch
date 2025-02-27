@@ -1,0 +1,19 @@
+ .name sym.Perl__is_uni_FOO
+ .offset 00000000001897c0
+ .file perl5.30.0
+ endbr64
+ mov r8d, esi
+ lea rax, [rip + CONST]
+ sub rsp, CONST
+ mov rsi, rdx
+ movzx r8d, r8b
+ mov rdi, qword [rax + r8*CONST]
+ call CONST
+ mov rdx, rax
+ not rax
+ and eax, CONST
+ test rdx, rdx
+ mov edx, CONST
+ cmovs eax, edx
+ add rsp, CONST
+ ret

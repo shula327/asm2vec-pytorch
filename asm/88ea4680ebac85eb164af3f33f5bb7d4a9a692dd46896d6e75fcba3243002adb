@@ -1,0 +1,103 @@
+ .name fcn.00057d00
+ .offset 0000000000057d00
+ .file bash
+ test rdx, rdx
+ cjmp LABEL1
+ mov dword [rdx], CONST
+LABEL1:
+ mov rcx, qword [rip + CONST]
+ test rcx, rcx
+ cjmp LABEL5
+ mov rax, rcx
+ jmp LABEL7
+LABEL12:
+ mov rax, qword [rax]
+ cmp rcx, rax
+ cjmp LABEL5
+LABEL7:
+ cmp dword [rax + CONST], edi
+ cjmp LABEL12
+ test esi, esi
+ cjmp LABEL14
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL14
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL12
+LABEL14:
+ ret
+LABEL5:
+ mov rcx, qword [rip + CONST]
+ test rcx, rcx
+ cjmp LABEL22
+ mov rax, rcx
+ jmp LABEL24
+LABEL29:
+ mov rax, qword [rax]
+ cmp rcx, rax
+ cjmp LABEL22
+LABEL24:
+ cmp dword [rax + CONST], edi
+ cjmp LABEL29
+ test esi, esi
+ cjmp LABEL14
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL14
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL14
+ mov rax, qword [rax]
+ cmp rcx, rax
+ cjmp LABEL24
+LABEL22:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL41
+ mov r9, qword [rip + CONST]
+ xor r8d, r8d
+ lea r11d, dword [rax + CONST]
+ mov r10d, r8d
+ mov rax, qword [r9 + r8*CONST]
+ test rax, rax
+ cjmp LABEL48
+ nop dword [rax]
+LABEL57:
+ lea rax, qword [r8 + CONST]
+ cmp r8, r11
+ cjmp LABEL41
+ mov r8, rax
+ mov rax, qword [r9 + r8*CONST]
+ mov r10d, r8d
+ test rax, rax
+ cjmp LABEL57
+LABEL48:
+ mov rax, qword [rax + CONST]
+ mov rcx, rax
+ jmp LABEL60
+LABEL65:
+ mov rcx, qword [rcx]
+ cmp rax, rcx
+ cjmp LABEL57
+LABEL60:
+ cmp edi, dword [rcx + CONST]
+ cjmp LABEL65
+ test esi, esi
+ cjmp LABEL67
+ cmp dword [rcx + CONST], CONST
+ cjmp LABEL67
+ cmp byte [rcx + CONST], CONST
+ cjmp LABEL65
+LABEL67:
+ test rdx, rdx
+ cjmp LABEL73
+ mov dword [rdx], r10d
+ ret
+LABEL73:
+ ret
+LABEL41:
+ test rdx, rdx
+ cjmp LABEL78
+ mov dword [rdx], CONST
+ xor eax, eax
+ ret
+LABEL78:
+ xor eax, eax
+ ret

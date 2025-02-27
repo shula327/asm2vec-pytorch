@@ -1,0 +1,26 @@
+ .name fcn.00012520
+ .offset 0000000000012520
+ .file find
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov rbx, rax
+ lea rsi, qword [rax + CONST]
+ test rbp, rbp
+ cjmp LABEL8
+ mov rdi, rbp
+ call CONST
+LABEL20:
+ mov dword [rbx + CONST], CONST
+ mov eax, CONST
+ mov dword [rbx + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ jmp LABEL20

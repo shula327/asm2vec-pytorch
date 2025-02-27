@@ -1,0 +1,40 @@
+ .name fcn.0001b0f0
+ .offset 000000000001b0f0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov edx, dword [rsi]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov byte [rsp + CONST], CONST
+ movabs rax, CONST
+ mov qword [rsp + CONST], rax
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL11
+ cmp edx, CONST
+ mov eax, CONST
+ mov edx, CONST
+ cmove eax, edx
+LABEL11:
+ mov byte [rsp + CONST], al
+ mov eax, dword [rdi + CONST]
+ lea rdx, [rsp + CONST]
+ lea rsi, [rip + CONST]
+ mov r8, qword [rdi + CONST]
+ mov edi, CONST
+ and eax, CONST
+ cmp eax, CONST
+ sbb ecx, ecx
+ xor eax, eax
+ and ecx, CONST
+ add ecx, CONST
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL31
+ add rsp, CONST
+ ret
+LABEL31:
+ call CONST

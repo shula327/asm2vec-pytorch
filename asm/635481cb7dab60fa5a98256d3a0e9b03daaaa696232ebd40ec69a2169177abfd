@@ -1,0 +1,43 @@
+ .name sym.Perl_hv_iterinit
+ .offset 00000000000f8340
+ .file perl5.30.0
+ endbr64
+ mov edx, dword [rsi + CONST]
+ push rbx
+ mov rbx, rsi
+ test edx, CONST
+ cjmp LABEL5
+ mov rax, qword [rsi]
+ mov rcx, qword [rax + CONST]
+ mov rax, qword [rsi + CONST]
+ lea rax, [rax + rcx*CONST + CONST]
+ mov r8, qword [rax + CONST]
+ test r8, r8
+ cjmp LABEL12
+ test edx, CONST
+ cjmp LABEL14
+LABEL12:
+ mov edx, dword [rax + CONST]
+ mov qword [rax + CONST], CONST
+ mov dword [rax + CONST], CONST
+ mov dword [rax + CONST], edx
+ mov rax, qword [rbx]
+ pop rbx
+ mov rax, qword [rax + CONST]
+ ret
+LABEL5:
+ call CONST
+ mov rax, qword [rbx]
+ pop rbx
+ mov rax, qword [rax + CONST]
+ ret
+LABEL14:
+ and edx, CONST
+ mov dword [rsi + CONST], edx
+ mov rdx, r8
+ call CONST
+ mov rax, qword [rbx]
+ mov rdx, qword [rax + CONST]
+ mov rax, qword [rbx + CONST]
+ lea rax, [rax + rdx*CONST + CONST]
+ jmp LABEL12

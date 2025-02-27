@@ -1,0 +1,44 @@
+ .name fcn.00011700
+ .offset 0000000000011700
+ .file grep
+ endbr64
+ cmp rdi, rsi
+ cjmp LABEL2
+ push rbx
+ xor edx, edx
+ jmp LABEL5
+LABEL25:
+ add eax, CONST
+ add r8d, CONST
+ cmp r10d, CONST
+ cjmp LABEL9
+LABEL27:
+ lea ebx, [r9 + CONST]
+ add ecx, CONST
+ test eax, eax
+ cjmp LABEL13
+LABEL9:
+ add rdx, CONST
+ cmp r8b, cl
+ cjmp LABEL13
+LABEL5:
+ movzx eax, byte [rdi + rdx]
+ movzx r9d, byte [rsi + rdx]
+ lea r11d, [rax + CONST]
+ mov r8d, eax
+ mov ecx, r9d
+ mov ebx, r9d
+ lea r10d, [r9 + CONST]
+ cmp r11d, CONST
+ cjmp LABEL25
+ cmp r10d, CONST
+ cjmp LABEL27
+ test eax, eax
+ cjmp LABEL9
+LABEL13:
+ sub eax, ebx
+ pop rbx
+ ret
+LABEL2:
+ xor eax, eax
+ ret

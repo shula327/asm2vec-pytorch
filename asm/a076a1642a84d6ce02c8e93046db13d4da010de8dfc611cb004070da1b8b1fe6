@@ -1,0 +1,40 @@
+ .name fcn.00004770
+ .offset 0000000000004770
+ .file bunzip2
+ push r12
+ xor eax, eax
+ mov edx, CONST
+ mov esi, CONST
+ push rbp
+ lea rdi, [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL9
+ lea rsi, [rip + CONST]
+ mov edi, eax
+ mov ebp, eax
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL16
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret
+LABEL9:
+ xor r12d, r12d
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret
+LABEL16:
+ mov edi, ebp
+ call CONST
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret

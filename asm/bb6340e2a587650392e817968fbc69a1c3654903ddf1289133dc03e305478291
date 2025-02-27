@@ -1,0 +1,34 @@
+ .name fcn.000087c0
+ .offset 00000000000087c0
+ .file logger
+ push r12
+ mov r12, rdi
+ mov rdi, rsi
+ push rbp
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ mov rsi, rax
+ mov rdi, r12
+ mov rbp, rax
+ call CONST
+ test eax, eax
+ cjmp LABEL13
+LABEL27:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL13:
+ mov rdi, rbp
+ mov dword [rsp + CONST], eax
+ call CONST
+ mov eax, dword [rsp + CONST]
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL7:
+ mov eax, CONST
+ jmp LABEL27

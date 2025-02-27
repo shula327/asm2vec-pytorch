@@ -1,0 +1,71 @@
+ .name fcn.00006510
+ .offset 0000000000006510
+ .file install
+ endbr64
+ push r14
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL11
+LABEL30:
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL16
+ cmp byte [rbx + CONST], CONST
+ cjmp LABEL18
+LABEL16:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL11:
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL30
+ call CONST
+ mov r13, rax
+ mov eax, dword [rax]
+ cmp eax, CONST
+ cjmp LABEL30
+ cmp eax, CONST
+ cjmp LABEL30
+ mov rsi, r12
+ mov edi, CONST
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov r14, rax
+ call CONST
+ mov esi, dword [r13]
+ mov rcx, r14
+ xor edi, edi
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL30
+LABEL18:
+ mov rdi, r12
+ mov dword [rsp + CONST], eax
+ call CONST
+ mov eax, dword [rsp + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

@@ -1,0 +1,114 @@
+ .name fcn.00084da0
+ .offset 0000000000084da0
+ .file bash
+ push r15
+ mov r15, rdi
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp + CONST], CONST
+ call CONST
+ lea r12, qword [r15 + rax]
+ movzx eax, byte [r15]
+ test al, al
+ cjmp LABEL16
+ lea rbx, qword [r15 + CONST]
+ xor r13d, r13d
+ lea r14, qword [rip + CONST]
+ lea r8, qword [rsp + CONST]
+ lea rbp, qword [rip + CONST]
+LABEL49:
+ sub eax, CONST
+ cmp al, CONST
+ cjmp LABEL24
+ movzx eax, al
+ movsxd rax, dword [rbp + rax*CONST]
+ add rax, rbp
+ jmp rax
+ cmp byte [r15 + CONST], CONST
+ lea rbx, qword [r15 + CONST]
+ cjmp LABEL16
+ nop dword [rax + rax]
+LABEL24:
+ cmp dword [rip + CONST], CONST
+ lea rsi, qword [rbx + CONST]
+ mov r15, rbx
+ cjmp LABEL36
+ movzx ecx, byte [rbx + CONST]
+ mov eax, ecx
+ shr al, CONST
+ and eax, CONST
+ mov eax, dword [r14 + rax*CONST]
+ shr eax, cl
+ test al, CONST
+ cjmp LABEL44
+LABEL53:
+ mov r15, rbx
+LABEL36:
+ movzx eax, byte [r15]
+ add rbx, CONST
+ test al, al
+ cjmp LABEL49
+LABEL16:
+ xor eax, eax
+ jmp LABEL51
+ test r13d, r13d
+ cjmp LABEL53
+LABEL80:
+ mov eax, CONST
+LABEL51:
+ mov rdx, qword [rsp + CONST]
+ xor rdx, qword fs:[CONST]
+ cjmp LABEL57
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL44:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL68
+ test cl, cl
+ cjmp LABEL68
+ setne al
+ movzx eax, al
+LABEL95:
+ mov r15, rbx
+ test rax, rax
+ cjmp LABEL36
+ lea rbx, qword [rsi + rax]
+ jmp LABEL53
+ cmp byte [r15 + CONST], CONST
+ cjmp LABEL53
+ jmp LABEL80
+ add r13d, CONST
+ mov r15, rbx
+ jmp LABEL36
+LABEL68:
+ mov rdx, r12
+ mov rcx, r8
+ xor edi, edi
+ mov qword [rsp + CONST], r8
+ sub rdx, rsi
+ mov qword [rsp], rsi
+ mov r15, qword [rsp + CONST]
+ call CONST
+ mov rsi, qword [rsp]
+ mov r8, qword [rsp + CONST]
+ cmp rax, -3
+ cjmp LABEL95
+ mov qword [rsp + CONST], r15
+ mov r15, rbx
+ jmp LABEL36
+LABEL57:
+ call CONST

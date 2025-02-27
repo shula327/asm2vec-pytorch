@@ -1,0 +1,35 @@
+ .name fcn.0001b720
+ .offset 000000000001b720
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov eax, dword [rdi + CONST]
+ test eax, eax
+ cjmp LABEL4
+ cmp eax, CONST
+ cjmp LABEL6
+ mov rax, qword [rdi + CONST]
+LABEL28:
+ add rsp, CONST
+ ret
+LABEL4:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ lea rdx, [rip + CONST]
+ cmp rax, rdx
+ lea rdx, [rip + CONST]
+ cmove rax, rdx
+ add rsp, CONST
+ ret
+LABEL6:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ lea rdx, [rip + CONST]
+ cmp rax, rdx
+ lea rdx, [rip + CONST]
+ cmove rax, rdx
+ jmp LABEL28

@@ -1,0 +1,64 @@
+ .name sym.Perl__invlist_search
+ .offset 00000000000b06c0
+ .file perl5.30.0
+ endbr64
+ mov r10, qword [rdi]
+ mov r9, CONST
+ mov rax, qword [r10 + CONST]
+ test rax, rax
+ cjmp LABEL5
+ movzx edx, byte [r10 + CONST]
+ shr rax, CONST
+ sub rax, rdx
+ lea r9, [rax + CONST]
+ cjmp LABEL10
+ mov rax, qword [rdi + CONST]
+ cmp qword [r10 + CONST], r9
+ lea r8, [rax + rdx*CONST]
+ mov rdx, r9
+ cmovle rdx, qword [r10 + CONST]
+ lea rax, [rdx*CONST]
+ cmp qword [r8 + rdx*CONST], rsi
+ cjmp LABEL18
+ cmp qword [r8], rsi
+ cjmp LABEL10
+ xor edi, edi
+ cmp qword [r8 + rax + CONST], rsi
+ cjmp LABEL23
+ jmp LABEL24
+LABEL34:
+ lea rcx, [rdx + rdi]
+ mov rax, rcx
+ shr rax, CONST
+ add rax, rcx
+ sar rax, CONST
+ cmp qword [r8 + rax*CONST], rsi
+ cjmp LABEL31
+ mov rdx, rax
+LABEL23:
+ cmp rdx, rdi
+ cjmp LABEL34
+LABEL24:
+ lea r9, [rdx + CONST]
+ mov qword [r10 + CONST], r9
+LABEL5:
+ mov rax, r9
+ ret
+LABEL18:
+ cmp qword [r8 + r9*CONST], rsi
+ cjmp LABEL5
+ cmp qword [r8 + rax + CONST], rsi
+ cjmp LABEL42
+ lea rdi, [rdx + CONST]
+ mov rdx, r9
+ jmp LABEL23
+LABEL31:
+ lea rdi, [rax + CONST]
+ jmp LABEL23
+LABEL42:
+ mov r9, rdx
+ mov rax, r9
+ ret
+LABEL10:
+ mov r9, CONST
+ jmp LABEL5

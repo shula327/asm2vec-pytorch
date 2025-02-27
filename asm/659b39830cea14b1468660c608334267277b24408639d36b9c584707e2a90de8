@@ -1,0 +1,41 @@
+ .name fcn.0002fa80
+ .offset 000000000002fa80
+ .file dpkg
+ endbr64
+ push r13
+ add rsi, CONST
+ push r12
+ mov r12, rcx
+ push rbp
+ mov rbp, rdx
+ mov rdx, rcx
+ push rbx
+ mov rdi, rbp
+ mov rbx, r8
+ sub rsp, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL14
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL14:
+ mov r13, qword [rbx]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ add rsp, CONST
+ mov rcx, r12
+ mov rdi, rbp
+ pop rbx
+ mov rsi, rax
+ pop rbp
+ mov rdx, r13
+ pop r12
+ xor eax, eax
+ pop r13
+ jmp CONST

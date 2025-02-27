@@ -1,0 +1,23 @@
+ .name fcn.0000c520
+ .offset 000000000000c520
+ .file gzip
+ mov eax, dword [rip + CONST]
+ cmp eax, dword [rip + CONST]
+ cjmp LABEL2
+ lea edx, dword [rax + CONST]
+ mov dword [rip + CONST], edx
+ lea rdx, qword [rip + CONST]
+ movzx eax, byte [rdx + rax]
+ ret
+LABEL2:
+ sub rsp, CONST
+ xor edi, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL12
+ add rsp, CONST
+ ret
+LABEL12:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ nop dword [rax + rax]

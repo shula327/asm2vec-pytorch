@@ -1,0 +1,51 @@
+ .name fcn.0000e660
+ .offset 000000000000e660
+ .file partx
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ add r12, CONST
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov r9, r13
+ mov r8, rbp
+ mov ecx, CONST
+ mov edx, CONST
+ mov esi, CONST
+ mov rdi, r12
+ mov rbx, rax
+ mov dword [rax], CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL20
+ cmp eax, CONST
+ cjmp LABEL22
+LABEL42:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL22:
+ mov dword [rbx], CONST
+ xor r12d, r12d
+ add rsp, CONST
+ pop rbx
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL20:
+ mov eax, dword [rbx]
+ xor r12d, r12d
+ test eax, eax
+ cjmp LABEL42
+ mov dword [rbx], CONST
+ jmp LABEL42

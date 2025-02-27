@@ -1,0 +1,25 @@
+ .name fcn.00005880
+ .offset 0000000000005880
+ .file cksum
+ endbr64
+ push rbp
+ mov rbp, rdi
+ test rdi, rdi
+ cjmp LABEL4
+ call CONST
+ test eax, eax
+ cjmp LABEL4
+ test dword [rbp], CONST
+ cjmp LABEL9
+LABEL4:
+ mov rdi, rbp
+ pop rbp
+ jmp CONST
+LABEL9:
+ mov rdi, rbp
+ mov edx, CONST
+ xor esi, esi
+ call CONST
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

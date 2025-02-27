@@ -1,0 +1,70 @@
+ .name fcn.000e71e0
+ .offset 00000000000e71e0
+ .file perl5.30.0
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rdx
+ sub rsp, CONST
+ mov rax, qword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL7
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL7
+ call rax
+LABEL7:
+ movzx eax, byte [rbp + CONST]
+ mov rdi, qword [rbp + CONST]
+ cmp al, CONST
+ cjmp LABEL15
+LABEL49:
+ cmp al, CONST
+ cjmp LABEL17
+ test rdi, rdi
+ cjmp LABEL17
+ mov rdx, qword [rbp + CONST]
+ test rdx, rdx
+ cjmp LABEL22
+ cmp al, CONST
+ cjmp LABEL22
+ cmp rdx, -2
+ cjmp LABEL17
+ mov edx, dword [rdi + CONST]
+ cmp edx, CONST
+ cjmp LABEL29
+ sub edx, CONST
+ mov dword [rdi + CONST], edx
+ nop word [rax + rax]
+LABEL17:
+ test byte [rbp + CONST], CONST
+ cjmp LABEL34
+ mov rsi, qword [rbp + CONST]
+ test rsi, rsi
+ cjmp LABEL34
+ mov edx, dword [rsi + CONST]
+ cmp edx, CONST
+ cjmp LABEL40
+ sub edx, CONST
+ mov dword [rsi + CONST], edx
+LABEL34:
+ add rsp, CONST
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL15:
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL49
+LABEL22:
+ call CONST
+ jmp LABEL17
+LABEL29:
+ mov rsi, rdi
+ mov rdi, r12
+ call CONST
+ jmp LABEL17
+LABEL40:
+ mov rdi, r12
+ call CONST
+ jmp LABEL34

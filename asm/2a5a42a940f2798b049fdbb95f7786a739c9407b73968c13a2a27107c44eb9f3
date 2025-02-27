@@ -1,0 +1,28 @@
+ .name fcn.00025aa0
+ .offset 0000000000025aa0
+ .file grep
+LABEL4:
+ call CONST
+ endbr64
+ sub rsp, CONST
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL4
+ mov edx, dword [rdi + CONST]
+ mov ecx, dword [rdi + CONST]
+ mov rax, rdx
+ lea rdx, [rdi + rdx*CONST]
+ mov r8d, dword [rdx]
+ mov dword [rdx], ecx
+ cmp eax, dword [rdi + CONST]
+ cjmp LABEL12
+ add eax, CONST
+ and eax, CONST
+ mov dword [rdi + CONST], eax
+ mov eax, r8d
+ add rsp, CONST
+ ret
+LABEL12:
+ mov byte [rdi + CONST], CONST
+ mov eax, r8d
+ add rsp, CONST
+ ret

@@ -1,0 +1,128 @@
+ .name fcn.0000f730
+ .offset 000000000000f730
+ .file partx
+ push rbp
+ mov rbp, rsp
+ push r15
+ push r14
+ lea r14d, dword [rdx*CONST]
+ push r13
+ sub r14d, edx
+ push r12
+ mov r12d, edx
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov dword [rbp + CONST], ecx
+ mov rcx, rsp
+ mov rax, qword fs:[CONST]
+ mov qword [rbp + CONST], rax
+ xor eax, eax
+ movsxd rax, r14d
+ add rax, CONST
+ mov rdx, rax
+ and rax, CONST
+ sub rcx, rax
+ and rdx, CONST
+ mov rax, rcx
+ cmp rsp, rax
+ cjmp LABEL25
+LABEL29:
+ sub rsp, CONST
+ or qword [rsp + CONST], CONST
+ cmp rsp, rax
+ cjmp LABEL29
+LABEL25:
+ and edx, CONST
+ sub rsp, rdx
+ test rdx, rdx
+ cjmp LABEL33
+LABEL103:
+ mov qword [rbx], CONST
+ mov rcx, r9
+ mov rdx, r8
+ mov r15, rsp
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov r13, rax
+ test rax, rax
+ cjmp LABEL42
+ mov rdx, rax
+ mov esi, r14d
+ mov rdi, rsp
+ call CONST
+ test rax, rax
+ cjmp LABEL48
+ mov rdi, r13
+ call CONST
+LABEL98:
+ mov rdi, r15
+ call CONST
+ cmp byte [r15 + rax + CONST], CONST
+ cjmp LABEL54
+ mov byte [r15 + rax + CONST], CONST
+LABEL54:
+ lea rsi, qword [rbp + CONST]
+ xor edx, edx
+ mov edi, r12d
+ call CONST
+ mov qword [rbx], rax
+ mov rsi, rax
+ test rax, rax
+ cjmp LABEL63
+ mov eax, dword [rbp + CONST]
+ mov rdx, qword [rbp + CONST]
+ test eax, eax
+ cjmp LABEL67
+ xor ecx, ecx
+ mov rdi, r15
+ call CONST
+ test eax, eax
+ cjmp LABEL72
+LABEL88:
+ xor eax, eax
+LABEL92:
+ mov rbx, qword [rbp + CONST]
+ xor rbx, qword fs:[CONST]
+ cjmp LABEL76
+ lea rsp, qword [rbp + CONST]
+ pop rbx
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ pop rbp
+ ret
+LABEL67:
+ mov rdi, r15
+ call CONST
+ test eax, eax
+ cjmp LABEL88
+LABEL72:
+ mov rdi, qword [rbx]
+ call CONST
+ mov eax, CONST
+ jmp LABEL92
+LABEL48:
+ call CONST
+ mov rdi, r13
+ mov r14d, dword [rax]
+ call CONST
+ test r14d, r14d
+ cjmp LABEL98
+ mov eax, r14d
+ neg eax
+ jmp LABEL92
+LABEL33:
+ or qword [rsp + rdx + CONST], CONST
+ jmp LABEL103
+LABEL42:
+ call CONST
+ mov eax, dword [rax]
+ neg eax
+ jmp LABEL92
+LABEL63:
+ mov eax, CONST
+ jmp LABEL92
+LABEL76:
+ call CONST

@@ -1,0 +1,19 @@
+ .name fcn.000191e0
+ .offset 00000000000191e0
+ .file install
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi + CONST]
+ test rdi, rdi
+ cjmp LABEL5
+ call CONST
+LABEL5:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL9
+ pop rbx
+ jmp CONST
+LABEL9:
+ pop rbx
+ ret

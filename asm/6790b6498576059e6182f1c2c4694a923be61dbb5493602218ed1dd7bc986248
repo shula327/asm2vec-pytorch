@@ -1,0 +1,18 @@
+ .name fcn.00005760
+ .offset 0000000000005760
+ .file cksum
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ mov rdi, rsi
+ sub rsp, CONST
+ call CONST
+ add rsp, CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, rax
+ pop rbp
+ pop r12
+ jmp CONST

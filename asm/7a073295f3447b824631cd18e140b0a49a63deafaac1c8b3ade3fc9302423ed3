@@ -1,0 +1,70 @@
+ .name fcn.000ce650
+ .offset 00000000000ce650
+ .file bash
+ push r13
+ push r12
+ mov r12d, edi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ xor eax, eax
+ cmp edi, CONST
+ lea rdi, qword [rsp + CONST]
+ sete al
+ mov qword [rsp + CONST], rsi
+ lea r13, qword [rsp + CONST]
+ shl eax, CONST
+ mov dword [rsp + CONST], eax
+ call CONST
+ lea rdi, qword [rbx + CONST]
+ call CONST
+ mov rdx, rsp
+ mov rsi, r13
+ mov edi, r12d
+ call CONST
+ lea rax, qword [rip + CONST]
+ cmp rbp, rax
+ cjmp LABEL28
+LABEL60:
+ movdqa xmm0, xmmword [rsp]
+ mov rax, qword [rsp + CONST]
+ movdqa xmm1, xmmword [rsp + CONST]
+ movdqa xmm2, xmmword [rsp + CONST]
+ movdqa xmm3, xmmword [rsp + CONST]
+ movdqa xmm4, xmmword [rsp + CONST]
+ movaps xmmword [rbx], xmm0
+ movdqa xmm5, xmmword [rsp + CONST]
+ movdqa xmm6, xmmword [rsp + CONST]
+ movaps xmmword [rbx + CONST], xmm1
+ movdqa xmm7, xmmword [rsp + CONST]
+ mov qword [rbx + CONST], rax
+ movdqa xmm0, xmmword [rsp + CONST]
+ movaps xmmword [rbx + CONST], xmm2
+ movaps xmmword [rbx + CONST], xmm3
+ movaps xmmword [rbx + CONST], xmm4
+ movaps xmmword [rbx + CONST], xmm5
+ movaps xmmword [rbx + CONST], xmm6
+ movaps xmmword [rbx + CONST], xmm7
+ movaps xmmword [rbx + CONST], xmm0
+LABEL61:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ mov rax, qword [rbx]
+ cjmp LABEL52
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL28:
+ cmp qword [rsp], rbp
+ cjmp LABEL60
+ jmp LABEL61
+LABEL52:
+ call CONST

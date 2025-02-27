@@ -1,0 +1,46 @@
+ .name fcn.00029fe0
+ .offset 0000000000029fe0
+ .file dpkg
+ endbr64
+ mov r8, rdi
+ test rdx, rdx
+ cjmp LABEL3
+ movzx ecx, byte [rsi]
+ test cl, cl
+ cjmp LABEL6
+ jmp LABEL7
+LABEL23:
+ mov rcx, rax
+ mov rax, rdx
+ mov r8, rdi
+ mov rdx, rcx
+ cmp rax, CONST
+ cjmp LABEL7
+LABEL30:
+ movzx eax, byte [rsi]
+ add rsi, CONST
+ lea rdi, [r8 + CONST]
+ mov byte [r8], al
+ movzx ecx, byte [rsi]
+ test cl, cl
+ cjmp LABEL20
+LABEL6:
+ lea rax, [rdx + CONST]
+ cmp cl, CONST
+ cjmp LABEL23
+ cmp rdx, CONST
+ cjmp LABEL20
+ mov byte [rdi], CONST
+ lea r8, [rdi + CONST]
+ sub rdx, CONST
+ cmp rax, CONST
+ cjmp LABEL30
+LABEL7:
+ mov byte [r8], CONST
+LABEL3:
+ mov rax, r8
+ ret
+LABEL20:
+ mov r8, rdi
+ mov byte [r8], CONST
+ jmp LABEL3

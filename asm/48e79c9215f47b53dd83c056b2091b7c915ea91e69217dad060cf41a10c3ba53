@@ -1,0 +1,38 @@
+ .name fcn.0000e2d0
+ .offset 000000000000e2d0
+ .file install
+LABEL29:
+ sub rsp, CONST
+ mov r9, qword [rip + CONST]
+ mov r8d, CONST
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ call CONST
+ mov r8, rax
+ lea rax, [rip + CONST]
+ mov eax, dword [rax + r8*CONST]
+ add rsp, CONST
+ ret
+ endbr64
+ test rsi, rsi
+ cjmp LABEL13
+ cmp byte [rsi], CONST
+ cjmp LABEL15
+LABEL13:
+ sub rsp, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rsi, rax
+ test rax, rax
+ cjmp LABEL21
+ cmp byte [rax], CONST
+ cjmp LABEL23
+LABEL21:
+ mov eax, CONST
+ add rsp, CONST
+ ret
+LABEL23:
+ lea rdi, [rip + CONST]
+ add rsp, CONST
+LABEL15:
+ jmp LABEL29

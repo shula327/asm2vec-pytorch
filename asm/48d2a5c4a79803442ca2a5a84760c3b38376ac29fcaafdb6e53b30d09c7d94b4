@@ -1,0 +1,257 @@
+ .name fcn.000206c0
+ .offset 00000000000206c0
+ .file dpkg
+ endbr64
+ lea rax, [rsi + CONST]
+ cmp rdx, rax
+ cjmp LABEL3
+ ret
+LABEL3:
+ push r13
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov ebx, dword [rsi + CONST]
+ cmp ebx, CONST
+ cjmp LABEL14
+ mov ebx, dword [rsi + CONST]
+ cmp ebx, CONST
+ cjmp LABEL17
+ mov r8d, dword [rsi + CONST]
+ cmp r8d, CONST
+ cjmp LABEL20
+ lea rdx, [rip + CONST]
+ mov r13, rdi
+ movsxd rax, dword [rdx + r8*CONST]
+ add rax, rdx
+ notrack jmp rax
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL27
+LABEL77:
+ and ecx, CONST
+ cjmp LABEL29
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov rdi, r13
+ mov rsi, rax
+ call CONST
+ mov esi, CONST
+ mov rdi, r13
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov rdi, r13
+ mov rsi, rax
+ call CONST
+ mov esi, CONST
+ mov rdi, r13
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ add rsp, CONST
+ mov rdx, r12
+ mov rdi, r13
+ pop rbx
+ mov rsi, rax
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL75
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL77
+LABEL75:
+ mov rdi, rbp
+ call CONST
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov r9, r13
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL94
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL77
+LABEL94:
+ mov rdi, rbp
+ call CONST
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov r9, r13
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL113
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL77
+LABEL113:
+ mov rdi, rbp
+ call CONST
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov r9, r13
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL77
+ mov rdi, rsi
+ call CONST
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov r9, r13
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL29:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov rdi, r13
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov rdi, r13
+ mov rsi, rax
+ call CONST
+ mov esi, CONST
+ mov rdi, r13
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov rdi, r13
+ mov rsi, rax
+ call CONST
+ mov esi, CONST
+ mov rdi, r13
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ mov rdi, r13
+ mov rdx, r12
+ mov rsi, rax
+ call CONST
+ add rsp, CONST
+ mov rdi, r13
+ mov esi, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL20:
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL14:
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ mov r9d, ebx
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL17:
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ mov r9d, ebx
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL27:
+ mov rdi, rsi
+ call CONST
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov r9, r13
+ mov esi, CONST
+ lea rcx, [rip + CONST]
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST

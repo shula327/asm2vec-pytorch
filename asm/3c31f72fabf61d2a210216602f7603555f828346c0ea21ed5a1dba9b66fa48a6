@@ -1,0 +1,113 @@
+ .name fcn.000074d0
+ .offset 00000000000074d0
+ .file lslogins
+ push r12
+ pxor xmm0, xmm0
+ push rbp
+ sub rsp, CONST
+ mov qword [rsp + CONST], rsi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm0
+ cmp edi, CONST
+ cjmp LABEL13
+ cjmp LABEL14
+ cmp edi, CONST
+ cjmp LABEL16
+ cmp edi, CONST
+ cjmp LABEL18
+ lea r12, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ mov rsi, r12
+ lea rbp, qword [rsp + CONST]
+ call CONST
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+ mov rdx, rbp
+LABEL34:
+ mov ecx, dword [rdx]
+ add rdx, CONST
+ lea eax, dword [rcx + CONST]
+ not ecx
+ and eax, ecx
+ and eax, CONST
+ cjmp LABEL34
+ mov ecx, eax
+ shr ecx, CONST
+ test eax, CONST
+ cmove eax, ecx
+ lea rcx, qword [rdx + CONST]
+ cmove rdx, rcx
+ mov esi, eax
+ add sil, al
+ sbb rdx, CONST
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL45
+ mov byte [rdx + CONST], CONST
+ jmp LABEL45
+LABEL14:
+ cmp edi, CONST
+ cjmp LABEL18
+ lea rbp, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ mov ecx, CONST
+ mov esi, CONST
+ mov rdx, rbp
+ call CONST
+LABEL76:
+ test eax, eax
+ cjmp LABEL57
+LABEL45:
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL61
+ mov rsi, qword [rsp + CONST]
+ xor rsi, qword fs:[CONST]
+ cjmp LABEL64
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL16:
+ lea rbp, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ mov r8d, CONST
+ mov edx, CONST
+ mov rcx, rbp
+ lea rsi, qword [rip + CONST]
+ call CONST
+ jmp LABEL76
+LABEL13:
+ lea rbp, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ mov ecx, CONST
+ mov esi, CONST
+ mov rdx, rbp
+ call CONST
+ jmp LABEL76
+LABEL18:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+LABEL98:
+ xor edi, edi
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL61:
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ call CONST
+LABEL64:
+ call CONST
+LABEL57:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ jmp LABEL98

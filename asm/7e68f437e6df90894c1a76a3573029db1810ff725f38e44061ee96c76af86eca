@@ -1,0 +1,73 @@
+ .name fcn.000c2b10
+ .offset 00000000000c2b10
+ .file bash
+ movsxd rcx, dword [rsi]
+ movzx edx, byte [rdi + rcx]
+ mov rax, rcx
+ cmp dl, CONST
+ cjmp LABEL4
+ cmp dl, CONST
+ cjmp LABEL4
+ mov r8d, edx
+ and r8d, CONST
+ cmp r8b, CONST
+ cjmp LABEL10
+ movsx ecx, byte [rdi + rcx + CONST]
+ cmp dl, CONST
+ cjmp LABEL13
+ cmp ecx, CONST
+ cjmp LABEL15
+LABEL58:
+ add eax, CONST
+ mov r8d, CONST
+ nop dword [rax]
+LABEL24:
+ mov dword [rsi], eax
+LABEL51:
+ mov eax, r8d
+ ret
+LABEL4:
+ mov r8d, CONST
+ test dl, dl
+ cjmp LABEL24
+ movsx ecx, byte [rdi + rcx + CONST]
+ cmp dl, CONST
+ cjmp LABEL27
+ lea edx, dword [rax + CONST]
+ add eax, CONST
+ cmp ecx, CONST
+ mov r8d, CONST
+ cmovne eax, edx
+ jmp LABEL24
+LABEL27:
+ cmp ecx, CONST
+ cjmp LABEL35
+ add eax, CONST
+ mov r8d, CONST
+ jmp LABEL24
+LABEL15:
+ add eax, CONST
+ mov r8d, CONST
+ jmp LABEL24
+LABEL13:
+ or r8d, CONST
+ cmp dl, CONST
+ cjmp LABEL24
+ cmp ecx, CONST
+ cjmp LABEL46
+ add eax, CONST
+ mov r8d, CONST
+ jmp LABEL24
+LABEL10:
+ mov r8d, CONST
+ jmp LABEL51
+LABEL46:
+ add eax, CONST
+ mov r8d, CONST
+ jmp LABEL24
+LABEL35:
+ cmp dl, CONST
+ cjmp LABEL46
+ cmp dl, CONST
+ cjmp LABEL58
+ jmp LABEL24

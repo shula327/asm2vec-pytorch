@@ -1,0 +1,38 @@
+ .name fcn.00006ac0
+ .offset 0000000000006ac0
+ .file lslogins
+ push r12
+ push rbp
+ push rbx
+ test rdx, rdx
+ cjmp LABEL4
+ mov rbx, qword [rsi]
+ mov rbp, rdx
+ mov rdx, qword [rdi]
+ lea rax, qword [rbx + rbx*CONST]
+ shl rax, CONST
+ lea r12, qword [rdx + rax + CONST]
+ jmp LABEL11
+LABEL20:
+ sub r12, CONST
+ sub rbx, CONST
+ cjmp LABEL4
+LABEL11:
+ lea rsi, qword [r12 + CONST]
+ mov edx, CONST
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL20
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL4:
+ xor r12d, r12d
+ pop rbx
+ pop rbp
+ mov rax, r12
+ pop r12
+ ret

@@ -1,0 +1,27 @@
+ .name fcn.0016e250
+ .offset 000000000016e250
+ .file perl5.30.0
+ test rsi, rsi
+ cjmp LABEL1
+ mov rax, rdi
+ lea rdi, qword [rip + CONST]
+ jmp LABEL4
+LABEL15:
+ cmp rax, rdx
+ cjmp LABEL6
+ movzx ecx, byte [rax]
+ sub rsi, CONST
+ movzx ecx, byte [rdi + rcx]
+ add rcx, rax
+ cmp rdx, rcx
+ cjmp LABEL12
+ mov rax, rcx
+LABEL4:
+ test rsi, rsi
+ cjmp LABEL15
+LABEL12:
+ ret
+LABEL1:
+ jmp CONST
+LABEL6:
+ ret

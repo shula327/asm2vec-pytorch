@@ -1,0 +1,31 @@
+ .name fcn.00021e80
+ .offset 0000000000021e80
+ .file grep
+ endbr64
+ sub rsp, CONST
+ mov rax, rsi
+ mov rsi, qword [rsi]
+ test rdi, rdi
+ cjmp LABEL5
+ movabs rdx, CONST
+ cmp rsi, rdx
+ cjmp LABEL8
+ mov rdx, rsi
+ shr rdx, CONST
+ lea rsi, [rsi + rdx + CONST]
+LABEL21:
+ mov qword [rax], rsi
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ add rsp, CONST
+ ret
+LABEL5:
+ test rsi, rsi
+ cjmp LABEL19
+ mov esi, CONST
+ jmp LABEL21
+LABEL19:
+ cjmp LABEL21
+LABEL8:
+ call CONST

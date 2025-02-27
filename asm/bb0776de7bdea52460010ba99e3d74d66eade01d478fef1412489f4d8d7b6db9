@@ -1,0 +1,113 @@
+ .name fcn.000da1c0
+ .offset 00000000000da1c0
+ .file bash
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ or qword [rsp], CONST
+ sub rsp, CONST
+ mov edx, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbx, rsp
+ mov rbp, rdi
+ mov rsi, rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL15
+ mov byte [rsp + rax], CONST
+ mov rbp, rbx
+LABEL15:
+ mov rdi, rbp
+ call CONST
+ lea rdi, qword [rax + CONST]
+ mov rbx, rax
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ mov r12, rax
+ call CONST
+ call CONST
+ mov byte [r12 + rbx], CONST
+ movsxd rdx, eax
+ mov esi, eax
+ imul rcx, rdx, CONST
+ sar esi, CONST
+ sar rcx, CONST
+ sub ecx, esi
+ movsxd rdi, ecx
+ mov r8d, ecx
+ imul rdi, rdi, CONST
+ sar r8d, CONST
+ sar rdi, CONST
+ sub edi, r8d
+ lea edi, dword [rdi + rdi*CONST]
+ add edi, edi
+ sub ecx, edi
+ add ecx, CONST
+ mov byte [r12 + rbx + CONST], cl
+ imul rcx, rdx, CONST
+ sar rcx, CONST
+ sub ecx, esi
+ movsxd rdi, ecx
+ mov r8d, ecx
+ imul rdi, rdi, CONST
+ sar r8d, CONST
+ sar rdi, CONST
+ sub edi, r8d
+ lea edi, dword [rdi + rdi*CONST]
+ add edi, edi
+ sub ecx, edi
+ add ecx, CONST
+ mov byte [r12 + rbx + CONST], cl
+ imul rcx, rdx, CONST
+ sar rcx, CONST
+ sub ecx, esi
+ movsxd rdi, ecx
+ mov r8d, ecx
+ imul rdi, rdi, CONST
+ sar r8d, CONST
+ sar rdi, CONST
+ sub edi, r8d
+ lea edi, dword [rdi + rdi*CONST]
+ add edi, edi
+ imul rdx, rdx, CONST
+ sub ecx, edi
+ add ecx, CONST
+ sar rdx, CONST
+ mov byte [r12 + rbx + CONST], cl
+ sub edx, esi
+ movsxd rcx, edx
+ mov esi, edx
+ imul rcx, rcx, CONST
+ sar esi, CONST
+ sar rcx, CONST
+ sub ecx, esi
+ mov esi, edx
+ lea edx, dword [rdx + rdx*CONST]
+ lea ecx, dword [rcx + rcx*CONST]
+ add edx, edx
+ add ecx, ecx
+ sub eax, edx
+ sub esi, ecx
+ add eax, CONST
+ mov ecx, esi
+ mov byte [r12 + rbx + CONST], al
+ lea rax, qword [r12 + rbx + CONST]
+ add ecx, CONST
+ mov byte [r12 + rbx + CONST], cl
+ mov dword [rax], CONST
+ mov byte [rax + CONST], CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL100
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL100:
+ call CONST

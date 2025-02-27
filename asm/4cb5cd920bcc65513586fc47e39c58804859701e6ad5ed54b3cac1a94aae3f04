@@ -1,0 +1,72 @@
+ .name fcn.00069990
+ .offset 0000000000069990
+ .file bash
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ test rdi, rdi
+ cjmp LABEL6
+ mov rbp, rdi
+ xor r12d, r12d
+ jmp LABEL9
+LABEL21:
+ mov rbp, qword [rbp]
+ mov rbx, rax
+ mov r12, rax
+ test rbp, rbp
+ cjmp LABEL14
+LABEL9:
+ mov rdi, qword [rbp + CONST]
+ mov rsi, qword [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL19
+LABEL40:
+ test r12, r12
+ cjmp LABEL21
+ mov qword [rbx], rax
+ jmp LABEL23
+LABEL27:
+ mov rbx, rax
+ mov rax, qword [rax]
+LABEL23:
+ test rax, rax
+ cjmp LABEL27
+ mov rbp, qword [rbp]
+ test rbp, rbp
+ cjmp LABEL9
+LABEL14:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL19:
+ mov rdx, qword [rbp + CONST]
+ test rdx, rdx
+ cjmp LABEL40
+ test byte [rdx + CONST], CONST
+ cjmp LABEL40
+ call CONST
+ mov edi, CONST
+ mov r13, rax
+ call CONST
+ xor esi, esi
+ mov rdi, r13
+ mov qword [r13], rax
+ mov byte [rax], CONST
+ call CONST
+ jmp LABEL40
+LABEL6:
+ add rsp, CONST
+ xor r12d, r12d
+ pop rbx
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ ret

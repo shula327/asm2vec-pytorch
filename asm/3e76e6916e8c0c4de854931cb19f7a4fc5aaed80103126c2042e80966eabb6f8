@@ -1,0 +1,24 @@
+ .name fcn.000066f0
+ .offset 00000000000066f0
+ .file update-alternatives
+ push rbp
+ mov rbp, rdi
+ call CONST
+ test eax, eax
+ cjmp LABEL4
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL7
+LABEL4:
+ pop rbp
+ ret
+LABEL7:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop dword [rax]

@@ -1,0 +1,26 @@
+ .name fcn.00002fa0
+ .offset 0000000000002fa0
+ .file cksum
+ endbr64
+ mov byte [rsi + CONST], CONST
+ lea r8, [rsi + CONST]
+ movabs rcx, CONST
+ nop word cs:[rax + rax]
+LABEL19:
+ mov rax, rdi
+ mov rsi, rdi
+ sub r8, CONST
+ mul rcx
+ shr rdx, CONST
+ lea rax, [rdx + rdx*CONST]
+ add rax, rax
+ sub rsi, rax
+ mov rax, rsi
+ add eax, CONST
+ mov byte [r8], al
+ mov rax, rdi
+ mov rdi, rdx
+ cmp rax, CONST
+ cjmp LABEL19
+ mov rax, r8
+ ret

@@ -21,6 +21,11 @@ class ASM2VEC(nn.Module):
         self.embeddings_f = nn.Embedding(function_size_new, 2 * embedding_size, _weight=((torch.rand(function_size_new, 2 * embedding_size)-0.5)/embedding_size/2).to(device))
 
     def v(self, inp):
+        max_index = self.embeddings.num_embeddings - 1
+        print(f"Embedding matrix size: {self.embeddings.num_embeddings}")
+        print(f"Max index in input data: {torch.max(inp[:, 1:])}")
+        if torch.any(inp[:, 1:] > max_index):
+            raise ValueError("Index out of range in input data")
         e  = self.embeddings(inp[:,1:])
         v_f = self.embeddings_f(inp[:,0])
         v_prev = torch.cat([e[:,0], (e[:,1] + e[:,2]) / 2], dim=1)

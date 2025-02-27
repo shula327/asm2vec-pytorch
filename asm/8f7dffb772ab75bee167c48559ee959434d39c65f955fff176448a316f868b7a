@@ -1,0 +1,19 @@
+ .name fcn.00022977
+ .offset 0000000000022977
+ .file grep
+ endbr64
+ lea rdi, [rbp + CONST]
+ mov dword [rbx + CONST], eax
+ xor eax, eax
+ and rdi, CONST
+ mov qword [rbx + CONST], CONST
+ mov qword [rbp + CONST], CONST
+ sub rbp, rdi
+ lea ecx, [rbp + CONST]
+ shr ecx, CONST
+ rep stosq qword [rdi], rax
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret

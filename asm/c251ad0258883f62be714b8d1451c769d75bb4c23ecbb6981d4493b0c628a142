@@ -1,0 +1,37 @@
+ .name fcn.00028a10
+ .offset 0000000000028a10
+ .file find
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rsi, qword [rdi + CONST]
+ mov rdi, qword [rdi + CONST]
+ cmp qword [rbx], rsi
+ cjmp LABEL8
+LABEL27:
+ lea rax, qword [rsi + CONST]
+ mov qword [rbx + CONST], rax
+ mov eax, CONST
+ mov qword [rdi + rsi*CONST], rbp
+LABEL29:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ add rsi, CONST
+ lea rax, qword [rsi + rsi]
+ shl rsi, CONST
+ mov qword [rbx], rax
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL24
+ mov qword [rbx + CONST], rax
+ mov rsi, qword [rbx + CONST]
+ jmp LABEL27
+LABEL24:
+ xor eax, eax
+ jmp LABEL29

@@ -1,0 +1,32 @@
+ .name fcn.000095c0
+ .offset 00000000000095c0
+ .file find
+ push rbp
+ mov rbp, rcx
+ push rbx
+ mov rbx, rsi
+ mov rsi, rdx
+ sub rsp, CONST
+ cmp rdi, rdx
+ cjmp LABEL7
+ xor eax, eax
+ cmp rcx, rbx
+ cjmp LABEL10
+LABEL7:
+ call CONST
+ sub rbx, rbp
+ xor eax, eax
+ movapd xmm1, xmm0
+ pxor xmm0, xmm0
+ cvtsi2sd xmm0, rbx
+ mulsd xmm0, qword [rip + CONST]
+ addsd xmm0, xmm1
+ pxor xmm1, xmm1
+ ucomisd xmm1, xmm0
+ setbe al
+ lea eax, dword [rax + rax + CONST]
+LABEL10:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

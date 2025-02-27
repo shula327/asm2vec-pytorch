@@ -1,0 +1,67 @@
+ .name fcn.0004a930
+ .offset 000000000004a930
+ .file perl5.30.0
+ mov rax, qword [rdi + CONST]
+ mov byte [rdi + CONST], CONST
+ mov r8d, CONST
+ cmp qword [rax + CONST], CONST
+ cjmp LABEL4
+ jmp LABEL5
+LABEL35:
+ mov edx, dword [rsi + CONST]
+ cmp edx, -1
+ cjmp LABEL8
+ mov r10d, dword [rsi + CONST]
+ mov r9d, dword [rdi + CONST]
+ cmp r10d, -1
+ cjmp LABEL12
+ cmp r9d, edx
+ seta cl
+ cmp r9d, r10d
+ setbe r9b
+ mov r11d, ecx
+ or r11d, r9d
+ and ecx, r9d
+ cmp edx, r10d
+ cmova ecx, r11d
+ test cl, cl
+ cjmp LABEL23
+ nop word [rax + rax]
+LABEL8:
+ add r8, CONST
+ cmp qword [rax + CONST], r8
+ cjmp LABEL5
+LABEL4:
+ mov rdx, qword [rax + CONST]
+ mov rsi, qword [rdx + r8*CONST]
+ test rsi, rsi
+ cjmp LABEL8
+ cmp byte [rsi + CONST], CONST
+ cjmp LABEL8
+ test byte [rsi + CONST], CONST
+ cjmp LABEL35
+LABEL23:
+ call CONST
+ mov rax, qword [rdi + CONST]
+LABEL50:
+ add r8, CONST
+ cmp qword [rax + CONST], r8
+ cjmp LABEL4
+LABEL5:
+ ret
+LABEL12:
+ cmp r9d, edx
+ cjmp LABEL43
+ sub edx, r9d
+ shr edx, CONST
+LABEL54:
+ test dl, dl
+ cjmp LABEL8
+ call CONST
+ mov rax, qword [rdi + CONST]
+ jmp LABEL50
+LABEL43:
+ sub r9d, edx
+ cmp r9d, CONST
+ setbe dl
+ jmp LABEL54

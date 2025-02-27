@@ -1,0 +1,133 @@
+ .name fcn.00003040
+ .offset 0000000000003040
+ .file taskset
+LABEL98:
+ push r12
+ push rbp
+ mov ebp, esi
+ push rbx
+ mov rbx, rdi
+ mov rcx, qword [rdi + CONST]
+ mov rdx, qword [rdi + CONST]
+ mov rsi, qword [rdi + CONST]
+ mov rdi, qword [rdi + CONST]
+ test byte [rbx + CONST], CONST
+ cjmp LABEL10
+ call CONST
+ mov edx, CONST
+ mov r12, rax
+ test ebp, ebp
+ cjmp LABEL15
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ jmp LABEL20
+LABEL10:
+ call CONST
+ mov edx, CONST
+ mov r12, rax
+ test ebp, ebp
+ cjmp LABEL25
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+LABEL20:
+ test r12, r12
+ cjmp LABEL31
+ mov edx, dword [rbx]
+ test edx, edx
+ cjmp LABEL34
+LABEL55:
+ pop rbx
+ mov rcx, r12
+ mov rsi, rbp
+ mov edi, CONST
+ pop rbp
+ xor eax, eax
+ pop r12
+ jmp CONST
+LABEL25:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ jmp LABEL20
+LABEL15:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ jmp LABEL20
+LABEL34:
+ call CONST
+ mov edx, eax
+ jmp LABEL55
+LABEL31:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ mov edi, dword [rdi]
+ test edi, edi
+ cjmp LABEL72
+LABEL107:
+ test byte [rbp + CONST], CONST
+ cjmp LABEL74
+LABEL87:
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL74:
+ mov edi, dword [rbp]
+ mov rdx, r13
+ mov rsi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL84
+ mov edi, dword [rbp]
+ test edi, edi
+ cjmp LABEL87
+ mov rdx, qword [rbp + CONST]
+ mov rsi, qword [rbp + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL92
+ mov rdi, rbp
+ mov esi, CONST
+ pop rbp
+ pop r12
+ pop r13
+ jmp LABEL98
+LABEL72:
+ mov rdx, qword [rbp + CONST]
+ mov rsi, qword [rbp + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL84
+ xor esi, esi
+ mov rdi, rbp
+ call LABEL98
+ jmp LABEL107
+LABEL84:
+ mov edi, dword [rbp]
+ mov esi, CONST
+ call CONST
+LABEL92:
+ mov edi, dword [rbp]
+ xor esi, esi
+ call CONST
+ nop word cs:[rax + rax]
+ nop

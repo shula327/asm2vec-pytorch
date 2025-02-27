@@ -1,0 +1,93 @@
+ .name fcn.0001c8e0
+ .offset 000000000001c8e0
+ .file find
+ mov rax, qword [rdi + CONST]
+ mov r8, qword [rsp + CONST]
+ mov r9, qword [rsp + CONST]
+ test rax, rax
+ cjmp LABEL4
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL4
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL4
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL10
+ cmp r9, CONST
+ cjmp LABEL12
+LABEL10:
+ movdqu xmm0, xmmword [rsp + CONST]
+ mov rax, qword [rsp + CONST]
+ mov byte [rdi + CONST], CONST
+ mov qword [rdi + CONST], rax
+ movups xmmword [rdi + CONST], xmm0
+ ret
+LABEL4:
+ cmp r9, CONST
+ cjmp LABEL20
+ add rax, CONST
+ mov r10, r8
+ sub r9, CONST
+ movabs rsi, CONST
+ mov qword [rdi + CONST], rax
+ mov rax, r8
+ sar r10, CONST
+ imul rsi
+ mov qword [rdi + CONST], r9
+ lea rcx, qword [rdx + r8]
+ mov rdx, r8
+ sar rcx, CONST
+ sub rcx, r10
+ lea rax, qword [rcx + rcx*CONST]
+ lea rax, qword [rax + rax*CONST]
+ shl rax, CONST
+ sub rdx, rax
+ mov rax, rcx
+ mov qword [rdi + CONST], rdx
+ imul rsi
+ mov rax, rcx
+ sar rax, CONST
+ lea rsi, qword [rdx + rcx]
+ movabs rdx, CONST
+ sar rsi, CONST
+ sub rsi, rax
+ lea rax, qword [rsi + rsi*CONST]
+ lea rax, qword [rax + rax*CONST]
+ shl rax, CONST
+ sub rcx, rax
+ mov rax, r8
+ imul rdx
+ mov qword [rdi + CONST], rcx
+ sar rdx, CONST
+ sub rdx, r10
+ mov qword [rdi + CONST], rdx
+ ret
+LABEL20:
+ add qword [rdi + CONST], CONST
+ cmp r9, CONST
+ cjmp LABEL60
+ movabs rdx, CONST
+ mov rax, r8
+ imul rdx
+ mov rax, r8
+ sar rax, CONST
+ add rdx, r8
+ sar rdx, CONST
+ sub rdx, rax
+ lea rax, qword [rdx + rdx*CONST]
+ mov qword [rdi + CONST], rdx
+ lea rax, qword [rax + rax*CONST]
+ shl rax, CONST
+ sub r8, rax
+ mov qword [rdi + CONST], r8
+LABEL83:
+ mov qword [rdi + CONST], CONST
+ mov qword [rdi + CONST], CONST
+ mov dword [rdi + CONST], CONST
+ ret
+LABEL12:
+ mov qword [rdi + CONST], CONST
+ nop dword [rax + rax]
+LABEL60:
+ mov qword [rdi + CONST], r8
+ mov qword [rdi + CONST], CONST
+ jmp LABEL83

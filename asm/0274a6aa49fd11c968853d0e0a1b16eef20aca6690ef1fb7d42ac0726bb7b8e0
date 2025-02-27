@@ -1,0 +1,39 @@
+ .name sym.Perl_sv_vsetpvfn
+ .offset 0000000000115e00
+ .file perl5.30.0
+ endbr64
+ push r15
+ mov r15, r9
+ push r14
+ mov r14, rcx
+ xor ecx, ecx
+ push r13
+ mov r13, rdx
+ xor edx, edx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, r8
+ sub rsp, CONST
+ call CONST
+ sub rsp, CONST
+ mov r9, r15
+ mov r8, rbx
+ push CONST
+ mov rcx, r14
+ mov rdx, r13
+ mov rsi, r12
+ push qword [rsp + CONST]
+ mov rdi, rbp
+ push qword [rsp + CONST]
+ call CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret

@@ -1,0 +1,26 @@
+ .name sym.Perl_magic_freearylen_p
+ .offset 00000000000ea740
+ .file perl5.30.0
+ endbr64
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL2
+ mov rax, qword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL2
+ mov rax, qword [rax]
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL2
+LABEL14:
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL11
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL14
+LABEL2:
+ xor eax, eax
+ ret
+LABEL11:
+ mov qword [rax + CONST], CONST
+ xor eax, eax
+ ret

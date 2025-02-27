@@ -1,0 +1,21 @@
+ .name fcn.0008a790
+ .offset 000000000008a790
+ .file bash
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL3
+ cmp byte [rax], CONST
+ cjmp LABEL5
+LABEL3:
+ add rsp, CONST
+ ret
+LABEL5:
+ mov rdi, rax
+ call CONST
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ mov word [rax], dx
+ add rsp, CONST
+ ret

@@ -1,0 +1,121 @@
+ .name fcn.00011080
+ .offset 0000000000011080
+ .file install
+ endbr64
+ movzx r11d, byte [rcx + CONST]
+ mov eax, edi
+ push r12
+ and eax, CONST
+ push rbp
+ push rbx
+ xor ebx, ebx
+ test r11b, r11b
+ cjmp LABEL9
+ not edx
+ jmp LABEL11
+LABEL52:
+ cmp r11b, CONST
+ cjmp LABEL13
+ mov r10d, CONST
+ xor edi, edi
+LABEL59:
+ cmp r11b, CONST
+ cjmp LABEL17
+ and r9d, eax
+ mov r11d, r9d
+ and r11d, CONST
+ cmp r11d, CONST
+ sbb r11d, r11d
+ not r11d
+ and r11d, CONST
+ mov r12d, r11d
+ or r12b, CONST
+ test r9b, CONST
+ cmovne r11d, r12d
+ mov r12d, r11d
+ or r12d, CONST
+ test r9b, CONST
+ cmovne r11d, r12d
+ or r9d, r11d
+LABEL17:
+ movzx r11d, byte [rcx]
+ and r9d, r10d
+ test ebp, ebp
+ cjmp LABEL37
+LABEL64:
+ and r9d, edx
+ cmp r11b, CONST
+ cjmp LABEL40
+ cmp r11b, CONST
+ cjmp LABEL42
+LABEL70:
+ cmp r11b, CONST
+ cjmp LABEL44
+LABEL93:
+ movzx r11d, byte [rcx + CONST]
+ add rcx, CONST
+ test r11b, r11b
+ cjmp LABEL9
+LABEL11:
+ mov ebp, dword [rcx + CONST]
+ mov r9d, dword [rcx + CONST]
+ test sil, sil
+ cjmp LABEL52
+ mov r10d, dword [rcx + CONST]
+ mov edi, r10d
+ or r10d, CONST
+ not edi
+ and edi, CONST
+ cmp r11b, CONST
+ cjmp LABEL59
+LABEL102:
+ or r9d, CONST
+ movzx r11d, byte [rcx]
+ and r9d, r10d
+ test ebp, ebp
+ cjmp LABEL64
+ nop dword [rax]
+LABEL37:
+ and r9d, ebp
+ cmp r11b, CONST
+ cjmp LABEL40
+ cmp r11b, CONST
+ cjmp LABEL70
+ not ebp
+ or edi, ebp
+ mov r10d, edi
+ not r10d
+LABEL42:
+ movzx r11d, byte [rcx + CONST]
+ and r10d, CONST
+ and eax, edi
+ add rcx, CONST
+ or ebx, r10d
+ or eax, r9d
+ test r11b, r11b
+ cjmp LABEL11
+LABEL9:
+ test r8, r8
+ cjmp LABEL84
+ mov dword [r8], ebx
+LABEL84:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL40:
+ or ebx, r9d
+ not r9d
+ and eax, r9d
+ jmp LABEL93
+LABEL44:
+ or ebx, r9d
+ or eax, r9d
+ jmp LABEL93
+LABEL13:
+ mov edi, eax
+ mov r10d, CONST
+ and edi, CONST
+ cjmp LABEL17
+ xor edi, edi
+ jmp LABEL102

@@ -1,0 +1,81 @@
+ .name fcn.0001a450
+ .offset 000000000001a450
+ .file grep
+ endbr64
+ push r12
+ mov eax, edx
+ mov r12, rdi
+ push rbp
+ and eax, CONST
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ and edx, CONST
+ cjmp LABEL10
+ test eax, eax
+ cjmp LABEL12
+ call CONST
+ mov rsi, rbp
+ mov rdi, r12
+ mov rdx, rax
+ mov rbx, rax
+ call CONST
+ test eax, eax
+ cjmp LABEL20
+ movsx edx, byte [rbp + rbx]
+ cmp edx, CONST
+ cmovne eax, edx
+LABEL20:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ mov rdi, rsi
+ call CONST
+ mov rbp, rax
+ mov rdi, rax
+ jmp LABEL33
+LABEL46:
+ mov byte [rax], CONST
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL39
+ mov byte [rbx], CONST
+ lea rdi, [rbx + CONST]
+LABEL33:
+ mov esi, CONST
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL46
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+LABEL39:
+ mov rdi, rbp
+ mov dword [rsp + CONST], eax
+ call CONST
+ mov eax, dword [rsp + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ test eax, eax
+ cjmp LABEL60
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL60:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ jmp CONST

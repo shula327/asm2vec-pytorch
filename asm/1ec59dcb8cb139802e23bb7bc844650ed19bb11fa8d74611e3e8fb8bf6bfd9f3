@@ -1,0 +1,61 @@
+ .name fcn.001a2d20
+ .offset 00000000001a2d20
+ .file perl5.30.0
+ mov rax, rdx
+ add rsi, rdi
+ test cl, cl
+ cjmp LABEL3
+ cmp rdi, rsi
+ cjmp LABEL5
+ jmp LABEL6
+LABEL14:
+ add rdi, CONST
+ mov byte [rax], cl
+ add rax, CONST
+ cmp rdi, rsi
+ cjmp LABEL6
+LABEL5:
+ movzx ecx, byte [rdi]
+ test cl, cl
+ cjmp LABEL14
+ mov edx, ecx
+ and ecx, CONST
+ add rdi, CONST
+ add rax, CONST
+ shr dl, CONST
+ or ecx, CONST
+ or edx, CONST
+ mov byte [rax + CONST], cl
+ mov byte [rax + CONST], dl
+ cmp rdi, rsi
+ cjmp LABEL5
+LABEL6:
+ ret
+LABEL3:
+ lea rcx, qword [rsi + CONST]
+ cmp rdi, rsi
+ cjmp LABEL6
+ sub rdi, CONST
+ jmp LABEL31
+LABEL39:
+ mov byte [rax], dl
+ add rax, CONST
+LABEL48:
+ sub rcx, CONST
+ cmp rdi, rcx
+ cjmp LABEL36
+LABEL31:
+ movzx edx, byte [rcx]
+ test dl, dl
+ cjmp LABEL39
+ mov esi, edx
+ and edx, CONST
+ add rax, CONST
+ shr sil, CONST
+ or edx, CONST
+ or esi, CONST
+ mov byte [rax + CONST], dl
+ mov byte [rax + CONST], sil
+ jmp LABEL48
+LABEL36:
+ ret

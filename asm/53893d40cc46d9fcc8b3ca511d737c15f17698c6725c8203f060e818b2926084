@@ -1,0 +1,154 @@
+ .name fcn.00024510
+ .offset 0000000000024510
+ .file grep
+ endbr64
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rdi]
+ test rdi, rdi
+ cjmp LABEL9
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL11
+ jmp LABEL12
+LABEL19:
+ call CONST
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL15
+LABEL23:
+ mov rdi, rbp
+LABEL11:
+ mov rbp, qword [rdi + CONST]
+ test rbp, rbp
+ cjmp LABEL19
+ mov rbp, qword [rdi + CONST]
+ call CONST
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL23
+LABEL15:
+ mov rdi, rbp
+ call CONST
+LABEL9:
+ mov rbp, qword [r12 + CONST]
+ test rbp, rbp
+ cjmp LABEL28
+ jmp LABEL29
+LABEL39:
+ call CONST
+ mov rdi, rbp
+ call CONST
+ test rbx, rbx
+ cjmp LABEL29
+LABEL43:
+ mov rbp, rbx
+LABEL28:
+ mov rdi, qword [rbp + CONST]
+ mov rbx, qword [rbp + CONST]
+ test rdi, rdi
+ cjmp LABEL39
+ mov rdi, rbp
+ call CONST
+ test rbx, rbx
+ cjmp LABEL43
+LABEL29:
+ mov rdi, qword [r12 + CONST]
+ call CONST
+ mov rdi, qword [r12 + CONST]
+ call CONST
+ mov eax, dword [r12 + CONST]
+ test ah, CONST
+ cjmp LABEL50
+ mov edi, dword [r12 + CONST]
+ test edi, edi
+ cjmp LABEL53
+LABEL90:
+ xor r13d, r13d
+LABEL107:
+ lea rbp, [r12 + CONST]
+ jmp LABEL56
+LABEL64:
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL60
+LABEL56:
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL64
+ mov rdi, qword [r12 + CONST]
+ test rdi, rdi
+ cjmp LABEL67
+ call CONST
+LABEL67:
+ mov rdi, qword [r12 + CONST]
+ test dword [r12 + CONST], CONST
+ cjmp LABEL71
+ test rdi, rdi
+ cjmp LABEL73
+ call CONST
+LABEL73:
+ mov rdi, r12
+ call CONST
+ test r13d, r13d
+ cjmp LABEL78
+LABEL126:
+ add rsp, CONST
+ mov eax, r13d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL60:
+ mov edi, eax
+ call CONST
+ jmp LABEL56
+LABEL50:
+ test al, CONST
+ cjmp LABEL90
+ mov edi, dword [r12 + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL94
+ mov edi, dword [r12 + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL90
+ call CONST
+ mov rbx, rax
+ jmp LABEL101
+LABEL53:
+ call CONST
+ test eax, eax
+ cjmp LABEL90
+ call CONST
+ mov r13d, dword [rax]
+ jmp LABEL107
+LABEL71:
+ call CONST
+ jmp LABEL73
+LABEL94:
+ call CONST
+ mov edi, dword [r12 + CONST]
+ mov r13d, dword [rax]
+ mov rbx, rax
+ call CONST
+ test r13d, r13d
+ cjmp LABEL107
+ test eax, eax
+ cjmp LABEL107
+LABEL101:
+ mov r13d, dword [rbx]
+ jmp LABEL107
+LABEL12:
+ mov rbp, rdi
+ jmp LABEL15
+LABEL78:
+ call CONST
+ mov dword [rax], r13d
+ mov r13d, CONST
+ jmp LABEL126

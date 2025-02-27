@@ -1,0 +1,24 @@
+ .name fcn.0000ba50
+ .offset 000000000000ba50
+ .file dpkg-query
+ sub rsp, CONST
+ mov edi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+ mov rdx, qword [rip + CONST]
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [rax], rdx
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ ret
+LABEL4:
+ lea rdi, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop dword [rax + rax]

@@ -1,0 +1,27 @@
+ .name sym.PerlIOPending_flush
+ .offset 0000000000193bf0
+ .file perl5.30.0
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rsi]
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL8
+ lea rax, [rbx + CONST]
+ cmp rdi, rax
+ cjmp LABEL8
+ mov qword [rsp + CONST], rsi
+ call CONST
+ mov qword [rbx + CONST], CONST
+ mov rsi, qword [rsp + CONST]
+LABEL8:
+ mov rdi, r12
+ call CONST
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop r12
+ ret

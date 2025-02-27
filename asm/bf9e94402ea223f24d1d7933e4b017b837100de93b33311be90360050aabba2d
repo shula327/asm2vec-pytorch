@@ -1,0 +1,19 @@
+ .name fcn.0001cca0
+ .offset 000000000001cca0
+ .file grep
+ endbr64
+ push rbp
+ mov ebp, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL5
+ pop rbp
+ ret
+LABEL5:
+ mov edi, ebp
+ call CONST
+ pop rbp
+ test eax, eax
+ sete al
+ movzx eax, al
+ ret

@@ -1,0 +1,51 @@
+ .name fcn.000f7020
+ .offset 00000000000f7020
+ .file perl5.30.0
+ sub rsp, CONST
+ movsxd r10, dword [rsi + CONST]
+ lea r11, qword [rsi + CONST]
+ mov r9, rdx
+ movzx eax, byte [rsi + r10 + CONST]
+ mov esi, r8d
+ shr esi, CONST
+ xor eax, esi
+ and eax, CONST
+ cjmp LABEL9
+ and r8d, CONST
+ movsxd rdx, ecx
+ cjmp LABEL12
+ mov r8, r10
+ mov rcx, r11
+ mov rsi, r9
+ call CONST
+ test eax, eax
+ sete al
+ movzx eax, al
+LABEL34:
+ add rsp, CONST
+ ret
+LABEL12:
+ mov r8, rdx
+ mov rcx, r9
+ mov rdx, r10
+ mov rsi, r11
+ call CONST
+ test eax, eax
+ sete al
+ add rsp, CONST
+ movzx eax, al
+ ret
+LABEL9:
+ mov rdx, r10
+ cmp r10d, ecx
+ cjmp LABEL34
+ mov eax, CONST
+ cmp r11, r9
+ cjmp LABEL34
+ mov rsi, r9
+ mov rdi, r11
+ call CONST
+ test eax, eax
+ sete al
+ movzx eax, al
+ jmp LABEL34

@@ -1,0 +1,68 @@
+ .name sym.Perl_emulate_cop_io
+ .offset 00000000000e8080
+ .file perl5.30.0
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rdx
+ push rbx
+ test dword [rsi + CONST], CONST
+ cjmp LABEL7
+ pop rbx
+ mov rsi, rdx
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL7:
+ mov rbx, rsi
+ xor ecx, ecx
+ xor edx, edx
+ mov rsi, rbp
+ call CONST
+ and dword [rbp + CONST], CONST
+ test byte [rbx + CONST], CONST
+ cjmp LABEL20
+LABEL60:
+ mov r8d, CONST
+ mov ecx, CONST
+ mov rsi, rbp
+ mov rdi, r12
+ lea rdx, [rip + CONST]
+ call CONST
+ test byte [rbx + CONST], CONST
+ cjmp LABEL28
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL28:
+ mov rsi, qword [rbx + CONST]
+ mov rdi, r12
+ mov ecx, CONST
+ xor r9d, r9d
+ lea rdx, [rip + CONST]
+ xor r8d, r8d
+ call CONST
+ pop rbx
+ mov rsi, rbp
+ mov rdi, r12
+ pop rbp
+ mov rdx, rax
+ mov ecx, CONST
+ pop r12
+ jmp CONST
+LABEL20:
+ mov rsi, qword [rbx + CONST]
+ mov rdi, r12
+ xor r9d, r9d
+ xor r8d, r8d
+ mov ecx, CONST
+ lea rdx, [rip + CONST]
+ call CONST
+ mov ecx, CONST
+ mov rsi, rbp
+ mov rdi, r12
+ mov rdx, rax
+ call CONST
+ jmp LABEL60

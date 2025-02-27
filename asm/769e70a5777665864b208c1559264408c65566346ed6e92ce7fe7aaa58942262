@@ -1,0 +1,38 @@
+ .name fcn.00074cb0
+ .offset 0000000000074cb0
+ .file bash
+ push r14
+ push r13
+ lea r13, qword [rip + CONST]
+ push r12
+ movsxd r12, edi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov ebx, dword [r13 + r12*CONST]
+ mov r14d, ebx
+ and r14d, CONST
+ cjmp LABEL11
+ test bl, CONST
+ cjmp LABEL11
+ call CONST
+LABEL11:
+ lea rax, qword [rip + CONST]
+ mov qword [rax + r12*CONST], rbp
+ mov eax, ebx
+ and ebx, CONST
+ or eax, CONST
+ or ebx, CONST
+ cmp rbp, CONST
+ cmove ebx, eax
+ mov eax, ebx
+ or eax, CONST
+ test r14d, r14d
+ cmovne ebx, eax
+ mov dword [r13 + r12*CONST], ebx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

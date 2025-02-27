@@ -1,0 +1,18 @@
+ .name fcn.00030520
+ .offset 0000000000030520
+ .file bash
+ sub rsp, CONST
+ xor edi, edi
+ call CONST
+ mov eax, dword [rip + CONST]
+ xor edi, edi
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], eax
+ mov eax, dword [rip + CONST]
+ mov dword [rip + CONST], CONST
+ or eax, dword [rip + CONST]
+ mov dword [rip + CONST], CONST
+ setne dil
+ add rsp, CONST
+ jmp CONST

@@ -1,0 +1,59 @@
+ .name fcn.00005af0
+ .offset 0000000000005af0
+ .file update-alternatives
+ push r15
+ mov r15, rcx
+ push r14
+ mov r14d, r9d
+ push r13
+ mov r13d, r8d
+ push r12
+ mov r12, rdx
+ push rbp
+ mov ebp, esi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL14
+ mov rdi, qword [rdi + CONST]
+LABEL50:
+ cmp dword [rbx + CONST], ebp
+ cjmp LABEL17
+ test rdi, rdi
+ cjmp LABEL19
+LABEL17:
+ mov ebx, CONST
+LABEL47:
+ mov edi, ebp
+ call CONST
+ sub rsp, CONST
+ mov r9d, dword [r15]
+ mov r8, qword [r12]
+ push rax
+ mov ecx, r14d
+ mov edx, r13d
+ mov esi, ebx
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL19:
+ mov rsi, qword [r12]
+ call CONST
+ cmp eax, CONST
+ sbb ebx, ebx
+ and ebx, CONST
+ add ebx, CONST
+ jmp LABEL47
+LABEL14:
+ call CONST
+ mov rdi, rax
+ jmp LABEL50

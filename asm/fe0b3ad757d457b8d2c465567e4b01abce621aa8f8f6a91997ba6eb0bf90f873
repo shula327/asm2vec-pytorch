@@ -1,0 +1,135 @@
+ .name fcn.000106f0
+ .offset 00000000000106f0
+ .file install
+ endbr64
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdx
+ movzx edx, byte [rdi]
+ mov qword [rsp + CONST], rcx
+ test dl, dl
+ cjmp LABEL12
+ mov r15, rdi
+ mov rbp, rsi
+ lea rbx, [rdi + CONST]
+ mov r12, rdi
+ xor r14d, r14d
+ xor r13d, r13d
+ jmp LABEL19
+LABEL32:
+ test al, al
+ setne r8b
+ cmp dl, CONST
+ sete dl
+ and r8b, dl
+ cjmp LABEL25
+ test al, al
+ cjmp LABEL27
+LABEL35:
+ add rbx, CONST
+ mov edx, eax
+LABEL19:
+ movzx eax, byte [rbx]
+ cmp al, CONST
+ cjmp LABEL32
+ cmp dl, CONST
+ cmovne r13, rbx
+ jmp LABEL35
+LABEL25:
+ test r13, r13
+ cjmp LABEL35
+ mov rdx, r13
+ sub rdx, r12
+ cmp rdx, CONST
+ cjmp LABEL41
+ mov byte [r13], CONST
+ cmp rdx, CONST
+ cjmp LABEL44
+LABEL92:
+ mov byte [rsp + CONST], r8b
+ mov rdx, qword [rsp + CONST]
+ mov rsi, r12
+ mov rdi, r15
+ mov rax, qword [rsp + CONST]
+ call rax
+ mov dword [rsp + CONST], CONST
+ movzx r8d, byte [rsp + CONST]
+ mov edx, CONST
+ test eax, eax
+ cjmp LABEL55
+ call CONST
+ cmp r14b, CONST
+ mov r8d, r14d
+ mov eax, dword [rax]
+ sbb edx, edx
+ add edx, CONST
+ mov dword [rsp + CONST], eax
+LABEL55:
+ xor ecx, ecx
+ mov rsi, r12
+ mov rdi, rbp
+ mov byte [rsp + CONST], r8b
+ call CONST
+ mov r14d, eax
+ cmp eax, CONST
+ cjmp LABEL70
+ mov byte [r13], CONST
+ test eax, eax
+ cjmp LABEL70
+ movzx r8d, byte [rsp + CONST]
+ movzx eax, byte [rbx]
+ mov r12, rbx
+ mov r14d, r8d
+ test al, al
+ cjmp LABEL35
+ nop dword [rax + rax]
+LABEL27:
+ mov rax, r12
+ sub rax, r15
+LABEL113:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL44:
+ cmp byte [r12], CONST
+ cjmp LABEL92
+ cmp byte [r12 + CONST], CONST
+ cjmp LABEL92
+ mov dword [rsp + CONST], CONST
+ xor r8d, r8d
+ xor edx, edx
+ jmp LABEL55
+LABEL41:
+ cmp byte [r12], CONST
+ cjmp LABEL100
+ mov byte [r13], CONST
+ jmp LABEL92
+LABEL70:
+ mov eax, dword [rsp + CONST]
+ test eax, eax
+ cjmp LABEL105
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL105
+ mov ecx, dword [rsp + CONST]
+ mov dword [rax], ecx
+ nop dword [rax + rax]
+LABEL105:
+ movsxd rax, r14d
+ jmp LABEL113
+LABEL100:
+ mov r12, rbx
+ jmp LABEL35
+LABEL12:
+ xor eax, eax
+ jmp LABEL113

@@ -1,0 +1,20 @@
+ .name sym.Perl_cv_get_call_checker
+ .offset 000000000004e7f0
+ .file perl5.30.0
+ endbr64
+ sub rsp, CONST
+ mov r8, rcx
+ mov rcx, rdx
+ mov edx, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea r9, [rsp + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL12
+ add rsp, CONST
+ ret
+LABEL12:
+ call CONST

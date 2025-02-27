@@ -1,0 +1,36 @@
+ .name fcn.0000fb40
+ .offset 000000000000fb40
+ .file grep
+ endbr64
+ push r12
+ push rbp
+ lea rbp, [rip + CONST]
+ push rbx
+ lea rbx, [rip + CONST]
+ lea r12, [rbx + CONST]
+ nop dword [rax]
+LABEL17:
+ mov edi, dword [rbx]
+ cmp edi, CONST
+ cjmp LABEL10
+ call CONST
+ test eax, eax
+ setne byte [rbp]
+ add rbx, CONST
+ add rbp, CONST
+ cmp rbx, r12
+ cjmp LABEL17
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ add rbx, CONST
+ mov byte [rbp], CONST
+ add rbp, CONST
+ cmp rbx, r12
+ cjmp LABEL17
+ pop rbx
+ pop rbp
+ pop r12
+ ret

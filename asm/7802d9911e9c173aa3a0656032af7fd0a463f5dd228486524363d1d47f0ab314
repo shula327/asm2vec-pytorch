@@ -1,0 +1,41 @@
+ .name fcn.000068e0
+ .offset 00000000000068e0
+ .file setpriv
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ push rbx
+ movzx eax, byte [rdi]
+ mov rbx, rcx
+ test rcx, rcx
+ cjmp LABEL7
+ test al, al
+ cjmp LABEL7
+ mov rcx, r8
+ mov r8, qword [rbx]
+ cmp r8, rdx
+ cjmp LABEL7
+ cmp al, CONST
+ cjmp LABEL15
+ mov qword [rbx], CONST
+LABEL27:
+ call CONST
+ test eax, eax
+ cjmp LABEL19
+ movsxd rdx, eax
+ add qword [rbx], rdx
+LABEL19:
+ pop rbx
+ ret
+LABEL15:
+ add rdi, CONST
+ sub rdx, r8
+ lea rsi, [rsi + r8*CONST]
+ jmp LABEL27
+LABEL7:
+ mov eax, CONST
+ pop rbx
+ ret
+LABEL2:
+ mov eax, CONST
+ ret

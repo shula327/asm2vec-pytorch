@@ -1,0 +1,26 @@
+ .name fcn.00024f00
+ .offset 0000000000024f00
+ .file find
+ push rbp
+ xor eax, eax
+ mov edx, CONST
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov edi, dword [rdi]
+ call CONST
+ test eax, eax
+ cjmp LABEL9
+ mov edi, dword [rbx]
+ mov ebp, eax
+ call CONST
+ mov dword [rbx], ebp
+ xor eax, eax
+LABEL20:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL9:
+ mov eax, CONST
+ jmp LABEL20

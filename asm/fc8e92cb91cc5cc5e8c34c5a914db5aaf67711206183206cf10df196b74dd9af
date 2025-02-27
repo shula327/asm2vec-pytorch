@@ -1,0 +1,21 @@
+ .name fcn.000086f0
+ .offset 00000000000086f0
+ .file install
+ endbr64
+ push r12
+ mov r12d, dword [rip + CONST]
+ cmp r12d, CONST
+ cjmp LABEL4
+ mov eax, r12d
+ pop r12
+ ret
+LABEL4:
+ xor edi, edi
+ call CONST
+ mov r12d, eax
+ mov edi, eax
+ mov dword [rip + CONST], eax
+ call CONST
+ mov eax, r12d
+ pop r12
+ ret

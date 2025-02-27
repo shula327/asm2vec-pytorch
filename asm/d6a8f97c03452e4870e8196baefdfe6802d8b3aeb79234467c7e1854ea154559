@@ -1,0 +1,92 @@
+ .name fcn.0007f640
+ .offset 000000000007f640
+ .file perl5.30.0
+ push r13
+ mov r13d, CONST
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, edx
+ sub rsp, CONST
+ cmp byte [rsi + CONST], CONST
+ cjmp LABEL10
+ mov rdi, rsi
+ call CONST
+ mov r13, rax
+LABEL10:
+ mov rdx, qword [rbp + CONST]
+ mov rax, qword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL17
+ test byte [rax + CONST], CONST
+ cjmp LABEL17
+ mov rax, qword [rbp + CONST]
+ mov ecx, CONST
+ test byte [rax + CONST], CONST
+ cjmp LABEL17
+LABEL71:
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ xor edx, edx
+ mov esi, CONST
+ mov rdi, rbp
+ mov rcx, rax
+ call CONST
+ mov rdx, qword [rbp + CONST]
+ mov r8d, CONST
+ movzx ecx, byte [rdx + CONST]
+ mov qword [rdx + rcx*CONST + CONST], rax
+ mov rdx, qword [rbp + CONST]
+ movzx ecx, byte [rdx + CONST]
+ mov dword [rdx + rcx*CONST + CONST], CONST
+ mov rdx, qword [rbp + CONST]
+ add byte [rdx + CONST], CONST
+ cmp ebx, CONST
+ mov byte [rax + CONST], CONST
+ mov rdx, qword [rbp + CONST]
+ mov eax, CONST
+ cmovne r8d, eax
+ xor ecx, ecx
+ cmp byte [rbp + CONST], CONST
+ mov rax, qword [rdx + CONST]
+ setne cl
+ add ecx, CONST
+ test rax, rax
+ cjmp LABEL53
+ test byte [rax + CONST], CONST
+ cjmp LABEL53
+ mov rax, qword [rbp + CONST]
+ test byte [rax + CONST], CONST
+ cjmp LABEL53
+ or ecx, CONST
+LABEL78:
+ add rsp, CONST
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL17:
+ xor ecx, ecx
+ test byte [rdx + CONST], CONST
+ cjmp LABEL71
+ mov ecx, dword [rbp + CONST]
+ mov eax, CONST
+ and ecx, CONST
+ cmovne ecx, eax
+ jmp LABEL71
+LABEL53:
+ test byte [rdx + CONST], CONST
+ cjmp LABEL78
+ mov eax, ecx
+ or eax, CONST
+ test byte [rbp + CONST], CONST
+ cmovne ecx, eax
+ jmp LABEL78

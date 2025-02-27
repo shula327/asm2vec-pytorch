@@ -1,0 +1,125 @@
+ .name fcn.000885f0
+ .offset 00000000000885f0
+ .file perl5.30.0
+ push r13
+ mov r13, rdi
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov edx, dword [r13 + CONST]
+ mov ecx, dword [rsi + CONST]
+ mov rdi, qword [rsi]
+ and edx, CONST
+ cmp cl, CONST
+ cjmp LABEL12
+ cmp qword [rdi + CONST], -1
+ mov rax, rsi
+ cjmp LABEL15
+LABEL12:
+ mov rsi, qword [r12 + CONST]
+ mov r8, qword [rdi + CONST]
+ lea rbp, qword [rsi + r8]
+ mov rbx, rsi
+ cmp rsi, rbp
+ cjmp LABEL21
+ jmp LABEL22
+LABEL27:
+ add rbx, CONST
+ cmp rbp, rbx
+ cjmp LABEL25
+LABEL21:
+ cmp byte [rbx], CONST
+ cjmp LABEL27
+ cmp byte [rbx + CONST], CONST
+ cjmp LABEL27
+LABEL22:
+ mov rax, r12
+ cmp rbp, rbx
+ cjmp LABEL15
+ test edx, edx
+ cjmp LABEL34
+LABEL100:
+ mov r8, rbx
+ cmp rbp, rbx
+ cjmp LABEL37
+ jmp LABEL38
+LABEL48:
+ mov byte [rdx + CONST], cl
+ cmp rbp, rsi
+ cjmp LABEL41
+LABEL71:
+ mov r8, rdx
+ mov rbx, rsi
+LABEL37:
+ movzx ecx, byte [rbx]
+ lea rsi, qword [rbx + CONST]
+ lea rdx, qword [r8 + CONST]
+ cmp cl, CONST
+ cjmp LABEL48
+ cmp rbp, rsi
+ cjmp LABEL50
+ mov byte [r8], CONST
+LABEL41:
+ mov byte [rdx], CONST
+ mov rcx, qword [r12]
+ sub rdx, qword [r12 + CONST]
+ mov qword [rcx + CONST], rdx
+ mov edx, dword [r13 + CONST]
+ and edx, CONST
+LABEL15:
+ test edx, edx
+ cjmp LABEL59
+LABEL74:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL50:
+ movzx ecx, byte [rbx + CONST]
+ cmp cl, CONST
+ cjmp LABEL69
+ mov byte [rdx + CONST], CONST
+ jmp LABEL71
+LABEL25:
+ mov rax, r12
+ test edx, edx
+ cjmp LABEL74
+LABEL59:
+ lea rcx, qword [rip + CONST]
+ push CONST
+ mov r9, r12
+ mov rdi, r13
+ push CONST
+ mov r8d, CONST
+ xor edx, edx
+ xor esi, esi
+ push rcx
+ push rax
+ call CONST
+ add rsp, CONST
+ add rsp, CONST
+ mov r12, rax
+ pop rbx
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL34:
+ and ecx, CONST
+ mov rdx, r8
+ mov rdi, r13
+ or ecx, CONST
+ call CONST
+ jmp LABEL100
+LABEL69:
+ lea rsi, qword [rbx + CONST]
+ jmp LABEL48
+LABEL38:
+ mov rdx, rbx
+ jmp LABEL41

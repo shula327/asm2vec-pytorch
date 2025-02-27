@@ -1,0 +1,61 @@
+ .name fcn.000b3c00
+ .offset 00000000000b3c00
+ .file perl5.30.0
+ push r14
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rcx
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ jmp LABEL9
+LABEL18:
+ sub rax, rbx
+ sar rax, CONST
+ mov r13, rax
+LABEL9:
+ lea r14, qword [rbx + r13*CONST]
+ mov rdi, rbp
+ mov rsi, r14
+ call CONST
+ test rax, rax
+ cjmp LABEL18
+ movzx eax, byte [r14 + CONST]
+ lea rdx, qword [rip + CONST]
+ cmp byte [rdx + rax], CONST
+ cjmp LABEL22
+ sub r12d, r13d
+ mov eax, CONST
+ mov dword [r14 + CONST], r12d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL22:
+ mov rax, r12
+ sub rax, r13
+ cmp rax, CONST
+ cjmp LABEL35
+ sub r12d, r13d
+ mov eax, CONST
+ mov word [r14 + CONST], r12w
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL35:
+ mov eax, CONST
+ mov word [r14 + CONST], ax
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

@@ -1,0 +1,27 @@
+ .name fcn.00030b90
+ .offset 0000000000030b90
+ .file bash
+ sub rsp, CONST
+ call CONST
+ mov rsi, rax
+ movzx eax, byte [rax]
+ cmp al, CONST
+ cjmp LABEL5
+ movzx eax, byte [rsi + CONST]
+ add rsi, CONST
+LABEL5:
+ xor r8d, r8d
+ cmp al, CONST
+ cjmp LABEL10
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ xor r8d, r8d
+ test al, al
+ sete r8b
+LABEL10:
+ mov eax, r8d
+ add rsp, CONST
+ ret

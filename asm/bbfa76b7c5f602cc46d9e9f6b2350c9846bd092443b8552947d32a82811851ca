@@ -1,0 +1,24 @@
+ .name fcn.00023150
+ .offset 0000000000023150
+ .file dpkg
+ endbr64
+ push r12
+ test rdi, rdi
+ cjmp LABEL3
+LABEL18:
+ call CONST
+ mov r12, rax
+ mov rdi, rax
+ call CONST
+ mov rax, r12
+ mov qword [rip + CONST], r12
+ pop r12
+ ret
+LABEL3:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ lea rax, [rip + CONST]
+ cmove rdi, rax
+ jmp LABEL18

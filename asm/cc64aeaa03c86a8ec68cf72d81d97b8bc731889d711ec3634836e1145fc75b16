@@ -1,0 +1,60 @@
+ .name fcn.00002e20
+ .offset 0000000000002e20
+ .file ionice
+ push r12
+ mov edx, edi
+ xor eax, eax
+ mov edi, CONST
+ push rbp
+ push rbx
+ call CONST
+ cmp eax, -1
+ cjmp LABEL8
+ mov ebp, eax
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov rbx, rax
+ sar ebp, CONST
+ call CONST
+ mov r12, rax
+ cmp ebp, CONST
+ cjmp LABEL18
+ cmp ebp, CONST
+ cjmp LABEL20
+LABEL39:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, rbx
+ mov rdx, r12
+ pop rbx
+ mov rsi, rax
+ pop rbp
+ and ecx, CONST
+ mov edi, CONST
+ xor eax, eax
+ pop r12
+ jmp CONST
+LABEL18:
+ movsxd rax, ebp
+ lea rdx, qword [rip + CONST]
+ mov r12, qword [rdx + rax*CONST]
+ cmp ebp, CONST
+ cjmp LABEL39
+LABEL20:
+ pop rbx
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL8:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST

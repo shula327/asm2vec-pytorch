@@ -1,0 +1,83 @@
+ .name sym.Perl_ck_length
+ .offset 000000000005eb20
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ test al, al
+ cjmp LABEL11
+ test byte [r12 + CONST], CONST
+ cjmp LABEL11
+ mov rsi, qword [r12 + CONST]
+ test rsi, rsi
+ cjmp LABEL11
+ movzx edx, word [rsi + CONST]
+ mov eax, edx
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL21
+ cjmp LABEL22
+ add ax, CONST
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL11
+LABEL21:
+ and dx, CONST
+ mov rdi, rbp
+ cmp dx, CONST
+ sete al
+ cmp dx, CONST
+ mov edx, CONST
+ sete bl
+ or ebx, eax
+ call CONST
+ mov rcx, rax
+ test rax, rax
+ cjmp LABEL38
+ test bl, bl
+ mov r9, rax
+ lea r8, [rip + CONST]
+ mov rdi, rbp
+ lea rax, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ cmove r8, rax
+ xor eax, eax
+ call CONST
+LABEL11:
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL22:
+ cmp ax, CONST
+ cjmp LABEL21
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL38:
+ test bl, bl
+ cjmp LABEL62
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ mov rdi, rbp
+ xor eax, eax
+ call CONST
+ jmp LABEL11
+LABEL62:
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ mov rdi, rbp
+ xor eax, eax
+ call CONST
+ jmp LABEL11

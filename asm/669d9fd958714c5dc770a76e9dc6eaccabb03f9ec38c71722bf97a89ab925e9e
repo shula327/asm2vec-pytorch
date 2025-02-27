@@ -1,0 +1,443 @@
+ .name fcn.0000fba0
+ .offset 000000000000fba0
+ .file grep
+LABEL407:
+ call CONST
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL12
+ mov ebx, edi
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL16
+ test bl, bl
+ cjmp LABEL16
+LABEL12:
+ xor ebp, ebp
+LABEL402:
+ mov rdi, rbp
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL24
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL16:
+ mov edi, CONST
+ xor ebx, ebx
+ lea r12, [rip + CONST]
+ mov r13, rsp
+ call CONST
+ mov rbp, rax
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL40
+ call CONST
+ mov rdx, qword [rax]
+ lea rax, [rdx + CONST]
+ cmp rbp, rax
+ cjmp LABEL45
+ lea rax, [rbp + CONST]
+ cmp rdx, rax
+ cjmp LABEL48
+LABEL45:
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqa xmm0, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm0, xmm5
+ movdqa xmm2, xmm1
+ punpckhwd xmm2, xmm0
+ punpcklwd xmm1, xmm0
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ movdqa xmm0, xmm2
+ punpcklwd xmm2, xmm7
+ punpckhwd xmm0, xmm7
+ movdqa xmm3, xmm2
+ punpckhwd xmm3, xmm0
+ punpcklwd xmm2, xmm0
+ movdqa xmm0, xmmword [rip + CONST]
+ punpcklwd xmm2, xmm3
+ pand xmm2, xmm0
+ pand xmm1, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp], xmm1
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm6
+ punpckhwd xmm2, xmm6
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm5
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm5
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm7
+ punpckhwd xmm2, xmm7
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm6
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm6
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm2, xmm5
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm7
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm7
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm6
+ punpckhwd xmm2, xmm6
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm5
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm5
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm7
+ punpckhwd xmm2, xmm7
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm6
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm6
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm2, xmm5
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm7
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm7
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm6
+ punpckhwd xmm2, xmm6
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm5
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm5
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm7
+ punpckhwd xmm2, xmm7
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm6
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm6
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm2, xmm5
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm7
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm7
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm6
+ punpckhwd xmm2, xmm6
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm5
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm5
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm7
+ punpckhwd xmm2, xmm7
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm6
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm6
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm2, xmm5
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm7
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm7
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm6
+ punpckhwd xmm2, xmm6
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm5
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm5
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm7, xmmword [rdx + CONST]
+ movdqu xmm6, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm7
+ punpckhwd xmm2, xmm7
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm6
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm6
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm2, xmm0
+ packuswb xmm1, xmm2
+ movups xmmword [rbp + CONST], xmm1
+ movdqu xmm1, xmmword [rdx + CONST]
+ movdqu xmm5, xmmword [rdx + CONST]
+ movdqu xmm4, xmmword [rdx + CONST]
+ movdqa xmm2, xmm1
+ punpcklwd xmm1, xmm5
+ punpckhwd xmm2, xmm5
+ movdqa xmm3, xmm1
+ punpckhwd xmm3, xmm2
+ punpcklwd xmm1, xmm2
+ movdqu xmm2, xmmword [rdx + CONST]
+ punpcklwd xmm1, xmm3
+ movdqa xmm3, xmm2
+ punpcklwd xmm2, xmm4
+ pand xmm1, xmm0
+ punpckhwd xmm3, xmm4
+ movdqa xmm4, xmm2
+ punpckhwd xmm4, xmm3
+ punpcklwd xmm2, xmm3
+ punpcklwd xmm2, xmm4
+ pand xmm0, xmm2
+ packuswb xmm1, xmm0
+ movups xmmword [rbp + CONST], xmm1
+ jmp LABEL402
+LABEL417:
+ mov rdx, r13
+ mov qword [rsp], CONST
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL407
+LABEL419:
+ add rbx, CONST
+ cmp rbx, CONST
+ cjmp LABEL402
+LABEL40:
+ mov r14d, dword [r12 + rbx*CONST]
+ mov edi, r14d
+ call CONST
+ lea rdi, [rbp + rbx]
+ mov esi, eax
+ cmp r14d, eax
+ cjmp LABEL417
+ mov byte [rbp + rbx], bl
+ jmp LABEL419
+LABEL48:
+ xor eax, eax
+ nop dword [rax + rax]
+LABEL426:
+ mov ecx, dword [rdx + rax*CONST]
+ mov byte [rbp + rax], cl
+ add rax, CONST
+ cmp rax, CONST
+ cjmp LABEL426
+ jmp LABEL402
+LABEL24:
+ call CONST

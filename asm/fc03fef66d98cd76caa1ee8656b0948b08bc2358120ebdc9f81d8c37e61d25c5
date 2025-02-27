@@ -1,0 +1,66 @@
+ .name fcn.000d1510
+ .offset 00000000000d1510
+ .file bash
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea r12, qword [rsp + CONST]
+ call CONST
+ mov edx, CONST
+ mov rdi, r12
+ movsxd r14, eax
+ mov rcx, rdx
+ xor eax, eax
+ cld
+ rep stosq qword [rdi], rax
+ lea r13, qword [rsp + CONST]
+ mov rcx, rdx
+ mov rdi, r13
+ cld
+ rep stosq qword [rdi], rax
+ mov rdi, r14
+ mov ebp, CONST
+ call CONST
+ mov rdi, r14
+ mov r8, rax
+ mov eax, r14d
+ sar eax, CONST
+ shr eax, CONST
+ lea ecx, dword [r14 + rax]
+ and ecx, CONST
+ sub ecx, eax
+ shl rbp, cl
+ or qword [rsp + r8*CONST + CONST], rbp
+ call CONST
+ xor edx, edx
+ mov rsi, r12
+ lea edi, dword [r14 + CONST]
+ or qword [rsp + rax*CONST + CONST], rbp
+ mov r8, rsp
+ mov rcx, r13
+ movsxd rax, dword [rip + CONST]
+ mov qword [rsp], CONST
+ mov qword [rsp + CONST], rax
+ call CONST
+ test eax, eax
+ setg al
+ mov rsi, qword [rsp + CONST]
+ xor rsi, qword fs:[CONST]
+ cjmp LABEL52
+ add rsp, CONST
+ movzx eax, al
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL52:
+ call CONST

@@ -1,0 +1,28 @@
+ .name fcn.000056a0
+ .offset 00000000000056a0
+ .file cksum
+ endbr64
+ mov rax, rsi
+ mov rsi, qword [rsi]
+ test rdi, rdi
+ cjmp LABEL4
+ movabs rdx, CONST
+ cmp rsi, rdx
+ cjmp LABEL7
+ mov rdx, rsi
+ shr rdx, CONST
+ lea rsi, [rdx + rsi + CONST]
+LABEL18:
+ mov qword [rax], rsi
+ jmp CONST
+LABEL4:
+ test rsi, rsi
+ cjmp LABEL14
+ mov esi, CONST
+ mov qword [rax], rsi
+ jmp CONST
+LABEL14:
+ cjmp LABEL18
+LABEL7:
+ push rax
+ call CONST

@@ -1,0 +1,75 @@
+ .name fcn.00006d10
+ .offset 0000000000006d10
+ .file setpriv
+ endbr64
+ mov rax, rdi
+ or rax, rsi
+ cjmp LABEL3
+ push r15
+ push r14
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ test rdi, rdi
+ cjmp LABEL15
+ test rsi, rsi
+ cjmp LABEL17
+ call CONST
+ xor r15d, r15d
+ mov rbx, rax
+ not rax
+ cmp r13, rax
+ cjmp LABEL23
+ lea r14, [r13 + rbx]
+ lea rdi, [r14 + CONST]
+ call CONST
+ mov r15, rax
+ test rax, rax
+ cjmp LABEL23
+ mov rdx, rbx
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ lea rdi, [r15 + rbx]
+ mov rdx, r13
+ mov rsi, r12
+ call CONST
+ mov byte [r15 + r14], CONST
+LABEL23:
+ add rsp, CONST
+ mov rax, r15
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL3:
+ lea rdi, [rip + CONST]
+ jmp CONST
+LABEL15:
+ add rsp, CONST
+ mov rdi, r12
+ mov rsi, rdx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST
+LABEL17:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST

@@ -1,0 +1,33 @@
+ .name fcn.0001a0b0
+ .offset 000000000001a0b0
+ .file grep
+ endbr64
+ mov qword [rdi], CONST
+ mov rdx, rdi
+ xor eax, eax
+ mov r8, rsi
+ mov qword [rdi + CONST], CONST
+ lea r9, [rdi + CONST]
+ lea rdi, [rdi + CONST]
+ mov rcx, rdx
+ and rdi, CONST
+ lea rsi, [rsi + CONST]
+ sub rcx, rdi
+ add ecx, CONST
+ shr ecx, CONST
+ rep stosq qword [rdi], rax
+ mov qword [rdx + CONST], CONST
+ mov ecx, CONST
+ mov rdi, r9
+ movzx eax, byte [rsi + CONST]
+ mov byte [rdx + CONST], al
+ mov rax, qword [r8 + CONST]
+ rep movsq qword [rdi], qword [rsi]
+ lea rdi, [rdx + CONST]
+ lea rsi, [r8 + CONST]
+ mov ecx, CONST
+ mov qword [rdx + CONST], rax
+ rep movsq qword [rdi], qword [rsi]
+ mov eax, dword [rsi]
+ mov dword [rdi], eax
+ ret

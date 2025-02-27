@@ -1,0 +1,49 @@
+ .name fcn.000914e0
+ .offset 00000000000914e0
+ .file bash
+ push r12
+ lea rax, qword [rip + CONST]
+ mov r12, rdi
+ push rbx
+ sub rsp, CONST
+ test rdi, rdi
+ lea rdi, qword [rip + CONST]
+ mov ebx, dword [rip + CONST]
+ cmove r12, rax
+ xor edx, edx
+ mov rsi, r12
+ call CONST
+ xor r8d, r8d
+ test rax, rax
+ cjmp LABEL14
+ mov eax, dword [rax + CONST]
+ mov r8d, eax
+ and r8d, CONST
+ cjmp LABEL18
+ test ebx, ebx
+ cjmp LABEL14
+ mov r8d, dword [rip + CONST]
+ test r8d, r8d
+ cjmp LABEL14
+ and eax, CONST
+ mov r8d, eax
+ cjmp LABEL14
+ mov rdx, r12
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ xor r8d, r8d
+ mov dword [rip + CONST], CONST
+LABEL14:
+ add rsp, CONST
+ mov eax, r8d
+ pop rbx
+ pop r12
+ ret
+LABEL18:
+ add rsp, CONST
+ mov r8d, CONST
+ mov eax, r8d
+ pop rbx
+ pop r12
+ ret

@@ -1,0 +1,50 @@
+ .name fcn.00009fc0
+ .offset 0000000000009fc0
+ .file gzip
+ push rbp
+ xor edx, edx
+ lea r8, qword [rip + CONST]
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rcx, qword [rsp + CONST]
+ nop dword [rax]
+LABEL15:
+ add ax, word [r8 + rdx]
+ add eax, eax
+ mov word [rcx + rdx], ax
+ add rdx, CONST
+ cmp rdx, CONST
+ cjmp LABEL15
+ test esi, esi
+ cjmp LABEL17
+ movsxd rsi, esi
+ mov rbx, rdi
+ lea rbp, qword [rdi + rsi*CONST + CONST]
+ nop dword [rax]
+LABEL33:
+ movzx esi, word [rbx + CONST]
+ test esi, esi
+ cjmp LABEL24
+ movsxd rax, esi
+ movzx edi, word [rsp + rax*CONST]
+ lea edx, dword [rdi + CONST]
+ mov word [rsp + rax*CONST], dx
+ call CONST
+ mov word [rbx], ax
+LABEL24:
+ add rbx, CONST
+ cmp rbx, rbp
+ cjmp LABEL33
+LABEL17:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL36
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL36:
+ call CONST

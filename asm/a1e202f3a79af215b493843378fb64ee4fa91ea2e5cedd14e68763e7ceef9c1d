@@ -1,0 +1,45 @@
+ .name fcn.0002eff0
+ .offset 000000000002eff0
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ mov rdi, rsi
+ sub rsp, CONST
+ call CONST
+ test rbx, rbx
+ cjmp LABEL9
+ mov rax, rbp
+ mov rdi, rbx
+ lea rcx, [rbp + CONST]
+LABEL26:
+ mov edx, dword [rax]
+ add rax, CONST
+ add rdi, CONST
+ shr edx, CONST
+ mov byte [rdi + CONST], dl
+ mov edx, dword [rax + CONST]
+ shr edx, CONST
+ mov byte [rdi + CONST], dl
+ mov edx, dword [rax + CONST]
+ mov byte [rdi + CONST], dh
+ mov edx, dword [rax + CONST]
+ mov byte [rdi + CONST], dl
+ cmp rax, rcx
+ cjmp LABEL26
+ lea rdi, [rbp + CONST]
+ mov qword [rbp], CONST
+ xor eax, eax
+ and rdi, CONST
+ mov qword [rbp + CONST], CONST
+ sub rbp, rdi
+ lea ecx, [rbp + CONST]
+ shr ecx, CONST
+ rep stosq qword [rdi], rax
+LABEL9:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

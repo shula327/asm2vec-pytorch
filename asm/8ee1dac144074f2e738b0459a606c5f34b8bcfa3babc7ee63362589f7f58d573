@@ -1,0 +1,39 @@
+ .name fcn.0000a910
+ .offset 000000000000a910
+ .file mkdir
+ push r13
+ mov r13, rsi
+ push r12
+ push rbp
+ mov rbp, rdi
+ lea rdi, qword [rdx + CONST]
+ push rbx
+ and rdi, CONST
+ mov rbx, rdx
+ sub rsp, CONST
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL13
+ lea rdi, qword [rax + CONST]
+ mov rdx, rbx
+ mov rsi, r13
+ call CONST
+ mov rax, qword [rbp + CONST]
+ mov byte [r12 + rbx + CONST], CONST
+ mov qword [r12 + CONST], rbx
+ mov qword [r12 + CONST], rbp
+ mov qword [r12 + CONST], rax
+ mov dword [r12 + CONST], CONST
+ mov qword [r12 + CONST], CONST
+ mov dword [r12 + CONST], CONST
+ mov qword [r12 + CONST], CONST
+ mov qword [r12 + CONST], CONST
+LABEL13:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

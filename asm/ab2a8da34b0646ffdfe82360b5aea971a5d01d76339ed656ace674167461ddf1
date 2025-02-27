@@ -1,0 +1,34 @@
+ .name fcn.000259b0
+ .offset 00000000000259b0
+ .file grep
+ endbr64
+ sub rsp, CONST
+ mov edx, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rsi, rsp
+ call CONST
+ mov r8d, eax
+ xor eax, eax
+ test r8d, r8d
+ cjmp LABEL11
+ cmp word [rsp], CONST
+ cjmp LABEL11
+ cmp dword [rsp], CONST
+ cjmp LABEL15
+LABEL24:
+ mov eax, CONST
+LABEL11:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL19
+ add rsp, CONST
+ ret
+LABEL15:
+ xor eax, eax
+ cmp word [rsp + CONST], CONST
+ cjmp LABEL24
+ jmp LABEL11
+LABEL19:
+ call CONST

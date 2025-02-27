@@ -1,0 +1,20 @@
+ .name fcn.0001fab0
+ .offset 000000000001fab0
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ mov rsi, rbp
+ mov edi, eax
+ call CONST
+ mov rdi, rbx
+ call CONST
+ mov qword [rip + CONST], rbx
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

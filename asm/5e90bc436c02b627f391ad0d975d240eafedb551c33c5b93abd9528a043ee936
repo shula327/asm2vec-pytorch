@@ -1,0 +1,32 @@
+ .name fcn.00007ff0
+ .offset 0000000000007ff0
+ .file ls
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL6
+LABEL21:
+ mov rsi, qword [rbp]
+ mov rdi, qword [rbx]
+ mov edx, CONST
+ mov rcx, qword [rip + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ jmp CONST
+LABEL6:
+ mov edi, CONST
+ mov byte [rip + CONST], CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL19
+ call CONST
+ jmp LABEL21
+LABEL19:
+ mov edi, CONST
+ call CONST
+ call CONST
+ jmp LABEL21

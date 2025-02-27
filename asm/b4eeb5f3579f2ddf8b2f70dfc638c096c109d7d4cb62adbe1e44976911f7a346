@@ -1,0 +1,92 @@
+ .name fcn.00006940
+ .offset 0000000000006940
+ .file setpriv
+ endbr64
+ test rdx, rdx
+ push r14
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdx
+ sete dl
+ test rsi, rsi
+ sete al
+ push rbx
+ or dl, al
+ cjmp LABEL12
+ test rdi, rdi
+ cjmp LABEL12
+ movzx eax, byte [rdi]
+ mov r13, rsi
+ mov rbx, rdi
+ mov r12d, CONST
+ test al, al
+ cjmp LABEL20
+ nop dword [rax + rax]
+LABEL58:
+ movzx edx, byte [rbx + CONST]
+ cmp al, CONST
+ cjmp LABEL24
+LABEL31:
+ test dl, dl
+ cjmp LABEL26
+ add rbx, CONST
+ mov eax, edx
+ movzx edx, byte [rbx + CONST]
+ cmp al, CONST
+ cjmp LABEL31
+LABEL24:
+ mov r14, rbx
+ test dl, dl
+ cjmp LABEL34
+LABEL26:
+ lea r14, [rbx + CONST]
+LABEL34:
+ cmp rdi, r14
+ cjmp LABEL37
+ mov rsi, r14
+ sub rsi, rdi
+ call rbp
+ test eax, eax
+ cjmp LABEL42
+ mov edx, eax
+ and eax, CONST
+ mov edi, r12d
+ sar edx, CONST
+ mov ecx, eax
+ movsxd rdx, edx
+ shl edi, cl
+ or byte [r13 + rdx], dil
+ cmp byte [r14], CONST
+ cjmp LABEL20
+ movzx eax, byte [rbx + CONST]
+ add rbx, CONST
+ test al, al
+ cjmp LABEL20
+ mov rdi, rbx
+ jmp LABEL58
+LABEL12:
+ mov eax, CONST
+LABEL42:
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL20:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL37:
+ pop rbx
+ mov eax, CONST
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

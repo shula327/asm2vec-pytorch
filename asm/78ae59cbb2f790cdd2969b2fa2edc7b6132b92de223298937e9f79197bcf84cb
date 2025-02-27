@@ -1,0 +1,21 @@
+ .name fcn.0001edb0
+ .offset 000000000001edb0
+ .file grep
+LABEL8:
+ call CONST
+ endbr64
+ sub rsp, CONST
+ lea rax, [rip + CONST]
+ test rdi, rdi
+ cmove rdi, rax
+ mov dword [rdi], CONST
+ test rsi, rsi
+ cjmp LABEL8
+ test rdx, rdx
+ cjmp LABEL8
+ movq xmm0, rsi
+ movq xmm1, rdx
+ punpcklqdq xmm0, xmm1
+ movups xmmword [rdi + CONST], xmm0
+ add rsp, CONST
+ ret

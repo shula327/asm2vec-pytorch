@@ -1,0 +1,27 @@
+ .name fcn.000df130
+ .offset 00000000000df130
+ .file perl5.30.0
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL5
+ add rsp, CONST
+ pop rbx
+ ret
+LABEL5:
+ mov edx, dword [rbx + CONST]
+ test edx, edx
+ cjmp LABEL11
+LABEL20:
+ mov dword [rax], CONST
+ add rsp, CONST
+ pop rbx
+ ret
+LABEL11:
+ mov qword [rsp + CONST], rax
+ mov rdi, rbx
+ call qword [rbx + CONST]
+ mov rax, qword [rsp + CONST]
+ jmp LABEL20

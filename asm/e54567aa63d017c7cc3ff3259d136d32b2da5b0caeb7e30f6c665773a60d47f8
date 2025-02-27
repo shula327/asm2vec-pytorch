@@ -1,0 +1,51 @@
+ .name fcn.00003140
+ .offset 0000000000003140
+ .file cksum
+ endbr64
+ push rbx
+ test rdi, rdi
+ cjmp LABEL3
+ mov esi, CONST
+ mov rbx, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ lea r8, [rax + CONST]
+ mov rdx, r8
+ sub rdx, rbx
+ cmp rdx, CONST
+ cjmp LABEL8
+ lea rsi, [rax + CONST]
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta dl
+ sbb dl, CONST
+ test dl, dl
+ cjmp LABEL8
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL23
+ cmp byte [r8 + CONST], CONST
+ cjmp LABEL23
+ cmp byte [r8 + CONST], CONST
+ cjmp LABEL23
+ lea rbx, [rax + CONST]
+ mov qword [rip + CONST], rbx
+LABEL8:
+ mov qword [rip + CONST], rbx
+ mov qword [rip + CONST], rbx
+ pop rbx
+ ret
+LABEL23:
+ mov rbx, r8
+ mov qword [rip + CONST], rbx
+ mov qword [rip + CONST], rbx
+ pop rbx
+ ret
+LABEL3:
+ mov rcx, qword [rip + CONST]
+ mov edx, CONST
+ mov esi, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ call CONST

@@ -1,0 +1,18 @@
+ .name fcn.000032c0
+ .offset 00000000000032c0
+ .file toe
+ push r12
+ lea r12, [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL3
+ mov esi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL3
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL3
+ lea r12, [rax + CONST]
+LABEL3:
+ mov rax, r12
+ pop r12
+ ret

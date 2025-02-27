@@ -1,0 +1,64 @@
+ .name fcn.000044d0
+ .offset 00000000000044d0
+ .file iconv
+LABEL7:
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi + CONST]
+ test rdi, rdi
+ cjmp LABEL6
+ call LABEL7
+LABEL6:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL10
+ call LABEL7
+LABEL10:
+ lea r12, qword [rip + CONST]
+ lea rbp, qword [rip + CONST]
+ nop dword [rax]
+LABEL35:
+ mov r8, qword [rbx]
+ mov ecx, CONST
+ mov rdi, r12
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL23
+LABEL52:
+ mov r8, qword [rbx + CONST]
+ mov ecx, CONST
+ mov rdi, r12
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL32
+ mov rbx, qword [rbx + CONST]
+ test rbx, rbx
+ cjmp LABEL35
+LABEL47:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL32:
+ mov rdx, qword [rip + CONST]
+ mov rsi, rbp
+ mov rdi, r8
+ call CONST
+ mov rbx, qword [rbx + CONST]
+ test rbx, rbx
+ cjmp LABEL35
+ jmp LABEL47
+LABEL23:
+ mov rdx, qword [rip + CONST]
+ mov rsi, rbp
+ mov rdi, r8
+ call CONST
+ jmp LABEL52

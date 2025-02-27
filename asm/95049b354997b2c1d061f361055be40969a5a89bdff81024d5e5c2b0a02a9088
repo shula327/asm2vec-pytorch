@@ -1,0 +1,61 @@
+ .name fcn.0010dd70
+ .offset 000000000010dd70
+ .file perl5.30.0
+ sub rcx, rdx
+ lea rax, qword [rcx + rcx]
+ cmp rax, rdx
+ cjmp LABEL3
+ lea r8, qword [rcx + CONST]
+ test rcx, rcx
+ cjmp LABEL6
+ nop dword [rax]
+LABEL22:
+ movzx eax, byte [rsi + CONST]
+ lea rdx, qword [rsi + CONST]
+ mov rsi, rdx
+ and eax, CONST
+ cmp al, CONST
+ cjmp LABEL13
+ nop word [rax + rax]
+LABEL19:
+ movzx edx, byte [rsi + CONST]
+ sub rsi, CONST
+ and edx, CONST
+ cmp dl, CONST
+ cjmp LABEL19
+LABEL13:
+ sub r8, CONST
+ cmp r8, -1
+ cjmp LABEL22
+LABEL6:
+ mov rax, rsi
+ sub rax, rdi
+ ret
+LABEL3:
+ cmp rsi, rdi
+ cjmp LABEL27
+ lea rcx, qword [rdx + CONST]
+ mov rax, rdi
+ test rdx, rdx
+ cjmp LABEL31
+ lea r8, qword [rip + CONST]
+ jmp LABEL33
+LABEL41:
+ sub rcx, CONST
+ cmp rcx, -1
+ cjmp LABEL31
+LABEL33:
+ movzx edx, byte [rax]
+ movzx edx, byte [r8 + rdx]
+ add rax, rdx
+ cmp rsi, rax
+ cjmp LABEL41
+LABEL31:
+ cmp rsi, rax
+ cmova rsi, rax
+ mov rax, rsi
+ sub rax, rdi
+ ret
+LABEL27:
+ mov rax, rdi
+ jmp LABEL31

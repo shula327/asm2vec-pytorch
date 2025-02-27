@@ -1,0 +1,79 @@
+ .name sym.Perl_pp_sprintf
+ .offset 0000000000134c50
+ .file perl5.30.0
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rax, qword [rdi + CONST]
+ mov rbx, rdi
+ mov r14, qword [rdi + CONST]
+ mov rbp, qword [rdi]
+ lea rdx, [rax + CONST]
+ mov qword [rdi + CONST], rdx
+ movsxd rax, dword [rax]
+ shl rax, CONST
+ add r14, rax
+ sar rax, CONST
+ cmp byte [rdi + CONST], CONST
+ mov r12, rax
+ mov rax, qword [rdi + CONST]
+ mov rdx, qword [rax + CONST]
+ mov rax, qword [rdi + CONST]
+ mov r13, qword [rax + rdx*CONST]
+ cjmp LABEL22
+LABEL50:
+ mov rdx, rbp
+ lea rcx, [r14 + CONST]
+ mov rsi, r13
+ mov rdi, rbx
+ sub rdx, r14
+ sar rdx, CONST
+ call CONST
+ mov eax, dword [r13 + CONST]
+ test eax, CONST
+ cjmp LABEL32
+ mov rdx, qword [rbx + CONST]
+ lea rbp, [rdx + r12*CONST]
+ test eax, CONST
+ cjmp LABEL36
+LABEL60:
+ mov qword [rbp + CONST], r13
+ mov rax, qword [rbx + CONST]
+ add rbp, CONST
+ mov qword [rbx], rbp
+ pop rbx
+ mov rax, qword [rax]
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL22:
+ mov rsi, r13
+ call CONST
+ jmp LABEL50
+LABEL32:
+ mov rsi, r13
+ mov rdi, rbx
+ call CONST
+ test al, al
+ cjmp LABEL55
+LABEL68:
+ mov rdx, qword [rbx + CONST]
+ mov eax, dword [r13 + CONST]
+ lea rbp, [rdx + r12*CONST]
+ test eax, CONST
+ cjmp LABEL60
+ nop word [rax + rax]
+LABEL36:
+ mov rsi, r13
+ mov rdi, rbx
+ call CONST
+ jmp LABEL60
+LABEL55:
+ movzx eax, byte [rbx + CONST]
+ mov byte [rbx + CONST], al
+ jmp LABEL68

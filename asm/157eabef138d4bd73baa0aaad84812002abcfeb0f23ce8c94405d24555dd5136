@@ -1,0 +1,40 @@
+ .name fcn.00025780
+ .offset 0000000000025780
+ .file grep
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ call CONST
+ mov ebx, dword [rbp]
+ mov rdi, rbp
+ mov r12, rax
+ and ebx, CONST
+ call CONST
+ test ebx, ebx
+ cjmp LABEL12
+ test eax, eax
+ cjmp LABEL14
+ test r12, r12
+ cjmp LABEL16
+ call CONST
+ cmp dword [rax], CONST
+ setne al
+ movzx eax, al
+ neg eax
+LABEL14:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ test eax, eax
+ cjmp LABEL16
+ call CONST
+ mov dword [rax], CONST
+ mov eax, CONST
+ jmp LABEL14
+LABEL16:
+ mov eax, CONST
+ jmp LABEL14

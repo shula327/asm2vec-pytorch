@@ -1,0 +1,17 @@
+ .name sym.Perl_dup_warnings
+ .offset 000000000006a6b0
+ .file perl5.30.0
+ endbr64
+ mov rax, rsi
+ test rsi, rsi
+ cjmp LABEL3
+ lea rdx, [rip + CONST]
+ cmp rsi, rdx
+ cjmp LABEL3
+ lea rdx, [rip + CONST]
+ cmp rsi, rdx
+ cjmp LABEL3
+ mov rdi, rsi
+ jmp CONST
+LABEL3:
+ ret

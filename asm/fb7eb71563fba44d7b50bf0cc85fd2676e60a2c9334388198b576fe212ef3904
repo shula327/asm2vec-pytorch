@@ -1,0 +1,27 @@
+ .name fcn.00005380
+ .offset 0000000000005380
+ .file gzip
+ push rbp
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ lea rbp, qword [rip + CONST]
+ push rbx
+ lea rbx, qword [rip + CONST]
+ sub rsp, CONST
+ mov rsi, qword [rip + CONST]
+ mov rdx, qword [rip + CONST]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ nop word [rax + rax]
+LABEL18:
+ add rbx, CONST
+ mov rdi, rbp
+ xor eax, eax
+ call CONST
+ mov rsi, qword [rbx]
+ test rsi, rsi
+ cjmp LABEL18
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

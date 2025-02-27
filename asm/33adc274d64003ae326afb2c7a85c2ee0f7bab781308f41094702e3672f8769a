@@ -1,0 +1,64 @@
+ .name fcn.0002dfa0
+ .offset 000000000002dfa0
+ .file dpkg
+ endbr64
+ push r13
+ mov r8, rsi
+ mov r13, rsi
+ mov rcx, CONST
+ push r12
+ xor esi, esi
+ mov r12, rdx
+ push rbp
+ push rbx
+ mov rbx, rdi
+ xor edi, edi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov r9, rsp
+ movdqu xmm0, xmmword [rdx]
+ movups xmmword [rsp], xmm0
+ mov rax, qword [rdx + CONST]
+ mov edx, CONST
+ mov qword [rsp + CONST], rax
+ call CONST
+ test eax, eax
+ cjmp LABEL24
+ add eax, CONST
+ mov rdi, rbx
+ movsxd rbp, eax
+ mov rsi, rbp
+ call CONST
+ mov rdi, qword [rbx]
+ mov r9, r12
+ add rdi, qword [rbx + CONST]
+ mov r8, r13
+ mov rcx, CONST
+ mov edx, CONST
+ mov rsi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL24
+ movsxd rdx, eax
+ add qword [rbx], rdx
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL44
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL24:
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL44:
+ call CONST

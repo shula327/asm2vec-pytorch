@@ -1,0 +1,19 @@
+ .name fcn.000047b0
+ .offset 00000000000047b0
+ .file cksum
+LABEL8:
+ call CONST
+ endbr64
+ sub rsp, CONST
+ lea rax, [rip + CONST]
+ test rdi, rdi
+ cmove rdi, rax
+ mov dword [rdi], CONST
+ test rsi, rsi
+ cjmp LABEL8
+ test rdx, rdx
+ cjmp LABEL8
+ mov qword [rdi + CONST], rsi
+ mov qword [rdi + CONST], rdx
+ add rsp, CONST
+ ret

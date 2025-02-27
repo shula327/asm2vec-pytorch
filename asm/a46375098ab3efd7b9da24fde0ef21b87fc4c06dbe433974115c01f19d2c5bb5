@@ -1,0 +1,73 @@
+ .name fcn.00188670
+ .offset 0000000000188670
+ .file perl5.30.0
+ push r15
+ push r14
+ push r13
+ lea r13, qword [rdi + rsi]
+ push r12
+ mov r12d, ecx
+ push rbp
+ push rbx
+ cmp rdi, r13
+ cjmp LABEL9
+ mov r9, rdi
+ xor eax, eax
+ xor r10d, r10d
+ mov r14d, CONST
+ lea rbp, qword [rip + CONST]
+LABEL53:
+ movzx r15d, byte [r9]
+ movzx ecx, r15b
+ mov r11d, r15d
+ movzx ebx, byte [rbp + rcx]
+ mov rcx, rbx
+ test r10, r10
+ cjmp LABEL21
+ mov eax, r14d
+ sar eax, cl
+ and r15d, eax
+ movsxd rax, r15d
+LABEL48:
+ add rbx, rbp
+ movzx r10d, byte [r10 + rbx + CONST]
+ test r10, r10
+ cjmp LABEL29
+ test rdx, rdx
+ cjmp LABEL31
+ sub r9, rdi
+ add r9, CONST
+ mov qword [rdx], r9
+LABEL31:
+ test r8, r8
+ cjmp LABEL36
+ mov dword [r8], CONST
+LABEL36:
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL21:
+ shl rax, CONST
+ and r11d, CONST
+ or rax, r11
+ jmp LABEL48
+LABEL29:
+ add r9, CONST
+ cmp r13, r9
+ cjmp LABEL9
+ cmp r10, CONST
+ cjmp LABEL53
+LABEL9:
+ pop rbx
+ mov ecx, r12d
+ pop rbp
+ xor r9d, r9d
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST

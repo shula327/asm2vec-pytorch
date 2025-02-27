@@ -1,0 +1,106 @@
+ .name fcn.00004b30
+ .offset 0000000000004b30
+ .file lsmem
+ push r12
+ push rbp
+ push rbx
+ cmp byte [rdi + CONST], CONST
+ mov rbx, rdi
+ mov rbp, qword [rdi + CONST]
+ cjmp LABEL6
+ mov rsi, rbp
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL12
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rsi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+LABEL12:
+ mov rdi, rbp
+ call CONST
+ mov rsi, qword [rbx + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL30
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rsi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+LABEL30:
+ mov rdi, rbp
+ call CONST
+ mov rsi, qword [rbx + CONST]
+ xor edi, edi
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL48
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rsi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+LABEL48:
+ pop rbx
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL6:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, rbp
+ mov edi, CONST
+ lea rsi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ mov r12, qword [rbx + CONST]
+ mov edx, CONST
+ xor edi, edi
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rcx, r12
+ mov edi, CONST
+ lea rsi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ mov r12, qword [rbx + CONST]
+ mov edx, CONST
+ xor edi, edi
+ lea rsi, qword [rip + CONST]
+ call CONST
+ pop rbx
+ mov rcx, r12
+ pop rbp
+ mov rdx, rax
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ pop r12
+ jmp CONST

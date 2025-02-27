@@ -1,0 +1,47 @@
+ .name fcn.0000b380
+ .offset 000000000000b380
+ .file grep
+LABEL8:
+ test rsi, rsi
+ cjmp LABEL1
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rsi, qword [rsi]
+ call LABEL8
+ test al, al
+ cjmp LABEL10
+ mov rsi, qword [rbp + CONST]
+ mov rdi, rbx
+ call LABEL8
+ test al, al
+ cjmp LABEL10
+ test rbx, rbx
+ cjmp LABEL17
+ movzx ecx, byte [rbp + CONST]
+ nop word cs:[rax + rax]
+LABEL26:
+ cmp cl, byte [rbx + CONST]
+ cjmp LABEL10
+ mov rdx, qword [rbx]
+ mov rbx, qword [rbx + CONST]
+ cjmp LABEL24
+ test rbx, rbx
+ cjmp LABEL26
+LABEL17:
+ xor eax, eax
+LABEL10:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL24:
+ test rdx, rdx
+ cjmp LABEL17
+ mov rbx, rdx
+ jmp LABEL26
+LABEL1:
+ mov eax, CONST
+ ret

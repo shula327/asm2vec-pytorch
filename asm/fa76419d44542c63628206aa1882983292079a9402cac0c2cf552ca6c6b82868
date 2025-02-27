@@ -1,0 +1,16 @@
+ .name sym.Perl_hv_placeholders_get
+ .offset 00000000000fcf90
+ .file perl5.30.0
+ endbr64
+ mov rdi, rsi
+ sub rsp, CONST
+ mov esi, CONST
+ call CONST
+ xor r8d, r8d
+ test rax, rax
+ cjmp LABEL7
+ mov r8d, dword [rax + CONST]
+LABEL7:
+ mov eax, r8d
+ add rsp, CONST
+ ret

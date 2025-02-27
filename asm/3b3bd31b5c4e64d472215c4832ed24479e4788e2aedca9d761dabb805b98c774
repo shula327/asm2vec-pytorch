@@ -1,0 +1,23 @@
+ .name fcn.0001ed50
+ .offset 000000000001ed50
+ .file grep
+ endbr64
+ test rdi, rdi
+ lea rax, [rip + CONST]
+ mov ecx, esi
+ cmove rdi, rax
+ mov eax, esi
+ and ecx, CONST
+ shr al, CONST
+ movzx eax, al
+ lea rsi, [rdi + rax*CONST + CONST]
+ mov edi, dword [rsi]
+ mov eax, edi
+ shr eax, cl
+ xor edx, eax
+ and eax, CONST
+ and edx, CONST
+ shl edx, cl
+ xor edx, edi
+ mov dword [rsi], edx
+ ret

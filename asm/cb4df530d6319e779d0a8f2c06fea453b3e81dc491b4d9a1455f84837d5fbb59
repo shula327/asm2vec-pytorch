@@ -1,0 +1,17 @@
+ .name fcn.000065f0
+ .offset 00000000000065f0
+ .file grep
+ endbr64
+ push rbp
+ mov rbp, rdi
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+ pop rbp
+ ret
+LABEL6:
+ mov rdi, rbp
+ call CONST
+ nop word cs:[rax + rax]
+ nop

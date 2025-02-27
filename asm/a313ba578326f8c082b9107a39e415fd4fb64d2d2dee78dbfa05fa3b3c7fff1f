@@ -1,0 +1,114 @@
+ .name fcn.000cf920
+ .offset 00000000000cf920
+ .file bash
+ push r14
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov ecx, dword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ test ecx, ecx
+ cjmp LABEL10
+ test rdi, rdi
+ cjmp LABEL12
+ mov eax, dword [rip + CONST]
+ lea ebx, dword [rax + CONST]
+ movsxd r13, ebx
+ lea rax, qword [rdi + r13*CONST]
+ mov r12, qword [rax]
+ test r12, r12
+ cjmp LABEL19
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL19
+ mov rdi, r12
+ mov dword [rsp + CONST], esi
+ call CONST
+ mov rdi, rbp
+ mov r14, rax
+ call CONST
+ lea rdi, qword [r14 + rax + CONST]
+ call CONST
+ mov esi, dword [rsp + CONST]
+ mov r14, rax
+ test esi, esi
+ cjmp LABEL34
+ mov rsi, r12
+ mov rdi, rax
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+LABEL101:
+ mov rdi, r12
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rax, qword [rip + CONST]
+ mov qword [rax + r13*CONST], r14
+ jmp LABEL47
+LABEL10:
+ test rdi, rdi
+ cjmp LABEL12
+ mov ebx, dword [rip + CONST]
+ cmp ebx, CONST
+ cjmp LABEL52
+ lea edx, dword [rbx + CONST]
+ lea eax, dword [rbx + CONST]
+ movsxd rdx, edx
+ mov dword [rip + CONST], eax
+ lea r12, qword [rdx*CONST]
+ mov rsi, r12
+ call CONST
+ lea rdx, qword [r12 + CONST]
+ mov qword [rip + CONST], rax
+LABEL87:
+ add rax, rdx
+ mov qword [rax], CONST
+LABEL19:
+ mov qword [rax], rbp
+LABEL47:
+ mov dword [rip + CONST], ebx
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL52:
+ mov rdi, qword [rdi]
+ call CONST
+ mov rax, qword [rip + CONST]
+ mov rdx, rax
+ lea rsi, qword [rax + CONST]
+ nop
+LABEL84:
+ mov rcx, qword [rdx + CONST]
+ add rdx, CONST
+ mov qword [rdx + CONST], rcx
+ cmp rsi, rdx
+ cjmp LABEL84
+ mov ebx, CONST
+ mov edx, CONST
+ jmp LABEL87
+LABEL12:
+ mov edi, CONST
+ xor ebx, ebx
+ mov dword [rip + CONST], CONST
+ call CONST
+ mov qword [rip + CONST], rax
+ mov qword [rax], CONST
+ jmp LABEL19
+LABEL34:
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ mov rsi, r12
+ mov rdi, rax
+ call CONST
+ jmp LABEL101

@@ -1,0 +1,34 @@
+ .name fcn.00002d40
+ .offset 0000000000002d40
+ .file nproc
+ push rbp
+ xor edi, edi
+ mov esi, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbp, rsp
+ mov rdx, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL11
+LABEL24:
+ xor eax, eax
+LABEL25:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL15
+ add rsp, CONST
+ pop rbp
+ ret
+LABEL11:
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ cdqe
+ test rax, rax
+ cjmp LABEL24
+ jmp LABEL25
+LABEL15:
+ call CONST

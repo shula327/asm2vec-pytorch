@@ -1,0 +1,45 @@
+ .name fcn.0000abf0
+ .offset 000000000000abf0
+ .file mkdir
+LABEL10:
+ call CONST
+ push rbp
+ mov ebp, esi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov esi, dword [rdi + CONST]
+ cmp esi, ebp
+ cjmp LABEL8
+ cmp esi, -CONST
+ cjmp LABEL10
+LABEL8:
+ test dl, dl
+ cjmp LABEL12
+ test byte [rbx + CONST], CONST
+ cjmp LABEL14
+ test esi, esi
+ cjmp LABEL16
+LABEL14:
+ mov dword [rbx + CONST], ebp
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL12:
+ lea rdi, qword [rbx + CONST]
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL14
+ call CONST
+LABEL35:
+ mov dword [rbx + CONST], ebp
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL16:
+ mov edi, esi
+ call CONST
+ jmp LABEL35

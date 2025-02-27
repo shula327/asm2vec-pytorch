@@ -1,0 +1,107 @@
+ .name sym.XS_DynaLoader_dl_install_xsub
+ .offset 00000000001af8a0
+ .file perl5.30.0
+ endbr64
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ mov rbp, qword [rdi]
+ lea rdx, [rax + CONST]
+ mov qword [rdi + CONST], rdx
+ mov rdx, qword [rdi + CONST]
+ movsxd rcx, dword [rax]
+ mov r13, rcx
+ lea eax, [rcx + CONST]
+ lea rcx, [rdx + rcx*CONST]
+ sub rbp, rcx
+ sar rbp, CONST
+ lea ecx, [rbp + CONST]
+ cmp ecx, CONST
+ cjmp LABEL22
+ cdqe
+ mov rsi, qword [rdx + rax*CONST]
+ lea r12, [rax*CONST]
+ mov eax, dword [rsi + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL29
+ mov r14, qword [rsi + CONST]
+LABEL87:
+ lea eax, [r13 + CONST]
+ cdqe
+ mov rsi, qword [rdx + rax*CONST]
+ mov eax, dword [rsi + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL37
+ mov rax, qword [rsi]
+ mov r15, qword [rax + CONST]
+LABEL81:
+ lea rcx, [rip + CONST]
+ cmp ebp, CONST
+ cjmp LABEL42
+ mov rdx, qword [rbx + CONST]
+ lea eax, [r13 + CONST]
+ cdqe
+ mov rsi, qword [rdx + rax*CONST]
+ mov eax, dword [rsi + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL50
+ mov rcx, qword [rsi + CONST]
+LABEL42:
+ mov rdx, r15
+ mov r9d, CONST
+ xor r8d, r8d
+ mov rsi, r14
+ mov rdi, rbx
+ call CONST
+ mov rdi, rbx
+ mov rsi, rax
+ call CONST
+ mov rbp, qword [rbx + CONST]
+ mov rdi, rbx
+ mov rsi, rax
+ call CONST
+ add rbp, r12
+ mov qword [rbp], rax
+ add r12, qword [rbx + CONST]
+ mov qword [rbx], r12
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL37:
+ mov edx, CONST
+ mov rdi, rbx
+ call CONST
+ mov r15, rax
+ jmp LABEL81
+LABEL29:
+ xor edx, edx
+ mov ecx, CONST
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ mov r14, rax
+ jmp LABEL87
+LABEL50:
+ mov ecx, CONST
+ xor edx, edx
+ mov rdi, rbx
+ call CONST
+ mov rcx, rax
+ jmp LABEL42
+LABEL22:
+ mov rdi, rsi
+ lea rsi, [rip + CONST]
+ call CONST

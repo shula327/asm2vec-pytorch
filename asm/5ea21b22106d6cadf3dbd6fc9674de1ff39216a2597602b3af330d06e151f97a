@@ -1,0 +1,106 @@
+ .name fcn.00021a40
+ .offset 0000000000021a40
+ .file grep
+ endbr64
+ sub rsp, CONST
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], r9
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ lea rax, [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ mov r8, rax
+ mov rax, qword [rax + CONST]
+ mov qword [rsp + CONST], rax
+ test rax, rax
+ cjmp LABEL16
+ mov rax, qword [r8 + CONST]
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ test rax, rax
+ cjmp LABEL21
+ mov rax, qword [rsp + CONST]
+ lea r8, [rsp + CONST]
+ mov r9d, CONST
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], rax
+ test rax, rax
+ cjmp LABEL28
+ mov rax, qword [r8]
+ lea r9, [rsp + CONST]
+ mov qword [rsp + CONST], r9
+ mov qword [rsp + CONST], rax
+ test rax, rax
+ cjmp LABEL34
+ mov rax, qword [r9]
+ lea r8, [rsp + CONST]
+ mov r9d, CONST
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], rax
+ test rax, rax
+ cjmp LABEL28
+ mov r8, qword [r8]
+ lea rax, [rsp + CONST]
+ mov r9d, CONST
+ mov qword [rsp + CONST], rax
+ mov qword [rsp + CONST], r8
+ test r8, r8
+ cjmp LABEL28
+ lea r8, [rsp + CONST]
+ mov qword [rsp + CONST], r8
+ mov r8, qword [rax]
+ mov qword [rsp + CONST], r8
+ test r8, r8
+ cjmp LABEL54
+ lea r8, [rsp + CONST]
+ mov qword [rsp + CONST], r8
+ mov r8, qword [rax + CONST]
+ mov qword [rsp + CONST], r8
+ test r8, r8
+ cjmp LABEL60
+ lea r8, [rsp + CONST]
+ mov qword [rsp + CONST], r8
+ mov r8, qword [rax + CONST]
+ mov qword [rsp + CONST], r8
+ test r8, r8
+ cjmp LABEL66
+ mov rax, qword [rax + CONST]
+ lea r8, [rsp + CONST]
+ xor r9d, r9d
+ mov qword [rsp + CONST], r8
+ test rax, rax
+ mov qword [rsp + CONST], rax
+ setne r9b
+ add r9, CONST
+LABEL28:
+ lea r8, [rsp + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL79
+ add rsp, CONST
+ ret
+LABEL21:
+ mov r9d, CONST
+ jmp LABEL28
+LABEL16:
+ xor r9d, r9d
+ jmp LABEL28
+LABEL34:
+ mov r9d, CONST
+ jmp LABEL28
+LABEL54:
+ mov r9d, CONST
+ jmp LABEL28
+LABEL60:
+ mov r9d, CONST
+ jmp LABEL28
+LABEL66:
+ mov r9d, CONST
+ jmp LABEL28
+LABEL79:
+ call CONST

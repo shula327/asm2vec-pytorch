@@ -1,0 +1,107 @@
+ .name fcn.00011940
+ .offset 0000000000011940
+ .file find
+ push r15
+ mov r15, r8
+ push r14
+ mov r14, rdx
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rcx
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ movsd qword [rsp + CONST], xmm0
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ movzx eax, byte [rdi]
+ cmp al, CONST
+ cjmp LABEL18
+ cmp al, CONST
+ cjmp LABEL20
+ mov dword [rsi + CONST], CONST
+ add r12, CONST
+LABEL44:
+ mov rcx, qword [rip + CONST]
+ lea rdx, qword [rsp + CONST]
+ xor esi, esi
+ mov rdi, r12
+ call CONST
+ mov r13d, eax
+ test al, al
+ cjmp LABEL30
+LABEL74:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL33
+ add rsp, CONST
+ mov eax, r13d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL20:
+ mov dword [rsi + CONST], CONST
+ jmp LABEL44
+LABEL30:
+ movsd xmm0, qword [rsp + CONST]
+ mulsd xmm0, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ call CONST
+ movsd xmm1, qword [rip + CONST]
+ mulsd xmm0, xmm1
+ comisd xmm1, xmm0
+ cjmp LABEL52
+ pxor xmm1, xmm1
+ movsd xmm2, qword [rsp + CONST]
+ cvtsi2sd xmm1, r14
+ subsd xmm1, xmm2
+ cvttsd2si rax, xmm1
+ pxor xmm1, xmm1
+ cmp rax, r14
+ mov qword [rbx + CONST], rax
+ setg cl
+ comisd xmm1, xmm2
+ seta dl
+ cmp cl, dl
+ cjmp LABEL65
+ pxor xmm1, xmm1
+ cvtsi2sd xmm1, rbp
+ movapd xmm2, xmm1
+ comisd xmm0, xmm1
+ subsd xmm2, xmm0
+ cvttsd2si rdx, xmm2
+ cjmp LABEL72
+ mov qword [rbx + CONST], rdx
+ jmp LABEL74
+LABEL18:
+ mov dword [rsi + CONST], CONST
+ add r12, CONST
+ jmp LABEL44
+LABEL72:
+ add rdx, CONST
+ sub rax, CONST
+ mov qword [rbx + CONST], rdx
+ mov qword [rbx + CONST], rax
+ jmp LABEL74
+LABEL33:
+ call CONST
+LABEL52:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL65:
+ mov rcx, r12
+ mov rdx, r15
+ xor esi, esi
+ mov edi, CONST
+ xor eax, eax
+ call CONST

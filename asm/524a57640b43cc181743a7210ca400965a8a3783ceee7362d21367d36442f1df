@@ -1,0 +1,37 @@
+ .name fcn.000079b0
+ .offset 00000000000079b0
+ .file partx
+ push r13
+ push r12
+ mov r12d, esi
+ push rbp
+ mov rbp, rdi
+ cmp esi, edx
+ cjmp LABEL6
+ mov r13d, edx
+ lea rsi, qword [rip + CONST]
+ mov edx, CONST
+ xor edi, edi
+ call CONST
+ mov ecx, r13d
+ mov edx, r12d
+ mov rsi, rbp
+ mov rdi, rax
+ pop rbp
+ xor eax, eax
+ pop r12
+ pop r13
+ jmp CONST
+LABEL6:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov edx, r12d
+ mov rsi, rbp
+ pop rbp
+ mov rdi, rax
+ pop r12
+ xor eax, eax
+ pop r13
+ jmp CONST

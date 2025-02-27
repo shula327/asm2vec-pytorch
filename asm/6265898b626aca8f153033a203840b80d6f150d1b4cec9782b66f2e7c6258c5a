@@ -1,0 +1,25 @@
+ .name fcn.0010de70
+ .offset 000000000010de70
+ .file perl5.30.0
+ push r14
+ mov r14, r8
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rsi
+ lea rsi, qword [rdi + CONST]
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rcx
+ call CONST
+ mov r9, r14
+ mov r8, rbx
+ mov rcx, r13
+ mov byte [rbp + CONST], CONST
+ mov rdx, r12
+ mov rdi, rbp
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ nop word [rax + rax]

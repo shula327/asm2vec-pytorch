@@ -1,0 +1,26 @@
+ .name fcn.000029f0
+ .offset 00000000000029f0
+ .file fold
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL1
+ cmp sil, CONST
+ cjmp LABEL3
+ xor eax, eax
+ cmp sil, CONST
+ cjmp LABEL6
+ cmp sil, CONST
+ cjmp LABEL8
+LABEL1:
+ lea rax, qword [rdi + CONST]
+LABEL6:
+ ret
+LABEL3:
+ test rdi, rdi
+ lea rax, qword [rdi + CONST]
+ mov edi, CONST
+ cmove rax, rdi
+ ret
+LABEL8:
+ and rdi, CONST
+ lea rax, qword [rdi + CONST]
+ ret

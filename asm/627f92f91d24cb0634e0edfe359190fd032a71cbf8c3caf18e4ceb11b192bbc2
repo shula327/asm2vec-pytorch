@@ -1,0 +1,41 @@
+ .name fcn.0000fa70
+ .offset 000000000000fa70
+ .file install
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ call CONST
+ mov rsi, qword [rax]
+ test rsi, rsi
+ cjmp LABEL9
+ mov rbx, rax
+ jmp LABEL11
+LABEL21:
+ mov rsi, qword [rbx]
+LABEL11:
+ cmp rsi, rbp
+ cjmp LABEL14
+ mov rdi, rbp
+ call qword [r12 + CONST]
+ test al, al
+ cjmp LABEL18
+ mov rbx, qword [rbx + CONST]
+ test rbx, rbx
+ cjmp LABEL21
+LABEL9:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL18:
+ mov rbp, qword [rbx]
+LABEL14:
+ mov rax, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ ret

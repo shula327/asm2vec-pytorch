@@ -1,0 +1,31 @@
+ .name fcn.000134f0
+ .offset 00000000000134f0
+ .file partx
+ push rbp
+ xor edx, edx
+ mov ebp, edi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ mov r8, rax
+ xor eax, eax
+ test r8, r8
+ cjmp LABEL11
+ lea rsi, qword [rsp + CONST]
+ mov edx, CONST
+ mov edi, ebp
+ call CONST
+ test rax, rax
+ setg al
+ movzx eax, al
+LABEL11:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL21
+ add rsp, CONST
+ pop rbp
+ ret
+LABEL21:
+ call CONST

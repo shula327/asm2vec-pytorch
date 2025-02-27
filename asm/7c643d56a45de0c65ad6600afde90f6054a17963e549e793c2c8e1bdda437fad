@@ -1,0 +1,83 @@
+ .name fcn.00006c10
+ .offset 0000000000006c10
+ .file setpriv
+ endbr64
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test rsi, rsi
+ cjmp LABEL12
+ test rdi, rdi
+ cjmp LABEL12
+ mov rbp, rsi
+ lea r13, [rsp + CONST]
+ lea r12, [rsp + CONST]
+ jmp LABEL18
+LABEL48:
+ test rbx, rbx
+ sete dl
+ test rbp, rbp
+ sete al
+ or dl, al
+ cjmp LABEL12
+ cmp r14, r15
+ cjmp LABEL12
+ mov rdx, r14
+ mov rsi, rbp
+ mov rdi, rbx
+ call CONST
+ test eax, eax
+ cjmp LABEL12
+ lea rdi, [rbx + r14]
+ add rbp, r15
+LABEL18:
+ mov rsi, r13
+ call CONST
+ mov rdi, rbp
+ mov rsi, r12
+ mov rbx, rax
+ call CONST
+ mov r14, qword [rsp + CONST]
+ mov r15, qword [rsp + CONST]
+ mov rbp, rax
+ mov rax, r14
+ add rax, r15
+ cjmp LABEL46
+ cmp rax, CONST
+ cjmp LABEL48
+ test rbx, rbx
+ cjmp LABEL50
+ cmp byte [rbx], CONST
+ cjmp LABEL46
+LABEL50:
+ test rbp, rbp
+ cjmp LABEL12
+ cmp byte [rbp], CONST
+ cjmp LABEL48
+ nop dword [rax]
+LABEL46:
+ mov eax, CONST
+ jmp LABEL59
+LABEL12:
+ xor eax, eax
+LABEL59:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL63
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL63:
+ call CONST

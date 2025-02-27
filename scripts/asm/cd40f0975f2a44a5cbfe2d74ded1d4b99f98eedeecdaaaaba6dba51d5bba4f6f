@@ -1,0 +1,78 @@
+ .name fcn.00007530
+ .offset 0000000000007530
+ .file install
+ sub rsp, CONST
+ mov r9d, esi
+ mov r10, rdx
+ movabs rdx, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov eax, ecx
+ not r9d
+ and rdx, qword [r8 + CONST]
+ not eax
+ shr r9d, CONST
+ shr eax, CONST
+ and eax, r9d
+ cmp byte [r8 + CONST], CONST
+ cjmp LABEL15
+ cmp byte [r8 + CONST], CONST
+ cjmp LABEL17
+LABEL15:
+ lea r11, qword [rip + CONST]
+ mov qword [rsp], r11
+ lea r11, qword [rip + CONST]
+ mov qword [rsp + CONST], r11
+ lea r11, qword [rip + CONST]
+ mov qword [rsp + CONST], r11
+ test al, al
+ cjmp LABEL25
+LABEL59:
+ mov rcx, rsp
+LABEL64:
+ test rdx, rdx
+ mov eax, CONST
+ lea rdx, qword [rip + CONST]
+ mov rsi, r10
+ cmove rdx, rax
+ call CONST
+LABEL57:
+ test eax, eax
+ sete al
+ mov rdi, qword [rsp + CONST]
+ xor rdi, qword fs:[CONST]
+ cjmp LABEL37
+ add rsp, CONST
+ ret
+LABEL17:
+ lea r11, qword [rip + CONST]
+ cmp byte [r8 + CONST], CONST
+ mov qword [rsp], r11
+ lea r11, qword [rip + CONST]
+ mov qword [rsp + CONST], r11
+ lea r11, qword [rip + CONST]
+ mov qword [rsp + CONST], r11
+ cjmp LABEL47
+ test al, al
+ cjmp LABEL49
+ xor r9d, r9d
+LABEL61:
+ test rdx, rdx
+ lea r8, qword [rip + CONST]
+ mov eax, CONST
+ mov rdx, r10
+ cmove r8, rax
+ call CONST
+ jmp LABEL57
+LABEL47:
+ test al, al
+ cjmp LABEL59
+LABEL25:
+ mov r9, rsp
+ jmp LABEL61
+LABEL37:
+ call CONST
+LABEL49:
+ xor ecx, ecx
+ jmp LABEL64

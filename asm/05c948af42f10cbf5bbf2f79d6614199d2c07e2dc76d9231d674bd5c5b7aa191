@@ -1,0 +1,51 @@
+ .name fcn.000a8010
+ .offset 00000000000a8010
+ .file bash
+ push rbp
+ push rbx
+ sub rsp, CONST
+ test rdi, rdi
+ cjmp LABEL4
+ mov rbx, rdi
+ xor ebp, ebp
+ jmp LABEL7
+LABEL19:
+ mov rdi, qword [rax]
+ call CONST
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL12
+LABEL7:
+ mov rax, qword [rbx + CONST]
+ mov rdi, qword [rax]
+ call CONST
+ mov rsi, rax
+ mov rax, qword [rbx + CONST]
+ test rsi, rsi
+ cjmp LABEL19
+ mov rbp, qword [rax]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ mov ebp, CONST
+ call CONST
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL7
+LABEL12:
+ add rsp, CONST
+ mov edi, ebp
+ pop rbx
+ pop rbp
+ jmp CONST
+LABEL4:
+ xor ebp, ebp
+ add rsp, CONST
+ mov edi, ebp
+ pop rbx
+ pop rbp
+ jmp CONST

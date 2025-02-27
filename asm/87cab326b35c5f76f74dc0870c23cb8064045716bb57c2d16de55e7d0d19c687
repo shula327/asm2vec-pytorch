@@ -1,0 +1,24 @@
+ .name fcn.000072a0
+ .offset 00000000000072a0
+ .file setpriv
+ endbr64
+ lea rdx, [rip + CONST]
+ mov ecx, CONST
+ xor eax, eax
+ jmp LABEL4
+LABEL11:
+ add rax, CONST
+ cmp rax, CONST
+ cjmp LABEL7
+ mov ecx, dword [rdx]
+ add rdx, CONST
+LABEL4:
+ cmp ecx, edi
+ cjmp LABEL11
+ shl rax, CONST
+ lea rdx, [rip + CONST]
+ mov rax, qword [rdx + rax]
+ ret
+LABEL7:
+ xor eax, eax
+ ret

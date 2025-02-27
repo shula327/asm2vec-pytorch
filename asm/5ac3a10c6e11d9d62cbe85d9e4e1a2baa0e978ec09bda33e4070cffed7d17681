@@ -1,0 +1,13 @@
+ .name fcn.0001cd30
+ .offset 000000000001cd30
+ .file grep
+ endbr64
+ mov eax, edi
+ lea rdx, [rip + CONST]
+ mov ecx, edi
+ shr al, CONST
+ and eax, CONST
+ mov eax, dword [rdx + rax*CONST]
+ shr eax, cl
+ and eax, CONST
+ ret

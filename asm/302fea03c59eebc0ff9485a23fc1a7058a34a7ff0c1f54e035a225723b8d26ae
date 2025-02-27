@@ -1,0 +1,24 @@
+ .name fcn.0001c430
+ .offset 000000000001c430
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov qword [rdi + CONST], rsi
+ test rdx, rdx
+ cjmp LABEL5
+ mov qword [rdi], rdx
+LABEL18:
+ movabs rax, CONST
+ mov edi, CONST
+ mov qword [rbx + CONST], rax
+ call CONST
+ mov qword [rbx + CONST], rax
+ mov qword [rax], CONST
+ pop rbx
+ ret
+LABEL5:
+ mov rdi, rsi
+ call CONST
+ mov qword [rbx], rax
+ jmp LABEL18

@@ -1,0 +1,22 @@
+ .name fcn.00004ca0
+ .offset 0000000000004ca0
+ .file update-alternatives
+ test rdi, rdi
+ cjmp LABEL1
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ add rsp, CONST
+ ret
+LABEL1:
+ xor eax, eax
+ ret
+LABEL5:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST

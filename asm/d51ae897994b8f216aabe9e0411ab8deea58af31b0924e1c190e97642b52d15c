@@ -1,0 +1,56 @@
+ .name fcn.00007ad0
+ .offset 0000000000007ad0
+ .file dpkg-deb
+ push r14
+ push r13
+ mov r13d, edi
+ push r12
+ xor r12d, r12d
+ push rbp
+ mov rbp, rsi
+ push rbx
+ nop dword [rax]
+LABEL25:
+ lea r14, qword [rbp + r12]
+ mov edi, r13d
+ mov rsi, r14
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL15
+ mov rdx, rax
+ mov esi, CONST
+ mov rdi, r14
+ add r12, rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL22
+ mov edx, CONST
+ cmp r12, CONST
+ cjmp LABEL25
+ pop rbx
+ mov byte [rbp + r12], CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL15:
+ mov r12, rax
+ pop rbx
+ pop rbp
+ mov rax, r12
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL22:
+ mov byte [rax + CONST], CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

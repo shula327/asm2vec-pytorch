@@ -1,0 +1,72 @@
+ .name fcn.000277e0
+ .offset 00000000000277e0
+ .file dpkg
+ endbr64
+ push r14
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ test rdx, rdx
+ cjmp LABEL8
+ movzx r8d, byte [rsi]
+ test r8b, r8b
+ cjmp LABEL11
+ mov rbx, rdx
+ lea rbp, [rsi + CONST]
+ mov r13, rdi
+ lea r14, [rip + CONST]
+ jmp LABEL16
+LABEL29:
+ test r8b, r8b
+ cjmp LABEL18
+ sub rbx, CONST
+ test rbx, rbx
+ cjmp LABEL21
+ mov byte [r13], r8b
+ add r13, CONST
+LABEL59:
+ movzx r8d, byte [rbp]
+ add rbp, CONST
+ test r8b, r8b
+ cjmp LABEL21
+LABEL16:
+ cmp r8b, CONST
+ cjmp LABEL29
+ sub rbx, CONST
+ test rbx, rbx
+ cjmp LABEL21
+ mov eax, CONST
+ add r13, CONST
+ add rbp, CONST
+ mov word [r13 + CONST], ax
+ movzx r8d, byte [rbp + CONST]
+ test r8b, r8b
+ cjmp LABEL16
+ nop
+LABEL21:
+ mov byte [r13], CONST
+LABEL8:
+ pop rbx
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL18:
+ sub rbx, CONST
+ test rbx, rbx
+ cjmp LABEL21
+ mov rdi, r13
+ mov rcx, r14
+ mov rdx, CONST
+ xor eax, eax
+ mov esi, CONST
+ add r13, CONST
+ call CONST
+ jmp LABEL59
+LABEL11:
+ mov r13, rdi
+ jmp LABEL21

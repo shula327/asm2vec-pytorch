@@ -1,0 +1,119 @@
+ .name sym.fts_close
+ .offset 0000000000018380
+ .file install
+ endbr64
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rdi, qword [rdi]
+ test rdi, rdi
+ cjmp LABEL7
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL9
+ jmp LABEL10
+LABEL17:
+ call CONST
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL13
+LABEL21:
+ mov rdi, rbp
+LABEL9:
+ mov rbp, qword [rdi + CONST]
+ test rbp, rbp
+ cjmp LABEL17
+ mov rbp, qword [rdi + CONST]
+ call CONST
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL21
+LABEL13:
+ mov rdi, rbp
+ call CONST
+LABEL7:
+ mov rdi, qword [r12 + CONST]
+ test rdi, rdi
+ cjmp LABEL26
+ call CONST
+LABEL26:
+ mov rdi, qword [r12 + CONST]
+ call CONST
+ mov rdi, qword [r12 + CONST]
+ call CONST
+ mov eax, dword [r12 + CONST]
+ test ah, CONST
+ cjmp LABEL34
+ mov edi, dword [r12 + CONST]
+ test edi, edi
+ cjmp LABEL37
+LABEL61:
+ xor r13d, r13d
+LABEL78:
+ lea rdi, [r12 + CONST]
+ call CONST
+ mov rdi, qword [r12 + CONST]
+ test rdi, rdi
+ cjmp LABEL43
+ call CONST
+LABEL43:
+ mov rdi, qword [r12 + CONST]
+ test dword [r12 + CONST], CONST
+ cjmp LABEL47
+ test rdi, rdi
+ cjmp LABEL49
+ call CONST
+LABEL49:
+ mov rdi, r12
+ call CONST
+ test r13d, r13d
+ cjmp LABEL54
+LABEL97:
+ mov eax, r13d
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL34:
+ test al, CONST
+ cjmp LABEL61
+ mov edi, dword [r12 + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL65
+ mov edi, dword [r12 + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL61
+ call CONST
+ mov rbp, rax
+ jmp LABEL72
+LABEL37:
+ call CONST
+ test eax, eax
+ cjmp LABEL61
+ call CONST
+ mov r13d, dword [rax]
+ jmp LABEL78
+LABEL47:
+ call CONST
+ jmp LABEL49
+LABEL65:
+ call CONST
+ mov edi, dword [r12 + CONST]
+ mov r13d, dword [rax]
+ mov rbp, rax
+ call CONST
+ test r13d, r13d
+ cjmp LABEL78
+ test eax, eax
+ cjmp LABEL78
+LABEL72:
+ mov r13d, dword [rbp]
+ jmp LABEL78
+LABEL10:
+ mov rbp, rdi
+ jmp LABEL13
+LABEL54:
+ call CONST
+ mov dword [rax], r13d
+ mov r13d, CONST
+ jmp LABEL97

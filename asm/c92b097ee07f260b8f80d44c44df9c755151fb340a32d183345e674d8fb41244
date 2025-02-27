@@ -1,0 +1,27 @@
+ .name fcn.00006af0
+ .offset 0000000000006af0
+ .file gzip
+ push r12
+ mov eax, dword [rip + CONST]
+ xor r12d, r12d
+ cmp dword [rip + CONST], eax
+ cjmp LABEL4
+LABEL19:
+ mov eax, r12d
+ pop r12
+ ret
+LABEL4:
+ cmp eax, CONST
+ cjmp LABEL9
+LABEL17:
+ mov r12d, CONST
+ mov eax, r12d
+ pop r12
+ ret
+LABEL9:
+ mov edi, CONST
+ call CONST
+ cmp eax, -1
+ cjmp LABEL17
+ mov dword [rip + CONST], CONST
+ jmp LABEL19

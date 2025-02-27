@@ -1,0 +1,17 @@
+ .name fcn.0000d420
+ .offset 000000000000d420
+ .file dpkg-query
+ push rax
+ pop rax
+ lea rdi, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]

@@ -1,0 +1,46 @@
+ .name fcn.000055a0
+ .offset 00000000000055a0
+ .file gzip
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ mov r8d, eax
+ mov eax, dword [rip + CONST]
+ test r8b, r8b
+ cjmp LABEL9
+ test eax, eax
+ cjmp LABEL11
+ mov rdx, rbx
+ test rbx, rbx
+ cjmp LABEL14
+LABEL32:
+ mov ecx, CONST
+ mov rsi, rbp
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rdi, qword [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ mov byte [rdi + rbx], CONST
+ call CONST
+ mov dword [rip + CONST], eax
+LABEL9:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL14:
+ mov edx, CONST
+ mov ebx, CONST
+ lea rbp, qword [rip + CONST]
+ jmp LABEL32
+LABEL11:
+ mov edi, eax
+ call CONST
+ mov rdx, rbx
+ test rbx, rbx
+ cjmp LABEL32
+ jmp LABEL14

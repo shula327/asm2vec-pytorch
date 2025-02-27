@@ -1,0 +1,20 @@
+ .name fcn.0001fd10
+ .offset 000000000001fd10
+ .file dpkg
+ endbr64
+ mov eax, dword [rsi + CONST]
+ cmp eax, CONST
+ cjmp LABEL3
+ mov r8d, dword [rdi + CONST]
+ test eax, eax
+ cjmp LABEL6
+ test r8d, r8d
+ cjmp LABEL3
+LABEL6:
+ lea rdx, [rdi + CONST]
+ lea rdi, [rsi + CONST]
+ mov esi, r8d
+ jmp CONST
+LABEL3:
+ xor eax, eax
+ ret

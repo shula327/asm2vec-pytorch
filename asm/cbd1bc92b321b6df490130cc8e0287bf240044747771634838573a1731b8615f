@@ -1,0 +1,36 @@
+ .name fcn.000038a0
+ .offset 00000000000038a0
+ .file sha384sum
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rbp, qword [rip + CONST]
+ test rbp, rbp
+ cjmp LABEL6
+ call CONST
+ mov rcx, qword [rax]
+ xor eax, eax
+ jmp LABEL10
+LABEL18:
+ lea edx, dword [rax + CONST]
+ add rbx, CONST
+ mov rax, rdx
+ cmp rdx, rbp
+ cjmp LABEL6
+LABEL10:
+ movzx edx, byte [rbx]
+ test byte [rcx + rdx*CONST + CONST], CONST
+ cjmp LABEL18
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret
+LABEL6:
+ cmp byte [rbx], CONST
+ sete al
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

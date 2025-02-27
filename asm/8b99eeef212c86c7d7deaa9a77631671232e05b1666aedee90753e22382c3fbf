@@ -1,0 +1,60 @@
+ .name fcn.000078e0
+ .offset 00000000000078e0
+ .file dpkg
+ sub rsp, CONST
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL2
+LABEL39:
+ mov rcx, qword [rip + CONST]
+ mov rax, qword [rip + CONST]
+ mov rdx, rcx
+ sub rdx, rax
+ cmp rdx, CONST
+ cjmp LABEL8
+ mov r8, qword [rip + CONST]
+ add rax, CONST
+ cmp rax, r8
+ cjmp LABEL12
+LABEL48:
+ movsxd rsi, dword [rip + CONST]
+ mov rdx, rsi
+ add rax, rsi
+ not edx
+ movsxd rdx, edx
+ and rax, rdx
+ cmp rax, rcx
+ cjmp LABEL20
+ mov rcx, rax
+ mov qword [rip + CONST], rax
+ mov rax, r8
+ mov qword [rip + CONST], rcx
+ add rsp, CONST
+ ret
+LABEL20:
+ mov qword [rip + CONST], rcx
+ mov rax, r8
+ mov qword [rip + CONST], rcx
+ add rsp, CONST
+ ret
+LABEL2:
+ mov r8, qword [rip + CONST]
+ lea rcx, [rip + CONST]
+ xor edx, edx
+ xor esi, esi
+ lea rdi, [rip + CONST]
+ call CONST
+ mov byte [rip + CONST], CONST
+ jmp LABEL39
+LABEL8:
+ mov esi, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rax, qword [rip + CONST]
+ mov r8, qword [rip + CONST]
+ mov rcx, qword [rip + CONST]
+ add rax, CONST
+ cmp rax, r8
+ cjmp LABEL48
+LABEL12:
+ or byte [rip + CONST], CONST
+ jmp LABEL48

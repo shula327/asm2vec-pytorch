@@ -1,0 +1,51 @@
+ .name fcn.00084550
+ .offset 0000000000084550
+ .file perl5.30.0
+ push rbx
+ mov eax, esi
+ mov rsi, rcx
+ mov rcx, qword [rdi + CONST]
+ mov rbx, rdi
+ mov dword [rcx + CONST], eax
+ mov rdi, qword [rdi + CONST]
+ mov r8, qword [rbx + CONST]
+ mov ecx, dword [rdi + CONST]
+ cmp dword [r8 + CONST], ecx
+ cmovbe ecx, dword [r8 + CONST]
+ mov dword [rdi + CONST], ecx
+ mov rcx, qword [rbx + CONST]
+ mov qword [rcx + CONST], rsi
+ mov rcx, qword [rbx + CONST]
+ mov rdi, qword [rcx + CONST]
+ mov qword [rcx + CONST], rdi
+ mov rcx, qword [rbx + CONST]
+ mov word [rcx + CONST], ax
+ mov rax, qword [rbx + CONST]
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL21
+ mov byte [rax + CONST], dl
+ cmp byte [rsi], CONST
+ cjmp LABEL24
+ xor edx, edx
+ mov rdi, rbx
+ call CONST
+ cmp byte [rax], CONST
+ cjmp LABEL24
+ mov rax, qword [rbx + CONST]
+LABEL21:
+ mov edx, dword [rax + CONST]
+ mov r8d, CONST
+ test edx, edx
+ cjmp LABEL34
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL34
+ mov byte [rax + CONST], CONST
+LABEL34:
+ mov eax, r8d
+ pop rbx
+ ret
+LABEL24:
+ mov r8d, CONST
+ pop rbx
+ mov eax, r8d
+ ret

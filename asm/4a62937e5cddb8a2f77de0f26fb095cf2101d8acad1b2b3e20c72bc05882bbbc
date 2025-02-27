@@ -1,0 +1,19 @@
+ .name fcn.0003aa80
+ .offset 000000000003aa80
+ .file bash
+LABEL7:
+ push r12
+ call CONST
+ cmp dword [rip + CONST], CONST
+ mov r12, rax
+ cjmp LABEL4
+ pop r12
+ ret
+LABEL4:
+ call LABEL7
+ mov rdx, r12
+ xor esi, esi
+ mov edi, CONST
+ mov rcx, rax
+ pop r12
+ jmp CONST

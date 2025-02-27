@@ -1,0 +1,47 @@
+ .name fcn.00001ba0
+ .offset 0000000000001ba0
+ .file mesg
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ mov rbx, rax
+ mov qword [rsp], CONST
+ call CONST
+ mov edx, CONST
+ mov rsi, rsp
+ mov rdi, rbx
+ mov dword [rax], CONST
+ mov rbp, rax
+ call CONST
+ mov edx, dword [rbp]
+ test edx, edx
+ cjmp LABEL8
+ mov rdx, qword [rsp]
+ test rdx, rdx
+ cjmp LABEL8
+ cmp byte [rdx], CONST
+ cjmp LABEL8
+ cmp rdx, rbx
+ cjmp LABEL8
+ lea rdx, qword [rax + CONST]
+ cmp rdx, CONST
+ cjmp LABEL8
+LABEL39:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL33
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ mov eax, CONST
+ jmp LABEL39
+LABEL33:
+ call CONST

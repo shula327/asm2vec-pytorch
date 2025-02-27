@@ -1,0 +1,77 @@
+ .name fcn.00027fe0
+ .offset 0000000000027fe0
+ .file dpkg
+ endbr64
+ lea rax, [rdi + CONST]
+ sub rsp, CONST
+ cmp rsi, rax
+ cjmp LABEL4
+LABEL61:
+ cmp qword [rsi], CONST
+ cjmp LABEL6
+LABEL14:
+ mov eax, CONST
+LABEL50:
+ add rsp, CONST
+ ret
+LABEL6:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL12
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL12:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL17
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL17:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL22
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL22:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL27
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL27:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL32
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL32:
+ mov rax, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL37
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL37:
+ lea rdi, [rsi + CONST]
+ mov qword [rsp + CONST], rsi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ test al, al
+ cjmp LABEL14
+ cmp qword [rsi + CONST], CONST
+ cjmp LABEL14
+ cmp qword [rsi + CONST], CONST
+ setne al
+ jmp LABEL50
+LABEL4:
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL14
+ mov eax, dword [rdi + CONST]
+ mov qword [rsp + CONST], rsi
+ test eax, eax
+ cjmp LABEL14
+ add rdi, CONST
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ test al, al
+ cjmp LABEL61
+ jmp LABEL14

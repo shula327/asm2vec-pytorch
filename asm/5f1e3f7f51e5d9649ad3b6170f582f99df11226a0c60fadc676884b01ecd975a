@@ -1,0 +1,119 @@
+ .name fcn.0000f9b0
+ .offset 000000000000f9b0
+ .file find
+ sub rsp, CONST
+ mov qword [rsp], rdi
+ mov rdi, rsp
+ mov qword [rsp + CONST], rsi
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+ movsxd rdx, dword [rax + CONST]
+ test edx, edx
+ cjmp LABEL9
+ cmp edx, CONST
+ cjmp LABEL11
+ movsxd rcx, dword [rax + CONST]
+ test ecx, ecx
+ cjmp LABEL14
+ cmp ecx, CONST
+ cjmp LABEL16
+ mov esi, dword [rax + CONST]
+ test esi, esi
+ cjmp LABEL19
+ cmp esi, CONST
+ cjmp LABEL21
+ mov r8d, dword [rax + CONST]
+ cmp r8d, CONST
+ cjmp LABEL24
+ mov r9d, dword [rax]
+ cmp r9d, CONST
+ cjmp LABEL27
+ mov edi, dword [rax + CONST]
+ sub rsp, CONST
+ add edi, CONST
+ push rdi
+ lea rdi, qword [rip + CONST]
+ push qword [rsp + CONST]
+ push r9
+ push r8
+ lea r8, qword [rip + CONST]
+ push rsi
+ mov eax, dword [rax + CONST]
+ mov esi, CONST
+ push rax
+ lea rax, qword [rip + CONST]
+ push qword [rax + rcx*CONST]
+ lea rax, qword [rip + CONST]
+ mov ecx, CONST
+ mov r9, qword [rax + rdx*CONST]
+ mov edx, CONST
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ cmp eax, CONST
+ cjmp LABEL51
+ lea rax, qword [rip + CONST]
+LABEL59:
+ add rsp, CONST
+ ret
+LABEL6:
+ mov rdi, qword [rsp]
+ mov rsi, qword [rsp + CONST]
+ mov edx, CONST
+ call CONST
+ jmp LABEL59
+LABEL9:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL51:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL27:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL24:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL21:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL19:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL16:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL14:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL11:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST

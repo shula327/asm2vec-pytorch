@@ -1,0 +1,35 @@
+ .name fcn.000079b0
+ .offset 00000000000079b0
+ .file grep
+ push r12
+ mov rcx, rsi
+ mov edx, CONST
+ mov r12, rdi
+ push rbx
+ lea r8, [rip + CONST]
+ mov rbx, rsi
+ xor esi, esi
+ sub rsp, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL11
+ cmp qword [rbx], CONST
+ cjmp LABEL11
+ add rsp, CONST
+ pop rbx
+ pop r12
+ ret
+LABEL11:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, r12
+ xor esi, esi
+ mov edi, CONST
+ mov r8, rax
+ lea rdx, [rip + CONST]
+ xor eax, eax
+ call CONST
+ nop word cs:[rax + rax]
+ nop

@@ -1,0 +1,39 @@
+ .name sym.Perl_newSV_type
+ .offset 0000000000119580
+ .file perl5.30.0
+ endbr64
+ push r13
+ mov r13d, esi
+ push r12
+ sub rsp, CONST
+ mov r12, qword [rdi + CONST]
+ test r12, r12
+ cjmp LABEL7
+ mov rax, qword [r12]
+ add qword [rdi + CONST], CONST
+ mov qword [rdi + CONST], rax
+LABEL32:
+ mov qword [r12], CONST
+ mov qword [r12 + CONST], CONST
+ test r13d, r13d
+ cjmp LABEL14
+ add rsp, CONST
+ mov rax, r12
+ pop r12
+ pop r13
+ ret
+LABEL14:
+ mov edx, r13d
+ mov rsi, r12
+ call CONST
+ add rsp, CONST
+ mov rax, r12
+ pop r12
+ pop r13
+ ret
+LABEL7:
+ mov qword [rsp + CONST], rdi
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ mov r12, rax
+ jmp LABEL32

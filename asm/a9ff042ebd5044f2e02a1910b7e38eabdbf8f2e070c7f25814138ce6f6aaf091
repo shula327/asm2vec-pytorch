@@ -1,0 +1,35 @@
+ .name sym.Perl_save_long
+ .offset 000000000019c940
+ .file perl5.30.0
+ endbr64
+ sub rsp, CONST
+ movsxd rax, dword [rdi + CONST]
+ lea edx, [rax + CONST]
+ cmp edx, dword [rdi + CONST]
+ cjmp LABEL5
+LABEL29:
+ lea ecx, [rax + CONST]
+ mov rdx, qword [rdi + CONST]
+ mov dword [rdi + CONST], ecx
+ mov rcx, qword [rsi]
+ mov qword [rdx + rax*CONST], rcx
+ movsxd rax, dword [rdi + CONST]
+ mov rdx, qword [rdi + CONST]
+ lea ecx, [rax + CONST]
+ mov dword [rdi + CONST], ecx
+ mov qword [rdx + rax*CONST], rsi
+ movsxd rax, dword [rdi + CONST]
+ mov rdx, qword [rdi + CONST]
+ lea ecx, [rax + CONST]
+ mov dword [rdi + CONST], ecx
+ mov qword [rdx + rax*CONST], CONST
+ add rsp, CONST
+ ret
+LABEL5:
+ mov qword [rsp + CONST], rsi
+ mov qword [rsp], rdi
+ call CONST
+ mov rdi, qword [rsp]
+ mov rsi, qword [rsp + CONST]
+ movsxd rax, dword [rdi + CONST]
+ jmp LABEL29

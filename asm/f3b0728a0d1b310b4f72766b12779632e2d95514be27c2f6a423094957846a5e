@@ -1,0 +1,21 @@
+ .name fcn.0002dde0
+ .offset 000000000002dde0
+ .file dpkg
+ endbr64
+ cmp qword [rdi], CONST
+ cjmp LABEL2
+ xor eax, eax
+ nop dword [rax]
+LABEL13:
+ mov rcx, qword [rdi + CONST]
+ add rcx, rax
+ movsx r8d, byte [rcx]
+ cmp r8d, esi
+ cjmp LABEL9
+ mov byte [rcx], dl
+LABEL9:
+ add rax, CONST
+ cmp qword [rdi], rax
+ cjmp LABEL13
+LABEL2:
+ ret

@@ -1,0 +1,22 @@
+ .name fcn.00010690
+ .offset 0000000000010690
+ .file install
+ endbr64
+ mov rdx, qword [rsi + CONST]
+ xor eax, eax
+ cmp qword [rdi + CONST], rdx
+ cjmp LABEL4
+LABEL8:
+ ret
+LABEL4:
+ mov rcx, qword [rsi + CONST]
+ cmp qword [rdi + CONST], rcx
+ cjmp LABEL8
+ sub rsp, CONST
+ mov rsi, qword [rsi]
+ mov rdi, qword [rdi]
+ call CONST
+ test eax, eax
+ sete al
+ add rsp, CONST
+ ret

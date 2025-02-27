@@ -1,0 +1,20 @@
+ .name entry.init0
+ .offset 0000000000003180
+ .file sdiff
+LABEL14:
+ lea rdi, qword [rip + CONST]
+ lea rsi, qword [rip + CONST]
+ sub rsi, rdi
+ sar rsi, CONST
+ mov rax, rsi
+ shr rax, CONST
+ add rsi, rax
+ sar rsi, CONST
+ cjmp LABEL8
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL8
+ jmp rax
+LABEL8:
+ ret
+ jmp LABEL14

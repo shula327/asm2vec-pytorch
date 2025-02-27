@@ -1,0 +1,69 @@
+ .name fcn.00053b50
+ .offset 0000000000053b50
+ .file perl5.30.0
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ movzx eax, word [rsi + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL7
+ cmp ax, CONST
+ cjmp LABEL9
+LABEL19:
+ add rsp, CONST
+ mov rsi, rbp
+ pop rbx
+ pop rbp
+ jmp CONST
+LABEL9:
+ mov rdx, qword [rsi + CONST]
+ movzx eax, word [rdx + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL19
+ mov rdx, qword [rdx + CONST]
+ movzx eax, word [rdx + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL19
+LABEL55:
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL19
+ mov esi, CONST
+ mov qword [rsp + CONST], rdi
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ test al, al
+ cjmp LABEL19
+ mov rdx, qword [rdi + CONST]
+ mov rax, qword [rdi + CONST]
+ mov ebx, dword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL37
+ mov eax, dword [rax + CONST]
+ cmp eax, -1
+ cjmp LABEL37
+ mov dword [rdx + CONST], eax
+LABEL37:
+ xor eax, eax
+ mov esi, CONST
+ mov qword [rsp + CONST], rdi
+ lea rdx, qword [rip + CONST]
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ mov rax, qword [rdi + CONST]
+ mov dword [rax + CONST], ebx
+ jmp LABEL19
+LABEL7:
+ mov rdx, qword [rsi + CONST]
+ movzx eax, word [rdx + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL55
+ add rsp, CONST
+ mov rsi, rbp
+ pop rbx
+ pop rbp
+ jmp CONST

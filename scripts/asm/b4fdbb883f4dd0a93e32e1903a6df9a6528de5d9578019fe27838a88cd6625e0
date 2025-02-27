@@ -1,0 +1,33 @@
+ .name fcn.0002e2d0
+ .offset 000000000002e2d0
+ .file dpkg
+ push rbx
+ mov esi, CONST
+ mov ebx, edi
+ call CONST
+ test al, al
+ cjmp LABEL5
+LABEL19:
+ xor eax, eax
+LABEL15:
+ pop rbx
+ ret
+LABEL5:
+ mov esi, CONST
+ mov edi, ebx
+ call CONST
+ mov r8d, eax
+ mov eax, ebx
+ test r8b, r8b
+ cjmp LABEL15
+ cmp ebx, CONST
+ cjmp LABEL17
+ test ebx, ebx
+ cjmp LABEL19
+ add eax, CONST
+ pop rbx
+ ret
+LABEL17:
+ mov eax, CONST
+ pop rbx
+ ret

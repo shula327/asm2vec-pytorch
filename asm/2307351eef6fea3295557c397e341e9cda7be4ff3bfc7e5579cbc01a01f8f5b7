@@ -1,0 +1,39 @@
+ .name fcn.00002dd0
+ .offset 0000000000002dd0
+ .file fmt
+ push rbx
+ mov eax, esi
+ mov rbx, rdi
+ jmp LABEL3
+LABEL21:
+ cmp eax, CONST
+ cjmp LABEL5
+ mov edx, dword [rip + CONST]
+ mov byte [rip + CONST], CONST
+ test edx, edx
+ lea eax, dword [rdx + CONST]
+ cmovns eax, edx
+ sar eax, CONST
+ lea eax, dword [rax*CONST + CONST]
+ mov dword [rip + CONST], eax
+ mov rax, qword [rbx + CONST]
+ cmp rax, qword [rbx + CONST]
+ cjmp LABEL16
+LABEL25:
+ lea rdx, qword [rax + CONST]
+ mov qword [rbx + CONST], rdx
+ movzx eax, byte [rax]
+LABEL3:
+ cmp eax, CONST
+ cjmp LABEL21
+ add dword [rip + CONST], CONST
+ mov rax, qword [rbx + CONST]
+ cmp rax, qword [rbx + CONST]
+ cjmp LABEL25
+LABEL16:
+ mov rdi, rbx
+ call CONST
+ jmp LABEL3
+LABEL5:
+ pop rbx
+ ret

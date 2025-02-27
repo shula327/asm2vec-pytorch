@@ -1,0 +1,43 @@
+ .name sym.Perl_sv_vsetpvf_mg
+ .offset 0000000000129b40
+ .file perl5.30.0
+ endbr64
+ push r13
+ mov r13, rdi
+ mov rdi, rdx
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rcx
+ sub rsp, CONST
+ call CONST
+ push CONST
+ mov rdx, r12
+ xor r9d, r9d
+ push CONST
+ mov rcx, rax
+ mov r8, rbx
+ mov rsi, rbp
+ mov rdi, r13
+ call CONST
+ pop rax
+ pop rdx
+ test byte [rbp + CONST], CONST
+ cjmp LABEL24
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL24:
+ add rsp, CONST
+ mov rsi, rbp
+ mov rdi, r13
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

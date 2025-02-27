@@ -1,0 +1,19 @@
+ .name fcn.0001b310
+ .offset 000000000001b310
+ .file dpkg
+ endbr64
+ mov rsi, rdi
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta al
+ sbb al, CONST
+ xor r8d, r8d
+ test al, al
+ cjmp LABEL9
+ lea rax, [rip + CONST]
+ mov r8d, CONST
+ mov qword [rip + CONST], rax
+LABEL9:
+ mov eax, r8d
+ ret

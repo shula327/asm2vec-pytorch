@@ -1,0 +1,46 @@
+ .name fcn.00006c60
+ .offset 0000000000006c60
+ .file dpkg-query
+ push r13
+ push r12
+ lea r12, qword [rip + CONST]
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ jmp LABEL7
+LABEL16:
+ mov r12, rax
+LABEL7:
+ mov rdi, qword [r12 + CONST]
+ mov rsi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL13
+ mov rax, qword [r12]
+ test rax, rax
+ cjmp LABEL16
+ mov rdi, rbp
+ call CONST
+ mov edi, CONST
+ cmp rax, CONST
+ sbb r13d, r13d
+ call CONST
+ and r13d, CONST
+ mov rdi, rbp
+ mov qword [rax], CONST
+ mov rbx, rax
+ add r13d, CONST
+ call CONST
+ mov dword [rbx + CONST], r13d
+ mov qword [rbx + CONST], rax
+ mov qword [r12], rbx
+ mov r12, rbx
+LABEL13:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

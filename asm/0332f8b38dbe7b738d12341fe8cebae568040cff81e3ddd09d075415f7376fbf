@@ -1,0 +1,117 @@
+ .name fcn.00013f30
+ .offset 0000000000013f30
+ .file install
+ endbr64
+ push r15
+ push r14
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rcx
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov dword [rsp + CONST], edi
+ mov qword [rsp + CONST], rdx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ sub edi, CONST
+ mov dword [rsp + CONST], CONST
+ mov dword [rsp + CONST], edi
+ cjmp LABEL18
+ movsxd rax, edi
+ jmp LABEL20
+LABEL28:
+ lea ebp, [rax + CONST]
+ sub rax, CONST
+ test eax, eax
+ cjmp LABEL24
+LABEL20:
+ mov rdx, qword [r13 + rax*CONST]
+ mov ebp, eax
+ cmp byte [rdx], CONST
+ cjmp LABEL28
+LABEL24:
+ test ebp, ebp
+ cjmp LABEL18
+ lea eax, [rbp + CONST]
+ mov r15, r13
+ lea rbx, [rsp + CONST]
+ xor r14d, r14d
+ lea rax, [r13 + rax*CONST + CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ jmp LABEL38
+LABEL59:
+ mov rdi, qword [r15]
+ mov rax, qword [rsp + CONST]
+ mov rdx, r12
+ mov rsi, rbx
+ call rax
+ cmp r14d, eax
+ cmovl r14d, eax
+LABEL62:
+ mov rax, qword [r15 + CONST]
+ cmp byte [rax], CONST
+ cjmp LABEL48
+ mov esi, r14d
+ mov rdi, rbx
+ call CONST
+ cmp r14d, eax
+ cmovl r14d, eax
+LABEL48:
+ add r15, CONST
+ cmp r15, qword [rsp + CONST]
+ cjmp LABEL56
+ mov eax, dword [rsp + CONST]
+LABEL38:
+ cmp eax, CONST
+ cjmp LABEL59
+ mov eax, dword [rsp + CONST]
+ test eax, eax
+ cjmp LABEL62
+ jmp LABEL59
+LABEL18:
+ xor r14d, r14d
+ xor ebp, ebp
+ lea rbx, [rsp + CONST]
+ nop word [rax + rax]
+LABEL56:
+ mov rdi, rbx
+ call CONST
+ cmp dword [rsp + CONST], ebp
+ cjmp LABEL71
+ mov edx, dword [rsp + CONST]
+ movsxd rax, ebp
+ lea r15, [r13 + rax*CONST]
+ sub edx, ebp
+ add rax, rdx
+ lea r13, [r13 + rax*CONST + CONST]
+ nop dword [rax]
+LABEL88:
+ mov rdi, qword [r15]
+ mov rax, qword [rsp + CONST]
+ mov rdx, r12
+ mov rsi, rbx
+ call rax
+ cmp r14d, eax
+ cmovl r14d, eax
+ add r15, CONST
+ cmp r15, r13
+ cjmp LABEL88
+LABEL71:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL91
+ add rsp, CONST
+ mov eax, r14d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL91:
+ call CONST

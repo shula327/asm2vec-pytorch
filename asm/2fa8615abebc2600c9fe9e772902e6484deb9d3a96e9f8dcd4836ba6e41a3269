@@ -1,0 +1,19 @@
+ .name entry.fini0
+ .offset 0000000000006570
+ .file grep
+ endbr64
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL2
+ push rbp
+ cmp qword [rip + CONST], CONST
+ mov rbp, rsp
+ cjmp LABEL6
+ mov rdi, qword [rip + CONST]
+ call CONST
+LABEL6:
+ call CONST
+ mov byte [rip + CONST], CONST
+ pop rbp
+ ret
+LABEL2:
+ ret

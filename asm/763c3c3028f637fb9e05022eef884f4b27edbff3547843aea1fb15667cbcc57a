@@ -1,0 +1,48 @@
+ .name fcn.000a9820
+ .offset 00000000000a9820
+ .file bash
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL2
+ mov edx, dword [rdi]
+ cmp edx, CONST
+ cjmp LABEL5
+ cmp edx, CONST
+ cjmp LABEL7
+LABEL35:
+ cmp dword [rsi], CONST
+ cjmp LABEL9
+LABEL5:
+ ret
+LABEL2:
+ xor eax, eax
+ cmp dword [rsi], CONST
+ cjmp LABEL5
+ mov edx, dword [rdi]
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ xor eax, eax
+ cmp dword [rdi + CONST], CONST
+ setne al
+ ret
+LABEL9:
+ mov edx, dword [rsi + CONST]
+ test edx, edx
+ cjmp LABEL26
+ cmp edx, CONST
+ cjmp LABEL5
+ mov edx, dword [rsi + CONST]
+ xor eax, eax
+ test edx, edx
+ sete al
+ ret
+LABEL7:
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL35
+ ret
+LABEL26:
+ mov eax, CONST
+ ret

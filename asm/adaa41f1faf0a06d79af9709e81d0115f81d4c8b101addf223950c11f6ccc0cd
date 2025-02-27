@@ -1,0 +1,65 @@
+ .name fcn.00024eb0
+ .offset 0000000000024eb0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ xor edx, edx
+ mov rsi, rsp
+ mov rdi, r12
+ mov dword [rax], CONST
+ mov rbp, rax
+ call CONST
+ mov rdx, qword [rsp]
+ cmp rdx, r12
+ cjmp LABEL19
+ cmp byte [rdx], CONST
+ cjmp LABEL21
+LABEL19:
+ mov rbp, qword [rbx]
+ test rbp, rbp
+ cjmp LABEL24
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL21:
+ cmp rax, CONST
+ cjmp LABEL19
+ mov edx, dword [rbp]
+ test edx, edx
+ cjmp LABEL19
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL41
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL24:
+ movsx ebp, byte [rbx + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdx, r12
+ mov rdi, rax
+ mov esi, ebp
+ xor eax, eax
+ call CONST
+LABEL41:
+ call CONST

@@ -1,0 +1,50 @@
+ .name fcn.0000ed20
+ .offset 000000000000ed20
+ .file dpkg
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL1
+ push rbx
+ mov r8d, dword [rdi + CONST]
+ cmp r8d, CONST
+ cjmp LABEL5
+ mov rbx, rsi
+ mov eax, CONST
+ test rsi, rsi
+ cjmp LABEL9
+ mov rax, qword [rdi + CONST]
+ test rax, rax
+ cjmp LABEL12
+ cmp byte [rax], CONST
+ cjmp LABEL14
+LABEL12:
+ mov edx, CONST
+ xor edi, edi
+ lea rsi, [rip + CONST]
+ call CONST
+ lea rdx, [rip + CONST]
+ cmp rax, rdx
+ lea rdx, [rip + CONST]
+ cmove rax, rdx
+LABEL14:
+ mov qword [rbx], rax
+ mov eax, CONST
+LABEL9:
+ pop rbx
+ ret
+LABEL5:
+ lea eax, [r8 + CONST]
+ cmp eax, CONST
+ cjmp LABEL29
+ xor eax, eax
+ pop rbx
+ ret
+LABEL1:
+ xor eax, eax
+ ret
+LABEL29:
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ call CONST

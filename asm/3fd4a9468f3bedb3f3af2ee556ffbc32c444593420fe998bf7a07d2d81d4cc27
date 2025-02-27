@@ -1,0 +1,53 @@
+ .name fcn.0002a060
+ .offset 000000000002a060
+ .file dpkg
+ endbr64
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ lea rdi, [rax + rax]
+ call CONST
+ movsx edi, byte [rbx]
+ mov r13, rax
+ mov r12, rax
+ test dil, dil
+ cjmp LABEL14
+ jmp LABEL15
+LABEL29:
+ mov rax, rbp
+ mov rbp, r12
+ mov r12, rax
+LABEL37:
+ movzx eax, byte [rbx]
+ add rbx, CONST
+ mov byte [rbp], al
+ movsx edi, byte [rbx]
+ test dil, dil
+ cjmp LABEL15
+LABEL14:
+ mov esi, CONST
+ lea rbp, [r12 + CONST]
+ call CONST
+ test al, al
+ cjmp LABEL29
+ movsx edi, byte [rbx]
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL29
+ mov byte [r12], CONST
+ add r12, CONST
+ jmp LABEL37
+LABEL15:
+ mov byte [r12], CONST
+ add rsp, CONST
+ mov rax, r13
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

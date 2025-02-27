@@ -1,0 +1,36 @@
+ .name fcn.000250e0
+ .offset 00000000000250e0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ xor edi, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL5
+LABEL12:
+ lea rax, [rip + CONST]
+LABEL18:
+ add rsp, CONST
+ ret
+LABEL5:
+ mov edi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL12
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL16
+ cmp byte [rax], CONST
+ cjmp LABEL18
+LABEL16:
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL22
+ cmp byte [rax], CONST
+ cjmp LABEL18
+LABEL22:
+ lea rax, [rip + CONST]
+ add rsp, CONST
+ ret

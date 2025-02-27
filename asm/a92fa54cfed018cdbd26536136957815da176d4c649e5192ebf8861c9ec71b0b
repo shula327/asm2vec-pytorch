@@ -1,0 +1,35 @@
+ .name fcn.000495c0
+ .offset 00000000000495c0
+ .file perl5.30.0
+ movzx eax, word [rdi + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL3
+ xor r8d, r8d
+ cmp ax, CONST
+ cjmp LABEL6
+ add ax, CONST
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL10
+ lea rdx, qword [rip + CONST]
+ movzx eax, ax
+ movsxd rax, dword [rdx + rax*CONST]
+ add rax, rdx
+ jmp rax
+LABEL3:
+ cmp ax, CONST
+ cjmp LABEL17
+LABEL10:
+ xor r8d, r8d
+LABEL6:
+ mov eax, r8d
+ ret
+ mov r8d, CONST
+ cmp esi, CONST
+ cjmp LABEL6
+LABEL17:
+ cmp esi, CONST
+ sete r8b
+ mov eax, r8d
+ ret

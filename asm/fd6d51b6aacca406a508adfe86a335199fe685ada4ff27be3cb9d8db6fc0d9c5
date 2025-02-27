@@ -1,0 +1,60 @@
+ .name fcn.0010e1f0
+ .offset 000000000010e1f0
+ .file perl5.30.0
+ push rbp
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov ebp, dword [rsi + CONST]
+ shr ebp, CONST
+ and ebp, CONST
+ test dl, CONST
+ cjmp LABEL8
+ and edx, CONST
+ movsd xmm0, qword [rip + CONST]
+ cjmp LABEL11
+LABEL44:
+ mov rax, qword [rbx]
+ movsd qword [rax + CONST], xmm0
+LABEL35:
+ mov edx, dword [rbx + CONST]
+ mov eax, edx
+ and eax, CONST
+ and edx, CONST
+ mov dword [rbx + CONST], eax
+ cjmp LABEL19
+LABEL48:
+ mov edx, eax
+ or ah, CONST
+ or dh, CONST
+ test ebp, ebp
+ cmovne eax, edx
+ mov dword [rbx + CONST], eax
+LABEL37:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ and edx, CONST
+ cjmp LABEL31
+ mov rax, qword [rsi]
+ movsd xmm0, qword [rip + CONST]
+ movsd qword [rax + CONST], xmm0
+ jmp LABEL35
+LABEL31:
+ test ebp, ebp
+ cjmp LABEL37
+ mov rbp, qword [rsi]
+ mov rsi, qword [rsi + CONST]
+ call CONST
+ movsd qword [rbp + CONST], xmm0
+ jmp LABEL37
+LABEL11:
+ xorpd xmm0, xmmword [rip + CONST]
+ jmp LABEL44
+LABEL19:
+ mov rdi, rbx
+ call CONST
+ mov eax, dword [rbx + CONST]
+ jmp LABEL48

@@ -1,0 +1,42 @@
+ .name fcn.00011840
+ .offset 0000000000011840
+ .file grep
+LABEL26:
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ xor ebp, ebp
+ push rbx
+ sub rsp, CONST
+ mov r13, qword [rdi + CONST]
+LABEL30:
+ mov rax, qword [r13 + rsi*CONST + CONST]
+ cmp rax, CONST
+ cjmp LABEL10
+ cmp rax, CONST
+ cjmp LABEL12
+LABEL22:
+ add rsp, CONST
+ lea rax, qword [rbp + CONST]
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL10:
+ sub rax, CONST
+ cmp rax, CONST
+ cjmp LABEL22
+ lea rbx, qword [rsi + CONST]
+ mov rdi, r12
+ mov rsi, rbx
+ call LABEL26
+ sub rbx, rax
+ lea rbp, qword [rbp + rax + CONST]
+ mov rsi, rbx
+ jmp LABEL30
+LABEL12:
+ sub rsi, CONST
+ add rbp, CONST
+ jmp LABEL30

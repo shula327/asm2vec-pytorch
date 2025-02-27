@@ -1,0 +1,21 @@
+ .name fcn.00005190
+ .offset 0000000000005190
+ .file setpriv
+ push r12
+ mov edx, CONST
+ mov r12, rdi
+ call CONST
+ test eax, eax
+ cjmp LABEL5
+ pop r12
+ ret
+LABEL5:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST

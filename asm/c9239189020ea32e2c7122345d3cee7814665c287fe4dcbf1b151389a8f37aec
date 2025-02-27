@@ -1,0 +1,72 @@
+ .name fcn.00044a90
+ .offset 0000000000044a90
+ .file bash
+ push r12
+ push rbp
+ mov ebp, esi
+ sub rsp, CONST
+ cmp edi, -1
+ cjmp LABEL5
+LABEL41:
+ cmp ebp, -1
+ cjmp LABEL7
+ cmp ebp, -2
+ cjmp LABEL9
+ mov esi, CONST
+ mov edi, ebp
+ call CONST
+ test eax, eax
+ cjmp LABEL14
+LABEL59:
+ test ebp, ebp
+ cjmp LABEL16
+ cmp ebp, CONST
+ cjmp LABEL16
+LABEL7:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL9:
+ mov esi, CONST
+ mov edi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL7
+ add rsp, CONST
+ mov esi, CONST
+ mov edi, CONST
+ xor eax, eax
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL5:
+ xor esi, esi
+ mov r12d, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL39
+LABEL54:
+ test r12d, r12d
+ cjmp LABEL41
+ mov edi, r12d
+ call CONST
+ jmp LABEL41
+LABEL16:
+ add rsp, CONST
+ mov edi, ebp
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL39:
+ xor esi, esi
+ mov edi, r12d
+ xor eax, eax
+ call CONST
+ jmp LABEL54
+LABEL14:
+ mov esi, CONST
+ mov edi, ebp
+ xor eax, eax
+ call CONST
+ jmp LABEL59

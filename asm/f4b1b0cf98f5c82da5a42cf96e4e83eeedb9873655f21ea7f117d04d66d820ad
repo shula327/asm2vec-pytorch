@@ -1,0 +1,40 @@
+ .name fcn.00022390
+ .offset 0000000000022390
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov qword [rsp + CONST], rcx
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], r9
+ test al, al
+ cjmp LABEL6
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm1
+ movaps xmmword [rsp + CONST], xmm2
+ movaps xmmword [rsp + CONST], xmm3
+ movaps xmmword [rsp + CONST], xmm4
+ movaps xmmword [rsp + CONST], xmm5
+ movaps xmmword [rsp + CONST], xmm6
+ movaps xmmword [rsp + CONST], xmm7
+LABEL6:
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, [rsp + CONST]
+ mov r8d, edx
+ xor ecx, ecx
+ mov qword [rsp + CONST], rax
+ xor edx, edx
+ mov r9, rsp
+ lea rax, [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ mov dword [rsp], CONST
+ mov dword [rsp + CONST], CONST
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL31
+ add rsp, CONST
+ ret
+LABEL31:
+ call CONST

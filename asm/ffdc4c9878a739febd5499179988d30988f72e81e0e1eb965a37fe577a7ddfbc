@@ -1,0 +1,37 @@
+ .name fcn.00006b60
+ .offset 0000000000006b60
+ .file diff3
+ xor eax, eax
+ cmp rdi, rsi
+ cjmp LABEL2
+ xor edx, edx
+ jmp LABEL4
+LABEL23:
+ add rdx, CONST
+ cmp al, cl
+ cjmp LABEL7
+LABEL4:
+ movzx r8d, byte [rdi + rdx]
+ lea ecx, dword [r8 + CONST]
+ mov eax, r8d
+ cmp ecx, CONST
+ cjmp LABEL12
+ add r8d, CONST
+ add eax, CONST
+LABEL12:
+ movzx r9d, byte [rsi + rdx]
+ lea r10d, dword [r9 + CONST]
+ mov ecx, r9d
+ cmp r10d, CONST
+ cjmp LABEL19
+ add r9d, CONST
+ add ecx, CONST
+LABEL19:
+ test al, al
+ cjmp LABEL23
+LABEL7:
+ movzx eax, r8b
+ movzx r9d, r9b
+ sub eax, r9d
+LABEL2:
+ ret

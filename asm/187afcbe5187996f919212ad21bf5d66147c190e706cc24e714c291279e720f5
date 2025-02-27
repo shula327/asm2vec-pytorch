@@ -1,0 +1,22 @@
+ .name fcn.0001ecd0
+ .offset 000000000001ecd0
+ .file grep
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ call CONST
+ test rbp, rbp
+ mov esi, CONST
+ mov r12d, dword [rax]
+ mov rbx, rax
+ lea rax, [rip + CONST]
+ cmove rbp, rax
+ mov rdi, rbp
+ call CONST
+ mov dword [rbx], r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret

@@ -1,0 +1,14 @@
+ .name fcn.00011a90
+ .offset 0000000000011a90
+ .file grep
+ push rax
+ pop rax
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ mov rdi, rax
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

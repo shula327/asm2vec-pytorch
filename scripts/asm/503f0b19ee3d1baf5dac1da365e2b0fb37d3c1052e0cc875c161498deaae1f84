@@ -1,0 +1,34 @@
+ .name fcn.00016ff0
+ .offset 0000000000016ff0
+ .file install
+ push rbx
+ mov rax, qword [rsi]
+ mov rbx, rdi
+ mov rdi, qword [rdi]
+ lea r8, qword [rax + rdx + CONST]
+ cmp rax, r8
+ cjmp LABEL6
+ mov qword [rsi], r8
+ mov rsi, r8
+ call CONST
+ test rax, rax
+ cjmp LABEL11
+ mov qword [rbx], rax
+ mov eax, CONST
+ pop rbx
+ ret
+LABEL6:
+ call CONST
+ mov qword [rbx], CONST
+ call CONST
+ mov dword [rax], CONST
+ xor eax, eax
+ pop rbx
+ ret
+LABEL11:
+ mov rdi, qword [rbx]
+ call CONST
+ mov qword [rbx], CONST
+ xor eax, eax
+ pop rbx
+ ret

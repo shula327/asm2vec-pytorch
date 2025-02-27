@@ -1,0 +1,30 @@
+ .name fcn.00041680
+ .offset 0000000000041680
+ .file bash
+ test rdi, rdi
+ cjmp LABEL1
+ push r12
+ lea r12, qword [rip + CONST]
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ nop word cs:[rax + rax]
+LABEL19:
+ mov rax, qword [rbx + CONST]
+ cmp qword [rbx], CONST
+ mov rdx, r12
+ lea rdi, qword [rip + CONST]
+ cmovne rdx, rbp
+ mov rsi, qword [rax]
+ xor eax, eax
+ call CONST
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL19
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL1:
+ ret

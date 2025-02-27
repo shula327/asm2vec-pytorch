@@ -1,0 +1,37 @@
+ .name sym.PerlIO_findFILE
+ .offset 00000000001989a0
+ .file perl5.30.0
+ endbr64
+ push r12
+ mov rax, qword [rdi]
+ test rax, rax
+ cjmp LABEL4
+ lea rdx, [rip + CONST]
+ jmp LABEL6
+LABEL11:
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL4
+LABEL6:
+ cmp qword [rax + CONST], rdx
+ cjmp LABEL11
+ mov r12, qword [rax + CONST]
+LABEL20:
+ mov rax, r12
+ pop r12
+ ret
+LABEL4:
+ xor esi, esi
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL20
+ mov rdi, rax
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL20
+ call CONST
+ mov rax, r12
+ pop r12
+ ret

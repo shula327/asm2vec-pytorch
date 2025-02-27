@@ -1,0 +1,155 @@
+ .name fcn.0000ad60
+ .offset 000000000000ad60
+ .file dpkg
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov eax, dword [rdi + CONST]
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL10
+ mov ecx, dword [rip + CONST]
+ lea rsi, [rdi + CONST]
+ mov edx, CONST
+ test ecx, ecx
+ cjmp LABEL15
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ xor r12d, r12d
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL95:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL15:
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ mov r12d, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL10:
+ test byte [rdi + CONST], CONST
+ cjmp LABEL55
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL57
+LABEL55:
+ add rsp, CONST
+ mov r12d, CONST
+ pop rbp
+ mov eax, r12d
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL57:
+ lea r13, [rdi + CONST]
+ lea r14, [rdi + CONST]
+ mov rsi, r13
+ mov rdi, r14
+ call CONST
+ test eax, eax
+ cjmp LABEL55
+ cjmp LABEL73
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL55
+ mov rdi, rbp
+ mov esi, CONST
+ call CONST
+ mov esi, CONST
+ mov rdi, r13
+ mov r12, rax
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov rbp, rax
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ xor r12d, r12d
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL95
+LABEL73:
+ mov edi, CONST
+ call CONST
+ mov esi, CONST
+ mov rdi, r14
+ mov r12d, eax
+ test al, al
+ cjmp LABEL102
+ call CONST
+ mov rdi, r13
+ mov esi, CONST
+ mov r14, rax
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov r13, rax
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov rbp, rax
+ call CONST
+ mov rcx, r14
+ mov rdx, r13
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL95
+LABEL102:
+ call CONST
+ mov rdi, r13
+ mov esi, CONST
+ mov r14, rax
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov r13, rax
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov rbp, rax
+ call CONST
+ mov rcx, r14
+ mov rdx, r13
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL95

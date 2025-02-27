@@ -1,0 +1,47 @@
+ .name fcn.00020170
+ .offset 0000000000020170
+ .file dpkg
+ endbr64
+ push r12
+ push rbp
+ sub rsp, CONST
+ mov r12, qword [rsi + CONST]
+ test r12, r12
+ cjmp LABEL6
+ cmp byte [r12], CONST
+ cjmp LABEL8
+LABEL6:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL8:
+ and ecx, CONST
+ mov rbp, rdi
+ cjmp LABEL15
+ mov rdi, r12
+ call CONST
+ add rsp, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov rdx, rax
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL15:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ mov rdi, r12
+ call CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov rdx, rax
+ call CONST
+ add rsp, CONST
+ mov rdi, rbp
+ mov esi, CONST
+ pop rbp
+ pop r12
+ jmp CONST

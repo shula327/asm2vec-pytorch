@@ -1,0 +1,147 @@
+ .name fcn.000ab800
+ .offset 00000000000ab800
+ .file bash
+ movzx ecx, byte [rdi]
+ test cl, cl
+ cjmp LABEL2
+ cmp rsi, rdi
+ cjmp LABEL4
+ push r12
+ xor r9d, r9d
+ xor r11d, r11d
+ xor r10d, r10d
+ push rbp
+ xor eax, eax
+ xor r8d, r8d
+ movabs rbp, CONST
+ push rbx
+LABEL57:
+ add rdi, CONST
+ test r8d, r8d
+ cjmp LABEL16
+ cmp cl, CONST
+ cjmp LABEL18
+ cjmp LABEL19
+ cmp cl, CONST
+ cjmp LABEL21
+ cmp cl, CONST
+ cjmp LABEL23
+ movzx ecx, byte [rdi]
+ test eax, eax
+ cjmp LABEL26
+ cmp cl, CONST
+ cjmp LABEL28
+ cmp cl, CONST
+ cjmp LABEL28
+ mov r8d, eax
+ mov r11, rdi
+ mov eax, CONST
+ test cl, cl
+ cjmp LABEL35
+LABEL55:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL19:
+ cmp cl, CONST
+ cjmp LABEL42
+ cmp cl, CONST
+ cjmp LABEL44
+ mov ebx, eax
+ or ebx, r9d
+ cjmp LABEL44
+ cmp edx, CONST
+ cjmp LABEL49
+ movzx ecx, byte [rdi]
+ xor eax, eax
+ xor r9d, r9d
+ nop word [rax + rax]
+LABEL67:
+ test cl, cl
+ cjmp LABEL55
+LABEL35:
+ cmp rsi, rdi
+ cjmp LABEL57
+ mov rax, rsi
+LABEL119:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL23:
+ cmp cl, CONST
+ cjmp LABEL44
+ movzx ecx, byte [rdi]
+ test eax, eax
+ cjmp LABEL67
+ add r9d, CONST
+ mov r8d, eax
+ jmp LABEL67
+LABEL16:
+ movzx ecx, byte [rdi]
+ xor r8d, r8d
+ jmp LABEL67
+LABEL44:
+ movzx ecx, byte [rdi]
+ jmp LABEL67
+LABEL42:
+ movzx ecx, byte [rdi]
+ test eax, eax
+ cjmp LABEL78
+ test r10d, r10d
+ cjmp LABEL80
+ movzx ebx, byte [rdi + CONST]
+ cmp ebx, r10d
+ cjmp LABEL83
+LABEL80:
+ lea rbx, qword [rdi + CONST]
+ cmp r11, rbx
+ cjmp LABEL67
+ xor eax, eax
+ xor r11d, r11d
+ jmp LABEL67
+LABEL18:
+ movzx ecx, byte [rdi]
+ mov r8d, CONST
+ jmp LABEL67
+LABEL21:
+ test eax, eax
+ cjmp LABEL44
+ lea ebx, dword [r9 + CONST]
+ test r9d, r9d
+ cjmp LABEL49
+ movzx ecx, byte [rdi]
+ mov r8d, eax
+ mov r9d, ebx
+ jmp LABEL67
+LABEL78:
+ mov r8d, eax
+ jmp LABEL67
+LABEL26:
+ cmp cl, CONST
+ cjmp LABEL35
+ mov r12, rbp
+ movzx ebx, cl
+ shr r12, cl
+ and r12d, CONST
+ cmovne r10d, ebx
+ jmp LABEL67
+LABEL28:
+ lea r11, qword [rdi + CONST]
+ xor r8d, r8d
+ mov eax, CONST
+ jmp LABEL67
+LABEL83:
+ xor r10d, r10d
+ jmp LABEL67
+LABEL49:
+ mov rax, rdi
+ jmp LABEL119
+LABEL2:
+ xor eax, eax
+ ret
+LABEL4:
+ mov rax, rdi
+ ret

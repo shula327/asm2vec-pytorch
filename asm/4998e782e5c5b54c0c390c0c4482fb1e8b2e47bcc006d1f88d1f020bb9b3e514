@@ -1,0 +1,44 @@
+ .name fcn.0002d710
+ .offset 000000000002d710
+ .file find
+ push r12
+ push rbp
+ push rbx
+ mov rax, qword [rdi]
+ sub rax, CONST
+ mov qword [rdi], rax
+ cjmp LABEL6
+ lea rbx, qword [rax + rax*CONST]
+ mov rax, qword [rsi]
+ mov r12, rsi
+ shl rcx, CONST
+ shl rbx, CONST
+ mov rbp, r9
+ mov rdi, r8
+ add rax, rbx
+ mov rsi, qword [rax]
+ mov qword [rdx], rsi
+ mov rsi, qword [rax + CONST]
+ mov rdx, rcx
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rax, qword [r12]
+ mov rdi, qword [rax + rbx + CONST]
+ call CONST
+ add rbx, qword [r12]
+ movdqu xmm0, xmmword [rbx + CONST]
+ movaps xmmword [rbp], xmm0
+ mov rax, qword [rbx + CONST]
+ mov qword [rbp + CONST], rax
+ mov rax, qword [rbx + CONST]
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL6:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST

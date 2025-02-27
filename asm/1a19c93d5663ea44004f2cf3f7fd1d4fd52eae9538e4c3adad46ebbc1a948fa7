@@ -1,0 +1,59 @@
+ .name fcn.00019210
+ .offset 0000000000019210
+ .file install
+ endbr64
+ pxor xmm0, xmm0
+ push r12
+ mov r12, rdi
+ push rbp
+ mov ebp, edx
+ push rbx
+ mov rbx, rcx
+ movups xmmword [rcx], xmm0
+ movups xmmword [rcx + CONST], xmm0
+ mov dword [rcx], edx
+ cmp esi, CONST
+ cjmp LABEL12
+ mov edi, esi
+ call CONST
+ mov qword [rbx + CONST], rax
+ test rax, rax
+ cjmp LABEL17
+LABEL30:
+ and ebp, CONST
+ xor eax, eax
+ cmp ebp, CONST
+ cjmp LABEL21
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ mov esi, CONST
+ call CONST
+ mov qword [rbx + CONST], rax
+ test rax, rax
+ cjmp LABEL30
+LABEL17:
+ call CONST
+ mov edi, dword [rax]
+ call CONST
+ pop rbx
+ pop rbp
+ movzx eax, al
+ pop r12
+ neg eax
+ ret
+LABEL21:
+ mov rdi, r12
+ mov esi, CONST
+ call CONST
+ test rax, rax
+ mov qword [rbx + CONST], rax
+ pop rbx
+ sete al
+ pop rbp
+ pop r12
+ movzx eax, al
+ neg eax
+ ret

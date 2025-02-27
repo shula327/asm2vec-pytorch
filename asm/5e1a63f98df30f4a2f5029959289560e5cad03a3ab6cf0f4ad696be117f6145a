@@ -1,0 +1,159 @@
+ .name fcn.0007fae0
+ .offset 000000000007fae0
+ .file perl5.30.0
+ push r13
+ mov r13, rdx
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ test rsi, rsi
+ cjmp LABEL8
+ call CONST
+ mov rsi, rax
+ test rax, rax
+ cjmp LABEL8
+LABEL113:
+ test r13, r13
+ cjmp LABEL14
+ mov qword [r13], rbx
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL8:
+ mov rdx, rbx
+ mov rcx, rbx
+ lea rbp, qword [rbx + rsi]
+ mov rax, rbx
+ shr rdx, CONST
+ shr rcx, CONST
+ and eax, CONST
+ or rdx, rbx
+ or rdx, rcx
+ and edx, CONST
+ add rdx, CONST
+ shl rdx, CONST
+ sub rdx, rax
+ cmp rsi, rdx
+ cjmp LABEL37
+ test rax, rax
+ cjmp LABEL39
+ nop dword [rax]
+LABEL104:
+ movabs rdx, CONST
+ jmp LABEL42
+LABEL49:
+ add rbx, CONST
+ lea rax, qword [rbx + CONST]
+ cmp rbp, rax
+ cjmp LABEL37
+LABEL42:
+ mov rax, qword [rbx]
+ test rax, rdx
+ cjmp LABEL49
+ movabs rdx, CONST
+ shr rax, CONST
+ and rax, rdx
+ lea rdx, qword [rax + CONST]
+ xor rax, rdx
+ movabs rdx, CONST
+ add rax, CONST
+ shr rax, CONST
+ imul rax, rdx
+ shr rax, CONST
+ add rax, CONST
+ shr rax, CONST
+ sub eax, CONST
+ add rbx, rax
+ nop dword [rax + rax]
+LABEL107:
+ lea r12, qword [rip + CONST]
+ cmp rbx, rbp
+ cjmp LABEL67
+ jmp LABEL68
+LABEL83:
+ sub rax, rbx
+ add rax, CONST
+LABEL125:
+ test rax, rax
+ cjmp LABEL68
+ add rbx, rax
+ cmp rbx, rbp
+ cjmp LABEL68
+LABEL67:
+ mov rax, rbx
+ xor edx, edx
+LABEL88:
+ movzx ecx, byte [rax]
+ add rdx, r12
+ movzx ecx, byte [r12 + rcx]
+ movzx edx, byte [rcx + rdx + CONST]
+ test rdx, rdx
+ cjmp LABEL83
+ add rax, CONST
+ cmp rbp, rax
+ cjmp LABEL86
+ cmp rdx, CONST
+ cjmp LABEL88
+LABEL86:
+ cmp byte [rbx], CONST
+ cjmp LABEL90
+LABEL68:
+ test r13, r13
+ cjmp LABEL92
+ mov qword [r13], rbx
+LABEL92:
+ cmp rbp, rbx
+ sete al
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL106:
+ add rbx, CONST
+ test bl, CONST
+ cjmp LABEL104
+LABEL39:
+ cmp byte [rbx], CONST
+ cjmp LABEL106
+ jmp LABEL107
+LABEL37:
+ cmp rbp, rbx
+ cjmp LABEL109
+ jmp LABEL110
+LABEL115:
+ add rbx, CONST
+ cmp rbp, rbx
+ cjmp LABEL113
+LABEL109:
+ cmp byte [rbx], CONST
+ cjmp LABEL115
+ jmp LABEL107
+LABEL90:
+ mov rax, rbp
+ sub rax, rbx
+ cmp rax, CONST
+ cjmp LABEL68
+ xor edx, edx
+ mov rsi, rbp
+ mov rdi, rbx
+ call CONST
+ jmp LABEL125
+LABEL14:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL110:
+ mov rbx, rbp
+ jmp LABEL113

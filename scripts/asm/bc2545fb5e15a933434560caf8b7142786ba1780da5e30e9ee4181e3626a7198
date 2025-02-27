@@ -1,0 +1,51 @@
+ .name fcn.00022b60
+ .offset 0000000000022b60
+ .file grep
+LABEL15:
+ call CONST
+ sub rsp, CONST
+ mov rax, rsi
+ mov rcx, qword fs:[CONST]
+ mov qword [rsp + CONST], rcx
+ xor ecx, ecx
+ and edi, CONST
+ cjmp LABEL7
+ mov rcx, qword [rdx + CONST]
+ test rcx, rcx
+ cjmp LABEL10
+ cmp qword [rcx + CONST], CONST
+ cjmp LABEL10
+ mov rax, qword [rsi]
+ cmp qword [rax + CONST], CONST
+ cjmp LABEL15
+ mov rsi, qword [rdx + CONST]
+ cmp qword [rax], rsi
+ cjmp LABEL18
+ nop dword [rax]
+LABEL10:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL22
+ add rsp, CONST
+ ret
+LABEL7:
+ movdqu xmm1, xmmword [rdx + CONST]
+ mov rdi, qword [rax]
+ mov rsi, rsp
+ movaps xmmword [rsp], xmm1
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL15
+ call CONST
+ jmp LABEL10
+LABEL18:
+ mov rsi, qword [rdx + CONST]
+ cmp qword [rax + CONST], rsi
+ cjmp LABEL10
+ movdqu xmm0, xmmword [rcx + CONST]
+ shufpd xmm0, xmm0, CONST
+ movups xmmword [rax], xmm0
+ jmp LABEL10
+LABEL22:
+ call CONST

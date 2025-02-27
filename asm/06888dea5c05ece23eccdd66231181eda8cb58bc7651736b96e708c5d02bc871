@@ -1,0 +1,82 @@
+ .name fcn.0001caa0
+ .offset 000000000001caa0
+ .file find
+ push r12
+ mov r12, rsi
+ lea rcx, qword [rip + CONST]
+ mov esi, CONST
+ push rbp
+ push rbx
+ movsxd rbx, edi
+ mov rdi, r12
+ mov rbp, rbx
+ mov eax, ebx
+ imul rbx, rbx, -CONST
+ mov edx, ebp
+ sar eax, CONST
+ sar edx, CONST
+ and eax, CONST
+ lea r8d, dword [rax + CONST]
+ xor eax, eax
+ shr rbx, CONST
+ add ebx, ebp
+ sar ebx, CONST
+ sub ebx, edx
+ mov edx, ebx
+ sar edx, CONST
+ mov r9d, edx
+ xor r9d, ebx
+ imul ebx, ebx, CONST
+ sub r9d, edx
+ mov rdx, -1
+ call CONST
+ sub ebp, ebx
+ cjmp LABEL30
+ cdqe
+ mov ecx, CONST
+ mov edi, CONST
+ lea rdx, qword [r12 + rax]
+ mov eax, ebp
+ sar eax, CONST
+ mov byte [rdx], CONST
+ xor ebp, eax
+ sub ebp, eax
+ mov eax, ebp
+ imul rax, rcx
+ shr rax, CONST
+ mov ecx, eax
+ imul esi, eax, CONST
+ imul rcx, rdi
+ shr rcx, CONST
+ lea r8d, dword [rcx + CONST]
+ lea ecx, dword [rcx + rcx*CONST]
+ add ecx, ecx
+ mov byte [rdx + CONST], r8b
+ sub eax, ecx
+ lea rcx, qword [rdx + CONST]
+ add eax, CONST
+ sub ebp, esi
+ mov byte [rdx + CONST], al
+ cjmp LABEL56
+LABEL75:
+ mov byte [rcx], CONST
+LABEL30:
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL56:
+ mov eax, ebp
+ mov byte [rdx + CONST], CONST
+ imul rax, rdi
+ shr rax, CONST
+ lea ecx, dword [rax + CONST]
+ lea eax, dword [rax + rax*CONST]
+ add eax, eax
+ mov byte [rdx + CONST], cl
+ lea rcx, qword [rdx + CONST]
+ sub ebp, eax
+ add ebp, CONST
+ mov byte [rdx + CONST], bpl
+ jmp LABEL75

@@ -1,0 +1,91 @@
+ .name sym.PerlIO_exportFILE
+ .offset 0000000000198870
+ .file perl5.30.0
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov edi, dword [rip + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ test rbx, rbx
+ cjmp LABEL15
+ mov r12, qword [rbx]
+ test r12, r12
+ cjmp LABEL18
+ mov rsi, rbx
+ mov rdi, rax
+ mov r13, rax
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+ mov rsi, rbx
+ mov rdi, r13
+ call CONST
+ test rbp, rbp
+ cjmp LABEL29
+ cmp byte [rbp], CONST
+ cjmp LABEL29
+LABEL76:
+ mov rsi, rbx
+ mov rdi, r13
+ call CONST
+ mov rsi, rbp
+ mov edi, eax
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL18
+ mov r14, qword [rbx]
+ mov qword [rbx], CONST
+ mov rcx, rsp
+ xor r8d, r8d
+ lea rdx, [rip + CONST]
+ mov rsi, rbx
+ mov rdi, r13
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL51
+ mov rax, qword [rax]
+ mov rdi, r12
+ mov qword [rax + CONST], r12
+ call CONST
+ mov edi, eax
+ call CONST
+ mov rax, qword [rbp]
+ mov qword [rax], r14
+ nop
+LABEL18:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL63
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL29:
+ mov rsi, rsp
+ mov rdi, rbx
+ call CONST
+ mov rbp, rax
+ jmp LABEL76
+LABEL15:
+ xor r12d, r12d
+ jmp LABEL18
+LABEL51:
+ mov qword [rbx], r14
+ jmp LABEL18
+LABEL63:
+ call CONST

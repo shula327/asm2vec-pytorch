@@ -1,0 +1,61 @@
+ .name fcn.00003330
+ .offset 0000000000003330
+ .file sum
+ fld dword [rip + CONST]
+ fld xword [rsp + CONST]
+ fcomi st(1)
+ cjmp LABEL3
+ fstp st(1)
+ fnstcw word [rsp + CONST]
+ movzx eax, word [rsp + CONST]
+ or ah, CONST
+ mov word [rsp + CONST], ax
+ fld st(0)
+ fldcw word [rsp + CONST]
+ fistp qword [rsp + CONST]
+ fldcw word [rsp + CONST]
+ mov rax, qword [rsp + CONST]
+LABEL47:
+ mov qword [rsp + CONST], rax
+ fild qword [rsp + CONST]
+ test rax, rax
+ cjmp LABEL17
+ fadd dword [rip + CONST]
+LABEL17:
+ test edi, edi
+ cjmp LABEL20
+ fxch st(1)
+ fucompi st(1)
+ cjmp LABEL23
+ cjmp LABEL24
+ fstp st(0)
+ jmp LABEL26
+LABEL23:
+ fstp st(0)
+ nop word [rax + rax]
+LABEL26:
+ add rax, CONST
+ mov qword [rsp + CONST], rax
+ fild qword [rsp + CONST]
+ cjmp LABEL32
+ jmp LABEL24
+LABEL20:
+ fstp st(1)
+LABEL24:
+ ret
+LABEL3:
+ fnstcw word [rsp + CONST]
+ fsubr st(1), st(0)
+ fxch st(1)
+ movzx eax, word [rsp + CONST]
+ or ah, CONST
+ mov word [rsp + CONST], ax
+ fldcw word [rsp + CONST]
+ fistp qword [rsp + CONST]
+ fldcw word [rsp + CONST]
+ mov rax, qword [rsp + CONST]
+ btc rax, CONST
+ jmp LABEL47
+LABEL32:
+ fadd dword [rip + CONST]
+ ret

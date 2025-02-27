@@ -1,0 +1,15 @@
+ .name fcn.000065c0
+ .offset 00000000000065c0
+ .file grep
+ endbr64
+ push rax
+ pop rax
+ lea rdx, [rip + CONST]
+ xor esi, esi
+ xor eax, eax
+ mov rcx, rdi
+ sub rsp, CONST
+ mov edi, CONST
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

@@ -1,0 +1,64 @@
+ .name fcn.0000ba10
+ .offset 000000000000ba10
+ .file localedef
+ push r14
+ mov r14, rdx
+ push r13
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov r13, qword [rsi + CONST]
+ test r13, r13
+ cjmp LABEL9
+ mov r12, rdi
+ xor ebx, ebx
+ jmp LABEL12
+LABEL20:
+ add rbx, CONST
+ cmp rbx, r13
+ cjmp LABEL15
+LABEL12:
+ mov rdi, qword [rbp + rbx*CONST + CONST]
+ mov rsi, r14
+ call CONST
+ test eax, eax
+ cjmp LABEL20
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+ pop rbx
+ mov rdx, r14
+ pop rbp
+ mov rsi, rax
+ mov rdi, r12
+ xor eax, eax
+ pop r12
+ pop r13
+ pop r14
+ jmp CONST
+LABEL15:
+ cmp r13, CONST
+ cjmp LABEL9
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov ecx, CONST
+ xor esi, esi
+ mov edi, CONST
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ mov r13, qword [rbp + CONST]
+LABEL9:
+ lea rax, qword [r13 + CONST]
+ mov qword [rbp + CONST], rax
+ mov qword [rbp + r13*CONST + CONST], r14
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

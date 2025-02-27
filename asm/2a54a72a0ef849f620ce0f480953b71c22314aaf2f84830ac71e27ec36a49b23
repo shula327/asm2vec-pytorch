@@ -1,0 +1,36 @@
+ .name fcn.000050f0
+ .offset 00000000000050f0
+ .file logger
+ push r12
+ push rbp
+ push rbx
+ mov rbx, qword [rdi]
+ cmp rdi, rbx
+ cjmp LABEL5
+ mov rbp, rdi
+ mov r12, rsi
+ nop word [rax + rax]
+LABEL18:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL11
+ mov rsi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+LABEL11:
+ mov rbx, qword [rbx]
+ cmp rbp, rbx
+ cjmp LABEL18
+LABEL5:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL15:
+ pop rbx
+ mov eax, CONST
+ pop rbp
+ pop r12
+ ret

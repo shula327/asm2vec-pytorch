@@ -1,0 +1,33 @@
+ .name fcn.00006bc0
+ .offset 0000000000006bc0
+ .file diff3
+ push rbp
+ xor esi, esi
+ mov ebp, edi
+ xor eax, eax
+ push rbx
+ lea rdi, qword [rip + CONST]
+ mov ebx, CONST
+ sub rsp, CONST
+ call CONST
+ cmp ebp, eax
+ cjmp LABEL10
+ xor ebx, ebx
+ test eax, eax
+ cjmp LABEL13
+LABEL10:
+ add rsp, CONST
+ mov eax, ebx
+ pop rbx
+ pop rbp
+ ret
+LABEL13:
+ mov edi, eax
+ call CONST
+ call CONST
+ mov dword [rax], CONST
+ add rsp, CONST
+ mov eax, ebx
+ pop rbx
+ pop rbp
+ ret

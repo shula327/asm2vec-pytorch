@@ -1,0 +1,37 @@
+ .name fcn.00004a30
+ .offset 0000000000004a30
+ .file lsmem
+ and byte [rdi + CONST], CONST
+ test rdx, rdx
+ cjmp LABEL2
+ lea rdx, qword [rsi + rdx*CONST]
+ jmp LABEL4
+LABEL16:
+ cmp eax, CONST
+ cjmp LABEL6
+ or byte [rdi + CONST], CONST
+LABEL6:
+ add rsi, CONST
+ cmp rsi, rdx
+ cjmp LABEL2
+LABEL4:
+ mov eax, dword [rsi]
+ cmp eax, CONST
+ cjmp LABEL13
+ cjmp LABEL14
+ cmp eax, CONST
+ cjmp LABEL16
+ add rsi, CONST
+ or byte [rdi + CONST], CONST
+ cmp rsi, rdx
+ cjmp LABEL4
+LABEL2:
+ ret
+LABEL14:
+ cmp eax, CONST
+ cjmp LABEL6
+ or byte [rdi + CONST], CONST
+ jmp LABEL6
+LABEL13:
+ or byte [rdi + CONST], CONST
+ jmp LABEL6

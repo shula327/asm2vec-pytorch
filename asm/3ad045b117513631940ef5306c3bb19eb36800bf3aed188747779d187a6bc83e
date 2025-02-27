@@ -1,0 +1,31 @@
+ .name sym.Perl_do_openn
+ .offset 00000000001682e0
+ .file perl5.30.0
+ endbr64
+ push rbx
+ mov eax, r9d
+ mov r11, qword [rsp + CONST]
+ mov r9d, dword [rsp + CONST]
+ mov rbx, qword [rsp + CONST]
+ mov r10d, dword [rsp + CONST]
+ test r8d, r8d
+ cjmp LABEL8
+ test r10d, r10d
+ cjmp LABEL10
+ mov qword [rsp + CONST], CONST
+ movsxd rcx, ecx
+ mov r8d, eax
+ pop rbx
+ jmp CONST
+LABEL8:
+ mov dword [rsp + CONST], r10d
+ mov r9, rbx
+ movsxd rcx, ecx
+ mov r8, r11
+ pop rbx
+ jmp CONST
+LABEL10:
+ movsxd rdx, r10d
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ call CONST

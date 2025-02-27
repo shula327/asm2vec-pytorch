@@ -1,0 +1,56 @@
+ .name fcn.000104e0
+ .offset 00000000000104e0
+ .file dpkg
+ endbr64
+ push r12
+ xor r12d, r12d
+ push rbp
+ sub rsp, CONST
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL6
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL6:
+ mov rbp, rdi
+ mov edi, CONST
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ test al, al
+ cjmp LABEL18
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ mov r12d, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL18:
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov rbp, rax
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret

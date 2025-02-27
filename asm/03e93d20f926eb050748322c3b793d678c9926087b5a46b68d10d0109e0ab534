@@ -1,0 +1,102 @@
+ .name sym.Perl__is_utf8_perl_idcont_with_len
+ .offset 000000000018ab10
+ .file perl5.30.0
+ endbr64
+ push r14
+ mov r14, rsi
+ push r13
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov r13, qword [rip + CONST]
+ cmp rsi, rdx
+ cjmp LABEL11
+ mov r8, rsi
+ xor edx, edx
+ xor esi, esi
+ mov r10d, CONST
+ lea r9, [rip + CONST]
+LABEL62:
+ movzx r11d, byte [r8]
+ movzx ecx, r11b
+ mov eax, r11d
+ movzx edi, byte [r9 + rcx]
+ mov rcx, rdi
+ test rdx, rdx
+ cjmp LABEL23
+ mov esi, r10d
+ add rdi, r9
+ sar esi, cl
+ movzx edx, byte [rdx + rdi + CONST]
+ and esi, r11d
+ movsxd rsi, esi
+ test rdx, rdx
+ cjmp LABEL31
+LABEL57:
+ test rsi, rsi
+ cjmp LABEL33
+ cmp byte [r14], CONST
+ cjmp LABEL35
+ xor esi, esi
+LABEL33:
+ mov rdi, r13
+ call CONST
+ mov rdx, rax
+ not rax
+ and eax, CONST
+ test rdx, rdx
+ mov edx, CONST
+ cmovs eax, edx
+ add rsp, CONST
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL23:
+ add rdi, r9
+ shl rsi, CONST
+ and eax, CONST
+ movzx edx, byte [rdx + rdi + CONST]
+ or rsi, rax
+ test rdx, rdx
+ cjmp LABEL57
+LABEL31:
+ add r8, CONST
+ cmp rdx, CONST
+ cjmp LABEL60
+ cmp r12, r8
+ cjmp LABEL62
+LABEL60:
+ mov rsi, r12
+ xor r9d, r9d
+ xor r8d, r8d
+ xor ecx, ecx
+ sub rsi, r14
+ xor edx, edx
+ mov rdi, r14
+ call CONST
+ mov rsi, rax
+ jmp LABEL57
+LABEL11:
+ mov rsi, rdx
+ xor r9d, r9d
+ xor r8d, r8d
+ xor ecx, ecx
+ sub rsi, r14
+ xor edx, edx
+ mov rdi, r14
+ call CONST
+ mov rsi, rax
+ test rax, rax
+ cjmp LABEL33
+LABEL35:
+ mov r8d, CONST
+ xor ecx, ecx
+ mov rdx, r12
+ mov rsi, r14
+ mov rdi, rbp
+ call CONST
+ nop word [rax + rax]

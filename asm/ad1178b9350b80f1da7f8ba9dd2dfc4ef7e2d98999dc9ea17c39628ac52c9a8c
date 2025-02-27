@@ -1,0 +1,24 @@
+ .name fcn.00005d00
+ .offset 0000000000005d00
+ .file setpriv
+ endbr64
+ test rsi, rsi
+ cjmp LABEL2
+ add rsi, rdi
+ jmp LABEL4
+LABEL12:
+ cmp al, dl
+ cjmp LABEL6
+ add rdi, CONST
+ cmp rsi, rdi
+ cjmp LABEL2
+LABEL4:
+ movzx eax, byte [rdi]
+ test al, al
+ cjmp LABEL12
+LABEL2:
+ xor eax, eax
+ ret
+LABEL6:
+ mov rax, rdi
+ ret

@@ -1,0 +1,59 @@
+ .name fcn.000fe460
+ .offset 00000000000fe460
+ .file perl5.30.0
+ mov rcx, qword [rsi]
+ mov rax, qword [rcx + CONST]
+ mov rdx, qword [rcx + CONST]
+ add rax, CONST
+ add rdx, CONST
+ cmp rax, rdx
+ cjmp LABEL6
+ nop dword [rax + rax]
+LABEL15:
+ mov rdx, qword [rsi + CONST]
+ sub rax, CONST
+ mov qword [rdx + rax*CONST], CONST
+ mov rcx, qword [rsi]
+ mov rdx, qword [rcx + CONST]
+ add rdx, CONST
+ cmp rax, rdx
+ cjmp LABEL15
+LABEL6:
+ mov r8, qword [rsi + CONST]
+ test rax, rax
+ cjmp LABEL18
+ add rdi, CONST
+LABEL29:
+ sub rax, CONST
+ mov rdx, qword [r8 + rax*CONST]
+ cmp rdx, rdi
+ cjmp LABEL23
+ test rdx, rdx
+ cjmp LABEL23
+ add dword [rdx + CONST], CONST
+ mov r8, qword [rsi + CONST]
+LABEL23:
+ test rax, rax
+ cjmp LABEL29
+ mov rcx, qword [rsi]
+LABEL18:
+ mov rdx, qword [rcx + CONST]
+ mov rax, r8
+ sub rax, rdx
+ sar rax, CONST
+ cmp rdx, r8
+ cjmp LABEL36
+ jmp LABEL37
+LABEL42:
+ mov rdx, qword [rsi]
+ mov rdx, qword [rdx + CONST]
+LABEL36:
+ sub rax, CONST
+ mov qword [rdx + rax*CONST], CONST
+ cjmp LABEL42
+LABEL37:
+ mov eax, dword [rsi + CONST]
+ and eax, CONST
+ or eax, CONST
+ mov dword [rsi + CONST], eax
+ ret

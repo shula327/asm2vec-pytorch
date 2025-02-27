@@ -1,0 +1,108 @@
+ .name fcn.00003350
+ .offset 0000000000003350
+ .file bunzip2
+ push rbx
+ mov ebx, edi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL7
+LABEL23:
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL9
+ mov r9d, dword [rip + CONST]
+ test r9d, r9d
+ cjmp LABEL9
+ mov eax, dword [rip + CONST]
+ cmp r9d, eax
+ cjmp LABEL15
+ nop word [rax + rax]
+LABEL9:
+ cmp ebx, dword [rip + CONST]
+ cjmp LABEL18
+ mov dword [rip + CONST], ebx
+LABEL18:
+ mov edi, dword [rip + CONST]
+ call CONST
+LABEL7:
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL23
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL23
+ mov rdx, rsp
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL31
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL33
+LABEL95:
+ mov rdi, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL36
+ call CONST
+LABEL36:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL23
+ mov rcx, qword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ xor eax, eax
+ mov esi, CONST
+ call CONST
+ jmp LABEL23
+LABEL15:
+ mov esi, r9d
+ mov rcx, qword [rip + CONST]
+ push rdx
+ lea rdx, qword [rip + CONST]
+ sub esi, eax
+ mov rdi, qword [rip + CONST]
+ xor eax, eax
+ push rsi
+ mov r8, rcx
+ mov esi, CONST
+ call CONST
+ pop rcx
+ pop rsi
+ jmp LABEL9
+LABEL31:
+ mov rcx, qword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ xor eax, eax
+ mov esi, CONST
+ call CONST
+ mov rcx, qword [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ mov rdi, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ call CONST
+ mov rcx, qword [rip + CONST]
+ xor eax, eax
+ mov rdi, qword [rip + CONST]
+ lea r8, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov esi, CONST
+ call CONST
+ mov rcx, qword [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ mov rdi, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ call CONST
+ jmp LABEL23
+LABEL33:
+ mov rcx, qword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ lea r8, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov esi, CONST
+ call CONST
+ jmp LABEL95

@@ -1,0 +1,27 @@
+ .name fcn.00007b30
+ .offset 0000000000007b30
+ .file ls
+ push rbx
+ movzx edi, dil
+ call CONST
+ mov ebx, eax
+ test al, al
+ cjmp LABEL5
+ mov rdi, qword [rip + CONST]
+ mov rax, qword [rdi + CONST]
+ cmp rax, qword [rdi + CONST]
+ cjmp LABEL9
+ lea rdx, qword [rax + CONST]
+ mov qword [rdi + CONST], rdx
+ mov byte [rax], bl
+LABEL20:
+ add qword [rip + CONST], CONST
+LABEL5:
+ test bl, bl
+ pop rbx
+ setne al
+ ret
+LABEL9:
+ movzx esi, bl
+ call CONST
+ jmp LABEL20

@@ -1,0 +1,23 @@
+ .name fcn.000b87f0
+ .offset 00000000000b87f0
+ .file bash
+ push rbp
+ mov ebp, edi
+ push rbx
+ sub rsp, CONST
+ call CONST
+ test ebp, ebp
+ cjmp LABEL6
+ lea ebx, dword [rbp + CONST]
+ nop dword [rax]
+LABEL13:
+ mov rdi, qword [rip + CONST]
+ sub ebx, CONST
+ call CONST
+ cmp ebx, -1
+ cjmp LABEL13
+LABEL6:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ jmp CONST

@@ -1,0 +1,109 @@
+ .name fcn.0001f460
+ .offset 000000000001f460
+ .file grep
+ endbr64
+ push r15
+ push r14
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov rbp, qword [rip + CONST]
+ mov rbx, rax
+ mov eax, dword [rax]
+ mov dword [rsp + CONST], eax
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL16
+ lea rax, [rip + CONST]
+ cmp rbp, rax
+ cjmp LABEL19
+ mov rdi, rbp
+ mov esi, CONST
+ call CONST
+ mov qword [rip + CONST], rax
+ mov rbp, rax
+LABEL100:
+ movsxd rdi, dword [rip + CONST]
+ mov edx, CONST
+ xor esi, esi
+ sub edx, edi
+ shl rdi, CONST
+ movsxd rdx, edx
+ add rdi, rbp
+ shl rdx, CONST
+ call CONST
+ mov dword [rip + CONST], CONST
+LABEL16:
+ sub rsp, CONST
+ mov r11, qword [rbp]
+ mov r13, qword [rbp + CONST]
+ mov rdx, r12
+ mov r15d, dword [rip + CONST]
+ lea r14, [rip + CONST]
+ push qword [rip + CONST]
+ mov rcx, CONST
+ push qword [rip + CONST]
+ mov rsi, r11
+ mov rdi, r13
+ mov r8d, dword [rip + CONST]
+ push r14
+ or r15d, CONST
+ mov r9d, r15d
+ mov qword [rsp + CONST], r11
+ call CONST
+ mov r11, qword [rsp + CONST]
+ add rsp, CONST
+ cmp r11, rax
+ cjmp LABEL55
+ lea rsi, [rax + CONST]
+ lea rax, [rip + CONST]
+ mov qword [rbp], rsi
+ cmp r13, rax
+ cjmp LABEL60
+ mov rdi, r13
+ mov qword [rsp + CONST], rsi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+LABEL60:
+ mov rdi, rsi
+ mov qword [rsp + CONST], rsi
+ call CONST
+ sub rsp, CONST
+ mov r9d, r15d
+ mov rdx, r12
+ mov qword [rbp + CONST], rax
+ mov r8d, dword [rip + CONST]
+ mov rdi, rax
+ mov r13, rax
+ push qword [rip + CONST]
+ mov rcx, CONST
+ push qword [rip + CONST]
+ push r14
+ mov rsi, qword [rsp + CONST]
+ call CONST
+ add rsp, CONST
+LABEL55:
+ mov eax, dword [rsp + CONST]
+ mov dword [rbx], eax
+ add rsp, CONST
+ mov rax, r13
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL19:
+ mov esi, CONST
+ xor edi, edi
+ call CONST
+ movdqa xmm0, xmmword [rip + CONST]
+ mov qword [rip + CONST], rax
+ mov rbp, rax
+ movups xmmword [rax], xmm0
+ jmp LABEL100

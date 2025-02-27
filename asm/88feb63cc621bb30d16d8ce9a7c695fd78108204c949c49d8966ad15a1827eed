@@ -1,0 +1,26 @@
+ .name fcn.000058f0
+ .offset 00000000000058f0
+ .file dd
+ push r12
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ jmp LABEL4
+LABEL14:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL7
+LABEL4:
+ call CONST
+ mov rsi, rbx
+ mov edi, CONST
+ call CONST
+ mov r12d, eax
+ test eax, eax
+ cjmp LABEL14
+LABEL7:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbx
+ pop r12
+ ret

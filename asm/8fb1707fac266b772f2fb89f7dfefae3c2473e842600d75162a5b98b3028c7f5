@@ -1,0 +1,18 @@
+ .name fcn.00025af0
+ .offset 0000000000025af0
+ .file grep
+ endbr64
+ sub rsp, CONST
+ mov edi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ cmp byte [rax], CONST
+ lea rdx, [rip + CONST]
+ cmove rax, rdx
+ add rsp, CONST
+ ret
+LABEL5:
+ lea rax, [rip + CONST]
+ add rsp, CONST
+ ret

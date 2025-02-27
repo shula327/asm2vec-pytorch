@@ -1,0 +1,54 @@
+ .name fcn.0001cfa0
+ .offset 000000000001cfa0
+ .file find
+ push r12
+ mov r12, rdx
+ mov rcx, rdi
+ xor r9d, r9d
+ push rbp
+ xor r8d, r8d
+ mov rbp, rsi
+ lea rdx, qword [rip + CONST]
+ push rbx
+ mov esi, CONST
+ mov rdi, r12
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ test rbp, rbp
+ cjmp LABEL17
+ mov rbx, rax
+ cmp eax, CONST
+ cjmp LABEL17
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL22
+LABEL17:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL25
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL22:
+ mov edi, dword [rbp + CONST]
+ mov rsi, rsp
+ call CONST
+ mov esi, CONST
+ movsxd rdi, ebx
+ lea r8, qword [rip + CONST]
+ sub esi, ebx
+ mov r9, rax
+ add rdi, r12
+ mov rcx, -1
+ movsxd rsi, esi
+ mov edx, CONST
+ xor eax, eax
+ call CONST
+ jmp LABEL17
+LABEL25:
+ call CONST

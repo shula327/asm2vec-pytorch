@@ -1,0 +1,31 @@
+ .name fcn.0007a2e0
+ .offset 000000000007a2e0
+ .file bash
+LABEL20:
+ push r12
+ call CONST
+ mov r12d, eax
+ mov eax, dword [rip + CONST]
+ cmp eax, dword [rip + CONST]
+ cjmp LABEL5
+ mov rcx, qword [rip + CONST]
+ movsxd rdx, eax
+ mov rdx, qword [rcx + rdx*CONST]
+ cmp byte [rdx], CONST
+ cjmp LABEL10
+LABEL5:
+ mov eax, r12d
+ pop r12
+ ret
+LABEL10:
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL5
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL5
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call LABEL20
+ or r12d, eax
+ setne r12b
+ movzx r12d, r12b
+ jmp LABEL5

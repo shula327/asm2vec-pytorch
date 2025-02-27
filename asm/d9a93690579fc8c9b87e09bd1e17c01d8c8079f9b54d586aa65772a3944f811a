@@ -1,0 +1,32 @@
+ .name fcn.00006130
+ .offset 0000000000006130
+ .file dpkg-query
+ mov r8, rdi
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov r9d, CONST
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL9
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL9
+ sub rsp, CONST
+ mov rdi, r8
+ call CONST
+ cmp rax, CONST
+ seta r9b
+ add rsp, CONST
+ mov eax, r9d
+ ret
+LABEL9:
+ mov eax, r9d
+ ret

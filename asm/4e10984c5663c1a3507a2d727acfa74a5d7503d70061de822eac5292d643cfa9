@@ -1,0 +1,53 @@
+ .name fcn.000deff0
+ .offset 00000000000deff0
+ .file perl5.30.0
+ push rbx
+ mov rax, rdx
+ movzx r11d, byte [rsp + CONST]
+ xor r10d, r10d
+ cmp rdx, rcx
+ cjmp LABEL5
+ jmp LABEL6
+LABEL20:
+ cmp edx, r8d
+ cjmp LABEL6
+LABEL29:
+ cmp rdi, rsi
+ cjmp LABEL10
+ movzx edx, byte [rax]
+ add rdi, CONST
+ mov byte [rdi + CONST], dl
+LABEL10:
+ add rax, CONST
+ add r10d, CONST
+ cmp rcx, rax
+ cjmp LABEL6
+LABEL5:
+ movsx edx, byte [rax]
+ test r11b, r11b
+ cjmp LABEL20
+ cmp dl, CONST
+ cjmp LABEL20
+ lea rbx, qword [rax + CONST]
+ cmp rbx, rcx
+ cjmp LABEL20
+ movsx edx, byte [rax + CONST]
+ mov rax, rbx
+ cmp edx, r8d
+ cjmp LABEL29
+ cmp rsi, rdi
+ cjmp LABEL31
+ mov byte [rdi], CONST
+ add rdi, CONST
+LABEL31:
+ add r10d, CONST
+ mov rax, rbx
+ jmp LABEL29
+LABEL6:
+ cmp rsi, rdi
+ cjmp LABEL38
+ mov byte [rdi], CONST
+LABEL38:
+ mov dword [r9], r10d
+ pop rbx
+ ret

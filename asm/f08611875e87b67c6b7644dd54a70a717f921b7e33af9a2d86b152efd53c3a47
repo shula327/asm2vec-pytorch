@@ -1,0 +1,45 @@
+ .name fcn.0002f770
+ .offset 000000000002f770
+ .file dpkg
+ endbr64
+ push r13
+ mov rdi, rcx
+ mov r13, r8
+ push r12
+ mov r12, rcx
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ cmp dword [rax + CONST], CONST
+ mov qword [rbx + CONST], rax
+ cjmp LABEL14
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL14:
+ mov rdi, r12
+ call CONST
+ mov r13, qword [r13]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov rbx, rax
+ call CONST
+ add rsp, CONST
+ mov r8, rbx
+ mov rcx, r13
+ pop rbx
+ mov rsi, rax
+ mov rdx, r12
+ mov rdi, rbp
+ xor eax, eax
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

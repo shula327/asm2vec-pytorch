@@ -1,0 +1,17 @@
+ .name fcn.00023b90
+ .offset 0000000000023b90
+ .file dpkg
+ push rax
+ pop rax
+ lea rdi, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]

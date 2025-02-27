@@ -1,0 +1,35 @@
+ .name fcn.00013eb0
+ .offset 0000000000013eb0
+ .file install
+ endbr64
+ push rbx
+ mov eax, dword [rdi]
+ mov rbx, rdi
+ cmp eax, CONST
+ cjmp LABEL5
+ cjmp LABEL6
+ test eax, eax
+ cjmp LABEL8
+ mov edi, dword [rdi + CONST]
+ call CONST
+LABEL8:
+ mov dword [rbx], CONST
+ pop rbx
+ ret
+LABEL6:
+ cmp eax, CONST
+ cjmp LABEL8
+ lea rcx, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL5:
+ mov eax, dword [rdi + CONST]
+ test eax, eax
+ cjmp LABEL8
+ lea rcx, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST

@@ -1,0 +1,42 @@
+ .name fcn.00021560
+ .offset 0000000000021560
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ mov ebx, esi
+ mov esi, CONST
+ call CONST
+ mov rbp, rax
+ mov rdi, rax
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ mov edx, ebx
+ mov rsi, r12
+ call CONST
+ and ebx, CONST
+ mov rdi, rbp
+ cjmp LABEL17
+ call CONST
+ mov rdi, rbp
+ call CONST
+ pop rbx
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL17:
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ pop rbx
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST

@@ -1,0 +1,23 @@
+ .name fcn.0001c3f0
+ .offset 000000000001c3f0
+ .file dpkg
+ mov eax, dword [rdi + CONST]
+ add esi, CONST
+ mov edx, eax
+ sub edx, dword [rdi + CONST]
+ cmp edx, esi
+ cjmp LABEL5
+ ret
+LABEL5:
+ add eax, esi
+ push rbx
+ mov rbx, rdi
+ add eax, eax
+ mov dword [rdi + CONST], eax
+ cdqe
+ mov rdi, qword [rdi + CONST]
+ lea rsi, qword [rax*CONST]
+ call CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

@@ -1,0 +1,31 @@
+ .name fcn.00023710
+ .offset 0000000000023710
+ .file dpkg
+ endbr64
+ mov r8, qword [rdi]
+ test r8, r8
+ cjmp LABEL3
+ movsxd rax, dword [rdi + CONST]
+ lea rcx, [rip + CONST]
+ jmp LABEL6
+LABEL15:
+ lea edx, [rax + CONST]
+ mov dword [rdi + CONST], edx
+ mov rdx, qword [rcx + rax*CONST]
+ add rax, CONST
+ mov qword [rdi], rdx
+ test rdx, rdx
+ cjmp LABEL13
+LABEL6:
+ cmp eax, CONST
+ cjmp LABEL15
+ mov rax, r8
+ ret
+LABEL3:
+ mov rdx, r8
+LABEL13:
+ mov rax, qword [rdx]
+ mov r8, rdx
+ mov qword [rdi], rax
+ mov rax, r8
+ ret

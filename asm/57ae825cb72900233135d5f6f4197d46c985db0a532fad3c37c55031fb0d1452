@@ -1,0 +1,57 @@
+ .name fcn.000173d0
+ .offset 00000000000173d0
+ .file install
+ and edi, CONST
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rbx, rdx
+ cjmp LABEL6
+ mov edi, CONST
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL11
+ mov rax, qword [rbx + CONST]
+ mov rdi, qword [r12]
+ mov rsi, rbp
+ mov qword [rbp + CONST], rbx
+ mov qword [rbp], rax
+ mov rax, qword [rbx + CONST]
+ mov qword [rbp + CONST], rax
+ call CONST
+ mov r12, rax
+ cmp rbp, rax
+ cjmp LABEL22
+ mov rdi, rbp
+ call CONST
+ test r12, r12
+ cjmp LABEL11
+ mov rax, qword [r12 + CONST]
+ mov ecx, CONST
+ mov word [rbx + CONST], cx
+ mov qword [rbx], rax
+LABEL22:
+ mov eax, CONST
+LABEL49:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL6:
+ mov rdi, qword [r12]
+ lea rsi, [rdx + CONST]
+ call CONST
+ test al, al
+ cjmp LABEL22
+ mov edx, CONST
+ mov qword [rbx], rbx
+ mov word [rbx + CONST], dx
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL11:
+ xor eax, eax
+ jmp LABEL49

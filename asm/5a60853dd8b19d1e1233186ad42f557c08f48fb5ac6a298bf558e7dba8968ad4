@@ -1,0 +1,46 @@
+ .name fcn.00031d80
+ .offset 0000000000031d80
+ .file bash
+ cmp edi, CONST
+ cjmp LABEL1
+ cmp edi, CONST
+ cjmp LABEL3
+ cmp edi, CONST
+ cjmp LABEL5
+ test edi, edi
+ cjmp LABEL1
+ movabs rax, CONST
+ bt rax, rdi
+ cjmp LABEL10
+LABEL1:
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL13
+LABEL20:
+ ret
+LABEL10:
+ mov eax, CONST
+ ret
+LABEL5:
+ sub edi, CONST
+ mov eax, CONST
+ cmp edi, CONST
+ cjmp LABEL20
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL20
+LABEL13:
+ mov eax, dword [rip + CONST]
+ sub eax, CONST
+ cmp eax, CONST
+ setbe al
+ movzx eax, al
+ ret
+LABEL3:
+ sub edi, CONST
+ cmp edi, CONST
+ cjmp LABEL1
+ lea rdx, qword [rip + CONST]
+ movsxd rax, dword [rdx + rdi*CONST]
+ add rax, rdx
+ jmp rax

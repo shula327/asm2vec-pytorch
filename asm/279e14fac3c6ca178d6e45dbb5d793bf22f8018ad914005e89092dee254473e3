@@ -1,0 +1,50 @@
+ .name fcn.000087b0
+ .offset 00000000000087b0
+ .file find
+ cmp edi, CONST
+ cjmp LABEL1
+ lea rcx, qword [rip + CONST]
+ mov edx, edi
+ movsxd rax, dword [rcx + rdx*CONST]
+ add rax, rcx
+ jmp rax
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+ lea rax, qword [rip + CONST]
+ ret
+LABEL1:
+ sub rsp, CONST
+ mov r8d, edi
+ lea rcx, qword [rip + CONST]
+ xor eax, eax
+ mov edx, CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rax, qword [rip + CONST]
+ add rsp, CONST
+ ret

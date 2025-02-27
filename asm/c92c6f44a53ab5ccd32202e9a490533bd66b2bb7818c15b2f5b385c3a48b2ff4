@@ -1,0 +1,39 @@
+ .name fcn.000211e0
+ .offset 00000000000211e0
+ .file grep
+ endbr64
+ push r13
+ mov r13d, edi
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ nop word [rax + rax]
+LABEL20:
+ mov rdx, rbx
+ mov rsi, rbp
+ mov edi, r13d
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL16
+ call CONST
+ mov eax, dword [rax]
+ cmp eax, CONST
+ cjmp LABEL20
+ cmp rbx, CONST
+ cjmp LABEL16
+ cmp eax, CONST
+ cjmp LABEL16
+ mov ebx, CONST
+ jmp LABEL20
+LABEL16:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

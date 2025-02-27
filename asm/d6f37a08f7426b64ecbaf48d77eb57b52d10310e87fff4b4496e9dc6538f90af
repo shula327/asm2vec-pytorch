@@ -1,0 +1,20 @@
+ .name fcn.000b6f10
+ .offset 00000000000b6f10
+ .file bash
+ sub rsp, CONST
+ mov rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL3
+ or rax, CONST
+ mov qword [rip + CONST], rax
+ call CONST
+ and qword [rip + CONST], CONST
+ add rsp, CONST
+ ret
+LABEL3:
+ or rax, CONST
+ mov qword [rip + CONST], rax
+ call CONST
+ and qword [rip + CONST], CONST
+ add rsp, CONST
+ ret

@@ -1,0 +1,130 @@
+ .name fcn.00170450
+ .offset 0000000000170450
+ .file perl5.30.0
+ push r15
+ mov r8d, CONST
+ push r14
+ mov r14, rdi
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rdx]
+ cmp rdi, rsi
+ cjmp LABEL11
+ mov rbp, rsi
+ mov rbx, rdx
+ lea r12, qword [rip + CONST]
+ test cl, cl
+ cjmp LABEL16
+ jmp LABEL17
+LABEL30:
+ lea rax, qword [rdi + CONST]
+ mov qword [rbx], rax
+ movzx esi, byte [rdi + CONST]
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov r8d, dword [r12 + rax*CONST]
+ lea eax, dword [r8 + CONST]
+ cmp eax, CONST
+ cjmp LABEL11
+ mov rdi, qword [rbx]
+LABEL16:
+ lea rax, qword [rdi + CONST]
+ cmp rbp, rax
+ cjmp LABEL30
+LABEL75:
+ mov qword [rbx], rbp
+ mov r8d, CONST
+LABEL11:
+ add rsp, CONST
+ mov eax, r8d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL17:
+ mov rdx, rsi
+ mov rsi, -1
+ mov dword [rsp + CONST], r8d
+ call CONST
+ mov r8d, dword [rsp + CONST]
+ test rax, rax
+ mov r15, rax
+ cjmp LABEL11
+ lea r13, qword [rip + CONST]
+ jmp LABEL51
+LABEL93:
+ mov esi, CONST
+ add rdi, r13
+ sar esi, cl
+ movzx edx, byte [rdx + rdi + CONST]
+ and r8d, esi
+ movsxd rsi, r8d
+ test rdx, rdx
+ cjmp LABEL59
+LABEL100:
+ mov rdi, qword [rip + CONST]
+ call CONST
+ lea rcx, qword [rip + CONST]
+ mov qword [rbx], r12
+ mov r8d, dword [rcx + rax*CONST]
+ lea eax, dword [r8 + CONST]
+ cmp eax, CONST
+ cjmp LABEL11
+LABEL51:
+ mov rdi, r15
+ mov rdx, rbp
+ mov rsi, -1
+ mov r12, r15
+ call CONST
+ mov r15, rax
+ test rax, rax
+ cjmp LABEL75
+ mov esi, CONST
+ mov rdi, r14
+ call CONST
+ cmp al, CONST
+ sbb r10d, r10d
+ and r10d, CONST
+ cmp r12, r15
+ cjmp LABEL83
+ mov r9, r15
+ xor esi, esi
+ xor edx, edx
+LABEL105:
+ movzx r8d, byte [r9]
+ movzx ecx, r8b
+ mov eax, r8d
+ movzx edi, byte [r13 + rcx]
+ mov rcx, rdi
+ test rdx, rdx
+ cjmp LABEL93
+ add rdi, r13
+ shl rsi, CONST
+ and eax, CONST
+ movzx edx, byte [rdx + rdi + CONST]
+ or rsi, rax
+ test rdx, rdx
+ cjmp LABEL100
+LABEL59:
+ add r9, CONST
+ cmp rdx, CONST
+ cjmp LABEL83
+ cmp r12, r9
+ cjmp LABEL105
+LABEL83:
+ mov rsi, r12
+ xor r9d, r9d
+ xor r8d, r8d
+ mov ecx, r10d
+ sub rsi, r15
+ xor edx, edx
+ mov rdi, r15
+ call CONST
+ mov rsi, rax
+ jmp LABEL100

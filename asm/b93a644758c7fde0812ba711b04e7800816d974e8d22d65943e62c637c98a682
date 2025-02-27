@@ -1,0 +1,31 @@
+ .name fcn.0010d990
+ .offset 000000000010d990
+ .file perl5.30.0
+ test rsi, rsi
+ cjmp LABEL1
+ test dword [rsi + CONST], CONST
+ cjmp LABEL1
+ mov rcx, qword [rsi + CONST]
+ test rcx, rcx
+ cjmp LABEL1
+ mov rax, qword [rsi]
+ mov rax, qword [rax + CONST]
+ cmp rax, CONST
+ cjmp LABEL1
+ add rdi, CONST
+ cmp rdx, rdi
+ cjmp LABEL13
+ jmp LABEL1
+LABEL19:
+ sub rax, CONST
+ cmp rax, -1
+ cjmp LABEL17
+LABEL13:
+ cmp qword [rcx + rax*CONST], rdx
+ cjmp LABEL19
+ ret
+LABEL17:
+ ret
+LABEL1:
+ mov rax, -1
+ ret

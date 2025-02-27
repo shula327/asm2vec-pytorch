@@ -1,0 +1,25 @@
+ .name int.000a9990
+ .offset 00000000000a9990
+ .file perl5.30.0
+ cmp dil, CONST
+ cjmp LABEL1
+ sub edi, CONST
+ lea rdx, qword [rip + CONST]
+ movzx edi, dil
+ movsxd rax, dword [rdx + rdi*CONST]
+ add rax, rdx
+ jmp rax
+ mov eax, CONST
+ ret
+ mov eax, CONST
+ ret
+ mov eax, CONST
+ ret
+LABEL1:
+ xor eax, eax
+ cmp dil, CONST
+ setne al
+ lea eax, dword [rax + rax + CONST]
+ ret
+ mov eax, CONST
+ ret

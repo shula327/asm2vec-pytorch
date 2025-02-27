@@ -1,0 +1,36 @@
+ .name fcn.00026e80
+ .offset 0000000000026e80
+ .file dpkg
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ jmp LABEL8
+LABEL16:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL11
+LABEL8:
+ mov rdi, qword [rbx + CONST]
+ mov rsi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL16
+ add rsp, CONST
+ mov rax, rbx
+ pop rbx
+ pop rbp
+ ret
+LABEL11:
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret
+LABEL2:
+ xor eax, eax
+ ret

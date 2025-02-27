@@ -1,0 +1,22 @@
+ .name fcn.00006df0
+ .offset 0000000000006df0
+ .file setpriv
+ endbr64
+ push r12
+ xor edx, edx
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ sub rsp, CONST
+ test rsi, rsi
+ cjmp LABEL8
+ mov rdi, rsi
+ call CONST
+ mov rdx, rax
+LABEL8:
+ add rsp, CONST
+ mov rsi, rbp
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST

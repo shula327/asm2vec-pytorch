@@ -1,0 +1,32 @@
+ .name fcn.0002bc10
+ .offset 000000000002bc10
+ .file dpkg
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ mov r12d, eax
+ test al, al
+ cjmp LABEL8
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL10
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+LABEL8:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ mov rdi, rbp
+ mov esi, CONST
+ call CONST
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret

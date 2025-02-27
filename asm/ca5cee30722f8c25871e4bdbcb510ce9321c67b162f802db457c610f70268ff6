@@ -1,0 +1,30 @@
+ .name fcn.0000c900
+ .offset 000000000000c900
+ .file find
+ push r12
+ lea rax, qword [rip + CONST]
+ mov r12, rdx
+ push rbp
+ mov rbp, rcx
+ push rbx
+ mov rbx, rdi
+ mov rdi, rsi
+ mov rsi, rcx
+ mov qword [rip + CONST], rax
+ call CONST
+ mov rdi, r12
+ mov rsi, rbp
+ lea r12, qword [rbx + CONST]
+ call qword [rip + CONST]
+ nop dword [rax]
+LABEL21:
+ mov rdi, rbx
+ add rbx, CONST
+ mov rsi, rbp
+ call qword [rip + CONST]
+ cmp rbx, r12
+ cjmp LABEL21
+ pop rbx
+ pop rbp
+ pop r12
+ ret

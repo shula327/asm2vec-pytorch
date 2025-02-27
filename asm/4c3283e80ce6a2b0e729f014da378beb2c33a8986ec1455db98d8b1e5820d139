@@ -1,0 +1,45 @@
+ .name fcn.00005610
+ .offset 0000000000005610
+ .file cksum
+ endbr64
+ mov r9, rsi
+ mov r8, rdx
+ mov rsi, qword [rsi]
+ test rdi, rdi
+ cjmp LABEL5
+ movabs rax, CONST
+ xor edx, edx
+ div r8
+ cmp rax, rsi
+ cjmp LABEL10
+ mov rax, rsi
+ shr rax, CONST
+ lea rsi, [rax + rsi + CONST]
+LABEL26:
+ mov qword [r9], rsi
+ imul rsi, r8
+ jmp CONST
+LABEL5:
+ test rsi, rsi
+ cjmp LABEL18
+LABEL36:
+ mov rax, rsi
+ mul r8
+ seto dl
+ movzx edx, dl
+ test rax, rax
+ cjmp LABEL10
+ test rdx, rdx
+ cjmp LABEL26
+LABEL10:
+ push rax
+ call CONST
+LABEL18:
+ xor edx, edx
+ mov eax, CONST
+ xor ecx, ecx
+ div r8
+ cmp r8, CONST
+ seta cl
+ lea rsi, [rcx + rax]
+ jmp LABEL36

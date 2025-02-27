@@ -1,0 +1,13 @@
+ .name fcn.00011c60
+ .offset 0000000000011c60
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov rdi, rsi
+ call CONST
+ lea rdi, [rip + CONST]
+ mov qword [rip + CONST], rax
+ call CONST
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ ret

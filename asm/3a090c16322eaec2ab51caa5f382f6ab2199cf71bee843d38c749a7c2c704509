@@ -1,0 +1,81 @@
+ .name fcn.00025e00
+ .offset 0000000000025e00
+ .file dpkg
+ endbr64
+ mov r11, qword [rsi]
+ test r11, r11
+ cjmp LABEL3
+ nop dword [rax]
+LABEL30:
+ mov rax, qword [r11 + CONST]
+ test rax, rax
+ cjmp LABEL7
+ jmp LABEL8
+LABEL20:
+ mov qword [r9 + CONST], r8
+ mov r8, qword [rax + CONST]
+LABEL25:
+ test r8, r8
+ cjmp LABEL12
+ mov qword [r8 + CONST], r9
+LABEL12:
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL8
+LABEL7:
+ mov r9, qword [rax + CONST]
+ mov r8, qword [rax + CONST]
+ test r9, r9
+ cjmp LABEL20
+ mov r10, qword [rax + CONST]
+ test cl, cl
+ cjmp LABEL23
+ mov qword [r10 + CONST], r8
+ jmp LABEL25
+LABEL23:
+ mov qword [r10 + CONST], r8
+ jmp LABEL25
+LABEL8:
+ mov r11, qword [r11 + CONST]
+ test r11, r11
+ cjmp LABEL30
+LABEL3:
+ mov r10, rdx
+ test rdx, rdx
+ cjmp LABEL33
+ nop dword [rax]
+LABEL60:
+ mov rax, qword [r10 + CONST]
+ mov qword [r10], rdi
+ test rax, rax
+ cjmp LABEL38
+ jmp LABEL39
+LABEL54:
+ lea r8, [r9 + CONST]
+ mov r9, qword [r9 + CONST]
+LABEL57:
+ mov qword [rax + CONST], r9
+ mov qword [rax + CONST], CONST
+ mov r9, qword [r8]
+ test r9, r9
+ cjmp LABEL46
+ mov qword [r9 + CONST], rax
+LABEL46:
+ mov qword [r8], rax
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL39
+LABEL38:
+ mov r9, qword [rax + CONST]
+ test cl, cl
+ cjmp LABEL54
+ lea r8, [r9 + CONST]
+ mov r9, qword [r9 + CONST]
+ jmp LABEL57
+LABEL39:
+ mov r10, qword [r10 + CONST]
+ test r10, r10
+ cjmp LABEL60
+LABEL33:
+ mov qword [rsi], rdx
+ ret

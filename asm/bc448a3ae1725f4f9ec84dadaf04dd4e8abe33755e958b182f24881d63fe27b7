@@ -1,0 +1,32 @@
+ .name fcn.00004a80
+ .offset 0000000000004a80
+ .file cksum
+LABEL7:
+ call CONST
+ endbr64
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ cmp esi, CONST
+ cjmp LABEL7
+ mov r8, rdx
+ mov dword [rsp], esi
+ mov rcx, rsp
+ mov rdx, CONST
+ mov rsi, r8
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL23
+ add rsp, CONST
+ ret
+LABEL23:
+ call CONST

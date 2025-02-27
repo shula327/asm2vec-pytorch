@@ -1,0 +1,44 @@
+ .name fcn.00004be0
+ .offset 0000000000004be0
+ .file cksum
+ endbr64
+ sub rsp, CONST
+ movdqa xmm0, xmmword [rip + CONST]
+ movdqa xmm1, xmmword [rip + CONST]
+ mov ecx, edx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rax, qword [rip + CONST]
+ mov r9, rsi
+ and ecx, CONST
+ movdqa xmm2, xmmword [rip + CONST]
+ movaps xmmword [rsp], xmm0
+ mov r10, rsp
+ mov qword [rsp + CONST], rax
+ mov eax, edx
+ shr al, CONST
+ movaps xmmword [rsp + CONST], xmm1
+ movzx eax, al
+ movaps xmmword [rsp + CONST], xmm2
+ lea rdx, [rsp + rax*CONST + CONST]
+ mov esi, dword [rdx]
+ mov eax, esi
+ shr eax, cl
+ not eax
+ and eax, CONST
+ shl eax, cl
+ mov rcx, r10
+ xor eax, esi
+ mov rsi, rdi
+ xor edi, edi
+ mov dword [rdx], eax
+ mov rdx, r9
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ xor rdi, qword fs:[CONST]
+ cjmp LABEL36
+ add rsp, CONST
+ ret
+LABEL36:
+ call CONST

@@ -1,0 +1,118 @@
+ .name fcn.0000ad30
+ .offset 000000000000ad30
+ .file partx
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ mov r12d, eax
+ test eax, eax
+ cjmp LABEL7
+ test byte [rbp + CONST], CONST
+ cjmp LABEL9
+LABEL7:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL9:
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL18
+ test byte [rip + CONST], CONST
+ cjmp LABEL20
+LABEL60:
+ xor esi, esi
+ mov rdi, rbp
+ call CONST
+ mov edx, dword [rbp + CONST]
+ test dl, CONST
+ cjmp LABEL26
+ test eax, eax
+ cjmp LABEL28
+LABEL43:
+ and edx, CONST
+ cjmp LABEL7
+LABEL28:
+ test byte [rip + CONST], CONST
+ cjmp LABEL32
+LABEL86:
+ mov rdi, rbp
+ xor esi, esi
+ mov r12d, CONST
+ call CONST
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL26:
+ test eax, eax
+ cjmp LABEL43
+ jmp LABEL7
+LABEL20:
+ call CONST
+ lea r9, qword [rip + CONST]
+ mov esi, CONST
+ lea r8, qword [rip + CONST]
+ mov ecx, eax
+ mov rax, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov rdi, qword [rax]
+ xor eax, eax
+ call CONST
+ lea rdi, qword [rbp + CONST]
+ mov rdx, rbp
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ jmp LABEL60
+LABEL18:
+ test byte [rip + CONST], CONST
+ cjmp LABEL62
+LABEL102:
+ call CONST
+ mov r12d, dword [rax]
+ add rsp, CONST
+ pop rbp
+ neg r12d
+ mov eax, r12d
+ pop r12
+ ret
+LABEL32:
+ call CONST
+ lea r9, qword [rip + CONST]
+ mov esi, CONST
+ lea r8, qword [rip + CONST]
+ mov ecx, eax
+ mov rax, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov rdi, qword [rax]
+ xor eax, eax
+ call CONST
+ lea rdi, qword [rbp + CONST]
+ mov rdx, rbp
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ jmp LABEL86
+LABEL62:
+ call CONST
+ lea r9, qword [rip + CONST]
+ mov esi, CONST
+ lea r8, qword [rip + CONST]
+ mov ecx, eax
+ mov rax, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov rdi, qword [rax]
+ xor eax, eax
+ call CONST
+ lea rdi, qword [rbp + CONST]
+ mov rdx, rbp
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ jmp LABEL102

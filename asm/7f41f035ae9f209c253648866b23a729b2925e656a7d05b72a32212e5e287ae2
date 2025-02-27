@@ -1,0 +1,36 @@
+ .name fcn.000041d0
+ .offset 00000000000041d0
+ .file update-alternatives
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rdi + CONST]
+ test rbx, rbx
+ cjmp LABEL5
+ mov rbp, rsi
+ jmp LABEL7
+LABEL15:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL5
+LABEL7:
+ mov rdi, qword [rbx + CONST]
+ mov rsi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+ mov rax, qword [rbx + CONST]
+ test rax, rax
+ cjmp LABEL5
+ cmp byte [rax], CONST
+ setne al
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL5:
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret

@@ -1,0 +1,30 @@
+ .name fcn.00005a50
+ .offset 0000000000005a50
+ .file cksum
+ endbr64
+ xor esi, esi
+ sub rsp, CONST
+ call CONST
+ mov rsi, rax
+ mov eax, CONST
+ test rsi, rsi
+ cjmp LABEL7
+ cmp byte [rsi], CONST
+ cjmp LABEL9
+LABEL21:
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ setne al
+LABEL7:
+ add rsp, CONST
+ ret
+LABEL9:
+ xor eax, eax
+ cmp byte [rsi + CONST], CONST
+ cjmp LABEL21
+ add rsp, CONST
+ ret

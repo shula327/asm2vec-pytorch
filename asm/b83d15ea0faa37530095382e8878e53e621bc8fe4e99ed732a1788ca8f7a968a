@@ -1,0 +1,17 @@
+ .name fcn.00007a20
+ .offset 0000000000007a20
+ .file update-alternatives
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdi
+ lea rdi, qword [rsp + CONST]
+ mov dword [rsp + CONST], esi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST

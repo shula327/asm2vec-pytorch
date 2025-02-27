@@ -1,0 +1,20 @@
+ .name fcn.00008480
+ .offset 0000000000008480
+ .file install
+ endbr64
+ push rbx
+ pxor xmm0, xmm0
+ mov rbx, rdi
+ movups xmmword [rdi], xmm0
+ movups xmmword [rdi + CONST], xmm0
+ movups xmmword [rdi + CONST], xmm0
+ movups xmmword [rdi + CONST], xmm0
+ movups xmmword [rdi + CONST], xmm0
+ call CONST
+ mov dword [rbx + CONST], CONST
+ test eax, eax
+ sete al
+ mov byte [rbx + CONST], al
+ mov byte [rbx + CONST], al
+ pop rbx
+ ret

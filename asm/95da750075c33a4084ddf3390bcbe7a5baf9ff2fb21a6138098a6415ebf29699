@@ -1,0 +1,15 @@
+ .name fcn.000080e0
+ .offset 00000000000080e0
+ .file logger
+ xor eax, eax
+ cmp qword [rdi], CONST
+ cjmp LABEL2
+ nop dword [rax + rax]
+LABEL7:
+ add rdi, CONST
+ add eax, CONST
+ cmp qword [rdi], CONST
+ cjmp LABEL7
+ ret
+LABEL2:
+ ret

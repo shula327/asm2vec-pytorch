@@ -1,0 +1,36 @@
+ .name fcn.000aa480
+ .offset 00000000000aa480
+ .file perl5.30.0
+ push r14
+ movzx eax, dl
+ push r13
+ mov r13d, ecx
+ push r12
+ mov r12, qword [rsi + CONST]
+ push rbp
+ mov ebp, edx
+ lea rdx, qword [rip + CONST]
+ push rbx
+ movzx r14d, byte [rdx + rax]
+ mov rbx, rsi
+ lea rdx, qword [r14 + CONST]
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ lea rax, qword [r12*CONST]
+ xor ecx, ecx
+ mov byte [rdx + r12*CONST], CONST
+ mov rdx, qword [rbx + CONST]
+ mov dword [rdx + rax + CONST], r13d
+ mov rdx, qword [rbx + CONST]
+ mov byte [rdx + rax + CONST], bpl
+ mov rdx, qword [rbx + CONST]
+ mov word [rdx + rax + CONST], cx
+ lea rax, qword [r12 + r14 + CONST]
+ mov qword [rbx + CONST], rax
+ pop rbx
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

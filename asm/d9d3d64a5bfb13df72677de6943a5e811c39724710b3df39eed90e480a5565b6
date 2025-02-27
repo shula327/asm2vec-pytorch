@@ -1,0 +1,46 @@
+ .name fcn.0002cf30
+ .offset 000000000002cf30
+ .file dpkg
+LABEL40:
+ push r14
+ mov r14d, ecx
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, r8d
+ call CONST
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL13
+ mov r8d, ebx
+ mov ecx, r14d
+ pop rbx
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ mov rax, qword [rax + CONST]
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ jmp rax
+LABEL13:
+ mov edx, CONST
+ mov rsi, r13
+ mov rdi, r12
+ call CONST
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ mov r8, rax
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ endbr64
+ mov r8d, ecx
+ mov ecx, CONST
+ jmp LABEL40

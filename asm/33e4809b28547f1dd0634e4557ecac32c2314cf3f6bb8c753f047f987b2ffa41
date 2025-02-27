@@ -1,0 +1,115 @@
+ .name fcn.000039d0
+ .offset 00000000000039d0
+ .file sha384sum
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ movzx eax, byte [rdi]
+ sub eax, CONST
+ cjmp LABEL10
+ movzx eax, byte [rdi + CONST]
+LABEL10:
+ mov byte [rbx], CONST
+ test eax, eax
+ cjmp LABEL14
+ mov rbp, qword [rip + CONST]
+ mov esi, CONST
+ mov byte [rip + CONST], CONST
+ mov rdi, rbp
+ call CONST
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL24
+LABEL50:
+ mov r13d, CONST
+LABEL64:
+ add rsp, CONST
+ mov eax, r13d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL14:
+ lea rsi, qword [rip + CONST]
+ mov rdi, r12
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL38
+ mov esi, CONST
+ mov rdi, rax
+ call CONST
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL24
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL50
+ mov rdx, r12
+ mov esi, CONST
+ xor edi, edi
+ xor r13d, r13d
+ call CONST
+ mov r12, rax
+ call CONST
+ mov rcx, r12
+ lea rdx, qword [rip + CONST]
+ xor edi, edi
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ jmp LABEL64
+LABEL24:
+ mov rdx, r12
+ xor edi, edi
+ mov esi, CONST
+ xor r13d, r13d
+ call CONST
+ mov r12, rax
+ call CONST
+ xor edi, edi
+ mov rcx, r12
+ lea rdx, qword [rip + CONST]
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ cmp qword [rip + CONST], rbp
+ cjmp LABEL64
+ mov rdi, rbp
+ call CONST
+ jmp LABEL64
+LABEL38:
+ call CONST
+ movzx r13d, byte [rip + CONST]
+ mov rbp, rax
+ test r13b, r13b
+ cjmp LABEL87
+ cmp dword [rax], CONST
+ cjmp LABEL89
+LABEL87:
+ mov rdx, r12
+ mov esi, CONST
+ xor edi, edi
+ xor r13d, r13d
+ call CONST
+ mov esi, dword [rbp]
+ lea rdx, qword [rip + CONST]
+ xor edi, edi
+ mov rcx, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL64
+LABEL89:
+ mov byte [rbx], CONST
+ jmp LABEL64

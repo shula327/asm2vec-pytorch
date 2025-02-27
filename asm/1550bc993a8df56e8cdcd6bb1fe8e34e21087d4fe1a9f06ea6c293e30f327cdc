@@ -1,0 +1,39 @@
+ .name fcn.00003010
+ .offset 0000000000003010
+ .file fmt
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL1
+ mov eax, dword [rip + CONST]
+ mov dword [rip + CONST], eax
+ ret
+LABEL1:
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL6
+ mov eax, dword [rip + CONST]
+ test dil, dil
+ cmove eax, dword [rip + CONST]
+ mov dword [rip + CONST], eax
+ ret
+LABEL6:
+ cmp byte [rip + CONST], CONST
+ mov eax, dword [rip + CONST]
+ cjmp LABEL14
+ test dil, dil
+ cjmp LABEL16
+ mov edx, dword [rip + CONST]
+ cmp edx, eax
+ cjmp LABEL16
+ mov dword [rip + CONST], edx
+ ret
+LABEL14:
+ mov dword [rip + CONST], eax
+LABEL25:
+ ret
+LABEL16:
+ cmp eax, dword [rip + CONST]
+ cjmp LABEL25
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ mov dword [rip + CONST], eax
+ ret

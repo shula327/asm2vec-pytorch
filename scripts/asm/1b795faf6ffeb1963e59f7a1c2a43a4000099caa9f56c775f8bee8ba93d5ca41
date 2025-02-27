@@ -1,0 +1,18 @@
+ .name fcn.00004b00
+ .offset 0000000000004b00
+ .file setpriv
+ test rdi, rdi
+ cjmp LABEL1
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ add rsp, CONST
+ ret
+LABEL1:
+ xor eax, eax
+ ret
+LABEL5:
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ call CONST

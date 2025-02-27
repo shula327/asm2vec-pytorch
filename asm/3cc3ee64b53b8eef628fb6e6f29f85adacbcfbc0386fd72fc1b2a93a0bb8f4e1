@@ -1,0 +1,65 @@
+ .name fcn.00034ee0
+ .offset 0000000000034ee0
+ .file localedef
+LABEL37:
+ call CONST
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdx
+ mov qword [rsp + CONST], rcx
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], r9
+ test al, al
+ cjmp LABEL12
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm1
+ movaps xmmword [rsp + CONST], xmm2
+ movaps xmmword [rsp + CONST], xmm3
+ movaps xmmword [rsp + CONST], xmm4
+ movaps xmmword [rsp + CONST], xmm5
+ movaps xmmword [rsp + CONST], xmm6
+ movaps xmmword [rsp + CONST], xmm7
+LABEL12:
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, qword [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ lea rax, qword [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ call CONST
+ lea rdx, qword [rsp + CONST]
+ lea rdi, qword [rsp + CONST]
+ mov rsi, r12
+ mov rbp, rax
+ call CONST
+ cmp eax, -1
+ cjmp LABEL37
+ mov rdi, rbp
+ call CONST
+ mov rcx, qword [rbx + CONST]
+ mov rdx, qword [rbx + CONST]
+ xor esi, esi
+ mov r9, qword [rsp + CONST]
+ xor edi, edi
+ xor eax, eax
+ lea r8, qword [rip + CONST]
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL52
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL52:
+ call CONST

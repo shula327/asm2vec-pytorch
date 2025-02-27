@@ -1,0 +1,43 @@
+ .name fcn.000165c0
+ .offset 00000000000165c0
+ .file install
+ endbr64
+ push r12
+ mov edx, CONST
+ xor r12d, r12d
+ sub rsp, CONST
+ mov rcx, qword [rip + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rsi, [rsp + CONST]
+ lea rdi, [rsp + CONST]
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL15
+ mov rdi, qword [rsp + CONST]
+ lea rax, [rdi + rax + CONST]
+ cmp byte [rax], CONST
+ cjmp LABEL19
+LABEL34:
+ call CONST
+ test eax, eax
+ setg r12b
+LABEL15:
+ mov rdi, qword [rsp + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL27
+ add rsp, CONST
+ mov eax, r12d
+ pop r12
+ ret
+LABEL19:
+ mov byte [rax], CONST
+ mov rdi, qword [rsp + CONST]
+ jmp LABEL34
+LABEL27:
+ call CONST

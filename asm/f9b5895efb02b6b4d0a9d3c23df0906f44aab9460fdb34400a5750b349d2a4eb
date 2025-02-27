@@ -1,0 +1,59 @@
+ .name fcn.00003c20
+ .offset 0000000000003c20
+ .file mcookie
+ push r12
+ xor esi, esi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbp, rsp
+ mov rdi, rbp
+ call CONST
+ call CONST
+ mov ebx, eax
+ call CONST
+ shl ebx, CONST
+ mov rdi, qword [rsp + CONST]
+ xor edi, dword [rsp]
+ xor ebx, eax
+ xor edi, ebx
+ call CONST
+ call CONST
+ mov ebx, eax
+ mov rax, qword fs:[0]
+ xor bx, word [rsp]
+ lea r12, qword [rax + CONST]
+ mov word [rax + CONST], bx
+ call CONST
+ mov rdx, qword [rsp + CONST]
+ xor esi, esi
+ mov rdi, rbp
+ xor eax, edx
+ xor rdx, qword [rsp]
+ sar rdx, CONST
+ mov word [r12 + CONST], ax
+ mov word [r12 + CONST], dx
+ call CONST
+ mov rbx, qword [rsp + CONST]
+ xor ebx, dword [rsp]
+ and ebx, CONST
+ cjmp LABEL39
+ nop dword [rax]
+LABEL43:
+ call CONST
+ sub ebx, CONST
+ cjmp LABEL43
+LABEL39:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL46
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL46:
+ call CONST

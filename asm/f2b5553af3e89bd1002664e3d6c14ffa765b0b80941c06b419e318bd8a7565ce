@@ -1,0 +1,54 @@
+ .name fcn.00014060
+ .offset 0000000000014060
+ .file find
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL1
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL1
+ push r13
+ push r12
+ mov r12, rsi
+ mov esi, CONST
+ push rbp
+ mov rbp, rdi
+ mov rdi, rdx
+ push rbx
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL15
+ mov rsi, r12
+ mov edi, CONST
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ mov r13, rax
+ call CONST
+ mov rsi, rbp
+ xor edi, edi
+ mov rbx, rax
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov r9, r13
+ mov r8, rbx
+ mov rcx, r12
+ mov rdx, rax
+ xor esi, esi
+ xor edi, edi
+ xor eax, eax
+ call CONST
+LABEL15:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL1:
+ mov eax, CONST
+ ret

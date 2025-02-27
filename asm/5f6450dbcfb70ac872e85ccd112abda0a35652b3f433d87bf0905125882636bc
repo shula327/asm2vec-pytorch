@@ -1,0 +1,19 @@
+ .name fcn.000591d0
+ .offset 00000000000591d0
+ .file bash
+ mov rax, qword [rip + CONST]
+ movsxd rdi, edi
+ mov rax, qword [rax + rdi*CONST]
+ mov rcx, qword [rax + CONST]
+ mov rax, rcx
+ jmp LABEL5
+LABEL11:
+ mov rdx, qword [rax]
+ cmp rcx, rdx
+ cjmp LABEL8
+ mov rax, rdx
+LABEL5:
+ test rax, rax
+ cjmp LABEL11
+LABEL8:
+ ret

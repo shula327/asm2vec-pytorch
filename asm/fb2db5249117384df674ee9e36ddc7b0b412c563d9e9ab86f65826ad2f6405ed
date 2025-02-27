@@ -1,0 +1,45 @@
+ .name sym.Perl_newSVuv
+ .offset 000000000011f590
+ .file perl5.30.0
+ endbr64
+ test rsi, rsi
+ cjmp LABEL2
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ test rax, rax
+ cjmp LABEL6
+ mov rdx, qword [rax]
+ add qword [rdi + CONST], CONST
+ mov qword [rdi + CONST], rdx
+LABEL25:
+ lea rdx, [rax + CONST]
+ mov qword [rax + CONST], rsi
+ movabs rcx, CONST
+ mov qword [rax], rdx
+ mov qword [rax + CONST], rcx
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL16
+LABEL27:
+ add rsp, CONST
+ ret
+LABEL2:
+ jmp CONST
+LABEL6:
+ mov qword [rsp + CONST], rsi
+ mov qword [rsp], rdi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ mov rdi, qword [rsp]
+ jmp LABEL25
+LABEL16:
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL27
+ mov rsi, rax
+ xor r9d, r9d
+ xor r8d, r8d
+ mov ecx, CONST
+ xor edx, edx
+ mov qword [rsp], rax
+ call CONST
+ mov rax, qword [rsp]
+ jmp LABEL27

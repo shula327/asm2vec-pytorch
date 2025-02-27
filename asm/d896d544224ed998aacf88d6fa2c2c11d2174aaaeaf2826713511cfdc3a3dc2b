@@ -1,0 +1,28 @@
+ .name fcn.00029ec0
+ .offset 0000000000029ec0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov rdi, r12
+ mov rbp, rax
+ call CONST
+ xor r8d, r8d
+ cmp rbp, rax
+ cjmp LABEL12
+ sub rbp, rax
+ mov rsi, r12
+ lea rdi, [rbx + rbp]
+ call CONST
+ test eax, eax
+ sete r8b
+LABEL12:
+ pop rbx
+ mov eax, r8d
+ pop rbp
+ pop r12
+ ret

@@ -1,0 +1,70 @@
+ .name fcn.0012a780
+ .offset 000000000012a780
+ .file perl5.30.0
+ push r13
+ push r12
+ mov r12, rsi
+ mov rsi, rdx
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, ecx
+ sub rsp, CONST
+ mov eax, dword [rdx + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL12
+ mov rax, qword [rdx]
+ mov r13, qword [rax + CONST]
+LABEL46:
+ test bl, bl
+ cjmp LABEL16
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL22
+LABEL16:
+ mov ecx, CONST
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ mov rcx, rax
+ test rax, rax
+ cjmp LABEL30
+ cmp qword [rax], CONST
+ cjmp LABEL30
+ add rsp, CONST
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ pop rbx
+ mov r8d, CONST
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL12:
+ mov edx, CONST
+ call CONST
+ mov r13, rax
+ jmp LABEL46
+LABEL22:
+ add rsp, CONST
+ mov rdx, r13
+ mov rsi, r12
+ mov rdi, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL30:
+ mov rdx, r13
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ xor eax, eax
+ call CONST
+ nop dword [rax]

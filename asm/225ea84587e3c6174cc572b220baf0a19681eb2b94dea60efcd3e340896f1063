@@ -1,0 +1,102 @@
+ .name fcn.0002be60
+ .offset 000000000002be60
+ .file find
+ mov rax, qword [rdi + CONST]
+ mov r8, rdx
+ movzx ecx, byte [rax + rdx]
+ movzx eax, byte [rsi + CONST]
+ cmp al, CONST
+ cjmp LABEL5
+ cjmp LABEL6
+ cmp al, CONST
+ cjmp LABEL8
+ cmp al, CONST
+ cjmp LABEL10
+ mov rdx, qword [rsi]
+ movzx eax, cl
+ sar rax, CONST
+ mov rax, qword [rdx + rax*CONST]
+ shr rax, cl
+ and eax, CONST
+ cjmp LABEL17
+LABEL56:
+ push rbx
+ mov ebx, dword [rsi + CONST]
+ mov eax, CONST
+ test ebx, CONST
+ cjmp LABEL22
+ mov edx, dword [rdi + CONST]
+ mov rsi, r8
+ shr ebx, CONST
+ call CONST
+ mov ecx, ebx
+ mov edx, eax
+ and cx, CONST
+ test bl, CONST
+ cjmp LABEL31
+ and ebx, CONST
+ cjmp LABEL33
+ test al, CONST
+ cjmp LABEL35
+LABEL33:
+ test cl, CONST
+ cjmp LABEL37
+ xor eax, eax
+ test dl, CONST
+ cjmp LABEL22
+LABEL37:
+ shr edx, CONST
+ mov eax, CONST
+ and edx, CONST
+ and ecx, CONST
+ cmovne eax, edx
+LABEL22:
+ pop rbx
+ ret
+LABEL6:
+ cmp al, CONST
+ mov eax, CONST
+ cjmp LABEL50
+ test cl, cl
+ cjmp LABEL52
+LABEL5:
+ cmp cl, CONST
+ cjmp LABEL54
+ test cl, cl
+ cjmp LABEL56
+ mov rdx, qword [rdi + CONST]
+ xor eax, eax
+ test byte [rdx + CONST], CONST
+ cjmp LABEL56
+LABEL52:
+ ret
+LABEL50:
+ ret
+LABEL31:
+ xor eax, eax
+ test dl, CONST
+ cjmp LABEL22
+ and ebx, CONST
+ cjmp LABEL33
+ pop rbx
+ ret
+LABEL17:
+ ret
+LABEL8:
+ xor eax, eax
+ cmp byte [rsi], cl
+ cjmp LABEL56
+ ret
+LABEL54:
+ mov rdx, qword [rdi + CONST]
+ xor eax, eax
+ test byte [rdx + CONST], CONST
+ cjmp LABEL56
+ ret
+LABEL35:
+ xor eax, eax
+ pop rbx
+ ret
+LABEL10:
+ xor eax, eax
+ ret

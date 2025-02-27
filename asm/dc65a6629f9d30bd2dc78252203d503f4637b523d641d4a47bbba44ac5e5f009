@@ -1,0 +1,32 @@
+ .name fcn.000bdb20
+ .offset 00000000000bdb20
+ .file bash
+ push r12
+ mov esi, CONST
+ push rbp
+ mov ebp, edi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov r12, rsp
+ mov rdx, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL12
+LABEL24:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL15
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ mov rdx, r12
+ mov esi, CONST
+ mov edi, ebp
+ call CONST
+ jmp LABEL24
+LABEL15:
+ call CONST

@@ -1,0 +1,99 @@
+ .name fcn.000056c0
+ .offset 00000000000056c0
+ .file apt-get
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rsi]
+ mov r13, qword [rsi + CONST]
+ add r13, rbx
+ cmp r13, rbx
+ cjmp LABEL11
+ nop
+LABEL18:
+ movsx edi, byte [rbx]
+ add rbx, CONST
+ call CONST
+ mov byte [rbx + CONST], al
+ cmp r13, rbx
+ cjmp LABEL18
+ mov rbx, qword [rbp]
+LABEL11:
+ movsx edi, byte [rbx]
+ call CONST
+ mov ecx, CONST
+ xor edx, edx
+ mov rdi, rbp
+ mov byte [rbx], al
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rsi, rax
+ cmp rax, -1
+ cjmp LABEL30
+ jmp LABEL31
+LABEL44:
+ mov rdx, qword [rbp]
+ mov byte [rdx + rax], CONST
+ mov rdx, qword [rbp]
+ lea rbx, qword [rdx + rax + CONST]
+ movsx edi, byte [rbx]
+ call CONST
+ mov byte [rbx], al
+LABEL30:
+ xor edx, edx
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ cmp rax, -1
+ cjmp LABEL44
+ lea rax, qword [r12 + CONST]
+ mov qword [r12], rax
+ mov rdx, qword [rbp]
+ lea rax, qword [rbp + CONST]
+ cmp rdx, rax
+ cjmp LABEL50
+ mov qword [r12], rdx
+ mov rdx, qword [rbp + CONST]
+ mov qword [r12 + CONST], rdx
+LABEL81:
+ mov rdx, qword [rbp + CONST]
+ mov qword [rbp], rax
+ mov rax, r12
+ mov qword [rbp + CONST], CONST
+ mov qword [r12 + CONST], rdx
+ mov byte [rbp + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL31:
+ mov rcx, qword [rbp + CONST]
+ mov rdx, rcx
+ sub rdx, rax
+ mov eax, CONST
+ cmp rdx, CONST
+ cmova rdx, rax
+ cmp rsi, rcx
+ cjmp LABEL73
+ mov r8d, CONST
+ lea rcx, qword [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ jmp LABEL30
+LABEL50:
+ movdqa xmm0, xmmword [rbp + CONST]
+ movups xmmword [r12 + CONST], xmm0
+ jmp LABEL81
+LABEL73:
+ mov rdx, rsi
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ nop word cs:[rax + rax]

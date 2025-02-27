@@ -1,0 +1,28 @@
+ .name fcn.000be6e0
+ .offset 00000000000be6e0
+ .file bash
+ sub rsp, CONST
+ mov rsi, rdi
+ mov edi, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ mov r8d, eax
+ xor eax, eax
+ test r8d, r8d
+ cjmp LABEL11
+ mov eax, dword [rsp + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ sete al
+ movzx eax, al
+LABEL11:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL19
+ add rsp, CONST
+ ret
+LABEL19:
+ call CONST

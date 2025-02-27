@@ -1,0 +1,36 @@
+ .name fcn.00170880
+ .offset 0000000000170880
+ .file perl5.30.0
+ push r15
+ push r14
+ lea r14, qword [rip + CONST]
+ push r13
+ mov r13d, ecx
+ push r12
+ mov r12, r8
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword [rsp + CONST]
+ mov ebx, dword [rsp + CONST]
+ mov dword [rsp + CONST], esi
+ mov qword [rsp], rax
+ mov r10d, ebx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp + CONST], r9
+ mov qword [rsp + CONST], r9
+ lea r9, qword [rip + CONST]
+ mov edx, edx
+ lea rax, qword [rdx + rdx*CONST]
+ lea rax, qword [r9 + rax*CONST]
+ sub rax, rdx
+ movzx r11d, byte [rax + r13]
+ cmp r11b, CONST
+ ja CONST
+ movzx eax, r11b
+ movsxd rax, dword [r14 + rax*CONST]
+ add rax, r14
+ jmp rax

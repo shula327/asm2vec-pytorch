@@ -1,0 +1,21 @@
+ .name fcn.00007c00
+ .offset 0000000000007c00
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ movsxd rdx, edx
+ mov edi, dword [rax]
+ call CONST
+ test eax, eax
+ cjmp LABEL7
+ add rsp, CONST
+ ret
+LABEL7:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST

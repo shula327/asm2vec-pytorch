@@ -1,0 +1,27 @@
+ .name fcn.000e1040
+ .offset 00000000000e1040
+ .file perl5.30.0
+ sub rsp, CONST
+ add rsi, rdx
+ cjmp LABEL2
+ add rsi, rcx
+ cjmp LABEL2
+ imul r8, rsi
+ cmp rsi, r8
+ cjmp LABEL2
+ test rdi, rdi
+ cjmp LABEL9
+ mov rsi, r8
+ call CONST
+LABEL18:
+ test rax, rax
+ cjmp LABEL2
+ add rsp, CONST
+ ret
+LABEL9:
+ mov rdi, r8
+ call CONST
+ jmp LABEL18
+LABEL2:
+ call CONST
+ nop

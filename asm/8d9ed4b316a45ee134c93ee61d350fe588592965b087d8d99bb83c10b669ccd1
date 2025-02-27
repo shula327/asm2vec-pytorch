@@ -1,0 +1,16 @@
+ .name fcn.000297c0
+ .offset 00000000000297c0
+ .file find
+ push rbp
+ mov rbp, rdi
+ mov rdi, qword [rdi]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

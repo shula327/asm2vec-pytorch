@@ -1,0 +1,43 @@
+ .name fcn.0001ee00
+ .offset 000000000001ee00
+ .file grep
+ endbr64
+ push r15
+ lea rax, [rip + CONST]
+ push r14
+ mov r14, rdx
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ mov rbx, r8
+ sub rsp, CONST
+ test r8, r8
+ cmove rbx, rax
+ mov qword [rsp + CONST], rcx
+ call CONST
+ sub rsp, CONST
+ mov rdx, r14
+ mov rsi, r13
+ mov r15d, dword [rax]
+ mov rbp, rax
+ lea rax, [rbx + CONST]
+ mov r9d, dword [rbx + CONST]
+ push qword [rbx + CONST]
+ mov r8d, dword [rbx]
+ mov rdi, r12
+ push qword [rbx + CONST]
+ push rax
+ mov rcx, qword [rsp + CONST]
+ call CONST
+ mov dword [rbp], r15d
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret

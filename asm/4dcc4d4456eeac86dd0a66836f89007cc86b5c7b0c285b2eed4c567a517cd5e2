@@ -1,0 +1,15 @@
+ .name fcn.000555d0
+ .offset 00000000000555d0
+ .file bash
+ sub edi, CONST
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rdx, qword [rip + CONST]
+ movsxd rax, dword [rdx + rdi*CONST]
+ add rax, rdx
+ jmp rax
+LABEL2:
+ xor eax, eax
+ ret
+ mov eax, CONST
+ ret

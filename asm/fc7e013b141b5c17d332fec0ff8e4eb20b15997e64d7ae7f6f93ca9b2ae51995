@@ -1,0 +1,30 @@
+ .name fcn.0002a3f0
+ .offset 000000000002a3f0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL4
+ test eax, eax
+ cjmp LABEL6
+ lea rdi, [rip + CONST]
+ xor edx, edx
+ lea rsi, [rip + CONST]
+ mov dword [rsp + CONST], eax
+ call CONST
+ mov eax, dword [rsp + CONST]
+LABEL6:
+ add rsp, CONST
+ ret
+LABEL4:
+ mov eax, dword [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST

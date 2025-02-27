@@ -1,0 +1,37 @@
+ .name fcn.000baf80
+ .offset 00000000000baf80
+ .file bash
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ movsxd rax, dword [rip + CONST]
+ mov r12d, dword [rdi + CONST]
+ lea edx, dword [rax + CONST]
+ mov edi, r12d
+ mov dword [rip + CONST], r12d
+ mov dword [rip + CONST], edx
+ mov rdx, qword [rip + CONST]
+ mov byte [rdx + rax], CONST
+ movsxd rax, dword [rip + CONST]
+ mov rdx, qword [rip + CONST]
+ mov byte [rdx + rax], CONST
+ mov rsi, qword [rip + CONST]
+ call CONST
+ mov rax, qword [rip + CONST]
+ test eax, CONST
+ cjmp LABEL19
+ test eax, CONST
+ cjmp LABEL19
+ add rsp, CONST
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL19:
+ add rsp, CONST
+ mov rsi, rbp
+ mov edi, r12d
+ pop rbp
+ pop r12
+ jmp CONST

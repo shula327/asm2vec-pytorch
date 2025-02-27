@@ -1,0 +1,18 @@
+ .name fcn.000064b0
+ .offset 00000000000064b0
+ .file install
+ push r12
+ mov rsi, rdi
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov rdx, r12
+ pop r12
+ mov rsi, rax
+ xor eax, eax
+ jmp CONST

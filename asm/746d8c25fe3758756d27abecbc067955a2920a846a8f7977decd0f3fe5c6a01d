@@ -1,0 +1,31 @@
+ .name fcn.0000fb90
+ .offset 000000000000fb90
+ .file install
+ endbr64
+ mov r9, qword [rdi]
+ xor eax, eax
+ cmp qword [rdi + CONST], r9
+ cjmp LABEL4
+LABEL9:
+ cmp qword [r9], CONST
+ cjmp LABEL6
+LABEL18:
+ add r9, CONST
+ cmp qword [rdi + CONST], r9
+ cjmp LABEL9
+ ret
+LABEL6:
+ mov rcx, r9
+ jmp LABEL12
+LABEL20:
+ mov r8, qword [rcx]
+ add rax, CONST
+ mov qword [rsi + rax*CONST + CONST], r8
+ mov rcx, qword [rcx + CONST]
+ test rcx, rcx
+ cjmp LABEL18
+LABEL12:
+ cmp rdx, rax
+ cjmp LABEL20
+LABEL4:
+ ret

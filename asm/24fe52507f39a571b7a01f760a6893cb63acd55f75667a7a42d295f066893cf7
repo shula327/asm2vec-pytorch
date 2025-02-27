@@ -1,0 +1,31 @@
+ .name fcn.0001bc10
+ .offset 000000000001bc10
+ .file grep
+LABEL9:
+ call CONST
+ endbr64
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL3
+ sub rsp, CONST
+ mov rax, qword [rdi]
+ mov rdx, qword [rdi + CONST]
+ cmp rax, rdx
+ cjmp LABEL8
+ jmp LABEL9
+LABEL15:
+ add rax, CONST
+ cmp rax, rdx
+ cjmp LABEL12
+LABEL8:
+ mov r8, qword [rax]
+ test r8, r8
+ cjmp LABEL15
+ mov rax, r8
+ add rsp, CONST
+ ret
+LABEL3:
+ xor r8d, r8d
+ mov rax, r8
+ ret
+LABEL12:
+ jmp LABEL9

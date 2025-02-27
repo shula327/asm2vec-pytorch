@@ -1,0 +1,66 @@
+ .name fcn.0000e630
+ .offset 000000000000e630
+ .file ls
+ mov rdx, qword [rdi]
+ movzx eax, byte [rdx]
+ test al, al
+ cjmp LABEL3
+ xor ecx, ecx
+ xor r8d, r8d
+ xor esi, esi
+ jmp LABEL7
+LABEL19:
+ cmp al, CONST
+ cjmp LABEL9
+ xor ecx, ecx
+ cmp al, CONST
+ cmovl r8, rsi
+LABEL25:
+ add rdx, CONST
+ mov qword [rdi], rdx
+ movzx eax, byte [rdx]
+ test al, al
+ cjmp LABEL17
+LABEL7:
+ test cl, cl
+ cjmp LABEL19
+ cmp al, CONST
+ cjmp LABEL21
+ cmp al, CONST
+ cjmp LABEL23
+ cmp al, CONST
+ cjmp LABEL25
+ sub eax, CONST
+ cmp al, CONST
+ cmovae r8, rsi
+ add rdx, CONST
+ mov qword [rdi], rdx
+ movzx eax, byte [rdx]
+ test al, al
+ cjmp LABEL7
+LABEL17:
+ mov rax, r8
+ ret
+LABEL9:
+ lea r9d, dword [rax + CONST]
+ xor ecx, ecx
+ cmp r9b, CONST
+ cjmp LABEL25
+LABEL45:
+ cmp al, CONST
+ cmovne r8, rsi
+ jmp LABEL25
+LABEL23:
+ lea r9d, dword [rax + CONST]
+ cmp r9b, CONST
+ cjmp LABEL45
+ jmp LABEL25
+LABEL21:
+ test r8, r8
+ mov ecx, CONST
+ cmove r8, rdx
+ jmp LABEL25
+LABEL3:
+ xor r8d, r8d
+ mov rax, r8
+ ret

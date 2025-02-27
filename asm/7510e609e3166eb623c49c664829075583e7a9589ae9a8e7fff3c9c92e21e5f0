@@ -1,0 +1,29 @@
+ .name fcn.0001c1e0
+ .offset 000000000001c1e0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ pxor xmm0, xmm0
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov dword [rsp + CONST], ecx
+ mov rcx, qword [rsp + CONST]
+ mov qword [rsp + CONST], r8
+ mov r8, qword [rsp + CONST]
+ movaps xmmword [rsp], xmm0
+ mov qword [rsp + CONST], rdx
+ lea rdx, [rsp + CONST]
+ mov dword [rsp], edi
+ mov rdi, rsp
+ mov dword [rsp + CONST], esi
+ lea rsi, [rsp + CONST]
+ mov dword [rsp + CONST], r9d
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL21
+ add rsp, CONST
+ ret
+LABEL21:
+ call CONST

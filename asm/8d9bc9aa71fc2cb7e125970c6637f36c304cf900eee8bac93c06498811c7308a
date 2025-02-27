@@ -1,0 +1,41 @@
+ .name sym.Perl_magic_freeovrld
+ .offset 0000000000075240
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ push rbx
+ mov rbp, qword [rdx + CONST]
+ test rbp, rbp
+ cjmp LABEL6
+ test byte [rbp], CONST
+ cjmp LABEL6
+ lea rbx, [rbp + CONST]
+ mov r12, rdi
+ add rbp, CONST
+ jmp LABEL12
+LABEL24:
+ sub edx, CONST
+ mov dword [rsi + CONST], edx
+LABEL27:
+ mov qword [rbx], CONST
+LABEL21:
+ add rbx, CONST
+ cmp rbx, rbp
+ cjmp LABEL6
+LABEL12:
+ mov rsi, qword [rbx]
+ test rsi, rsi
+ cjmp LABEL21
+ mov edx, dword [rsi + CONST]
+ cmp edx, CONST
+ cjmp LABEL24
+ mov rdi, r12
+ call CONST
+ jmp LABEL27
+LABEL6:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret

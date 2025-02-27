@@ -1,0 +1,15 @@
+ .name fcn.000032f0
+ .offset 00000000000032f0
+ .file toe
+ endbr64
+ push r12
+ mov rdi, qword [rcx]
+ mov r12, rdx
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ pop r12
+ mov rcx, rax
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ jmp CONST

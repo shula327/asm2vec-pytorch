@@ -1,0 +1,63 @@
+ .name fcn.000c2a50
+ .offset 00000000000c2a50
+ .file bash
+ mov rax, rdx
+ test rdx, rdx
+ cmove rax, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL4
+ mov r10d, dword [rip + CONST]
+ lea r9, qword [rdi + rsi]
+ test rsi, rsi
+ cjmp LABEL8
+ jmp LABEL4
+LABEL25:
+ movzx esi, sil
+ movzx r8d, byte [rdi + CONST]
+ shl rsi, CONST
+ add rsi, rax
+ movsx edx, byte [rsi]
+ cmp dl, CONST
+ cjmp LABEL16
+ mov rax, qword [rsi + CONST]
+ test r8b, r8b
+ cjmp LABEL19
+ add rdi, CONST
+ cmp rdi, r9
+ cjmp LABEL4
+LABEL8:
+ movzx esi, byte [rdi]
+ test sil, sil
+ cjmp LABEL25
+ test r10d, r10d
+ cjmp LABEL25
+ movsx edx, byte [rax + CONST]
+ mov rax, qword [rax + CONST]
+ cmp dl, CONST
+ cjmp LABEL31
+ and esi, CONST
+ jmp LABEL25
+LABEL4:
+ xor eax, eax
+LABEL38:
+ ret
+LABEL16:
+ xor eax, eax
+ test r8b, r8b
+ cjmp LABEL38
+ test rcx, rcx
+ cjmp LABEL40
+ mov dword [rcx], edx
+LABEL40:
+ mov rax, qword [rsi + CONST]
+ ret
+LABEL19:
+ test rcx, rcx
+ cjmp LABEL38
+ mov dword [rcx], CONST
+ ret
+LABEL31:
+ test rcx, rcx
+ cjmp LABEL38
+ mov dword [rcx], edx
+ ret

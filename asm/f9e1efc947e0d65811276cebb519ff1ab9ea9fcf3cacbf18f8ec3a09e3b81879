@@ -1,0 +1,47 @@
+ .name fcn.000083c0
+ .offset 00000000000083c0
+ .file lslogins
+ push r12
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov r12, qword [rip + CONST]
+ test r12, r12
+ cjmp LABEL6
+ jmp LABEL7
+LABEL15:
+ mov r12, qword [r12 + CONST]
+ test r12, r12
+ cjmp LABEL10
+LABEL6:
+ mov rsi, qword [r12]
+ mov rdi, rbx
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret
+LABEL7:
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL23
+ mov rdi, qword [rip + CONST]
+ call rax
+LABEL37:
+ mov r12, qword [rip + CONST]
+ test r12, r12
+ cjmp LABEL6
+LABEL10:
+ xor r12d, r12d
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret
+LABEL23:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ jmp LABEL37

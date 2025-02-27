@@ -1,0 +1,50 @@
+ .name fcn.00007a50
+ .offset 0000000000007a50
+ .file grep
+ sub rsp, CONST
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL3
+ mov rsi, qword [rip + CONST]
+ cmp byte [rsi], CONST
+ cjmp LABEL6
+LABEL3:
+ mov rdi, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL9
+LABEL32:
+ mov rsi, qword [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL13
+ call CONST
+ mov eax, dword [rax]
+ mov dword [rip + CONST], eax
+LABEL13:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL19
+ mov rax, qword [rip + CONST]
+ cmp byte [rax], CONST
+ cjmp LABEL22
+LABEL19:
+ add rsp, CONST
+ ret
+LABEL22:
+ mov rdi, qword [rip + CONST]
+ add rsp, CONST
+ jmp CONST
+LABEL6:
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL32
+ nop dword [rax + rax]
+LABEL9:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov qword [rip + CONST], rax
+ mov rdi, rax
+ jmp LABEL32

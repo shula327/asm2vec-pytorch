@@ -1,0 +1,22 @@
+ .name fcn.0002df60
+ .offset 000000000002df60
+ .file dpkg
+ endbr64
+ push r12
+ mov r12d, esi
+ mov rsi, rdx
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov rdi, qword [rbx]
+ mov rdx, rbp
+ add rdi, qword [rbx + CONST]
+ mov esi, r12d
+ call CONST
+ add qword [rbx], rbp
+ pop rbx
+ pop rbp
+ pop r12
+ ret

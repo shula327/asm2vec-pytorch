@@ -1,0 +1,75 @@
+ .name fcn.00006810
+ .offset 0000000000006810
+ .file diff3
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL8:
+ test rbx, rbx
+ cjmp LABEL14
+LABEL50:
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ mov rsi, rbx
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov rbp, rax
+ call CONST
+ mov rbx, rax
+ call CONST
+ mov r8, r12
+ mov rcx, rbp
+ mov rdx, rbx
+ mov esi, dword [rax]
+ mov edi, dword [rip + CONST]
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL14:
+ cmp qword [rip + CONST], r12
+ mov edx, CONST
+ cjmp LABEL41
+ cmp qword [rip + CONST], r12
+ cjmp LABEL43
+ cmp qword [rip + CONST], r12
+ cjmp LABEL45
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbx, rax
+ jmp LABEL50
+LABEL45:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbx, rax
+ jmp LABEL50
+LABEL41:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbx, rax
+ jmp LABEL50
+LABEL43:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rbx, rax
+ jmp LABEL50

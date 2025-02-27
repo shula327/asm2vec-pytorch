@@ -1,0 +1,39 @@
+ .name fcn.000276d0
+ .offset 00000000000276d0
+ .file dpkg
+ endbr64
+ xor eax, eax
+ test rdi, rdi
+ cjmp LABEL3
+ cmp byte [rdi], CONST
+ push rbx
+ mov rbx, rdi
+ cjmp LABEL7
+ call CONST
+ sub rax, CONST
+ lea rdx, [rbx + rax]
+ test rax, rax
+ cjmp LABEL12
+ nop word cs:[rax + rax]
+LABEL26:
+ movzx ecx, byte [rdx]
+ cmp cl, CONST
+ cjmp LABEL16
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL12
+ cmp cl, CONST
+ cjmp LABEL12
+LABEL16:
+ mov byte [rdx], CONST
+ sub rdx, CONST
+ mov rax, rdx
+ sub rax, rbx
+ test rax, rax
+ cjmp LABEL26
+LABEL12:
+ add rax, CONST
+LABEL7:
+ pop rbx
+ ret
+LABEL3:
+ ret

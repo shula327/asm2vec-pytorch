@@ -1,0 +1,22 @@
+ .name fcn.00011240
+ .offset 0000000000011240
+ .file dpkg
+ endbr64
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL3
+ jmp LABEL4
+LABEL9:
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL7
+LABEL3:
+ cmp qword [rax + CONST], rdi
+ cjmp LABEL9
+ mov eax, CONST
+ ret
+LABEL7:
+ ret
+LABEL4:
+ xor eax, eax
+ ret

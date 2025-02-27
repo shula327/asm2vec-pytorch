@@ -1,0 +1,121 @@
+ .name fcn.0002f470
+ .offset 000000000002f470
+ .file dpkg
+ endbr64
+ push r15
+ mov r15, rdx
+ push r14
+ push r13
+ mov r13, r8
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ cmp byte [rcx], CONST
+ cjmp LABEL11
+ test byte [rdx + CONST], CONST
+ cjmp LABEL13
+ mov r12, rdi
+ mov rdi, rcx
+ mov r14, qword [r12 + CONST]
+ add r12, CONST
+ call CONST
+ movsx edi, byte [rax]
+ mov rbp, rax
+ test dil, dil
+ cjmp LABEL22
+ nop dword [rax]
+LABEL60:
+ mov rbx, rbp
+ jmp LABEL25
+LABEL33:
+ movsx edi, byte [rbx + CONST]
+ add rbx, CONST
+ test dil, dil
+ cjmp LABEL29
+LABEL25:
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL33
+ cmp byte [rbx], CONST
+ cjmp LABEL29
+ mov byte [rbx], CONST
+ add rbx, CONST
+LABEL29:
+ mov rax, qword [r12]
+ test rax, rax
+ cjmp LABEL40
+LABEL71:
+ mov rdx, qword [r13 + CONST]
+ mov r12, rax
+ mov qword [rax + rdx], rbp
+ movsx edi, byte [rbx]
+ test dil, dil
+ cjmp LABEL46
+ jmp LABEL22
+LABEL55:
+ movsx edi, byte [rbx + CONST]
+ add rbx, CONST
+ test dil, dil
+ cjmp LABEL22
+LABEL46:
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL55
+ movsx edi, byte [rbx]
+ test dil, dil
+ cjmp LABEL22
+ mov rbp, rbx
+ jmp LABEL60
+LABEL40:
+ test r14, r14
+ cjmp LABEL62
+ mov edi, CONST
+ call CONST
+ mov qword [rax], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [r12], rax
+ jmp LABEL71
+LABEL22:
+ cmp qword [r12], CONST
+ cjmp LABEL73
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL11:
+ mov r12, qword [r8]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+LABEL95:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdx, r12
+ mov rdi, r15
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL73:
+ mov r12, qword [r13]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ jmp LABEL95
+LABEL62:
+ mov r12, qword [r13]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ jmp LABEL95
+LABEL13:
+ mov r12, qword [r8]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ jmp LABEL95

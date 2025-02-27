@@ -1,0 +1,31 @@
+ .name fcn.000171f0
+ .offset 00000000000171f0
+ .file dpkg
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov rbx, qword [rbp + CONST]
+ cmp qword [rbx + CONST], CONST
+ cjmp LABEL7
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL7:
+ mov rsi, rbp
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov qword [rbx + CONST], rax
+ call CONST
+ add rsp, CONST
+ mov edi, CONST
+ lea rsi, [rip + CONST]
+ mov rdx, rax
+ pop rbx
+ xor eax, eax
+ pop rbp
+ jmp CONST

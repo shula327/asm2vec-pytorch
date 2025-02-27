@@ -1,0 +1,37 @@
+ .name fcn.00016e90
+ .offset 0000000000016e90
+ .file install
+ sub rsp, CONST
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL3
+ cjmp LABEL4
+ mov r8d, CONST
+ cmp rax, CONST
+ cjmp LABEL7
+ mov edx, CONST
+ xor r8d, r8d
+ cmp rax, rdx
+ cjmp LABEL7
+ xor r8d, r8d
+ cmp rax, CONST
+ setne r8b
+LABEL7:
+ mov eax, r8d
+ add rsp, CONST
+ ret
+LABEL4:
+ xor r8d, r8d
+ cmp rax, CONST
+ cjmp LABEL7
+ cmp rax, CONST
+ cjmp LABEL7
+ xor r8d, r8d
+ test rax, rax
+ setne r8b
+ add rsp, CONST
+ mov eax, r8d
+ ret
+LABEL3:
+ mov r8d, CONST
+ jmp LABEL7

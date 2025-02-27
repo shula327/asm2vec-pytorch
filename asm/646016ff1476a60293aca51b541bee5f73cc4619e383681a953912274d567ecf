@@ -1,0 +1,25 @@
+ .name fcn.000073d0
+ .offset 00000000000073d0
+ .file install
+ and esi, CONST
+ cmp esi, CONST
+ cjmp LABEL2
+ mov eax, CONST
+ ret
+LABEL2:
+ push rbp
+ mov rbp, rdi
+ call CONST
+ test al, al
+ cjmp LABEL9
+ mov eax, CONST
+ pop rbp
+ ret
+LABEL9:
+ mov rdi, rbp
+ mov esi, CONST
+ call CONST
+ pop rbp
+ test eax, eax
+ sete al
+ ret

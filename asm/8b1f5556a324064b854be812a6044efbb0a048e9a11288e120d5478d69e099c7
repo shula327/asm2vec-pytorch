@@ -1,0 +1,31 @@
+ .name fcn.00054900
+ .offset 0000000000054900
+ .file bash
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ call CONST
+ mov rbp, qword [rbx + CONST]
+ mov r12, rax
+ mov eax, dword [rbx]
+ mov rdi, qword [rbp]
+ mov dword [r12], eax
+ mov eax, dword [rbx + CONST]
+ mov dword [r12 + CONST], eax
+ call CONST
+ mov edx, dword [rbp + CONST]
+ mov rdi, qword [rbx + CONST]
+ mov dword [rax + CONST], edx
+ mov qword [r12 + CONST], rax
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ mov qword [r12 + CONST], rax
+ call CONST
+ mov qword [r12 + CONST], rax
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret

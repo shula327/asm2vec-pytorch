@@ -1,0 +1,31 @@
+ .name fcn.000059d0
+ .offset 00000000000059d0
+ .file locale
+ push r13
+ push r12
+ mov r12, rsi
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+LABEL25:
+ add rsp, CONST
+ pop r12
+ pop r13
+ ret
+LABEL7:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov r13, rax
+ call CONST
+ mov rcx, r12
+ mov rdx, r13
+ xor edi, edi
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ mov byte [rip + CONST], CONST
+ jmp LABEL25

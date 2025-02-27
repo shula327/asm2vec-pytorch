@@ -1,0 +1,26 @@
+ .name fcn.00008050
+ .offset 0000000000008050
+ .file install
+ endbr64
+ mov r8, rdi
+ mov r9, rsi
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte [rdi]
+ seta al
+ sbb al, CONST
+ movsx eax, al
+ test eax, eax
+ cjmp LABEL11
+ ret
+LABEL11:
+ sub rsp, CONST
+ mov rsi, r9
+ mov rdi, r8
+ call CONST
+ test eax, eax
+ setne al
+ add rsp, CONST
+ movzx eax, al
+ ret

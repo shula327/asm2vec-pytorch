@@ -1,0 +1,30 @@
+ .name fcn.0002d480
+ .offset 000000000002d480
+ .file dpkg
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rdi
+ call CONST
+ mov rdi, r13
+ call CONST
+ mov rsi, r13
+ mov rdi, rbp
+ mov rdx, rax
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, r12
+ call CONST
+ mov rdi, rbp
+ mov rsi, r12
+ mov rdx, rax
+ call CONST
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

@@ -1,0 +1,138 @@
+ .name fcn.0001ca80
+ .offset 000000000001ca80
+ .file grep
+ endbr64
+ push r12
+ mov ecx, CONST
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL14
+ mov rax, qword [rsp]
+ sub qword [rbx + CONST], CONST
+ cmp qword [rax], CONST
+ cjmp LABEL18
+LABEL14:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL21
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL18:
+ mov rax, qword [rbx + CONST]
+ sub rax, CONST
+ mov qword [rbx + CONST], rax
+ cjmp LABEL31
+ pxor xmm0, xmm0
+ cvtsi2ss xmm0, rax
+LABEL97:
+ mov rdx, qword [rbx + CONST]
+ mov rax, qword [rbx + CONST]
+ movss xmm2, dword [rdx]
+ test rax, rax
+ cjmp LABEL38
+ pxor xmm1, xmm1
+ cvtsi2ss xmm1, rax
+LABEL113:
+ movaps xmm3, xmm2
+ mulss xmm3, xmm1
+ comiss xmm3, xmm0
+ cjmp LABEL14
+ lea rax, [rip + CONST]
+ cmp rdx, rax
+ cjmp LABEL47
+ movss xmm4, dword [rdx + CONST]
+ comiss xmm4, dword [rip + CONST]
+ cjmp LABEL50
+ movss xmm3, dword [rip + CONST]
+ comiss xmm3, xmm4
+ cjmp LABEL50
+ movss xmm3, dword [rdx + CONST]
+ comiss xmm3, dword [rip + CONST]
+ pxor xmm3, xmm3
+ cjmp LABEL57
+ comiss xmm2, xmm3
+ cjmp LABEL57
+ addss xmm2, dword [rip + CONST]
+ movss xmm5, dword [rdx + CONST]
+ comiss xmm5, xmm2
+ cjmp LABEL57
+ movss xmm6, dword [rip + CONST]
+ comiss xmm6, xmm5
+ cjmp LABEL57
+ comiss xmm4, xmm2
+ cjmp LABEL57
+ mulss xmm1, xmm5
+ cmp byte [rdx + CONST], CONST
+ cjmp LABEL71
+LABEL105:
+ comiss xmm1, dword [rip + CONST]
+ cjmp LABEL73
+ cvttss2si rsi, xmm1
+LABEL117:
+ mov rdi, rbx
+ call CONST
+ test al, al
+ cjmp LABEL14
+ mov rbp, qword [rbx + CONST]
+ test rbp, rbp
+ cjmp LABEL81
+ nop dword [rax + rax]
+LABEL87:
+ mov rdi, rbp
+ mov rbp, qword [rbp + CONST]
+ call CONST
+ test rbp, rbp
+ cjmp LABEL87
+LABEL81:
+ mov qword [rbx + CONST], CONST
+ jmp LABEL14
+LABEL31:
+ mov rdx, rax
+ and eax, CONST
+ pxor xmm0, xmm0
+ shr rdx, CONST
+ or rdx, rax
+ cvtsi2ss xmm0, rdx
+ addss xmm0, xmm0
+ jmp LABEL97
+LABEL50:
+ pxor xmm3, xmm3
+LABEL57:
+ mulss xmm3, xmm1
+ mov qword [rbx + CONST], rax
+ comiss xmm3, xmm0
+ cjmp LABEL14
+LABEL47:
+ movss xmm4, dword [rip + CONST]
+LABEL71:
+ mulss xmm1, xmm4
+ jmp LABEL105
+LABEL38:
+ mov rcx, rax
+ and eax, CONST
+ pxor xmm1, xmm1
+ shr rcx, CONST
+ or rcx, rax
+ cvtsi2ss xmm1, rcx
+ addss xmm1, xmm1
+ jmp LABEL113
+LABEL73:
+ subss xmm1, dword [rip + CONST]
+ cvttss2si rsi, xmm1
+ btc rsi, CONST
+ jmp LABEL117
+LABEL21:
+ call CONST

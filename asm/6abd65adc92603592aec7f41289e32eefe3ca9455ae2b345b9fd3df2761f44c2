@@ -1,0 +1,17 @@
+ .name fcn.00002f70
+ .offset 0000000000002f70
+ .file cksum
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ push r12
+ mov r12d, esi
+ call CONST
+ mov ecx, r12d
+ xor edx, edx
+ xor esi, esi
+ mov edi, eax
+ pop r12
+ jmp CONST
+LABEL2:
+ ret

@@ -1,0 +1,21 @@
+ .name fcn.00006340
+ .offset 0000000000006340
+ .file update-alternatives
+ push rbp
+ lea rsi, qword [rip + CONST]
+ mov rbp, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ pop rbp
+ ret
+LABEL5:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]

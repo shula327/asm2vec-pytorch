@@ -1,0 +1,15 @@
+ .name fcn.0002a1b0
+ .offset 000000000002a1b0
+ .file find
+ cmp rdx, qword [rdi]
+ cjmp LABEL1
+ mov rax, qword [rsi]
+ nop dword [rax + rax]
+LABEL8:
+ mov rcx, qword [rax + rdx*CONST + CONST]
+ mov qword [rax + rdx*CONST], rcx
+ add rdx, CONST
+ cmp rdx, qword [rdi]
+ cjmp LABEL8
+LABEL1:
+ ret

@@ -1,0 +1,69 @@
+ .name fcn.0001c250
+ .offset 000000000001c250
+ .file dpkg
+ endbr64
+ push r12
+ pxor xmm0, xmm0
+ push rbp
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ movaps xmmword [rsp], xmm0
+ mov dword [rsp], edi
+ mov dword [rsp + CONST], esi
+ test esi, esi
+ cjmp LABEL12
+ mov r12, rdx
+ mov edx, CONST
+ mov rbp, rcx
+ mov rsi, r12
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL19
+LABEL40:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL22
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret
+LABEL19:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL30
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ movsxd r12, eax
+ jmp LABEL40
+LABEL30:
+ mov rcx, r12
+ lea rdx, [rsp + CONST]
+ lea rsi, [rsp + CONST]
+ mov rdi, rsp
+ mov r8, rbp
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ call CONST
+ mov r12, rax
+ jmp LABEL40
+LABEL12:
+ mov r8d, esi
+ lea rcx, [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL22:
+ call CONST

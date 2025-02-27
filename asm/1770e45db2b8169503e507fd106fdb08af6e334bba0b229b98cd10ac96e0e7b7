@@ -1,0 +1,14 @@
+ .name fcn.000035a0
+ .offset 00000000000035a0
+ .file bunzip2
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov r8, rbx
+ pop rbx
+ mov rcx, rax
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ xor eax, eax
+ jmp CONST

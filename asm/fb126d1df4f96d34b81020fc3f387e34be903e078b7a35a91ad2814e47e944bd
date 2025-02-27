@@ -1,0 +1,48 @@
+ .name fcn.00007980
+ .offset 0000000000007980
+ .file grep
+ push rax
+ pop rax
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ sub rsp, CONST
+ call CONST
+ xor esi, esi
+ mov edi, CONST
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]
+ push r12
+ mov rcx, rsi
+ mov edx, CONST
+ mov r12, rdi
+ push rbx
+ lea r8, qword [rip + CONST]
+ mov rbx, rsi
+ xor esi, esi
+ sub rsp, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL24
+ cmp qword [rbx], CONST
+ cjmp LABEL24
+ add rsp, CONST
+ pop rbx
+ pop r12
+ ret
+LABEL24:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, r12
+ xor esi, esi
+ mov edi, CONST
+ mov r8, rax
+ lea rdx, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ nop word cs:[rax + rax]
+ nop

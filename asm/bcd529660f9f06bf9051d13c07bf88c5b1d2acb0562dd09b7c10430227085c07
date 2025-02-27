@@ -1,0 +1,44 @@
+ .name fcn.00002f10
+ .offset 0000000000002f10
+ .file setarch
+ push r12
+ lea rdi, qword [rip + CONST]
+ push rbp
+ push rbx
+ call CONST
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL7
+ lea rbx, qword [rip + CONST]
+ xor ebp, ebp
+ lea r12, qword [rip + CONST]
+ jmp LABEL11
+LABEL21:
+ mov eax, dword [rbx + CONST]
+ add rbx, CONST
+ add rbp, CONST
+ test eax, eax
+ cjmp LABEL16
+LABEL11:
+ mov rsi, qword [rbx]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL21
+LABEL35:
+ pop rbx
+ lea rax, qword [rip + CONST]
+ pop rbp
+ pop r12
+ ret
+LABEL7:
+ xor ebp, ebp
+LABEL16:
+ imul rbp, rbp, CONST
+ lea rax, qword [rip + CONST]
+ add rbp, rax
+ lea rax, qword [rip + CONST]
+ mov dword [rbp], CONST
+ mov qword [rbp + CONST], rax
+ mov qword [rbp + CONST], rax
+ jmp LABEL35

@@ -1,0 +1,16 @@
+ .name sym.Perl_sv_free
+ .offset 000000000010ffd0
+ .file perl5.30.0
+ endbr64
+ test rsi, rsi
+ cjmp LABEL2
+ mov edx, dword [rsi + CONST]
+ cmp edx, CONST
+ cjmp LABEL5
+ sub edx, CONST
+ mov dword [rsi + CONST], edx
+ ret
+LABEL2:
+ ret
+LABEL5:
+ jmp CONST

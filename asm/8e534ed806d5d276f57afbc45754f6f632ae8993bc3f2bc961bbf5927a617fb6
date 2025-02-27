@@ -1,0 +1,31 @@
+ .name fcn.00002ee0
+ .offset 0000000000002ee0
+ .file who
+ push r12
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ push rbx
+ mov rbx, rdi
+ xor edi, edi
+ sub rsp, CONST
+ call CONST
+ mov rdi, rax
+ call CONST
+ lea rdi, qword [rax + CONST]
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rdi, r12
+ mov rsi, rax
+ call CONST
+ lea rsi, qword [rbx + CONST]
+ mov rdi, r12
+ mov edx, CONST
+ call CONST
+ add rsp, CONST
+ pop rbx
+ pop r12
+ ret

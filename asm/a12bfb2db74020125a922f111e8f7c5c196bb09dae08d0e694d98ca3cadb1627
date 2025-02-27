@@ -1,0 +1,42 @@
+ .name fcn.00004fb0
+ .offset 0000000000004fb0
+ .file logger
+ push rbp
+ xor esi, esi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbp, rsp
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ lea r8, qword [rip + CONST]
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ mov ecx, dword [rax]
+ movsxd rdx, dword [rax + CONST]
+ push rcx
+ mov ecx, dword [rax + CONST]
+ push rcx
+ mov ecx, dword [rax + CONST]
+ push rcx
+ mov eax, dword [rax + CONST]
+ mov ecx, CONST
+ push rax
+ lea rax, qword [rip + CONST]
+ mov r9, qword [rax + rdx*CONST]
+ xor eax, eax
+ mov edx, CONST
+ call CONST
+ add rsp, CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL32
+ add rsp, CONST
+ lea rax, qword [rip + CONST]
+ pop rbp
+ ret
+LABEL32:
+ call CONST

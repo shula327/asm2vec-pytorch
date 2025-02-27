@@ -1,0 +1,32 @@
+ .name fcn.0001b610
+ .offset 000000000001b610
+ .file dpkg
+ endbr64
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rcx, [rip + CONST]
+ mov edx, edi
+ movsxd rax, dword [rcx + rdx*CONST]
+ add rax, rcx
+ notrack jmp rax
+ lea rax, [rip + CONST]
+ ret
+ lea rax, [rip + CONST]
+ ret
+ lea rax, [rip + CONST]
+ ret
+ lea rax, [rip + CONST]
+ ret
+ lea rax, [rip + CONST]
+ ret
+LABEL2:
+ xor eax, eax
+ ret
+ push rax
+ mov r8d, edi
+ lea rcx, [rip + CONST]
+ mov esi, CONST
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST

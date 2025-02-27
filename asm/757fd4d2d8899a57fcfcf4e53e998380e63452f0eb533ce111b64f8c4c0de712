@@ -1,0 +1,96 @@
+ .name fcn.000d6c00
+ .offset 00000000000d6c00
+ .file perl5.30.0
+ push r15
+ push r14
+ mov r14d, edx
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ mov esi, dword [rax + CONST]
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL15
+ mov rax, qword [rax]
+ mov rax, qword [rax + CONST]
+ mov rax, qword [rax + CONST]
+ mov r12, qword [rax]
+LABEL15:
+ mov rdi, r13
+ xor ebx, ebx
+ lea r15, qword [rip + CONST]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ lea eax, dword [r14 + CONST]
+ mov dword [rsp + CONST], eax
+ test r14d, r14d
+ cjmp LABEL31
+ jmp LABEL32
+LABEL64:
+ mov r8, qword [rax]
+ movzx ecx, byte [rax + CONST]
+ mov rdi, r13
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], rcx
+ call CONST
+ mov r8, qword [rsp + CONST]
+ mov rcx, qword [rsp + CONST]
+ mov edx, CONST
+ mov rdi, rax
+ lea rsi, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL72:
+ cmp dword [rsp + CONST], ebx
+ cjmp LABEL47
+ mov rdi, r13
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL47:
+ add ebx, CONST
+ add rbp, CONST
+ cmp r14d, ebx
+ cjmp LABEL32
+LABEL31:
+ test r12, r12
+ cjmp LABEL59
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+ test rax, rax
+ cjmp LABEL64
+LABEL59:
+ mov rdi, r13
+ call CONST
+ mov rdx, rbp
+ mov rsi, r15
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL72
+LABEL32:
+ mov rdi, r13
+ call CONST
+ add rsp, CONST
+ lea rsi, qword [rip + CONST]
+ pop rbx
+ mov rdi, rax
+ pop rbp
+ xor eax, eax
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST

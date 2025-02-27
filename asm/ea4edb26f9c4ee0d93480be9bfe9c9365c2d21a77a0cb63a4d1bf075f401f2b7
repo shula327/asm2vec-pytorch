@@ -1,0 +1,17 @@
+ .name fcn.00005560
+ .offset 0000000000005560
+ .file cksum
+ endbr64
+ mov rax, rdi
+ mul rsi
+ mov rdi, rax
+ seto al
+ test rdi, rdi
+ cjmp LABEL6
+ movzx eax, al
+ test rax, rax
+ cjmp LABEL6
+ jmp CONST
+LABEL6:
+ push rax
+ call CONST

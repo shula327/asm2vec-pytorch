@@ -1,0 +1,14 @@
+ .name sym.Perl_setfd_inhexec_for_sysfd
+ .offset 0000000000165cb0
+ .file perl5.30.0
+ endbr64
+ mov r8, rdi
+ mov edi, esi
+ cmp dword [r8 + CONST], esi
+ cjmp LABEL4
+ ret
+LABEL4:
+ xor edx, edx
+ mov esi, CONST
+ xor eax, eax
+ jmp CONST

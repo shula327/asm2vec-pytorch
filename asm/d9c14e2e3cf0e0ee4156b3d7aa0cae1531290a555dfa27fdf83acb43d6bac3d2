@@ -1,0 +1,37 @@
+ .name fcn.0000f510
+ .offset 000000000000f510
+ .file install
+ mov rax, qword [rdi]
+ lea rdx, [rip + CONST]
+ cmp rax, rdx
+ cjmp LABEL3
+ movss xmm0, dword [rax + CONST]
+ comiss xmm0, dword [rip + CONST]
+ cjmp LABEL6
+ movss xmm1, dword [rip + CONST]
+ comiss xmm1, xmm0
+ cjmp LABEL6
+ movss xmm1, dword [rax + CONST]
+ comiss xmm1, dword [rip + CONST]
+ cjmp LABEL6
+ movss xmm1, dword [rax]
+ comiss xmm1, dword [rip + CONST]
+ cjmp LABEL6
+ addss xmm1, dword [rip + CONST]
+ movss xmm2, dword [rax + CONST]
+ comiss xmm2, xmm1
+ cjmp LABEL6
+ movss xmm3, dword [rip + CONST]
+ comiss xmm3, xmm2
+ cjmp LABEL6
+ comiss xmm0, xmm1
+ mov eax, CONST
+ cjmp LABEL25
+LABEL6:
+ mov qword [rdi], rdx
+ xor eax, eax
+ ret
+LABEL3:
+ mov eax, CONST
+LABEL25:
+ ret

@@ -1,0 +1,40 @@
+ .name fcn.00014af0
+ .offset 0000000000014af0
+ .file dpkg-query
+ push rbp
+ cmp byte [rdi], CONST
+ mov rbp, rdi
+ cjmp LABEL3
+ nop dword [rax]
+LABEL15:
+ movzx eax, byte [rbp + CONST]
+ test al, al
+ cjmp LABEL7
+ cmp al, CONST
+ cjmp LABEL7
+ lea rdi, qword [rbp + CONST]
+ mov esi, CONST
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL15
+ lea rax, qword [rip + CONST]
+ pop rbp
+ ret
+LABEL3:
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL26
+LABEL7:
+ lea rax, qword [rip + CONST]
+ pop rbp
+ ret
+LABEL26:
+ lea rax, qword [rip + CONST]
+ pop rbp
+ ret

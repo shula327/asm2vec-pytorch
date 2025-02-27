@@ -1,0 +1,35 @@
+ .name fcn.00010ff0
+ .offset 0000000000010ff0
+ .file install
+ endbr64
+ push rbx
+ mov rsi, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ mov r8d, eax
+ xor eax, eax
+ test r8d, r8d
+ cjmp LABEL13
+ mov ebx, dword [rsp + CONST]
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ mov word [rax], dx
+ mov dword [rax + CONST], CONST
+ mov dword [rax + CONST], ebx
+ mov dword [rax + CONST], CONST
+ mov byte [rax + CONST], CONST
+LABEL13:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL25
+ add rsp, CONST
+ pop rbx
+ ret
+LABEL25:
+ call CONST

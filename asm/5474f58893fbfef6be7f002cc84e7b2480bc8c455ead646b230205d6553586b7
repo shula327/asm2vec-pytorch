@@ -1,0 +1,66 @@
+ .name fcn.00022af0
+ .offset 0000000000022af0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rsi
+ mov rsi, rdi
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL14
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL17
+LABEL36:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL20
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL14:
+ mov edx, dword [rsp + CONST]
+ mov esi, dword [rsp + CONST]
+ mov rdi, r12
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL30
+ mov esi, dword [rsp + CONST]
+ mov rdi, r12
+ and esi, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL36
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+LABEL56:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rsi, r12
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL20:
+ call CONST
+LABEL17:
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL30:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ jmp LABEL56

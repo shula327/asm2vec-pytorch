@@ -1,0 +1,32 @@
+ .name fcn.00002f50
+ .offset 0000000000002f50
+ .file who
+ sub rsp, CONST
+ movsxd rdi, edi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp], rdi
+ mov rdi, rsp
+ call CONST
+ test rax, rax
+ cjmp LABEL9
+ mov rdx, qword [rip + CONST]
+ mov rcx, rax
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rax, qword [rip + CONST]
+LABEL24:
+ mov rdx, qword [rsp + CONST]
+ xor rdx, qword fs:[CONST]
+ cjmp LABEL18
+ add rsp, CONST
+ ret
+LABEL9:
+ mov rdi, qword [rsp]
+ lea rsi, qword [rip + CONST]
+ call CONST
+ jmp LABEL24
+LABEL18:
+ call CONST

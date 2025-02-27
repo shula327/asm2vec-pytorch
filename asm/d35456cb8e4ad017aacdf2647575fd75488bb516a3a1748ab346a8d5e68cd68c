@@ -1,0 +1,31 @@
+ .name fcn.0000ca70
+ .offset 000000000000ca70
+ .file install
+ endbr64
+ push rbp
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp], rdi
+ mov rdi, qword [rip + CONST]
+ mov qword [rsp + CONST], rsi
+ mov rsi, rsp
+ mov qword [rsp + CONST], CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL13
+ mov rdi, qword [rax + CONST]
+ mov rbp, rax
+ call CONST
+ mov rdi, rbp
+ call CONST
+LABEL13:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL21
+ add rsp, CONST
+ pop rbp
+ ret
+LABEL21:
+ call CONST

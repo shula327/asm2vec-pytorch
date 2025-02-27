@@ -1,0 +1,72 @@
+ .name fcn.00009dd0
+ .offset 0000000000009dd0
+ .file gzip
+ push r15
+ movsxd r10, esi
+ add esi, esi
+ lea r8, qword [rip + CONST]
+ push r14
+ mov r11d, dword [rip + CONST]
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov eax, dword [r8 + r10*CONST]
+ mov dword [rsp + CONST], eax
+ cmp esi, r11d
+ cjmp LABEL13
+ movsxd r15, eax
+ lea r14, qword [rip + CONST]
+ movzx r12d, word [rdi + r15*CONST]
+ jmp LABEL17
+LABEL41:
+ lea esi, dword [rax + rax]
+ mov dword [r8 + r10*CONST], edx
+ movsxd r10, eax
+ cmp esi, r11d
+ cjmp LABEL13
+LABEL17:
+ movsxd rax, esi
+ movsxd r9, dword [r8 + rax*CONST]
+ mov eax, esi
+ movzx ecx, word [rdi + r9*CONST]
+ mov rdx, r9
+ cmp r11d, esi
+ cjmp LABEL29
+ add eax, CONST
+ movsxd rbx, eax
+ movsxd r13, dword [r8 + rbx*CONST]
+ movzx ebp, word [rdi + r13*CONST]
+ cmp bp, cx
+ cjmp LABEL35
+ cjmp LABEL36
+ mov eax, esi
+ nop dword [rax]
+LABEL29:
+ cmp r12w, cx
+ cjmp LABEL13
+ cjmp LABEL41
+ movsxd rcx, edx
+ movzx ebx, byte [r14 + rcx]
+ cmp byte [r14 + r15], bl
+ cjmp LABEL41
+LABEL13:
+ mov eax, dword [rsp + CONST]
+ mov dword [r8 + r10*CONST], eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL35:
+ mov ecx, ebp
+ mov edx, r13d
+ jmp LABEL29
+LABEL36:
+ movzx ebp, byte [r14 + r13]
+ cmp bpl, byte [r14 + r9]
+ cmovbe edx, r13d
+ cmova eax, esi
+ jmp LABEL29

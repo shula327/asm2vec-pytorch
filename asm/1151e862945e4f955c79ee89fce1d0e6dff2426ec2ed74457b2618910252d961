@@ -1,0 +1,17 @@
+ .name fcn.00044320
+ .offset 0000000000044320
+ .file bash
+ sub rsp, CONST
+ mov rsi, rdi
+ test rdi, rdi
+ lea rax, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ cmove rsi, rax
+ xor edx, edx
+ call CONST
+ test rax, rax
+ cjmp LABEL9
+ and dword [rax + CONST], CONST
+LABEL9:
+ add rsp, CONST
+ ret

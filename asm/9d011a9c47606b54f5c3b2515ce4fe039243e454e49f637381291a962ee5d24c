@@ -1,0 +1,60 @@
+ .name fcn.000b8a10
+ .offset 00000000000b8a10
+ .file bash
+LABEL50:
+ push rbp
+ mov ebp, edi
+ push rbx
+ movsxd rbx, esi
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ cmp eax, ebx
+ cjmp LABEL8
+LABEL33:
+ lea edx, dword [rbx + CONST]
+ movsxd rsi, ebp
+ add rsi, qword [rip + CONST]
+ movsxd rdx, edx
+ call CONST
+ mov byte [rax + rbx + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ mov ecx, ebx
+ lea esi, dword [rbx + CONST]
+ sar ecx, CONST
+ shr ecx, CONST
+ lea edx, dword [rbx + rcx]
+ and edx, CONST
+ sub edx, ecx
+ sub esi, edx
+ add esi, eax
+ mov dword [rip + CONST], esi
+ movsxd rsi, esi
+ call CONST
+ mov qword [rip + CONST], rax
+ mov rdi, rax
+ jmp LABEL33
+ test rdi, rdi
+ cjmp LABEL35
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL37
+LABEL35:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL40
+ mov rax, qword [rip + CONST]
+ mov byte [rax], CONST
+ ret
+LABEL40:
+ ret
+LABEL37:
+ mov r8d, dword [rdi + CONST]
+ mov esi, dword [rdi + CONST]
+ sub esi, r8d
+ mov edi, r8d
+ add esi, CONST
+ jmp LABEL50

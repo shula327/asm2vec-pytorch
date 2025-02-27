@@ -1,0 +1,50 @@
+ .name fcn.000bddf0
+ .offset 00000000000bddf0
+ .file bash
+ movzx eax, byte [rip + CONST]
+ test al, al
+ cjmp LABEL2
+ shl rax, CONST
+ add rax, rdi
+ cmp byte [rax], CONST
+ cjmp LABEL6
+LABEL2:
+ movzx eax, byte [rip + CONST]
+ test al, al
+ cjmp LABEL9
+ shl rax, CONST
+ add rax, rdi
+ cmp byte [rax], CONST
+ cjmp LABEL13
+LABEL9:
+ movzx eax, byte [rip + CONST]
+ test al, al
+ cjmp LABEL16
+ shl rax, CONST
+ add rax, rdi
+ cmp byte [rax], CONST
+ cjmp LABEL20
+LABEL16:
+ movzx eax, byte [rip + CONST]
+ test al, al
+ cjmp LABEL23
+ shl rax, CONST
+ add rdi, rax
+ cmp byte [rdi], CONST
+ cjmp LABEL23
+ lea rax, qword [rip + CONST]
+ mov qword [rdi + CONST], rax
+LABEL23:
+ ret
+LABEL20:
+ lea rdx, qword [rip + CONST]
+ mov qword [rax + CONST], rdx
+ jmp LABEL16
+LABEL13:
+ lea rdx, qword [rip + CONST]
+ mov qword [rax + CONST], rdx
+ jmp LABEL9
+LABEL6:
+ lea rdx, qword [rip + CONST]
+ mov qword [rax + CONST], rdx
+ jmp LABEL2

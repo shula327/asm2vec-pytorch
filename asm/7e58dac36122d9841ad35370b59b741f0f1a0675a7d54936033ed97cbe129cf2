@@ -1,0 +1,101 @@
+ .name sym.Perl_PerlLIO_dup2_cloexec
+ .offset 0000000000165e40
+ .file perl5.30.0
+ endbr64
+ push r13
+ push r12
+ mov r12d, edx
+ push rbp
+ mov ebp, esi
+ push rbx
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ cmp eax, CONST
+ cjmp LABEL10
+ cmp eax, CONST
+ cjmp LABEL12
+ mov edx, CONST
+ mov esi, r12d
+ mov edi, ebp
+ call CONST
+ mov r13d, eax
+ cmp eax, CONST
+ cjmp LABEL19
+ mov edi, eax
+ mov esi, CONST
+ xor eax, eax
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL25
+ test al, CONST
+ cjmp LABEL25
+ mov dword [rip + CONST], CONST
+LABEL50:
+ add rsp, CONST
+ mov eax, r13d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL10:
+ add rsp, CONST
+ mov esi, r12d
+ mov edi, ebp
+ mov edx, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL12:
+ mov esi, edx
+ mov edi, ebp
+ call CONST
+ mov r13d, eax
+ cmp eax, CONST
+ cjmp LABEL50
+LABEL64:
+ mov edi, r13d
+ mov edx, CONST
+ mov esi, CONST
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ mov eax, r13d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL25:
+ mov dword [rip + CONST], CONST
+ jmp LABEL64
+LABEL19:
+ call CONST
+ mov rbx, rax
+ mov eax, dword [rax]
+ sub eax, CONST
+ and eax, CONST
+ cjmp LABEL50
+ mov edi, ebp
+ mov esi, r12d
+ call CONST
+ mov ebp, eax
+ cmp eax, CONST
+ cjmp LABEL76
+ mov edi, eax
+ mov edx, CONST
+ mov esi, CONST
+ xor eax, eax
+ mov dword [rip + CONST], CONST
+ mov r13d, ebp
+ call CONST
+ jmp LABEL50
+LABEL76:
+ mov eax, dword [rbx]
+ sub eax, CONST
+ and eax, CONST
+ cjmp LABEL50
+ mov dword [rip + CONST], CONST
+ jmp LABEL50

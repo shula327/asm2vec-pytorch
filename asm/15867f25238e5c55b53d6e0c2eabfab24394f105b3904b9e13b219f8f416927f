@@ -1,0 +1,33 @@
+ .name fcn.00008140
+ .offset 0000000000008140
+ .file lsipc
+ push rbx
+ mov rbx, rdi
+ mov edi, esi
+ mov rax, qword [rbx]
+ test rax, rax
+ cjmp LABEL5
+ cmp dword [rax + CONST], esi
+ cjmp LABEL7
+LABEL5:
+ call CONST
+ mov qword [rbx], rax
+ test rax, rax
+ cjmp LABEL11
+LABEL7:
+ mov rdi, qword [rax]
+ test rdi, rdi
+ cjmp LABEL11
+ call CONST
+ test rax, rax
+ cjmp LABEL17
+ pop rbx
+ ret
+LABEL11:
+ xor eax, eax
+ pop rbx
+ ret
+LABEL17:
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ call CONST

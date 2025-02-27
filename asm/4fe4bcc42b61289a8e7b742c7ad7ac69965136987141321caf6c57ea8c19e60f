@@ -1,0 +1,37 @@
+ .name fcn.0008a720
+ .offset 000000000008a720
+ .file bash
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rip + CONST]
+ test rbx, rbx
+ cjmp LABEL6
+ jmp LABEL7
+LABEL19:
+ cmp dword [rip + CONST], CONST
+ mov rsi, rbp
+ sbb edx, edx
+ and edx, CONST
+ add edx, CONST
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL15
+ add rbx, CONST
+LABEL6:
+ mov rdi, qword [rbx]
+ test rdi, rdi
+ cjmp LABEL19
+LABEL7:
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret
+LABEL15:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ ret

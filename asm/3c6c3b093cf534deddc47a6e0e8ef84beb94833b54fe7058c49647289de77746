@@ -1,0 +1,16 @@
+ .name fcn.00006580
+ .offset 0000000000006580
+ .file logger
+ push r13
+ mov r13, rdi
+ push r12
+ mov r12, rsi
+ sub rsp, CONST
+ call CONST
+ mov edi, dword [rip + CONST]
+ mov rcx, r13
+ mov rdx, r12
+ mov dword [rax], CONST
+ lea rsi, qword [rip + CONST]
+ xor eax, eax
+ call CONST

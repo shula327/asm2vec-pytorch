@@ -1,0 +1,50 @@
+ .name fcn.00004dc0
+ .offset 0000000000004dc0
+ .file lsmem
+ push r13
+ mov r13, rsi
+ push r12
+ push rbp
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL7
+LABEL13:
+ mov rdi, r12
+ call CONST
+ test rax, rax
+ cjmp LABEL11
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL13
+ lea rbp, qword [rax + CONST]
+ xor esi, esi
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL13
+ mov edx, CONST
+ xor esi, esi
+ mov rdi, rbp
+ call CONST
+ mov r13d, eax
+LABEL33:
+ mov rdi, r12
+ call CONST
+ mov eax, r13d
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL11:
+ mov r13d, CONST
+ jmp LABEL33
+LABEL7:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdx, r13
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST

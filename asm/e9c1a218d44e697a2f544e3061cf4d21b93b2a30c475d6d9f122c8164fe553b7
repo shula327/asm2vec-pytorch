@@ -1,0 +1,14 @@
+ .name fcn.00023350
+ .offset 0000000000023350
+ .file dpkg
+ endbr64
+ lea rax, [rip + CONST]
+ lea rdx, [rax + CONST]
+ nop word [rax + rax]
+LABEL7:
+ mov qword [rax], CONST
+ add rax, CONST
+ cmp rax, rdx
+ cjmp LABEL7
+ mov dword [rip + CONST], CONST
+ ret

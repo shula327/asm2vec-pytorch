@@ -1,0 +1,18 @@
+ .name sym.Perl_invert
+ .offset 0000000000054f50
+ .file perl5.30.0
+ endbr64
+ test rsi, rsi
+ cjmp LABEL2
+ push rbp
+ mov rbp, rdi
+ call CONST
+ mov rdi, rbp
+ mov edx, CONST
+ pop rbp
+ mov rcx, rax
+ mov esi, CONST
+ jmp CONST
+LABEL2:
+ xor eax, eax
+ ret

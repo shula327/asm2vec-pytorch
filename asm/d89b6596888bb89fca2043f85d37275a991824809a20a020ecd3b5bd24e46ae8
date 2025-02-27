@@ -1,0 +1,14 @@
+ .name fcn.00027770
+ .offset 0000000000027770
+ .file dpkg
+ endbr64
+ push rbx
+ mov esi, CONST
+ mov rbx, rdi
+ call CONST
+ lea rdi, [rax + CONST]
+ test rax, rax
+ mov rax, rbx
+ pop rbx
+ cmovne rax, rdi
+ ret

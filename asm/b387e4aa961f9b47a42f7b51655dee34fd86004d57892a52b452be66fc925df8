@@ -1,0 +1,117 @@
+ .name fcn.00014140
+ .offset 0000000000014140
+ .file install
+ endbr64
+ push r15
+ mov r15, rdx
+ push r14
+ mov r14, rdi
+ push r13
+ push r12
+ mov r12, r8
+ push rbp
+ mov ebp, esi
+ push rbx
+ sub rsp, CONST
+ mov qword [rsp + CONST], rcx
+ mov qword [rsp + CONST], r8
+ call CONST
+ mov rdi, r14
+ mov qword [rsp + CONST], rax
+ mov eax, dword [rax]
+ mov dword [rsp + CONST], eax
+ call CONST
+ movsxd rdx, ebp
+ add rdx, r12
+ cmp rdx, rax
+ cjmp LABEL23
+ mov rbx, rax
+ lea rsi, [rip + CONST]
+ sub rbx, rdx
+ lea rax, [r14 + rbx]
+ mov rdi, rax
+ mov qword [rsp + CONST], rax
+ call CONST
+ cmp r12, rax
+ cjmp LABEL23
+ mov r12, qword [rsp + CONST]
+ xor edi, edi
+ mov rsi, r12
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL39
+ mov dword [rsp + CONST], CONST
+ lea rax, [r14 + r12]
+ lea r12, [rip + CONST]
+ add rbx, rax
+ nop word cs:[rax + rax]
+LABEL69:
+ cmp qword [rsp + CONST], CONST
+ mov r13, qword [rsp + CONST]
+ cjmp LABEL47
+ nop dword [rax]
+LABEL56:
+ mov esi, CONST
+ mov rdi, rbp
+ add r13, CONST
+ call CONST
+ movzx eax, byte [r12 + rax]
+ mov byte [r13 + CONST], al
+ cmp rbx, r13
+ cjmp LABEL56
+LABEL47:
+ mov rax, qword [rsp + CONST]
+ mov rsi, r15
+ mov rdi, r14
+ call rax
+ mov r8d, eax
+ test eax, eax
+ cjmp LABEL63
+ mov rax, qword [rsp + CONST]
+ mov edx, dword [rax]
+ cmp edx, CONST
+ cjmp LABEL67
+ sub dword [rsp + CONST], CONST
+ cjmp LABEL69
+ mov rdi, rbp
+ call CONST
+ mov rax, qword [rsp + CONST]
+ mov r8d, CONST
+ mov dword [rax], CONST
+ jmp LABEL75
+LABEL63:
+ mov eax, dword [rsp + CONST]
+ mov rcx, qword [rsp + CONST]
+ mov dword [rcx], eax
+ mov edx, eax
+LABEL98:
+ mov rdi, rbp
+ mov dword [rsp + CONST], r8d
+ mov dword [rsp + CONST], edx
+ call CONST
+ mov rax, qword [rsp + CONST]
+ mov edx, dword [rsp + CONST]
+ mov r8d, dword [rsp + CONST]
+ mov dword [rax], edx
+LABEL75:
+ add rsp, CONST
+ mov eax, r8d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL67:
+ mov r8d, CONST
+ jmp LABEL98
+LABEL23:
+ mov rax, qword [rsp + CONST]
+ mov r8d, CONST
+ mov dword [rax], CONST
+ jmp LABEL75
+LABEL39:
+ mov r8d, CONST
+ jmp LABEL75

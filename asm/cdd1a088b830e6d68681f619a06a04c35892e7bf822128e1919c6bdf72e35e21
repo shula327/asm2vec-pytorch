@@ -1,0 +1,19 @@
+ .name fcn.0004b200
+ .offset 000000000004b200
+ .file perl5.30.0
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov rax, qword [rdi]
+ lea r12, qword [rax + CONST]
+ mov rdi, r12
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret

@@ -1,0 +1,26 @@
+ .name fcn.0000b470
+ .offset 000000000000b470
+ .file find
+LABEL10:
+ push rbx
+ mov rbx, rdi
+LABEL14:
+ test rbx, rbx
+ cjmp LABEL3
+ movzx eax, byte [rbx + CONST]
+ test al, al
+ cjmp LABEL6
+LABEL12:
+ pop rbx
+ ret
+LABEL6:
+ mov rdi, qword [rbx + CONST]
+ call LABEL10
+ test al, al
+ cjmp LABEL12
+ mov rbx, qword [rbx + CONST]
+ jmp LABEL14
+LABEL3:
+ xor eax, eax
+ pop rbx
+ ret

@@ -1,0 +1,27 @@
+ .name fcn.0000fcb0
+ .offset 000000000000fcb0
+ .file find
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ lea rax, qword [rip + CONST]
+ cmp edi, CONST
+ cjmp LABEL2
+ cmp edi, CONST
+ lea rax, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ cmove rax, rdx
+LABEL2:
+ ret

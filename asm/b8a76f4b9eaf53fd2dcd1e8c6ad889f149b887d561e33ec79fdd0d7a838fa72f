@@ -1,0 +1,61 @@
+ .name fcn.00003900
+ .offset 0000000000003900
+ .file sha384sum
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ test sil, sil
+ cjmp LABEL5
+ movzx esi, byte [rdi]
+ lea rbx, qword [rip + CONST]
+ test sil, sil
+ cjmp LABEL9
+ jmp LABEL10
+LABEL25:
+ mov rax, qword [rcx + CONST]
+ cmp rax, qword [rcx + CONST]
+ cjmp LABEL13
+ lea rdx, qword [rax + CONST]
+ mov qword [rcx + CONST], rdx
+ mov byte [rax], sil
+LABEL42:
+ movzx esi, byte [rbp + CONST]
+ add rbp, CONST
+ test sil, sil
+ cjmp LABEL10
+LABEL9:
+ mov rcx, qword [rip + CONST]
+ cmp sil, CONST
+ cjmp LABEL23
+ cmp sil, CONST
+ cjmp LABEL25
+ mov esi, CONST
+ mov edx, CONST
+ lea rdi, qword [rip + CONST]
+ add rbp, CONST
+ call CONST
+ movzx esi, byte [rbp]
+ test sil, sil
+ cjmp LABEL9
+LABEL10:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL23:
+ mov edx, CONST
+ mov esi, CONST
+ mov rdi, rbx
+ call CONST
+ jmp LABEL42
+LABEL13:
+ mov rdi, rcx
+ call CONST
+ jmp LABEL42
+LABEL5:
+ mov rsi, qword [rip + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ jmp CONST

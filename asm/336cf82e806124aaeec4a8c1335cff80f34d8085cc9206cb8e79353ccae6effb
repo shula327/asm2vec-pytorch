@@ -1,0 +1,21 @@
+ .name fcn.000041d0
+ .offset 00000000000041d0
+ .file sdiff
+ push rbx
+ mov rbx, rdi
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL4
+LABEL12:
+ cmp byte [rbx + rax + CONST], CONST
+ lea rdx, qword [rax + CONST]
+ cjmp LABEL7
+LABEL4:
+ pop rbx
+ ret
+LABEL7:
+ mov rax, rdx
+ cmp rdx, CONST
+ cjmp LABEL12
+ pop rbx
+ ret

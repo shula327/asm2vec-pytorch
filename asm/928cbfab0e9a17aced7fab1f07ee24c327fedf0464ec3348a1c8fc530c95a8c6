@@ -1,0 +1,20 @@
+ .name fcn.000055e0
+ .offset 00000000000055e0
+ .file setpriv
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ mov edx, CONST
+ cmp rax, rdx
+ cjmp LABEL8
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL8:
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST

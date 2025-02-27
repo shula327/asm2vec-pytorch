@@ -1,0 +1,35 @@
+ .name fcn.0001cb30
+ .offset 000000000001cb30
+ .file dpkg
+ push rbp
+ lea rax, [rip + CONST]
+ push rbx
+ lea rbx, [rip + CONST]
+ sub rsp, CONST
+ jmp LABEL5
+LABEL15:
+ mov rax, qword [rbx + CONST]
+LABEL5:
+ mov rdi, qword [rax]
+ add rbx, CONST
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ mov rbp, qword [rbx + CONST]
+ call CONST
+ mov qword [rbp], rax
+ cmp qword [rbx], CONST
+ cjmp LABEL15
+ mov rdi, qword [rip + CONST]
+ call CONST
+ lea rdi, [rax + CONST]
+ call CONST
+ mov rsi, qword [rip + CONST]
+ mov rdi, rax
+ mov qword [rip + CONST], rax
+ call CONST
+ mov byte [rip + CONST], CONST
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

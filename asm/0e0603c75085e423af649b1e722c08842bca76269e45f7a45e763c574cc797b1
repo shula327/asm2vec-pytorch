@@ -1,0 +1,17 @@
+ .name fcn.00028a20
+ .offset 0000000000028a20
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ mov qword [rax + CONST], rbp
+ mov qword [rax], rbx
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

@@ -1,0 +1,20 @@
+ .name fcn.0000d570
+ .offset 000000000000d570
+ .file dpkg
+ endbr64
+ push rbp
+ mov ebp, esi
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ mov qword [rax], rbx
+ add rdx, CONST
+ mov dword [rax + CONST], ebp
+ mov qword [rax + CONST], rdx
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

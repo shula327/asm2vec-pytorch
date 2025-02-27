@@ -1,0 +1,35 @@
+ .name fcn.000130a0
+ .offset 00000000000130a0
+ .file dpkg-query
+ push rbp
+ mov rbp, rdi
+ mov rdi, rdx
+ push rbx
+ sub rsp, CONST
+ mov qword [rbp], rsi
+ call CONST
+ xor edx, edx
+ mov qword [rbp + CONST], rax
+ mov word [rbp + CONST], dx
+ test byte [rbp + CONST], CONST
+ cjmp LABEL11
+ mov rdi, qword [rbp]
+ lea rsi, qword [rip + CONST]
+ mov rbx, rax
+ call CONST
+ test rax, rax
+ cjmp LABEL17
+ mov byte [rbp + CONST], CONST
+LABEL17:
+ mov rdi, qword [rbx + CONST]
+ lea rsi, qword [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL11
+ mov byte [rbp + CONST], CONST
+LABEL11:
+ add rsp, CONST
+ mov rdi, rbp
+ pop rbx
+ pop rbp
+ jmp CONST

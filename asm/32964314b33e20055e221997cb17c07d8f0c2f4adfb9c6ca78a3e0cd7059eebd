@@ -1,0 +1,48 @@
+ .name fcn.00014c40
+ .offset 0000000000014c40
+ .file install
+ mov r9, qword [rdi + CONST]
+ lea rsi, [r9 + CONST]
+ cmp rsi, CONST
+ cjmp LABEL3
+ cmp r9, CONST
+ cjmp LABEL5
+LABEL3:
+ mov rdx, qword [rdi + CONST]
+ lea r8, [rdx + CONST]
+ cmp r8, CONST
+ cjmp LABEL9
+ cmp rdx, CONST
+ cjmp LABEL5
+LABEL9:
+ xor ecx, ecx
+ xor r10d, r10d
+ cmp rsi, CONST
+ cjmp LABEL15
+ mov qword [rdi], CONST
+ xor ecx, ecx
+ cmp r9, CONST
+ mov r10d, CONST
+ sete cl
+LABEL15:
+ cmp r8, CONST
+ cjmp LABEL22
+ xor eax, eax
+ mov qword [rdi + CONST], CONST
+ cmp rdx, CONST
+ mov r10d, CONST
+ sete al
+ add ecx, eax
+LABEL22:
+ xor eax, eax
+ cmp ecx, CONST
+ sete al
+ add eax, r10d
+ ret
+LABEL5:
+ sub rsp, CONST
+ call CONST
+ mov dword [rax], CONST
+ mov eax, CONST
+ add rsp, CONST
+ ret

@@ -1,0 +1,25 @@
+ .name fcn.00025a60
+ .offset 0000000000025a60
+ .file grep
+ endbr64
+ movzx eax, byte [rdi + CONST]
+ mov edx, dword [rdi + CONST]
+ xor eax, CONST
+ movzx eax, al
+ add edx, eax
+ and edx, CONST
+ mov ecx, edx
+ lea rcx, [rdi + rcx*CONST]
+ mov r8d, dword [rcx]
+ mov dword [rcx], esi
+ mov ecx, dword [rdi + CONST]
+ mov dword [rdi + CONST], edx
+ cmp ecx, edx
+ cjmp LABEL14
+ add eax, ecx
+ and eax, CONST
+ mov dword [rdi + CONST], eax
+LABEL14:
+ mov byte [rdi + CONST], CONST
+ mov eax, r8d
+ ret

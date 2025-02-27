@@ -1,0 +1,34 @@
+ .name fcn.0000a560
+ .offset 000000000000a560
+ .file grep
+ endbr64
+ mov r8, qword [rip + CONST]
+ mov rcx, qword [rip + CONST]
+ cmp r8, CONST
+ cjmp LABEL4
+ mov edx, CONST
+ mov eax, CONST
+ jmp LABEL7
+LABEL13:
+ add rax, CONST
+ add rdx, CONST
+ cmp rax, r8
+ cjmp LABEL11
+LABEL7:
+ cmp qword [rcx + rdx + CONST], rdi
+ cjmp LABEL13
+ lea rcx, [rcx + rdx + CONST]
+LABEL4:
+ add rdi, CONST
+ sub rdi, qword [rcx + CONST]
+ mov rax, qword [rcx]
+ mov qword [rsi], rdi
+ ret
+LABEL11:
+ shl rax, CONST
+ add rdi, CONST
+ lea rcx, [rcx + rax + CONST]
+ sub rdi, qword [rcx + CONST]
+ mov rax, qword [rcx]
+ mov qword [rsi], rdi
+ ret

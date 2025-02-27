@@ -1,0 +1,63 @@
+ .name fcn.0001ee80
+ .offset 000000000001ee80
+ .file grep
+ endbr64
+ push r15
+ lea rax, [rip + CONST]
+ push r14
+ mov r14, rsi
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ test rdx, rdx
+ cmove rbx, rax
+ call CONST
+ sub rsp, CONST
+ mov rcx, r14
+ mov rdx, r13
+ mov r10d, dword [rax]
+ lea r15, [rbx + CONST]
+ mov r9d, dword [rbx + CONST]
+ xor esi, esi
+ mov r8d, dword [rbx]
+ xor edi, edi
+ mov rbp, rax
+ mov dword [rsp + CONST], r10d
+ or r9d, CONST
+ push qword [rbx + CONST]
+ push qword [rbx + CONST]
+ push r15
+ mov dword [rsp + CONST], r9d
+ call CONST
+ add rsp, CONST
+ lea rsi, [rax + CONST]
+ mov rdi, rsi
+ mov qword [rsp], rsi
+ call CONST
+ sub rsp, CONST
+ push qword [rbx + CONST]
+ mov r8d, dword [rbx]
+ push qword [rbx + CONST]
+ mov rcx, r14
+ mov rdx, r13
+ mov rdi, rax
+ push r15
+ mov r12, rax
+ mov r9d, dword [rsp + CONST]
+ mov rsi, qword [rsp + CONST]
+ call CONST
+ mov r10d, dword [rsp + CONST]
+ mov rax, r12
+ mov dword [rbp], r10d
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret

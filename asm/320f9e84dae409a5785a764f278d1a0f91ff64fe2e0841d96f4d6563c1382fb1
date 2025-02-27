@@ -1,0 +1,17 @@
+ .name fcn.0000aef0
+ .offset 000000000000aef0
+ .file diff3
+LABEL3:
+ call CONST
+ sub rsp, CONST
+ test dil, CONST
+ cjmp LABEL3
+ test dil, CONST
+ cjmp LABEL5
+ add rsp, CONST
+ ret
+LABEL5:
+ movzx eax, byte [rdi + CONST]
+ add rsp, CONST
+ sub rdi, rax
+ jmp CONST

@@ -1,0 +1,51 @@
+ .name fcn.00009d50
+ .offset 0000000000009d50
+ .file dpkg
+ push r14
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rsi
+ mov esi, CONST
+ mov rdi, rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov r14, rsp
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ mov r13, rax
+ call CONST
+ mov r8, r13
+ mov edx, CONST
+ mov rdi, r14
+ mov rcx, rax
+ mov esi, CONST
+ xor eax, eax
+ call CONST
+ mov rax, qword [r12]
+ mov r8, rbx
+ mov r9, rbp
+ lea rdi, [rip + CONST]
+ mov rcx, r14
+ mov rdx, r12
+ mov rsi, qword [rax]
+ call CONST
+ mov rbx, qword [rsp + CONST]
+ xor rbx, qword fs:[CONST]
+ cjmp LABEL38
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL38:
+ call CONST

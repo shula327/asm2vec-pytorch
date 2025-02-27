@@ -1,0 +1,91 @@
+ .name fcn.00007850
+ .offset 0000000000007850
+ .file grep
+ push r12
+ mov r12, rdi
+ push rbx
+ mov ebx, esi
+ lea rsi, [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL8
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL13
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL18
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL23
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL28
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL33
+ lea rsi, [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL38
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, r12
+ xor esi, esi
+ mov edi, CONST
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+LABEL33:
+ mov eax, CONST
+ nop word [rax + rax]
+LABEL8:
+ test ebx, ebx
+ cjmp LABEL52
+ cmp ebx, eax
+ cjmp LABEL54
+LABEL52:
+ add rsp, CONST
+ pop rbx
+ pop r12
+ ret
+LABEL13:
+ mov eax, CONST
+ jmp LABEL8
+LABEL18:
+ mov eax, CONST
+ jmp LABEL8
+LABEL23:
+ mov eax, CONST
+ jmp LABEL8
+LABEL28:
+ mov eax, CONST
+ jmp LABEL8
+LABEL38:
+ mov eax, CONST
+ jmp LABEL8
+LABEL54:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ xor esi, esi
+ mov edi, CONST
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]

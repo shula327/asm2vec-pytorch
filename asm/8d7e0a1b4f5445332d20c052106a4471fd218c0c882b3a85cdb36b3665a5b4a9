@@ -1,0 +1,41 @@
+ .name fcn.00060070
+ .offset 0000000000060070
+ .file bash
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, esi
+ sub rsp, CONST
+ movzx eax, byte [rdi]
+ sub eax, CONST
+ cmp al, CONST
+ cjmp LABEL8
+LABEL32:
+ test ebx, ebx
+ cjmp LABEL10
+LABEL20:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL10:
+ xor esi, esi
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL20
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ setne al
+ add rsp, CONST
+ movzx eax, al
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ call CONST
+ test eax, eax
+ cjmp LABEL32
+ jmp LABEL20

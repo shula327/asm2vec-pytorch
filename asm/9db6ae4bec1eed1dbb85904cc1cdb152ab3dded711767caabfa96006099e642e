@@ -1,0 +1,133 @@
+ .name fcn.00016b40
+ .offset 0000000000016b40
+ .file dpkg-query
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ test rdi, rdi
+ cjmp LABEL5
+ mov rbx, rdi
+ movsx edi, byte [rdi]
+LABEL101:
+ test rbp, rbp
+ lea rax, qword [rip + CONST]
+ cmove rbp, rax
+LABEL93:
+ test dil, dil
+ cjmp LABEL12
+ cmp byte [rbp], CONST
+ cjmp LABEL14
+ jmp LABEL15
+LABEL34:
+ movsx edi, byte [rbp]
+ test dil, dil
+ cjmp LABEL18
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL22
+LABEL39:
+ movsx edi, byte [rbx]
+ call CONST
+ movsx edi, byte [rbp]
+ mov r12d, eax
+ call CONST
+ cmp r12d, eax
+ cjmp LABEL29
+ movsx edi, byte [rbx + CONST]
+ add rbx, CONST
+ add rbp, CONST
+LABEL14:
+ test dil, dil
+ cjmp LABEL34
+LABEL12:
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL34
+ jmp LABEL39
+LABEL29:
+ sub r12d, eax
+LABEL91:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL18:
+ movzx eax, byte [rbx]
+ cmp al, CONST
+ cjmp LABEL48
+ nop word [rax + rax]
+LABEL53:
+ movzx eax, byte [rbx + CONST]
+ add rbx, CONST
+ cmp al, CONST
+ cjmp LABEL53
+LABEL98:
+ cmp dil, CONST
+ cjmp LABEL48
+ nop word [rax + rax]
+LABEL59:
+ add rbp, CONST
+ cmp byte [rbp], CONST
+ cjmp LABEL59
+LABEL48:
+ xor r12d, r12d
+ jmp LABEL61
+LABEL79:
+ movsx edi, byte [rbp]
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL66
+ test r12d, r12d
+ cjmp LABEL68
+ movsx r12d, byte [rbx]
+ movsx edx, byte [rbp]
+ sub r12d, edx
+LABEL68:
+ movzx eax, byte [rbx + CONST]
+ add rbx, CONST
+ add rbp, CONST
+LABEL61:
+ movsx edi, al
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL79
+LABEL66:
+ movsx edi, byte [rbx]
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL84
+ movsx edi, byte [rbp]
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL89
+ test r12d, r12d
+ cjmp LABEL91
+ movsx edi, byte [rbx]
+ jmp LABEL93
+LABEL22:
+ movzx eax, byte [rbx]
+ movzx edi, byte [rbp]
+ cmp al, CONST
+ cjmp LABEL53
+ jmp LABEL98
+LABEL5:
+ xor edi, edi
+ lea rbx, qword [rip + CONST]
+ jmp LABEL101
+LABEL89:
+ mov r12d, CONST
+ jmp LABEL91
+LABEL84:
+ mov r12d, CONST
+ jmp LABEL91
+LABEL15:
+ xor r12d, r12d
+ jmp LABEL91

@@ -1,8 +1,12 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/root/dailu_code/asm2vec-pytorch/')))
 import torch
 import torch.nn as nn
 import click
 import asm2vec
-
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/root/dailu_code/asm2vec-pytorch/asm2vec/')))
 def cosine_similarity(v1, v2):
     return (v1 @ v2 / (v1.norm() * v2.norm())).item()
 

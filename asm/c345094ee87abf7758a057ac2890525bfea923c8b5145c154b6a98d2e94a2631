@@ -1,0 +1,22 @@
+ .name fcn.000f7220
+ .offset 00000000000f7220
+ .file perl5.30.0
+ push rbp
+ add rsi, CONST
+ mov rbp, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ mov edx, dword [rax + CONST]
+ cmp edx, CONST
+ cjmp LABEL8
+ sub edx, CONST
+ mov dword [rax + CONST], edx
+LABEL5:
+ pop rbp
+ ret
+LABEL8:
+ mov rdi, rbp
+ mov rsi, rax
+ pop rbp
+ jmp CONST

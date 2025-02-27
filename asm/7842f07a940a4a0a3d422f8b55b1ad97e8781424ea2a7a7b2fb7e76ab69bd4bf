@@ -1,0 +1,35 @@
+ .name fcn.00010ed0
+ .offset 0000000000010ed0
+ .file dpkg
+ push rbp
+ xor esi, esi
+ call CONST
+ mov rbp, rax
+ nop dword [rax + rax]
+LABEL12:
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ mov rdx, qword [rip + CONST]
+ test rdx, rdx
+ cjmp LABEL11
+ jmp LABEL12
+LABEL17:
+ mov rdx, qword [rdx]
+ test rdx, rdx
+ cjmp LABEL12
+LABEL11:
+ cmp rax, qword [rdx + CONST]
+ cjmp LABEL17
+ mov rdi, rbp
+ call CONST
+ mov eax, CONST
+ pop rbp
+ ret
+LABEL8:
+ mov rdi, rbp
+ call CONST
+ xor eax, eax
+ pop rbp
+ ret

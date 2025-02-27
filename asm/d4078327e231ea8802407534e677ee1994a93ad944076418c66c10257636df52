@@ -1,0 +1,22 @@
+ .name fcn.0010e140
+ .offset 000000000010e140
+ .file perl5.30.0
+ mov edx, esi
+ push rbx
+ lea rbx, qword [rdi + rdx*CONST]
+ mov rax, qword [rbx + CONST]
+ test rax, rax
+ cjmp LABEL5
+ mov rdx, qword [rax]
+ mov qword [rbx + CONST], rdx
+ pop rbx
+ ret
+LABEL5:
+ lea rax, qword [rip + CONST]
+ mov ecx, dword [rax + rdx*CONST + CONST]
+ movzx edx, byte [rax + rdx*CONST]
+ call CONST
+ mov rdx, qword [rax]
+ mov qword [rbx + CONST], rdx
+ pop rbx
+ ret

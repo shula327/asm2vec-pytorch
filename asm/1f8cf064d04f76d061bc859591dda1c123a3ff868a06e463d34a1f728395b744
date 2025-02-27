@@ -1,0 +1,60 @@
+ .name fcn.00084620
+ .offset 0000000000084620
+ .file perl5.30.0
+ push r13
+ mov r13, rsi
+ lea rsi, qword [rip + CONST]
+ push r12
+ movzx r12d, dl
+ xor edx, edx
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ mov rsi, r13
+ mov rdi, rbx
+ mov rbp, rax
+ mov rax, qword [rbx + CONST]
+ mov rdx, qword [rax + CONST]
+ sub rdx, r13
+ call CONST
+ mov rdx, qword [rbp]
+ mov rsi, rbp
+ mov rdi, rbx
+ xor ecx, ecx
+ mov qword [rdx + CONST], rax
+ xor edx, edx
+ call CONST
+ mov rax, qword [rbp]
+ xor ecx, ecx
+ mov rdi, rbx
+ xor esi, esi
+ mov qword [rax + CONST], r12
+ mov rax, qword [rbp]
+ mov qword [rax + CONST], CONST
+ mov rax, qword [rbx + CONST]
+ mov rax, qword [rax + CONST]
+ mov rax, qword [rax]
+ mov qword [rax + CONST], CONST
+ mov rax, qword [rbx + CONST]
+ mov rdx, qword [rax + CONST]
+ call CONST
+ mov rax, qword [rbx + CONST]
+ mov rax, qword [rax + CONST]
+ or dword [rax + CONST], CONST
+ mov rdx, qword [rbx + CONST]
+ mov rcx, qword [rdx + CONST]
+ mov rax, qword [rcx]
+ mov rax, qword [rax + CONST]
+ add rax, qword [rcx + CONST]
+ mov qword [rdx + CONST], rax
+ mov rax, qword [rbx + CONST]
+ mov rax, qword [rax + CONST]
+ mov rax, qword [rax + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

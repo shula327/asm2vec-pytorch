@@ -1,0 +1,15 @@
+ .name fcn.0000a7d0
+ .offset 000000000000a7d0
+ .file dpkg
+ endbr64
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL2
+ ret
+LABEL2:
+ sub rsp, CONST
+ xor esi, esi
+ lea rdi, [rip + CONST]
+ call CONST
+ mov byte [rip + CONST], CONST
+ add rsp, CONST
+ ret

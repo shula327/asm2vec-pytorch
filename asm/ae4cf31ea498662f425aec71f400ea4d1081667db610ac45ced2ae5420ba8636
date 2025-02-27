@@ -1,0 +1,14 @@
+ .name fcn.0001ec90
+ .offset 000000000001ec90
+ .file dpkg
+ endbr64
+ mov rdx, qword [rsi]
+ mov rcx, qword [rdi]
+ mov eax, CONST
+ mov rdx, qword [rdx + CONST]
+ cmp qword [rcx + CONST], rdx
+ cjmp LABEL6
+ setg al
+ movzx eax, al
+LABEL6:
+ ret

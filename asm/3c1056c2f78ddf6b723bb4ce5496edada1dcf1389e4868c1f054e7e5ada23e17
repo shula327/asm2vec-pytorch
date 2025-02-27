@@ -1,0 +1,119 @@
+ .name fcn.0000f000
+ .offset 000000000000f000
+ .file install
+ endbr64
+ mov edx, edi
+ mov eax, CONST
+ and edx, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL5
+ cmp edx, CONST
+ mov eax, CONST
+ mov edx, CONST
+ cmovne eax, edx
+LABEL5:
+ mov byte [rsi], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ test edi, CONST
+ cjmp LABEL45
+ and eax, CONST
+ add eax, CONST
+LABEL100:
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ test edi, CONST
+ cjmp LABEL68
+ and eax, CONST
+ add eax, CONST
+LABEL103:
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, edi
+ and eax, CONST
+ cmp eax, CONST
+ sbb eax, eax
+ and edi, CONST
+ cjmp LABEL91
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, CONST
+ mov word [rsi + CONST], ax
+ ret
+LABEL45:
+ and eax, CONST
+ add eax, CONST
+ jmp LABEL100
+LABEL68:
+ and eax, CONST
+ add eax, CONST
+ jmp LABEL103
+LABEL91:
+ and eax, CONST
+ add eax, CONST
+ mov byte [rsi + CONST], al
+ mov eax, CONST
+ mov word [rsi + CONST], ax
+ ret

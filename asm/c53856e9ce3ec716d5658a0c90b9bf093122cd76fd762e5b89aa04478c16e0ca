@@ -1,0 +1,21 @@
+ .name fcn.00031d40
+ .offset 0000000000031d40
+ .file bash
+ push rbx
+ mov rbx, rdi
+ call CONST
+ cmp eax, CONST
+ cjmp LABEL4
+ cmp qword [rip + CONST], rbx
+ cjmp LABEL4
+ cmp qword [rip + CONST], rbx
+ cjmp LABEL8
+ sub eax, CONST
+LABEL4:
+ pop rbx
+ ret
+LABEL8:
+ cmp dword [rip + CONST], CONST
+ pop rbx
+ adc eax, -1
+ ret

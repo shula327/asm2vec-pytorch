@@ -1,0 +1,92 @@
+ .name fcn.00016d60
+ .offset 0000000000016d60
+ .file install
+LABEL72:
+ call CONST
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov r12, qword [rdi + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test byte [r12 + CONST], CONST
+ cjmp LABEL11
+ mov rbp, qword [r12 + CONST]
+ mov rbx, rdi
+ mov r13d, esi
+ test rbp, rbp
+ cjmp LABEL16
+LABEL35:
+ mov rax, qword [rbx + CONST]
+ mov rsi, rsp
+ mov rdi, rbp
+ mov qword [rsp], rax
+ call CONST
+ test rax, rax
+ cjmp LABEL23
+ mov r12, qword [rax + CONST]
+ jmp LABEL25
+LABEL16:
+ mov r8, qword [rip + CONST]
+ lea rcx, [rip + CONST]
+ xor esi, esi
+ mov edi, CONST
+ lea rdx, [rip + CONST]
+ call CONST
+ mov qword [r12 + CONST], rax
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL35
+LABEL23:
+ test r13d, r13d
+ cjmp LABEL11
+ lea rsi, [rsp + CONST]
+ mov edi, r13d
+ call CONST
+ test eax, eax
+ cjmp LABEL42
+ nop dword [rax]
+LABEL11:
+ xor r12d, r12d
+LABEL25:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL47
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL42:
+ mov r12, qword [rsp + CONST]
+ test rbp, rbp
+ cjmp LABEL25
+ mov edi, CONST
+ call CONST
+ mov r13, rax
+ test rax, rax
+ cjmp LABEL25
+ mov rax, qword [rbx + CONST]
+ mov qword [r13 + CONST], r12
+ mov rsi, r13
+ mov rdi, rbp
+ mov qword [r13], rax
+ call CONST
+ test rax, rax
+ cjmp LABEL70
+ cmp r13, rax
+ cjmp LABEL72
+LABEL77:
+ mov r12, qword [rsp + CONST]
+ jmp LABEL25
+LABEL70:
+ mov rdi, r13
+ call CONST
+ jmp LABEL77
+LABEL47:
+ call CONST

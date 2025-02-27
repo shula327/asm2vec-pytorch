@@ -1,0 +1,86 @@
+ .name main
+ .offset 00000000000492e0
+ .file perl5.30.0
+ endbr64
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov byte [rip + CONST], CONST
+ mov dword [rsp + CONST], edi
+ lea rdi, [rsp + CONST]
+ mov qword [rsp + CONST], rsi
+ lea rsi, [rsp + CONST]
+ mov qword [rsp + CONST], rdx
+ lea rdx, [rsp + CONST]
+ call CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov rdx, rsi
+ call CONST
+ cmp byte [rip + CONST], CONST
+ mov rdi, qword [rip + CONST]
+ cjmp LABEL20
+ call CONST
+ mov qword [rip + CONST], rax
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL25
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov byte [rdi + CONST], CONST
+LABEL20:
+ or byte [rdi + CONST], CONST
+ mov rcx, qword [rsp + CONST]
+ xor r8d, r8d
+ lea rsi, [rip + CONST]
+ mov edx, dword [rsp + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL36
+LABEL73:
+ cmp qword [rip + CONST], CONST
+ cjmp LABEL38
+ mov ebx, CONST
+ lea r13, [rip + CONST]
+ mov eax, CONST
+ lea r12, [rip + CONST]
+ jmp LABEL43
+LABEL53:
+ add ebx, CONST
+ movsxd rax, ebx
+ cmp qword [r12 + rax*CONST], CONST
+ cjmp LABEL38
+LABEL43:
+ mov ebp, dword [r13 + rax*CONST]
+ mov rdi, qword [rip + CONST]
+ mov esi, ebp
+ call CONST
+ cmp qword [rip + CONST], rax
+ cjmp LABEL53
+ mov rdi, qword [rip + CONST]
+ xor edx, edx
+ add ebx, CONST
+ mov esi, ebp
+ call CONST
+ movsxd rax, ebx
+ cmp qword [r12 + rax*CONST], CONST
+ cjmp LABEL43
+ nop
+LABEL38:
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov ebp, eax
+ call CONST
+ call CONST
+ mov edi, ebp
+ call CONST
+LABEL36:
+ mov rdi, qword [rip + CONST]
+ call CONST
+ jmp LABEL73
+LABEL25:
+ mov edi, CONST
+ call CONST

@@ -1,0 +1,20 @@
+ .name fcn.00015e80
+ .offset 0000000000015e80
+ .file install
+ endbr64
+ mov eax, dword [rdi + CONST]
+ mov r8d, CONST
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL5
+ xor r8d, r8d
+ cmp eax, CONST
+ cjmp LABEL8
+LABEL5:
+ mov eax, r8d
+ ret
+LABEL8:
+ cmp qword [rsi + CONST], CONST
+ setne r8b
+ mov eax, r8d
+ ret

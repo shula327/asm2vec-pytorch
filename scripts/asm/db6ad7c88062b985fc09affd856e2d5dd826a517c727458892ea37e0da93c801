@@ -1,0 +1,14 @@
+ .name fcn.0002c340
+ .offset 000000000002c340
+ .file dpkg
+ push rbp
+ mov rbp, rdi
+ call CONST
+ mov rdi, rbp
+ mov qword [rip + CONST], rax
+ call CONST
+ pop rbp
+ mov qword [rip + CONST], rax
+ mov rax, qword [rip + CONST]
+ mov rax, qword [rax]
+ jmp rax

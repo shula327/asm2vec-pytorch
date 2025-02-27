@@ -1,0 +1,25 @@
+ .name fcn.00005740
+ .offset 0000000000005740
+ .file update-alternatives
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ call CONST
+ mov qword [rax], CONST
+ mov qword [rax + CONST], r12
+ mov qword [rax + CONST], rbp
+ nop word cs:[rax + rax]
+LABEL15:
+ mov rdx, rbx
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL15
+ mov qword [rdx], rax
+ pop rbx
+ pop rbp
+ pop r12
+ ret

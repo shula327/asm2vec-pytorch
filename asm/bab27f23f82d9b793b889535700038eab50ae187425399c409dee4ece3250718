@@ -1,0 +1,42 @@
+ .name fcn.000ce780
+ .offset 00000000000ce780
+ .file bash
+ push r14
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdx
+ push rbp
+ mov ebp, edi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rdi, qword [rsp + CONST]
+ call CONST
+ mov rdx, r12
+ mov rsi, r13
+ mov edi, ebp
+ mov dword [rsp + CONST], CONST
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL19
+LABEL34:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL22
+ add rsp, CONST
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL19:
+ mov r14, rsp
+ mov rsi, r12
+ mov edi, ebp
+ mov rdx, r14
+ call CONST
+ jmp LABEL34
+LABEL22:
+ call CONST

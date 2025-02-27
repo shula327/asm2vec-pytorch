@@ -1,0 +1,16 @@
+ .name fcn.00006a10
+ .offset 0000000000006a10
+ .file gzip
+ push rax
+ pop rax
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL6
+ call CONST
+LABEL6:
+ xor edi, edi
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

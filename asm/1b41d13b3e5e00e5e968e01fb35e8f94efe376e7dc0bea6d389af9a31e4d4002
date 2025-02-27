@@ -1,0 +1,22 @@
+ .name fcn.00016d20
+ .offset 0000000000016d20
+ .file install
+ push rbx
+ mov rbx, rdi
+ jmp LABEL2
+LABEL10:
+ mov rdi, rbx
+ call CONST
+ test eax, eax
+ cjmp LABEL6
+LABEL2:
+ mov rdi, rbx
+ call CONST
+ test al, al
+ cjmp LABEL10
+ pop rbx
+ ret
+LABEL6:
+ mov edi, eax
+ call CONST
+ jmp LABEL2

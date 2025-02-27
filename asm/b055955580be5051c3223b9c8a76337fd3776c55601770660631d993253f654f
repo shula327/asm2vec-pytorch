@@ -1,0 +1,16 @@
+ .name fcn.000297f0
+ .offset 00000000000297f0
+ .file find
+ mov eax, dword [rdi + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL3
+ cmp eax, CONST
+ cjmp LABEL5
+ ret
+LABEL3:
+ mov rdi, qword [rdi]
+ jmp CONST
+LABEL5:
+ mov rdi, qword [rdi]
+ jmp CONST

@@ -1,0 +1,127 @@
+ .name fcn.00049b30
+ .offset 0000000000049b30
+ .file perl5.30.0
+LABEL67:
+ xor esi, esi
+ mov rdi, rbp
+ call LABEL2
+ movzx eax, byte [CONST]
+ ud2
+LABEL2:
+ push r12
+ push rbp
+ push rbx
+ test rsi, rsi
+ cjmp LABEL9
+ movzx eax, word [rsi + CONST]
+ movzx edx, byte [rsi + CONST]
+ mov rbp, rdi
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL15
+ test ax, ax
+ cjmp LABEL17
+LABEL41:
+ movzx eax, word [rsi + CONST]
+ xor r12d, r12d
+ and eax, CONST
+LABEL63:
+ cmp eax, CONST
+ cjmp LABEL22
+ cmp eax, CONST
+ cjmp LABEL24
+ and edx, CONST
+ cjmp LABEL9
+ lea edx, dword [rax + CONST]
+ cmp edx, CONST
+ cjmp LABEL29
+ mov ecx, CONST
+ bt rcx, rdx
+ cjmp LABEL32
+ nop dword [rax + rax]
+LABEL9:
+ mov r12d, CONST
+LABEL60:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL17:
+ test dl, CONST
+ cjmp LABEL41
+ mov rsi, qword [rsi + CONST]
+ movzx edx, byte [rsi + CONST]
+ jmp LABEL41
+LABEL15:
+ mov rax, qword [rsi + CONST]
+ mov rdi, qword [rax + CONST]
+ movzx eax, word [rdi + CONST]
+ or dl, byte [rdi + CONST]
+ mov ecx, eax
+ and eax, CONST
+ and cx, CONST
+ test dl, CONST
+ cjmp LABEL53
+ cmp cx, CONST
+ mov r12d, CONST
+ sete r8b
+ cmp cx, CONST
+ sete dil
+ or r8b, dil
+ cjmp LABEL60
+ sub ecx, CONST
+ cmp cx, CONST
+ cjmp LABEL63
+ jmp LABEL60
+LABEL22:
+ mov rax, qword [rsi + CONST]
+ test byte [rax + CONST], CONST
+ cjmp LABEL67
+ mov rbx, qword [rax + CONST]
+ mov rdi, rbp
+ mov rsi, rbx
+ call LABEL2
+ xor esi, esi
+ mov r12d, eax
+ test byte [rbx + CONST], CONST
+ cjmp LABEL75
+ mov rsi, qword [rbx + CONST]
+LABEL75:
+ mov rdi, rbp
+ call LABEL2
+ cmp r12d, CONST
+ mov r8d, eax
+ sete al
+ cmp r8d, CONST
+ sete dl
+ test al, al
+ cjmp LABEL85
+ test dl, dl
+ cjmp LABEL9
+LABEL85:
+ xor r12d, r12d
+ cmp al, dl
+ cjmp LABEL60
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ jmp LABEL60
+LABEL24:
+ and edx, CONST
+ cmp dl, CONST
+ cjmp LABEL9
+ cmp byte [rsi + CONST], CONST
+ cjmp LABEL9
+ jmp LABEL60
+LABEL53:
+ mov r12d, CONST
+ jmp LABEL63
+LABEL29:
+ cmp eax, CONST
+ cjmp LABEL9
+LABEL32:
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL60
+ jmp LABEL9

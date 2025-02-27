@@ -1,0 +1,35 @@
+ .name fcn.00006680
+ .offset 0000000000006680
+ .file update-alternatives
+ push r12
+ mov esi, CONST
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ mov r12, qword [rbp + CONST]
+ test r12, r12
+ cjmp LABEL8
+ mov rdi, rbp
+ call CONST
+ mov r12, qword [rax + CONST]
+ add rsp, CONST
+ pop rbp
+ mov rax, r12
+ pop r12
+ ret
+LABEL8:
+ mov rbp, qword [rbp]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret

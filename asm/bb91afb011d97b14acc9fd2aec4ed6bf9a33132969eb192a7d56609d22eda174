@@ -1,0 +1,31 @@
+ .name fcn.00006f70
+ .offset 0000000000006f70
+ .file ls
+ cmp qword [rip + CONST], CONST
+ push rbx
+ cjmp LABEL2
+ xor ebx, ebx
+ nop dword [rax]
+LABEL10:
+ mov rax, qword [rip + CONST]
+ mov rdi, qword [rax + rbx*CONST]
+ add rbx, CONST
+ call CONST
+ cmp qword [rip + CONST], rbx
+ cjmp LABEL10
+LABEL2:
+ mov qword [rip + CONST], CONST
+ pop rbx
+ mov byte [rip + CONST], CONST
+ mov byte [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ mov dword [rip + CONST], CONST
+ ret

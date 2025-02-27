@@ -1,0 +1,18 @@
+ .name fcn.000062d0
+ .offset 00000000000062d0
+ .file setpriv
+ endbr64
+ push rbx
+ mov rbx, rsi
+ mov rsi, rdx
+ call CONST
+ pxor xmm1, xmm1
+ cvttsd2si rax, xmm0
+ cvtsi2sd xmm1, rax
+ mov qword [rbx], rax
+ subsd xmm0, xmm1
+ mulsd xmm0, qword [rip + CONST]
+ cvttsd2si rax, xmm0
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

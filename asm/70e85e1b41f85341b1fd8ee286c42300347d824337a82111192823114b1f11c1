@@ -1,0 +1,23 @@
+ .name fcn.00028b10
+ .offset 0000000000028b10
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov rdi, rsi
+ xor esi, esi
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ test rdx, rdx
+ cjmp LABEL8
+ mov qword [rdx], rax
+ add dword [rbx + CONST], CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret
+LABEL8:
+ add dword [rbx + CONST], CONST
+ mov qword [rbx], rax
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

@@ -1,0 +1,51 @@
+ .name fcn.00005440
+ .offset 0000000000005440
+ .file setpriv
+ push r12
+ mov r12, rsi
+ xor eax, eax
+ push rbp
+ mov rbp, rdi
+ push rbx
+ movsx esi, byte [rdi]
+ xor ebx, ebx
+ test sil, sil
+ cjmp LABEL9
+ nop word cs:[rax + rax]
+LABEL21:
+ cmp sil, CONST
+ cjmp LABEL12
+ mov rdi, r12
+ call CONST
+ test rax, rax
+ cjmp LABEL16
+ add ebx, CONST
+ movsxd rax, ebx
+ movsx esi, byte [rbp + rax]
+ test sil, sil
+ cjmp LABEL21
+LABEL9:
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ lea eax, dword [rbx + CONST]
+ cdqe
+ cmp byte [rbp + rax], CONST
+ cjmp LABEL16
+ add ebx, CONST
+ movsxd rax, ebx
+ movsx esi, byte [rbp + rax]
+ test sil, sil
+ cjmp LABEL21
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL16:
+ movsxd rax, ebx
+ pop rbx
+ pop rbp
+ pop r12
+ ret

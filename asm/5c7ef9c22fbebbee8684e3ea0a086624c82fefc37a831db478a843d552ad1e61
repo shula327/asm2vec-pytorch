@@ -1,0 +1,62 @@
+ .name fcn.00004f14
+ .offset 0000000000004f14
+ .file apt-get
+ push rbp
+ mov rbp, rsp
+ push r14
+ push r13
+ lea r14, qword [rbp + CONST]
+ lea r13, qword [rbp + CONST]
+ push r12
+ mov r12, rsi
+ push rbx
+ mov ebx, edi
+ mov rdi, r14
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rbp + CONST], rax
+ xor eax, eax
+ call CONST
+ sub rsp, CONST
+ mov r9d, ebx
+ mov rsi, r14
+ lea rax, qword [rip + CONST]
+ lea r8, qword [rip + CONST]
+ mov edx, CONST
+ mov rdi, r13
+ push rax
+ lea rax, qword [rip + CONST]
+ lea rcx, qword [rip + CONST]
+ push rax
+ push r12
+ call CONST
+ add rsp, CONST
+ call CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, r14
+ call CONST
+ mov rsi, r13
+ mov rdi, r14
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ movzx r12d, ax
+ test rdi, rdi
+ cjmp LABEL41
+ call CONST
+LABEL41:
+ mov rdi, r14
+ call CONST
+ mov rax, qword [rbp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL47
+ lea rsp, qword [rbp + CONST]
+ mov eax, r12d
+ pop rbx
+ pop r12
+ pop r13
+ pop r14
+ pop rbp
+ ret
+LABEL47:
+ call CONST

@@ -1,0 +1,18 @@
+ .name fcn.00041760
+ .offset 0000000000041760
+ .file bash
+ movsxd rax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL2
+ mov rdx, qword [rip + CONST]
+ movzx eax, byte [rdx + rax + CONST]
+ cmp al, CONST
+ cjmp LABEL6
+ cmp al, CONST
+ cjmp LABEL6
+LABEL2:
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ jmp CONST
+LABEL6:
+ ret

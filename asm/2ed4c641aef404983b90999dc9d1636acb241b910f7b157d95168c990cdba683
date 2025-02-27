@@ -1,0 +1,26 @@
+ .name fcn.000232f0
+ .offset 00000000000232f0
+ .file dpkg
+ endbr64
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ lea rsi, [rcx + CONST]
+ nop dword [rax]
+LABEL18:
+ mov rax, qword [rcx]
+ test rax, rax
+ cjmp LABEL7
+ nop dword [rax + rax]
+LABEL15:
+ mov dword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], rdx
+ mov qword [rax + CONST], CONST
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL15
+LABEL7:
+ add rcx, CONST
+ cmp rcx, rsi
+ cjmp LABEL18
+ ret

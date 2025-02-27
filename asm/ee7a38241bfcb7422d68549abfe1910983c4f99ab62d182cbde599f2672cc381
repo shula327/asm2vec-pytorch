@@ -1,0 +1,30 @@
+ .name fcn.00076420
+ .offset 0000000000076420
+ .file bash
+ add edi, CONST
+ push rbx
+ mov ebx, dword [rip + CONST]
+ mov dword [rip + CONST], edi
+ movsxd rdi, edi
+ lea rsi, qword [rdi*CONST]
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov ecx, dword [rip + CONST]
+ mov qword [rip + CONST], rax
+ cmp ebx, ecx
+ cjmp LABEL11
+ sub ecx, CONST
+ movsxd rsi, ebx
+ sub ecx, ebx
+ lea rdx, qword [rax + rsi*CONST]
+ lea rcx, qword [rsi + rcx + CONST]
+ lea rax, qword [rax + rcx*CONST]
+ nop dword [rax]
+LABEL22:
+ mov qword [rdx], CONST
+ add rdx, CONST
+ cmp rdx, rax
+ cjmp LABEL22
+LABEL11:
+ pop rbx
+ ret

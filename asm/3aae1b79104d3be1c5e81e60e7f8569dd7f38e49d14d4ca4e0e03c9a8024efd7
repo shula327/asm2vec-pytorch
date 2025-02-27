@@ -1,0 +1,17 @@
+ .name fcn.00015b40
+ .offset 0000000000015b40
+ .file install
+ endbr64
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL2
+ movzx eax, byte [rip + CONST]
+ ret
+LABEL2:
+ sub rsp, CONST
+ call CONST
+ mov byte [rip + CONST], CONST
+ test eax, eax
+ sete al
+ mov byte [rip + CONST], al
+ add rsp, CONST
+ ret

@@ -1,0 +1,40 @@
+ .name sym.Perl_vcroak
+ .offset 00000000000e05f0
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ test rsi, rsi
+ cjmp LABEL6
+ call CONST
+ mov rsi, rax
+LABEL28:
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ xor edx, edx
+ mov r12, rax
+ mov rsi, rax
+ call CONST
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+LABEL6:
+ mov rsi, qword [rdi + CONST]
+ mov rax, qword [rsi + CONST]
+ cmp qword [rax], CONST
+ cjmp LABEL22
+LABEL32:
+ mov rsi, qword [rax]
+ xor edx, edx
+ mov rdi, rbp
+ call CONST
+ mov rsi, rax
+ jmp LABEL28
+LABEL22:
+ xor edx, edx
+ call CONST
+ mov rax, qword [rax + CONST]
+ jmp LABEL32

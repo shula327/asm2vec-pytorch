@@ -1,0 +1,115 @@
+ .name fcn.0000a7f0
+ .offset 000000000000a7f0
+ .file gzip
+ push r15
+ push r14
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ mov qword [rsp + CONST], rsi
+ test eax, eax
+ cjmp LABEL11
+ xor ebx, ebx
+ xor r14d, r14d
+ xor r12d, r12d
+ xor eax, eax
+ lea r15, qword [rip + CONST]
+ jmp LABEL17
+LABEL35:
+ lea rax, qword [r13 + rax*CONST]
+ movzx esi, word [rax + CONST]
+ movzx edi, word [rax]
+ call CONST
+LABEL73:
+ shr bl, CONST
+ cmp dword [rip + CONST], ebp
+ cjmp LABEL11
+LABEL80:
+ mov eax, ebp
+LABEL17:
+ test al, CONST
+ cjmp LABEL27
+ mov edx, r14d
+ lea rbx, qword [rip + CONST]
+ add r14d, CONST
+ movzx ebx, byte [rbx + rdx]
+LABEL27:
+ lea ebp, dword [rax + CONST]
+ movzx eax, byte [r15 + rax]
+ test bl, CONST
+ cjmp LABEL35
+ movzx ecx, al
+ mov dword [rsp + CONST], ecx
+ lea rcx, qword [rip + CONST]
+ movzx eax, byte [rcx + rax]
+ lea edx, dword [rax + CONST]
+ mov dword [rsp + CONST], eax
+ lea rdx, qword [r13 + rdx*CONST]
+ movzx esi, word [rdx + CONST]
+ movzx edi, word [rdx]
+ call CONST
+ mov eax, dword [rsp + CONST]
+ lea rcx, qword [rip + CONST]
+ mov esi, dword [rcx + rax*CONST]
+ test esi, esi
+ cjmp LABEL50
+LABEL101:
+ lea eax, dword [r12 + CONST]
+ mov dword [rsp + CONST], eax
+ lea rax, qword [rip + CONST]
+ movzx edx, word [rax + r12*CONST]
+ cmp edx, CONST
+ cjmp LABEL56
+ mov eax, edx
+ lea rcx, qword [rip + CONST]
+ movzx eax, byte [rcx + rax]
+LABEL96:
+ mov rdi, qword [rsp + CONST]
+ mov dword [rsp + CONST], edx
+ mov qword [rsp + CONST], rax
+ lea rcx, qword [rdi + rax*CONST]
+ movzx esi, word [rcx + CONST]
+ movzx edi, word [rcx]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ lea rcx, qword [rip + CONST]
+ mov r12d, dword [rsp + CONST]
+ mov edx, dword [rsp + CONST]
+ mov esi, dword [rcx + rax*CONST]
+ test esi, esi
+ cjmp LABEL73
+ lea rcx, qword [rip + CONST]
+ shr bl, CONST
+ sub edx, dword [rcx + rax*CONST]
+ mov edi, edx
+ call CONST
+ cmp dword [rip + CONST], ebp
+ cjmp LABEL80
+LABEL11:
+ movzx esi, word [r13 + CONST]
+ movzx edi, word [r13 + CONST]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST
+LABEL56:
+ mov eax, edx
+ lea rcx, qword [rip + CONST]
+ shr eax, CONST
+ add eax, CONST
+ movzx eax, byte [rcx + rax]
+ jmp LABEL96
+LABEL50:
+ lea rdx, qword [rip + CONST]
+ mov edi, dword [rsp + CONST]
+ sub edi, dword [rdx + rax*CONST]
+ call CONST
+ jmp LABEL101

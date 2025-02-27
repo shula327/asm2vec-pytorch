@@ -1,0 +1,33 @@
+ .name fcn.0004ffc0
+ .offset 000000000004ffc0
+ .file bash
+ push r13
+ mov r13, rsi
+ push r12
+ push rbp
+ mov rbp, rdi
+ call CONST
+ cmp qword [rip + CONST], CONST
+ mov r12, rax
+ cjmp LABEL8
+LABEL27:
+ mov rdi, rbp
+ call CONST
+ lea rdi, qword [rax + CONST]
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ mov rsi, r13
+ mov edx, CONST
+ mov rdi, rax
+ call CONST
+ mov qword [rax + CONST], r12
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL8:
+ call CONST
+ jmp LABEL27

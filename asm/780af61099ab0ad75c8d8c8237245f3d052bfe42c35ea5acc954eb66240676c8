@@ -1,0 +1,54 @@
+ .name fcn.0000d900
+ .offset 000000000000d900
+ .file find
+ push r12
+ mov r8d, edx
+ mov r12d, esi
+ mov rdx, rcx
+ push rbp
+ mov ebp, edi
+ sub rsp, CONST
+ test r8b, r8b
+ cjmp LABEL8
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL10
+LABEL27:
+ mov byte [rip + CONST], CONST
+LABEL41:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ mov esi, dword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov esi, r12d
+ mov edi, ebp
+ mov rcx, rax
+ xor eax, eax
+ call CONST
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL27
+ mov dword [rip + CONST], CONST
+ jmp LABEL27
+LABEL8:
+ mov esi, dword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov esi, r12d
+ mov edi, ebp
+ mov rcx, rax
+ xor eax, eax
+ call CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL41
+ mov dword [rip + CONST], CONST
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret

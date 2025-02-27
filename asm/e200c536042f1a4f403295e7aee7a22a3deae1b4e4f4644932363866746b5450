@@ -1,0 +1,112 @@
+ .name fcn.00002850
+ .offset 0000000000002850
+ .file test
+ push r12
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ cmp byte [rdi], CONST
+ cjmp LABEL5
+ cmp byte [rdi + CONST], CONST
+ mov r12d, CONST
+ cjmp LABEL5
+LABEL27:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL5:
+ movzx eax, byte [rbp]
+ cmp eax, CONST
+ cjmp LABEL16
+LABEL88:
+ cmp eax, CONST
+ cjmp LABEL18
+LABEL98:
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ mov r12d, CONST
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL27
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL27
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ sete r12b
+ jmp LABEL27
+LABEL16:
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL88
+ cmp byte [rbp + CONST], CONST
+ mov r12d, CONST
+ cjmp LABEL88
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL18:
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL98
+ cmp byte [rbp + CONST], CONST
+ mov r12d, CONST
+ cjmp LABEL27
+ jmp LABEL98

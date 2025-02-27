@@ -1,0 +1,68 @@
+ .name fcn.00015240
+ .offset 0000000000015240
+ .file find
+ mov rax, qword [rsi + CONST]
+ test dl, dl
+ cjmp LABEL2
+ cmp rcx, rax
+ cjmp LABEL4
+LABEL25:
+ test rax, rax
+ cjmp LABEL6
+ mov rdx, qword [rsi + CONST]
+ cmp rdx, rax
+ cjmp LABEL9
+LABEL6:
+ cmp rcx, -1
+ cjmp LABEL11
+LABEL49:
+ add rcx, CONST
+LABEL11:
+ mov rax, qword [rdi + CONST]
+ test rax, rax
+ cjmp LABEL15
+ add rax, CONST
+ cmp rcx, rax
+ cmovb rcx, rax
+LABEL15:
+ test rcx, rcx
+ mov eax, CONST
+ cmovne rax, rcx
+ ret
+LABEL4:
+ mov qword [rsi + CONST], rcx
+ mov rax, rcx
+ jmp LABEL25
+LABEL2:
+ mov rdx, qword [rsi + CONST]
+ cmp rdx, rcx
+ cjmp LABEL28
+ test rdx, rdx
+ cjmp LABEL30
+LABEL28:
+ mov qword [rsi + CONST], rcx
+LABEL30:
+ test rax, rax
+ cjmp LABEL33
+ mov rdx, qword [rsi + CONST]
+ cmp rax, rdx
+ cjmp LABEL36
+LABEL33:
+ shr rcx, CONST
+ jmp LABEL11
+LABEL36:
+ sub rdx, rax
+ lea rsi, qword [rcx + CONST]
+ mov rax, rdx
+ shr rax, CONST
+ sub rcx, rax
+ cmp rdx, CONST
+ cmove rcx, rsi
+ jmp LABEL11
+LABEL9:
+ sub rdx, rax
+ cmp rdx, CONST
+ cjmp LABEL49
+ shr rdx, CONST
+ add rcx, rdx
+ jmp LABEL11

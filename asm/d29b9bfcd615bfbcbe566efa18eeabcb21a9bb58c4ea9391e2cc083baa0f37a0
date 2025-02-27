@@ -1,0 +1,48 @@
+ .name fcn.000062c0
+ .offset 00000000000062c0
+ .file update-alternatives
+ push r14
+ mov r14d, esi
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rcx
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ push rbx
+ call CONST
+ mov rdi, r13
+ mov dword [rax + CONST], r14d
+ mov rbx, rax
+ call CONST
+ mov rdi, r12
+ mov qword [rbx + CONST], rax
+ call CONST
+ mov qword [rbx], CONST
+ mov qword [rbx + CONST], rax
+ mov rax, qword [rbp]
+ jmp LABEL21
+LABEL27:
+ mov rdx, qword [rax]
+ test rdx, rdx
+ cjmp LABEL24
+ mov rax, rdx
+LABEL21:
+ test rax, rax
+ cjmp LABEL27
+ mov qword [rbp], rbx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL24:
+ mov qword [rax], rbx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

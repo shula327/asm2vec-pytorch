@@ -1,0 +1,68 @@
+ .name fcn.00007580
+ .offset 0000000000007580
+ .file grep
+ xor r9d, r9d
+ nop dword [rax + rax]
+LABEL38:
+ movzx eax, byte [rdi]
+ cmp al, CONST
+ cjmp LABEL4
+ cmp al, CONST
+ cjmp LABEL6
+ test al, al
+ cjmp LABEL8
+ mov rax, r9
+ ret
+LABEL4:
+ cmp al, CONST
+ cjmp LABEL6
+LABEL8:
+ test rdx, rdx
+ cjmp LABEL14
+ mov qword [rdx + r9*CONST], rsi
+ movzx eax, byte [rdi]
+LABEL14:
+ add r9, CONST
+ mov rcx, rsi
+ jmp LABEL19
+LABEL33:
+ cmp al, CONST
+ cjmp LABEL21
+LABEL35:
+ mov rcx, rsi
+LABEL19:
+ cmp al, CONST
+ lea rsi, [rcx + CONST]
+ mov byte [rsi + CONST], al
+ lea r8, [rdi + CONST]
+ movzx eax, byte [rdi + CONST]
+ cjmp LABEL28
+ mov rdi, r8
+LABEL48:
+ test al, al
+ cjmp LABEL31
+ cmp al, CONST
+ cjmp LABEL33
+ cmp al, CONST
+ cjmp LABEL35
+LABEL21:
+ mov byte [rcx + CONST], CONST
+ lea rsi, [rcx + CONST]
+ jmp LABEL38
+LABEL6:
+ add rdi, CONST
+ jmp LABEL38
+LABEL28:
+ test al, al
+ cjmp LABEL42
+LABEL50:
+ mov rdi, r8
+ jmp LABEL21
+LABEL42:
+ mov byte [rsi + CONST], al
+ add rdi, CONST
+ movzx eax, byte [rdi]
+ jmp LABEL48
+LABEL31:
+ mov r8, rdi
+ jmp LABEL50

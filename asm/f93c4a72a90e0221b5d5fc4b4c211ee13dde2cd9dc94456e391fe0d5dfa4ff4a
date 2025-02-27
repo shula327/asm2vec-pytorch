@@ -1,0 +1,15 @@
+ .name fcn.0002f800
+ .offset 000000000002f800
+ .file dpkg
+ endbr64
+ cmp byte [rcx], CONST
+ cjmp LABEL2
+ ret
+LABEL2:
+ push rbx
+ mov rbx, rdi
+ mov rdi, rcx
+ call CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

@@ -1,0 +1,66 @@
+ .name fcn.0002f280
+ .offset 000000000002f280
+ .file dpkg
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rbp, qword [rdi]
+ movsx edi, byte [rbp]
+ test dil, dil
+ cjmp LABEL9
+LABEL43:
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL13
+ movsx edi, byte [rbp]
+ mov r12, rbp
+ test dil, dil
+ cjmp LABEL17
+LABEL50:
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL21
+LABEL51:
+ mov r13, r12
+ sub r13, rbp
+LABEL53:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rdx, r13
+ mov rsi, rbp
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov qword [rbx], r12
+ mov rax, qword [rip + CONST]
+LABEL46:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL13:
+ movsx edi, byte [rbp + CONST]
+ add rbp, CONST
+ test dil, dil
+ cjmp LABEL43
+LABEL9:
+ mov qword [rbx], rbp
+ xor eax, eax
+ jmp LABEL46
+LABEL21:
+ movsx edi, byte [r12 + CONST]
+ add r12, CONST
+ test dil, dil
+ cjmp LABEL50
+ jmp LABEL51
+LABEL17:
+ xor r13d, r13d
+ jmp LABEL53

@@ -1,0 +1,14 @@
+ .name entry0
+ .offset 00000000000030a0
+ .file sdiff
+ xor ebp, ebp
+ mov r9, rdx
+ pop rsi
+ mov rdx, rsp
+ and rsp, CONST
+ push rax
+ push rsp
+ lea r8, qword [rip + CONST]
+ lea rcx, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call qword [rip + CONST]

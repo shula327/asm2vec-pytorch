@@ -1,0 +1,24 @@
+ .name fcn.00023c70
+ .offset 0000000000023c70
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov rcx, rdx
+ mov rdx, rsi
+ mov esi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL7
+ add rsp, CONST
+ ret
+LABEL7:
+ mov eax, dword [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST

@@ -1,0 +1,14 @@
+ .name fcn.0000ca30
+ .offset 000000000000ca30
+ .file install
+ endbr64
+ mov rdx, qword [rsi]
+ xor eax, eax
+ cmp qword [rdi], rdx
+ cjmp LABEL4
+ ret
+LABEL4:
+ mov rax, qword [rsi + CONST]
+ cmp qword [rdi + CONST], rax
+ sete al
+ ret

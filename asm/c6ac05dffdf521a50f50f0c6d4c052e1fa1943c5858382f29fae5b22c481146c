@@ -1,0 +1,40 @@
+ .name fcn.000258a0
+ .offset 00000000000258a0
+ .file grep
+ endbr64
+ movzx edx, byte [rdi]
+ mov rax, rdi
+ cmp dl, CONST
+ cjmp LABEL4
+ nop
+LABEL9:
+ movzx edx, byte [rax + CONST]
+ add rax, CONST
+ cmp dl, CONST
+ cjmp LABEL9
+LABEL4:
+ test dl, dl
+ cjmp LABEL11
+ mov rcx, rax
+ xor esi, esi
+ jmp LABEL14
+LABEL24:
+ test sil, sil
+ cjmp LABEL16
+ mov rax, rcx
+ xor esi, esi
+LABEL16:
+ movzx edx, byte [rcx + CONST]
+ add rcx, CONST
+ test dl, dl
+ cjmp LABEL11
+LABEL14:
+ cmp dl, CONST
+ cjmp LABEL24
+ movzx edx, byte [rcx + CONST]
+ add rcx, CONST
+ mov esi, CONST
+ test dl, dl
+ cjmp LABEL14
+LABEL11:
+ ret

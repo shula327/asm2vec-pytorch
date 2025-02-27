@@ -1,0 +1,68 @@
+ .name fcn.0008da60
+ .offset 000000000008da60
+ .file bash
+ push r14
+ mov r14, rsi
+ push r13
+ mov r13, rdx
+ push r12
+ push rbp
+ mov ebp, r8d
+ push rbx
+ mov rbx, rcx
+ call CONST
+ xor esi, esi
+ mov rdi, rax
+ call CONST
+ mov rdi, r14
+ mov r12, rax
+ call CONST
+ xor esi, esi
+ mov rdi, rax
+ call CONST
+ mov rdi, r13
+ mov qword [r12], rax
+ mov r14, rax
+ call CONST
+ xor esi, esi
+ mov rdi, rax
+ call CONST
+ mov qword [r14], rax
+ mov r13, rax
+ test rbx, rbx
+ cjmp LABEL29
+ cmp ebp, CONST
+ cjmp LABEL31
+ lea r8d, dword [rbp + CONST]
+ mov eax, CONST
+ jmp LABEL34
+LABEL40:
+ cmp eax, r8d
+ cjmp LABEL31
+LABEL34:
+ mov rbx, qword [rbx]
+ add eax, CONST
+ test rbx, rbx
+ cjmp LABEL40
+LABEL29:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, rax
+LABEL59:
+ xor esi, esi
+ call CONST
+ mov qword [r13], rax
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL31:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL29
+ call CONST
+ mov rdi, rax
+ jmp LABEL59

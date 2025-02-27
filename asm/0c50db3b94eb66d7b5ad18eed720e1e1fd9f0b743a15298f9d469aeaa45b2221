@@ -1,0 +1,17 @@
+ .name fcn.00004250
+ .offset 0000000000004250
+ .file skill
+ push r12
+ mov r12, rsi
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+ pop r12
+ ret
+LABEL4:
+ mov rcx, r12
+ lea rdx, qword [rip + CONST]
+ xor esi, esi
+ mov edi, CONST
+ call CONST
+ nop dword [rax + rax]

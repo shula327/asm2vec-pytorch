@@ -1,0 +1,53 @@
+ .name fcn.00016510
+ .offset 0000000000016510
+ .file install
+ endbr64
+ sub rsp, CONST
+ mov r8, rdi
+ mov rdx, rsi
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ movzx eax, byte [rdi]
+ xor edi, edi
+ test al, al
+ cjmp LABEL10
+ jmp LABEL11
+LABEL19:
+ cmp byte [r8 + rdi*CONST + CONST], CONST
+ cjmp LABEL13
+ add rdi, CONST
+ movzx eax, byte [r8 + rdi*CONST]
+ test al, al
+ cjmp LABEL11
+LABEL10:
+ cmp al, CONST
+ cjmp LABEL19
+LABEL13:
+ mov rsi, r8
+ mov rdi, rsp
+ call CONST
+ mov r8d, eax
+ mov rax, qword [rsp]
+ test r8d, r8d
+ cjmp LABEL26
+LABEL36:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL29
+ add rsp, CONST
+ ret
+LABEL26:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL34
+ xor eax, eax
+ jmp LABEL36
+LABEL11:
+ mov rsi, rdx
+ call CONST
+ jmp LABEL36
+LABEL34:
+ call CONST
+LABEL29:
+ call CONST

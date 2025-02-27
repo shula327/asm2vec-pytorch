@@ -1,0 +1,77 @@
+ .name fcn.0000db20
+ .offset 000000000000db20
+ .file install
+ endbr64
+ push r15
+ mov eax, CONST
+ push r14
+ movabs r14, CONST
+ push r13
+ movabs r13, CONST
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ lea rbx, [rsi + CONST]
+ sub rsp, CONST
+ cmp rsi, CONST
+ cmovae rbx, rax
+ nop dword [rax]
+LABEL52:
+ mov rdi, rbx
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL20
+LABEL39:
+ mov rdx, rbx
+ mov rsi, rax
+ mov rdi, r12
+ call CONST
+ mov r15, rax
+ test rax, rax
+ cjmp LABEL27
+LABEL55:
+ cmp rbx, r15
+ cjmp LABEL29
+ mov rdi, rbp
+ call CONST
+ cmp rbx, r13
+ cjmp LABEL33
+ add rbx, rbx
+ mov rdi, rbx
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL39
+LABEL20:
+ add rsp, CONST
+ mov rax, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL33:
+ cmp rbx, r14
+ cjmp LABEL50
+ movabs rbx, CONST
+ jmp LABEL52
+LABEL27:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL55
+ mov rdi, rbp
+ xor ebp, ebp
+ call CONST
+ jmp LABEL20
+LABEL29:
+ mov byte [rbp + r15], CONST
+ jmp LABEL20
+LABEL50:
+ call CONST
+ xor ebp, ebp
+ mov dword [rax], CONST
+ jmp LABEL20

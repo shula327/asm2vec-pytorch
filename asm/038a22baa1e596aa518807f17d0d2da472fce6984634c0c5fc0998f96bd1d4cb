@@ -1,0 +1,42 @@
+ .name fcn.00010cd0
+ .offset 0000000000010cd0
+ .file dpkg
+ endbr64
+ sub rsp, CONST
+ mov dword [rip + CONST], edi
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+ cmp byte [rax], CONST
+ cjmp LABEL8
+LABEL25:
+ add rsp, CONST
+ ret
+LABEL6:
+ mov ecx, dword [rip + CONST]
+ lea rdx, [rip + CONST]
+ xor esi, esi
+ lea rax, [rip + CONST]
+ jmp LABEL15
+LABEL23:
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL17
+ or ecx, dword [rax + CONST]
+ mov esi, CONST
+LABEL17:
+ mov rdx, qword [rax + CONST]
+LABEL15:
+ add rax, CONST
+ test rdx, rdx
+ cjmp LABEL23
+ test sil, sil
+ cjmp LABEL25
+ mov dword [rip + CONST], ecx
+ add rsp, CONST
+ ret
+LABEL8:
+ mov esi, CONST
+ mov rdi, rax
+ add rsp, CONST
+ jmp CONST

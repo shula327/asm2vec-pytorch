@@ -1,0 +1,129 @@
+ .name fcn.00006200
+ .offset 0000000000006200
+ .file install
+ push r14
+ push r13
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test cl, cl
+ cjmp LABEL12
+ cmp byte [rdi], CONST
+ cjmp LABEL14
+LABEL12:
+ mov r13, rsp
+ mov rcx, r12
+ lea rdx, qword [rip + CONST]
+ mov rdi, rbp
+ mov rsi, r13
+ mov dword [rsp], CONST
+ call CONST
+ mov r12, rax
+ call CONST
+ mov rbx, rax
+ cmp r12, -1
+ cjmp LABEL26
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov esi, dword [rbx]
+ mov rcx, r12
+ xor edi, edi
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ mov rdi, r13
+ mov esi, CONST
+ call CONST
+ mov rdi, r13
+ call CONST
+ nop dword [rax + rax]
+LABEL57:
+ xor eax, eax
+ jmp LABEL48
+LABEL26:
+ xor esi, esi
+ mov rdi, r13
+ call CONST
+ mov rdi, r13
+ mov r14d, dword [rbx]
+ mov r12d, eax
+ call CONST
+ test r12d, r12d
+ cjmp LABEL57
+ cjmp LABEL58
+LABEL82:
+ mov eax, CONST
+LABEL48:
+ mov rbx, qword [rsp + CONST]
+ xor rbx, qword fs:[CONST]
+ cjmp LABEL62
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL14:
+ cmp byte [rsi], CONST
+ cjmp LABEL12
+ mov r13, rsp
+ mov dword [rsp], CONST
+ mov rdi, r13
+ call CONST
+ mov rcx, r12
+ mov rsi, r13
+ mov rdi, rbp
+ lea rdx, qword [rip + CONST]
+ call CONST
+ cmp rax, -1
+ cjmp LABEL82
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r13, rax
+ call CONST
+ mov r12, rax
+ call CONST
+ mov rcx, r13
+ mov rdx, r12
+ xor edi, edi
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ xor eax, eax
+ jmp LABEL48
+LABEL58:
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov rcx, r12
+ mov esi, r14d
+ xor edi, edi
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ xor eax, eax
+ jmp LABEL48
+LABEL62:
+ call CONST

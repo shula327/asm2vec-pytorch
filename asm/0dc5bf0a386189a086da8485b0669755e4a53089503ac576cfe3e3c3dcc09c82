@@ -1,0 +1,29 @@
+ .name fcn.0002bb30
+ .offset 000000000002bb30
+ .file dpkg
+ endbr64
+ movsx eax, byte [rdi]
+ add rdi, CONST
+ test al, al
+ cjmp LABEL4
+ nop
+LABEL12:
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL8
+ movsx eax, byte [rdi]
+ add rdi, CONST
+ test al, al
+ cjmp LABEL12
+ xor eax, eax
+ ret
+LABEL8:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ jmp CONST
+LABEL4:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ jmp CONST

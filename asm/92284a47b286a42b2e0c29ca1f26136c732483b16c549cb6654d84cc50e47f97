@@ -1,0 +1,51 @@
+ .name fcn.0000ec40
+ .offset 000000000000ec40
+ .file dpkg
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rax, qword [rdi]
+ mov rdi, qword [rax + CONST]
+ call CONST
+ mov edx, ebx
+ lea rsi, [rbp + CONST]
+ mov rdi, rbp
+ lea ecx, [rax + CONST]
+ mov dword [rsp + CONST], eax
+ sub ebx, ecx
+ cmp eax, CONST
+ cmovle ebx, edx
+ lea rdx, [rsp + CONST]
+ call CONST
+ cmp dword [rsp + CONST], ebx
+ cmovle ebx, dword [rsp + CONST]
+ mov rdi, rbp
+ mov esi, CONST
+ mov r13, rax
+ mov dword [rsp + CONST], ebx
+ call CONST
+ mov r8, r13
+ mov ecx, ebx
+ mov edi, CONST
+ mov rdx, rax
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL39
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL39:
+ call CONST

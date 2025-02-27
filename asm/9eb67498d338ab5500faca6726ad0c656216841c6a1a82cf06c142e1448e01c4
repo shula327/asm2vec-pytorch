@@ -1,0 +1,20 @@
+ .name fcn.0004d2e0
+ .offset 000000000004d2e0
+ .file bash
+ test sil, CONST
+ cjmp LABEL1
+ test sil, CONST
+ cjmp LABEL3
+ and esi, CONST
+ cjmp LABEL5
+ test rdi, rdi
+ cjmp LABEL7
+ jmp CONST
+LABEL3:
+ jmp CONST
+LABEL1:
+ jmp CONST
+LABEL7:
+ ret
+LABEL5:
+ jmp CONST

@@ -1,0 +1,38 @@
+ .name fcn.00006e80
+ .offset 0000000000006e80
+ .file ls
+ push r13
+ mov r13d, edx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov rbx, rax
+ test r12, r12
+ cjmp LABEL12
+ mov rdi, r12
+ call CONST
+ mov r12, rax
+LABEL12:
+ mov qword [rbx + CONST], r12
+ test rbp, rbp
+ cjmp LABEL18
+ mov rdi, rbp
+ call CONST
+ mov rbp, rax
+LABEL18:
+ mov rax, qword [rip + CONST]
+ mov qword [rbx], rbp
+ mov byte [rbx + CONST], r13b
+ mov qword [rbx + CONST], rax
+ mov qword [rip + CONST], rbx
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

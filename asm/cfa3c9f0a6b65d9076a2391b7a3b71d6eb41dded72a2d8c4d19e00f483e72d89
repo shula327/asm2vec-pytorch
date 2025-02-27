@@ -1,0 +1,22 @@
+ .name fcn.00022780
+ .offset 0000000000022780
+ .file grep
+ endbr64
+ sub rsp, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rsi, rax
+ xor eax, eax
+ test rsi, rsi
+ cjmp LABEL7
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ setne al
+ movzx eax, al
+LABEL7:
+ add rsp, CONST
+ ret

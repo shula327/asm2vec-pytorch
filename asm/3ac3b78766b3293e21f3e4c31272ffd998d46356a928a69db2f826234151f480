@@ -1,0 +1,31 @@
+ .name fcn.0000dce0
+ .offset 000000000000dce0
+ .file install
+ endbr64
+ push rbx
+ mov rbx, rdi
+ test rdi, rdi
+ cjmp LABEL4
+LABEL23:
+ cmp byte [rbx], CONST
+ cjmp LABEL6
+LABEL14:
+ lea rbx, [rip + CONST]
+ mov qword [rip + CONST], rbx
+ pop rbx
+ ret
+LABEL6:
+ mov rdi, rbx
+ call CONST
+ cmp rbx, rax
+ cjmp LABEL14
+ mov qword [rip + CONST], rbx
+ pop rbx
+ ret
+LABEL4:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL14
+ jmp LABEL23

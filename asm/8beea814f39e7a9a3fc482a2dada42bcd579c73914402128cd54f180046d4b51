@@ -1,0 +1,19 @@
+ .name fcn.00010610
+ .offset 0000000000010610
+ .file install
+ endbr64
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov rdi, qword [rdi]
+ call CONST
+ xor edx, edx
+ xor rax, qword [rbp + CONST]
+ add rsp, CONST
+ div rbx
+ pop rbx
+ pop rbp
+ mov rax, rdx
+ ret

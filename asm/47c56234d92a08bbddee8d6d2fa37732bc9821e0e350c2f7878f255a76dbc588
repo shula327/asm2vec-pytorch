@@ -1,0 +1,59 @@
+ .name fcn.00006db0
+ .offset 0000000000006db0
+ .file gzip
+ mov eax, dword [rip + CONST]
+ or eax, dword [rip + CONST]
+ push r12
+ cmp eax, CONST
+ mov eax, dword [rip + CONST]
+ push rbp
+ sbb r12d, r12d
+ push rbx
+ and r12d, CONST
+ add r12d, CONST
+ test eax, eax
+ cjmp LABEL11
+LABEL50:
+ lea rbp, qword [rip + CONST]
+ mov edi, CONST
+LABEL49:
+ mov edx, r12d
+ mov rsi, rbp
+ xor eax, eax
+ call CONST
+ mov r12d, eax
+ test eax, eax
+ cjmp LABEL20
+LABEL31:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL20:
+ lea rdx, qword [rip + CONST]
+ mov esi, eax
+ mov edi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL31
+ call CONST
+ mov edi, r12d
+ mov r12d, CONST
+ mov ebx, dword [rax]
+ mov rbp, rax
+ call CONST
+ mov dword [rbp], ebx
+ jmp LABEL31
+LABEL11:
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rax
+ mov rbp, rax
+ sub rsi, rdi
+ call CONST
+ mov edi, eax
+ test eax, eax
+ cjmp LABEL49
+ jmp LABEL50

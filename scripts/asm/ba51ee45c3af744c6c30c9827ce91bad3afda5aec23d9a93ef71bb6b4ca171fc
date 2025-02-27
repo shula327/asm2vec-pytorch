@@ -1,0 +1,57 @@
+ .name fcn.0002c910
+ .offset 000000000002c910
+ .file dpkg
+ push r15
+ mov r15d, r9d
+ push r14
+ mov r14, r8
+ push r13
+ mov r13, rdi
+ mov rdi, rdx
+ push r12
+ mov r12, rcx
+ push rbp
+ mov rbp, rdx
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL16
+ test rbx, rbx
+ cjmp LABEL18
+ add rsp, CONST
+ mov ecx, r15d
+ mov rdx, r14
+ mov rsi, r12
+ mov rdi, rbp
+ mov rax, rbx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp rax
+LABEL18:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL16:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ mov qword [rsp + CONST], rax
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ mov rdx, rbp
+ mov rsi, r13
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop dword [rax]

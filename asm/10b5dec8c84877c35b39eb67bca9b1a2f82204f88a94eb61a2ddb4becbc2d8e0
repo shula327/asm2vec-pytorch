@@ -1,0 +1,95 @@
+ .name fcn.0016d750
+ .offset 000000000016d750
+ .file perl5.30.0
+ mov r8, rdi
+ mov r10, rdi
+ mov rax, rsi
+ mov rsi, rdi
+ shr r8, CONST
+ shr r10, CONST
+ and esi, CONST
+ mov r9, rax
+ or r8, rdi
+ sub r9, rdi
+ or r8, r10
+ and r8d, CONST
+ add r8, CONST
+ shl r8, CONST
+ sub r8, rsi
+ cmp r9, r8
+ cjmp LABEL16
+ test rsi, rsi
+ cjmp LABEL18
+ nop dword [rax + rax]
+LABEL54:
+ movabs r9, CONST
+ movzx esi, dl
+ movzx r8d, cl
+ imul rsi, r9
+ imul r8, r9
+LABEL64:
+ mov r9, qword [rdi]
+ and r9, r8
+ cmp rsi, r9
+ cjmp LABEL28
+ movabs rdx, CONST
+ xor rsi, r9
+ lea rax, qword [rsi + rsi]
+ or rsi, rax
+ lea rax, qword [rsi*CONST]
+ or rsi, rax
+ mov rax, rsi
+ shl rax, CONST
+ or rax, rsi
+ shr rax, CONST
+ and rdx, rax
+ lea rax, qword [rdx + CONST]
+ xor rax, rdx
+ movabs rdx, CONST
+ add rax, CONST
+ shr rax, CONST
+ imul rax, rdx
+ shr rax, CONST
+ add rax, CONST
+ shr rax, CONST
+ sub eax, CONST
+ add rax, rdi
+ ret
+LABEL58:
+ add rdi, CONST
+ test dil, CONST
+ cjmp LABEL54
+LABEL18:
+ movzx esi, byte [rdi]
+ and esi, ecx
+ cmp sil, dl
+ cjmp LABEL58
+LABEL67:
+ mov rax, rdi
+ ret
+LABEL28:
+ add rdi, CONST
+ lea r9, qword [rdi + CONST]
+ cmp rax, r9
+ cjmp LABEL64
+ nop dword [rax]
+LABEL16:
+ cmp rax, rdi
+ cjmp LABEL67
+ movzx esi, byte [rdi]
+ and esi, ecx
+ cmp sil, dl
+ cjmp LABEL67
+ add rdi, CONST
+ cmp rax, rdi
+ cjmp LABEL74
+LABEL81:
+ movzx esi, byte [rdi]
+ and esi, ecx
+ cmp sil, dl
+ cjmp LABEL67
+ add rdi, CONST
+ cmp rax, rdi
+ cjmp LABEL81
+LABEL74:
+ ret

@@ -1,0 +1,129 @@
+ .name fcn.000a8df0
+ .offset 00000000000a8df0
+ .file perl5.30.0
+ xor eax, eax
+ cmp rdi, rsi
+ cjmp LABEL2
+ cmp byte [rdi], CONST
+ cjmp LABEL2
+ add rdi, CONST
+ lea r8, qword [rip + CONST]
+ cmp rsi, rdi
+ cjmp LABEL8
+ jmp LABEL9
+LABEL19:
+ add rdi, CONST
+ cmp rsi, rdi
+ cjmp LABEL12
+LABEL8:
+ movzx ecx, byte [rdi]
+ movzx eax, cl
+ mov edx, ecx
+ mov eax, dword [r8 + rax*CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL19
+ xor r10d, r10d
+ cmp rsi, rdi
+ cjmp LABEL22
+ jmp LABEL23
+LABEL32:
+ add rdi, CONST
+ mov r10d, CONST
+ movzx edx, byte [rdi]
+ cmp rsi, rdi
+ cjmp LABEL28
+ movzx ecx, dl
+LABEL22:
+ lea r9d, dword [rcx + CONST]
+ cmp r9d, CONST
+ cjmp LABEL32
+ cmp rsi, rdi
+ cjmp LABEL34
+ jmp LABEL23
+LABEL45:
+ add rdi, CONST
+ movzx edx, byte [rdi]
+ cmp rsi, rdi
+ cjmp LABEL28
+ movzx ecx, dl
+LABEL34:
+ movsxd rcx, ecx
+ mov ecx, dword [r8 + rcx*CONST]
+ and ecx, CONST
+ cmp ecx, CONST
+ cjmp LABEL45
+ xor eax, eax
+ cmp dl, CONST
+ cjmp LABEL48
+LABEL95:
+ cmp rdi, rsi
+ cjmp LABEL50
+ or eax, r10d
+ mov edx, CONST
+ cmp byte [rdi], CONST
+ cmovne eax, edx
+ ret
+LABEL2:
+ ret
+LABEL28:
+ mov rdi, rsi
+LABEL23:
+ cmp dl, CONST
+ cjmp LABEL48
+LABEL50:
+ xor eax, eax
+ ret
+LABEL48:
+ add rdi, CONST
+ lea r8, qword [rip + CONST]
+ cmp rsi, rdi
+ cjmp LABEL65
+ jmp LABEL50
+LABEL75:
+ add rdi, CONST
+ cmp rsi, rdi
+ cjmp LABEL50
+LABEL65:
+ movzx eax, byte [rdi]
+ mov rdx, rax
+ mov eax, dword [r8 + rax*CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL75
+ xor eax, eax
+ cmp rsi, rdi
+ cjmp LABEL78
+ jmp LABEL79
+LABEL87:
+ add rdi, CONST
+ cmp rsi, rdi
+ cjmp LABEL50
+ movzx edx, byte [rdi]
+ mov eax, CONST
+LABEL78:
+ lea ecx, dword [rdx + CONST]
+ cmp ecx, CONST
+ cjmp LABEL87
+ cmp rsi, rdi
+ cjmp LABEL89
+ jmp LABEL50
+LABEL98:
+ movzx edx, byte [rdi]
+LABEL89:
+ mov edx, dword [r8 + rdx*CONST]
+ and edx, CONST
+ cmp edx, CONST
+ cjmp LABEL95
+ add rdi, CONST
+ cmp rsi, rdi
+ cjmp LABEL98
+ jmp LABEL50
+LABEL12:
+ mov rdi, rsi
+LABEL9:
+ movzx edx, byte [rdi]
+ xor r10d, r10d
+ jmp LABEL23
+LABEL79:
+ ret

@@ -1,0 +1,135 @@
+ .name fcn.000967a0
+ .offset 00000000000967a0
+ .file bash
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ mov rdi, rdx
+ push rbx
+ mov ebx, esi
+ mov r13d, ebx
+ sub rsp, CONST
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ and r13d, CONST
+ cjmp LABEL35
+LABEL114:
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL38
+ xor esi, esi
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL94:
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL48
+LABEL110:
+ mov r12, qword [rip + CONST]
+ test r12, r12
+ cjmp LABEL51
+ mov rdi, r12
+ call CONST
+ lea rdi, qword [rax + CONST]
+ call CONST
+ mov rsi, r12
+ mov rdi, rax
+ call CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL51:
+ lea rdi, qword [rip + CONST]
+ xor esi, esi
+ xor eax, eax
+ call CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL69
+LABEL104:
+ test rbp, rbp
+ cjmp LABEL71
+ test bl, CONST
+ cjmp LABEL73
+LABEL71:
+ test r13d, r13d
+ cjmp LABEL75
+ mov eax, ebx
+ not eax
+ and eax, CONST
+ mov dword [rip + CONST], eax
+LABEL75:
+ test bl, CONST
+ cjmp LABEL81
+LABEL116:
+ and bh, CONST
+ cjmp LABEL83
+ mov dword [rip + CONST], CONST
+LABEL83:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL38:
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ jmp LABEL94
+LABEL73:
+ lea rdi, qword [rip + CONST]
+ mov rsi, rbp
+ xor eax, eax
+ call CONST
+ jmp LABEL71
+LABEL69:
+ lea rdi, qword [rip + CONST]
+ xor esi, esi
+ xor eax, eax
+ call CONST
+ jmp LABEL104
+LABEL48:
+ call CONST
+ lea rdi, qword [rip + CONST]
+ mov esi, eax
+ xor eax, eax
+ call CONST
+ jmp LABEL110
+LABEL35:
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ jmp LABEL114
+LABEL81:
+ call CONST
+ jmp LABEL116

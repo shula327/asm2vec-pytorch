@@ -1,0 +1,123 @@
+ .name fcn.0018ed30
+ .offset 000000000018ed30
+ .file perl5.30.0
+LABEL56:
+ mov eax, dword [0]
+ ud2
+ push r15
+ push r14
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rdi
+ push rbp
+ mov ebp, r8d
+ push rbx
+ mov rbx, rcx
+ sub rsp, CONST
+ mov rax, qword [rsi]
+ mov rdx, qword [rax + CONST]
+ mov rax, qword [rsi + CONST]
+ mov r15, qword [rax + rdx*CONST + CONST]
+ test r15, r15
+ cjmp LABEL18
+ mov r14, qword [r15 + CONST]
+ test r14, r14
+ cjmp LABEL21
+LABEL92:
+ sub rsp, CONST
+ mov r9d, ebp
+ mov r8, rbx
+ mov rcx, r13
+ push CONST
+ shr r9d, CONST
+ xor edx, edx
+ mov rsi, r14
+ push CONST
+ and r9d, CONST
+ mov rdi, r12
+ push CONST
+ call CONST
+ add rsp, CONST
+ mov r8, rax
+ mov eax, CONST
+ test r8, r8
+ cjmp LABEL39
+LABEL85:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL39:
+ mov ecx, ebp
+ mov edx, ebx
+ mov rsi, r13
+ mov rdi, r12
+ call CONST
+ test rax, rax
+ cjmp LABEL54
+ test byte [rax + CONST], CONST
+ cjmp LABEL56
+ mov rdx, qword [rax]
+ mov rax, qword [rax + CONST]
+ mov rdx, qword [rdx + CONST]
+ lea rax, qword [rax + rdx*CONST + CONST]
+ mov rdx, qword [rax]
+ test rdx, rdx
+ cjmp LABEL56
+ mov eax, dword [rax + CONST]
+ test eax, eax
+ cjmp LABEL66
+ mov rax, qword [rdx]
+LABEL107:
+ test rax, rax
+ cjmp LABEL69
+LABEL103:
+ movsxd r8, dword [rax + CONST]
+ lea rcx, qword [rax + CONST]
+ sub rsp, CONST
+ xor edx, edx
+ mov rsi, r14
+ mov rdi, r12
+ movzx r9d, byte [rax + r8 + CONST]
+ mov eax, dword [rax]
+ push rax
+ push CONST
+ push CONST
+ call CONST
+ add rsp, CONST
+ test rax, rax
+ setne al
+ jmp LABEL85
+LABEL18:
+ mov qword [rsp + CONST], rsi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ mov r15, rax
+ mov r14, qword [r15 + CONST]
+ test r14, r14
+ cjmp LABEL92
+ nop
+LABEL21:
+ mov rdi, r12
+ call CONST
+ mov r14, qword [r15 + CONST]
+ jmp LABEL92
+LABEL54:
+ xor eax, eax
+ jmp LABEL85
+LABEL66:
+ cmp eax, -1
+ cjmp LABEL101
+ mov rax, rdx
+ cjmp LABEL103
+LABEL69:
+ mov rax, qword [rdx]
+ jmp LABEL103
+LABEL101:
+ mov rax, qword [rdx + CONST]
+ jmp LABEL107

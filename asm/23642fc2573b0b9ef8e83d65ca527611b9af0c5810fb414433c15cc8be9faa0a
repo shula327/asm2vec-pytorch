@@ -1,0 +1,39 @@
+ .name fcn.00015770
+ .offset 0000000000015770
+ .file dpkg-deb
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL1
+ ret
+LABEL1:
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ mov qword [rbx + CONST], rax
+ mov rsi, rax
+ call rbp
+ test eax, eax
+ cjmp LABEL15
+ mov rax, qword [rbx + CONST]
+ mov eax, dword [rax + CONST]
+ mov dword [rbx + CONST], eax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL15:
+ mov rbp, qword [rbx + CONST]
+ lea rsi, qword [rip + CONST]
+ mov edx, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

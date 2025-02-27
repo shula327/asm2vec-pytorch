@@ -1,0 +1,143 @@
+ .name fcn.00011ff0
+ .offset 0000000000011ff0
+ .file grep
+ push r15
+ mov r15d, r8d
+ push r14
+ mov r14, rcx
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, r9
+ sub rsp, CONST
+ mov rax, qword [r9 + CONST]
+ sub rax, qword [rsi]
+ cmp rax, qword [rcx]
+ cjmp LABEL16
+LABEL120:
+ mov qword [rbx + CONST], CONST
+ mov rsi, qword [rbp]
+ xor ecx, ecx
+ xor edi, edi
+ mov r10, qword [r14]
+ nop dword [rax + rax]
+LABEL67:
+ cmp rdi, rsi
+ cjmp LABEL24
+LABEL46:
+ cmp rcx, r10
+ cjmp LABEL26
+ mov rax, rcx
+ shl rax, CONST
+ add rax, qword [r13]
+LABEL72:
+ mov r8d, r15d
+ and r8d, dword [rax + CONST]
+ cjmp LABEL32
+ mov rsi, qword [rbx + CONST]
+ mov rax, qword [rax]
+ mov rdx, rsi
+ add rsi, CONST
+ shl rdx, CONST
+ add rdx, qword [rbx]
+ mov qword [rdx], rax
+ mov qword [rbx + CONST], rsi
+ mov rsi, qword [rbp]
+ mov dword [rdx + CONST], r8d
+ mov r10, qword [r14]
+LABEL32:
+ add rcx, CONST
+ cmp rdi, rsi
+ cjmp LABEL46
+LABEL24:
+ mov rdx, rdi
+ xor r8d, r8d
+ shl rdx, CONST
+ add rdx, qword [r12]
+ mov r9, qword [rdx]
+ cmp rcx, r10
+ cjmp LABEL53
+LABEL73:
+ mov rsi, qword [rbx + CONST]
+ mov edx, dword [rdx + CONST]
+ add rdi, CONST
+ mov rax, rsi
+ or edx, r8d
+ add rsi, CONST
+ shl rax, CONST
+ add rax, qword [rbx]
+ mov qword [rax], r9
+ mov qword [rbx + CONST], rsi
+ mov rsi, qword [rbp]
+ mov dword [rax + CONST], edx
+ mov r10, qword [r14]
+ jmp LABEL67
+LABEL53:
+ mov rax, rcx
+ shl rax, CONST
+ add rax, qword [r13]
+ cmp qword [rax], r9
+ cjmp LABEL72
+ cjmp LABEL73
+ mov r8d, dword [rax + CONST]
+ add rcx, CONST
+ and r8d, r15d
+ jmp LABEL73
+LABEL26:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL16:
+ mov rdi, qword [r9]
+ call CONST
+ mov rax, qword [rbp]
+ mov rdx, rax
+ mov qword [rbx + CONST], rax
+ mov rcx, qword [r14]
+ sar rdx, CONST
+ add rdx, rax
+ cjmp LABEL94
+ imul rdi, rdx, CONST
+ mov rsi, rdi
+ cjmp LABEL94
+ cmp rdi, CONST
+ mov r8d, CONST
+ cmovle rsi, r8
+ cmp rdi, CONST
+ mov edi, CONST
+ cmovle rdx, rdi
+LABEL123:
+ mov rdi, rdx
+ mov qword [rbx + CONST], CONST
+ sub rdi, rax
+ cmp rcx, rdi
+ cjmp LABEL108
+ add rax, rcx
+ mov rdx, rax
+ cjmp LABEL111
+ imul rsi, rax, CONST
+ cjmp LABEL111
+LABEL108:
+ xor edi, edi
+ mov qword [rsp + CONST], rdx
+ call CONST
+ mov rdx, qword [rsp + CONST]
+ mov qword [rbx], rax
+ mov qword [rbx + CONST], rdx
+ jmp LABEL120
+LABEL94:
+ movabs rsi, CONST
+ movabs rdx, CONST
+ jmp LABEL123
+LABEL111:
+ call CONST
+ nop dword [rax + rax]

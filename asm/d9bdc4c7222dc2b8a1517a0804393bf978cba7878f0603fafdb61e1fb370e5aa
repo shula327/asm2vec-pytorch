@@ -1,0 +1,14 @@
+ .name fcn.00145670
+ .offset 0000000000145670
+ .file perl5.30.0
+ push r12
+ xor esi, esi
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rax, qword [rdi + CONST]
+ mov qword [rsp + CONST], rdi
+ lea rdi, qword [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ call CONST

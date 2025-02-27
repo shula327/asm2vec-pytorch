@@ -1,0 +1,19 @@
+ .name fcn.00006750
+ .offset 0000000000006750
+ .file diff3
+ mov rax, rdi
+ sub rsp, CONST
+ mul rsi
+ seto dl
+ test rax, rax
+ cjmp LABEL5
+ movzx edx, dl
+ test rdx, rdx
+ cjmp LABEL5
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ add rsp, CONST
+ ret
+LABEL5:
+ call CONST

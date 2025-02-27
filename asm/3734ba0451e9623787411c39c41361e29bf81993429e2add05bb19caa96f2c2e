@@ -1,0 +1,35 @@
+ .name fcn.00005160
+ .offset 0000000000005160
+ .file dpkg-query
+ push r12
+ mov eax, CONST
+ mov r12, rdi
+ push rbp
+ push rbx
+ lea rbx, qword [rip + CONST]
+ nop dword [rax + rax]
+LABEL16:
+ movsx ebp, al
+ mov rdi, r12
+ mov esi, ebp
+ call CONST
+ test rax, rax
+ cjmp LABEL12
+ movzx eax, byte [rbx + CONST]
+ add rbx, CONST
+ test al, al
+ cjmp LABEL16
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL12:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov esi, ebp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]

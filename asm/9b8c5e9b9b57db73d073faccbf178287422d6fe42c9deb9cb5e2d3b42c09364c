@@ -1,0 +1,14 @@
+ .name fcn.00006a40
+ .offset 0000000000006a40
+ .file gzip
+ push rax
+ pop rax
+ lea rsi, qword [rip + CONST]
+ xor eax, eax
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ mov rdx, qword [rip + CONST]
+ call CONST
+ mov edi, CONST
+ call CONST
+ nop dword [rax]

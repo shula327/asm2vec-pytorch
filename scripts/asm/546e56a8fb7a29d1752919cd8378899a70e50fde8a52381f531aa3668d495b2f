@@ -1,0 +1,24 @@
+ .name fcn.00004b40
+ .offset 0000000000004b40
+ .file setpriv
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ mov eax, dword [rax + CONST]
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL7:
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret

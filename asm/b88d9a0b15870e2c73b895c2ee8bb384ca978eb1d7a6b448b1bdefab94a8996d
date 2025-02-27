@@ -1,0 +1,27 @@
+ .name fcn.00029820
+ .offset 0000000000029820
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov qword [rdi], rsi
+ mov dword [rdi + CONST], edx
+ mov qword [rdi + CONST], CONST
+ mov edi, CONST
+ call CONST
+ mov rdx, r12
+ lea rsi, [rip + CONST]
+ test eax, eax
+ setne byte [rbx + CONST]
+ cjmp LABEL15
+ lea rsi, [rip + CONST]
+LABEL15:
+ add rsp, CONST
+ mov edi, CONST
+ xor eax, eax
+ pop rbx
+ pop r12
+ jmp CONST

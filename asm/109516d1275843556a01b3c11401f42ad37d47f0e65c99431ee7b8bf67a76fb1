@@ -1,0 +1,24 @@
+ .name fcn.00017df0
+ .offset 0000000000017df0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rdi
+ call CONST
+ test eax, eax
+ cjmp LABEL5
+ mov rdx, r12
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ pop r12
+ jmp CONST
+LABEL5:
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov rsi, r12
+ mov rdi, rax
+ xor eax, eax
+ call CONST

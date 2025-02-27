@@ -1,0 +1,57 @@
+ .name sym.Perl_opslab_force_free
+ .offset 000000000004ce10
+ .file perl5.30.0
+ endbr64
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+LABEL41:
+ mov rbx, qword [r13]
+ cmp qword [rbx], CONST
+ cjmp LABEL11
+ jmp LABEL12
+LABEL19:
+ mov rbx, qword [rbx]
+ cmp qword [rbx], CONST
+ cjmp LABEL12
+LABEL11:
+ movzx eax, word [rbx + CONST]
+ and ax, CONST
+ cmp ax, CONST
+ cjmp LABEL19
+ test byte [rbx + CONST], CONST
+ cjmp LABEL19
+ lea rsi, [rbx + CONST]
+ mov rdi, r12
+ call CONST
+ cmp qword [rbp + CONST], CONST
+ cjmp LABEL19
+ nop dword [rax + rax]
+LABEL32:
+ mov rdi, rbp
+ mov rbp, qword [rbp + CONST]
+ call CONST
+ test rbp, rbp
+ cjmp LABEL32
+LABEL47:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL12:
+ mov r13, qword [r13 + CONST]
+ test r13, r13
+ cjmp LABEL41
+ mov rax, qword [rbp + CONST]
+ cmp rax, CONST
+ cjmp LABEL32
+ sub rax, CONST
+ mov qword [rbp + CONST], rax
+ jmp LABEL47

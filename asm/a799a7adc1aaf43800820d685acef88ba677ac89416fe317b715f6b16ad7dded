@@ -1,0 +1,14 @@
+ .name fcn.000402f0
+ .offset 00000000000402f0
+ .file bash
+ push rbp
+ mov rbp, rdi
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ xor esi, esi
+ or dword [rax + CONST], CONST
+ mov rdi, rax
+ pop rbp
+ jmp CONST

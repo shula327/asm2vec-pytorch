@@ -1,0 +1,119 @@
+ .name fcn.00049e50
+ .offset 0000000000049e50
+ .file bash
+ push r14
+ push r13
+ mov r13d, esi
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rdi, qword [rdi + CONST]
+ add dword [rip + CONST], CONST
+ or dword [rdi + CONST], CONST
+ test byte [rbp], CONST
+ cjmp LABEL11
+ mov rax, qword [rbp + CONST]
+ or dword [rax + CONST], CONST
+LABEL11:
+ mov r14d, r13d
+ xor r12d, r12d
+ and r13d, CONST
+ xor r14d, CONST
+ and r14d, CONST
+ jmp LABEL19
+LABEL59:
+ test r14b, r14b
+ cjmp LABEL21
+ test ebx, ebx
+ cjmp LABEL23
+LABEL61:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL26
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL29
+LABEL91:
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov r12d, eax
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL35
+LABEL96:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL38
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL41
+LABEL83:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL44
+ sub eax, CONST
+ mov dword [rip + CONST], eax
+ cjmp LABEL47
+LABEL44:
+ mov rdi, qword [rbp + CONST]
+LABEL19:
+ call CONST
+ mov edx, dword [rip + CONST]
+ mov ebx, eax
+ test edx, edx
+ cjmp LABEL53
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL56
+LABEL53:
+ call CONST
+LABEL56:
+ test ebx, ebx
+ cjmp LABEL59
+LABEL23:
+ test r13b, r13b
+ cjmp LABEL61
+LABEL21:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL64
+ sub eax, CONST
+ mov dword [rip + CONST], eax
+LABEL64:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL47
+ sub eax, CONST
+ mov dword [rip + CONST], eax
+LABEL47:
+ pop rbx
+ mov eax, r12d
+ pop rbp
+ pop r12
+ sub dword [rip + CONST], CONST
+ pop r13
+ pop r14
+ ret
+LABEL38:
+ call CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL83
+LABEL41:
+ sub eax, CONST
+ mov dword [rip + CONST], eax
+ jmp LABEL47
+LABEL26:
+ mov edi, dword [rip + CONST]
+ call CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL91
+LABEL29:
+ call CONST
+ jmp LABEL91
+LABEL35:
+ mov edi, dword [rip + CONST]
+ call CONST
+ jmp LABEL96

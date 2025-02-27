@@ -1,0 +1,62 @@
+ .name fcn.0000feb0
+ .offset 000000000000feb0
+ .file dpkg
+ endbr64
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rsi, qword [rdi]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test rsi, rsi
+ cjmp LABEL10
+ cmp qword [rdi + CONST], CONST
+ mov rbx, rdi
+ cjmp LABEL10
+ mov rbp, rsp
+ lea rdi, [rsp + CONST]
+ mov rdx, rbp
+ call CONST
+ mov r8d, eax
+ xor eax, eax
+ test r8d, r8d
+ cjmp LABEL21
+LABEL43:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL24
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL21:
+ mov r12, qword [rbx]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, rbp
+ mov rsi, rax
+ mov rdx, r12
+ xor eax, eax
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov eax, CONST
+ jmp LABEL43
+LABEL10:
+ mov rax, qword [rip + CONST]
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ mov rbp, qword [rax]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST
+LABEL24:
+ call CONST

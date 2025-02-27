@@ -1,0 +1,15 @@
+ .name fcn.0001dd30
+ .offset 000000000001dd30
+ .file dpkg
+ endbr64
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL3
+ movzx eax, byte [rip + CONST]
+ ret
+LABEL3:
+ sub rsp, CONST
+ call CONST
+ movzx eax, byte [rip + CONST]
+ add rsp, CONST
+ ret

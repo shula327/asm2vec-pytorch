@@ -1,0 +1,27 @@
+ .name fcn.000e9ee0
+ .offset 00000000000e9ee0
+ .file perl5.30.0
+ push r12
+ mov r9d, CONST
+ xor r8d, r8d
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ push CONST
+ call CONST
+ pop rdx
+ pop rcx
+ test rax, rax
+ cjmp LABEL12
+ mov rdx, rax
+ mov ecx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+LABEL12:
+ add rsp, CONST
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret

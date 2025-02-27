@@ -1,0 +1,21 @@
+ .name fcn.00027740
+ .offset 0000000000027740
+ .file dpkg
+ endbr64
+ movzx edx, byte [rdi]
+ mov rax, rdi
+ jmp LABEL3
+LABEL12:
+ cmp byte [rax + CONST], CONST
+ cjmp LABEL5
+ add rax, CONST
+LABEL10:
+ movzx edx, byte [rax + CONST]
+ add rax, CONST
+LABEL3:
+ cmp dl, CONST
+ cjmp LABEL10
+ cmp dl, CONST
+ cjmp LABEL12
+LABEL5:
+ ret

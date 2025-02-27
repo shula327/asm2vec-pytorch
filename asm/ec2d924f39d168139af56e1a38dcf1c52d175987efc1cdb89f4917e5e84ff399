@@ -1,0 +1,92 @@
+ .name sym.Perl_pp_i_ncmp
+ .offset 0000000000132080
+ .file perl5.30.0
+ endbr64
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rax, qword [rdi + CONST]
+ mov rbx, rdi
+ mov rbp, qword [rdi]
+ mov rdx, qword [rax + CONST]
+ mov rax, qword [rdi + CONST]
+ mov rsi, qword [rbp]
+ mov r12, qword [rax + rdx*CONST]
+ mov rdx, qword [rbp + CONST]
+ mov eax, dword [rsi + CONST]
+ mov ecx, dword [rdx + CONST]
+ or ecx, eax
+ and ecx, CONST
+ cjmp LABEL18
+LABEL73:
+ test ah, CONST
+ cjmp LABEL20
+ mov rax, qword [rsi]
+ mov r14, qword [rax + CONST]
+LABEL65:
+ mov rsi, qword [rbp + CONST]
+ lea r13, [rbp + CONST]
+ test byte [rsi + CONST], CONST
+ cjmp LABEL26
+ mov rax, qword [rsi]
+ mov rax, qword [rax + CONST]
+LABEL60:
+ mov edx, CONST
+ cmp r14, rax
+ cjmp LABEL31
+LABEL56:
+ mov eax, dword [r12 + CONST]
+ mov ecx, eax
+ and ecx, CONST
+ cmp ecx, CONST
+ cjmp LABEL36
+ cmp byte [rbx + CONST], CONST
+ cjmp LABEL36
+ or ah, CONST
+ mov qword [r12 + CONST], rdx
+ mov dword [r12 + CONST], eax
+LABEL77:
+ mov qword [rbp + CONST], r12
+ mov qword [rbx], r13
+LABEL70:
+ mov rax, qword [rbx + CONST]
+ pop rbx
+ pop rbp
+ pop r12
+ mov rax, qword [rax]
+ pop r13
+ pop r14
+ ret
+LABEL31:
+ setg dl
+ movzx edx, dl
+ neg edx
+ movsxd rdx, edx
+ jmp LABEL56
+LABEL26:
+ xor edx, edx
+ mov rdi, rbx
+ call CONST
+ jmp LABEL60
+LABEL20:
+ xor edx, edx
+ mov rdi, rbx
+ call CONST
+ mov r14, rax
+ jmp LABEL65
+LABEL18:
+ xor edx, edx
+ mov esi, CONST
+ call CONST
+ test al, al
+ cjmp LABEL70
+ mov rsi, qword [rbp]
+ mov eax, dword [rsi + CONST]
+ jmp LABEL73
+LABEL36:
+ mov rsi, r12
+ mov rdi, rbx
+ call CONST
+ jmp LABEL77

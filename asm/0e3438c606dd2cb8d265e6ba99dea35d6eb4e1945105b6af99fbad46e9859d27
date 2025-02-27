@@ -1,0 +1,21 @@
+ .name fcn.0000bb30
+ .offset 000000000000bb30
+ .file grep
+ endbr64
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rcx
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ mov rdx, qword [rbp + CONST]
+ mov qword [rbx], CONST
+ mov qword [rbx + CONST], rax
+ mov qword [rbx + CONST], rdx
+LABEL8:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

@@ -1,0 +1,46 @@
+ .name fcn.000156e0
+ .offset 00000000000156e0
+ .file localedef
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ test edx, edx
+ cjmp LABEL5
+LABEL39:
+ test rbx, rbx
+ cjmp LABEL7
+ mov qword [rbx + CONST], CONST
+LABEL7:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL5:
+ mov edi, CONST
+ mov rbp, rsi
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rax + CONST]
+ mov rcx, rax
+ mov rdx, rax
+ mov qword [rbp], rax
+ and rdi, CONST
+ mov qword [rax], CONST
+ mov qword [rax + CONST], CONST
+ sub rcx, rdi
+ xor eax, eax
+ add ecx, CONST
+ shr ecx, CONST
+ rep stosq qword [rdi], rax
+ mov ecx, CONST
+ mov word [rdx + CONST], si
+ movabs rax, CONST
+ mov qword [rdx + CONST], CONST
+ mov qword [rdx + CONST], CONST
+ mov qword [rdx + CONST], rax
+ mov dword [rdx + CONST], CONST
+ mov word [rdx + CONST], cx
+ mov qword [rdx + CONST], rax
+ mov dword [rdx + CONST], CONST
+ jmp LABEL39

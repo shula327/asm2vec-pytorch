@@ -1,0 +1,41 @@
+ .name fcn.0000a330
+ .offset 000000000000a330
+ .file find
+ push r12
+ mov r12, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov r8, rbx
+ mov rcx, r12
+ mov esi, CONST
+ mov rdi, qword [rip + CONST]
+ mov rdx, rax
+ xor eax, eax
+ call CONST
+ test eax, eax
+ cjmp LABEL19
+ mov rdi, qword [rip + CONST]
+ call CONST
+ add rsp, CONST
+ pop rbx
+ pop r12
+ jmp CONST
+LABEL19:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST

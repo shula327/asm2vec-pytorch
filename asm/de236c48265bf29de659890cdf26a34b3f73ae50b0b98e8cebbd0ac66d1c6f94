@@ -1,0 +1,121 @@
+ .name fcn.000121b0
+ .offset 00000000000121b0
+ .file grep
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov rsi, qword [rdi + CONST]
+ mov r10, qword [rdi]
+ test rsi, rsi
+ cjmp LABEL10
+ mov r11, qword [rbx]
+ mov r9, qword [rbx + CONST]
+ mov rax, r10
+ xor r12d, r12d
+ mov r8, qword [rbx + CONST]
+ mov rdi, qword [rbx + CONST]
+ jmp LABEL17
+LABEL33:
+ add r12, CONST
+ add rax, CONST
+ cmp r12, rsi
+ cjmp LABEL21
+LABEL17:
+ mov rdx, qword [rax]
+ mov rcx, qword [rax + CONST]
+ xor rdx, r11
+ xor rcx, r9
+ or rcx, rdx
+ mov rdx, qword [rax + CONST]
+ xor rdx, r8
+ or rdx, rcx
+ mov rcx, qword [rax + CONST]
+ xor rcx, rdi
+ or rcx, rdx
+ cjmp LABEL33
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL10:
+ xor r12d, r12d
+ nop dword [rax]
+LABEL21:
+ mov rax, qword [rbp + CONST]
+ cmp rax, rsi
+ cjmp LABEL45
+LABEL99:
+ mov rax, r12
+ movdqa xmm0, xmmword [rbx]
+ mov qword [rbp], r10
+ add rsi, CONST
+ shl rax, CONST
+ mov qword [rbp + CONST], rsi
+ add r10, rax
+ mov rax, r12
+ movups xmmword [r10], xmm0
+ movdqa xmm1, xmmword [rbx + CONST]
+ movups xmmword [r10 + CONST], xmm1
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL45:
+ mov r13, rax
+ sar r13, CONST
+ add r13, rax
+ cjmp LABEL66
+ movabs rdx, CONST
+ cmp r13, rdx
+ cmovg r13, rdx
+ imul rsi, r13, CONST
+ cjmp LABEL66
+ cmp rsi, CONST
+ mov edx, CONST
+ cmovle r13, rdx
+ mov edx, CONST
+ cmovle rsi, rdx
+LABEL105:
+ test r10, r10
+ cjmp LABEL78
+LABEL101:
+ mov rdx, r13
+ sub rdx, rax
+ test rdx, rdx
+ cjmp LABEL82
+ movabs rdx, CONST
+ add rax, CONST
+ mov r13, rax
+ seto al
+ movzx eax, al
+ cmp r13, rdx
+ cjmp LABEL89
+ test rax, rax
+ cjmp LABEL89
+ imul rsi, r13, CONST
+ cjmp LABEL89
+LABEL82:
+ mov rdi, r10
+ call CONST
+ mov qword [rbp + CONST], r13
+ mov rsi, qword [rbp + CONST]
+ mov r10, rax
+ jmp LABEL99
+LABEL78:
+ mov qword [rbp + CONST], CONST
+ jmp LABEL101
+LABEL89:
+ call CONST
+LABEL66:
+ movabs r13, CONST
+ movabs rsi, CONST
+ jmp LABEL105

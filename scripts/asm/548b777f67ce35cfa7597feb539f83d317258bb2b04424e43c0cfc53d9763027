@@ -1,0 +1,31 @@
+ .name fcn.00004d20
+ .offset 0000000000004d20
+ .file setpriv
+ push rbp
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ push rbx
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ mov rdi, rax
+ mov rbp, rax
+ xor eax, eax
+ lea rdx, qword [rip + CONST]
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ mov ebx, eax
+ call CONST
+ mov eax, dword [rip + CONST]
+ cmp ebx, CONST
+ cjmp LABEL19
+LABEL7:
+ mov dword [rip + CONST], CONST
+ mov eax, CONST
+LABEL19:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

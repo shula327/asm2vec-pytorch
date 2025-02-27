@@ -1,0 +1,50 @@
+ .name sym.Perl_is_uni_blank_lc
+ .offset 000000000019d620
+ .file perl5.30.0
+ endbr64
+ push rbx
+ mov rbx, rsi
+ cmp rsi, CONST
+ cjmp LABEL4
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL6
+ movsxd rbx, esi
+ lea rax, [rip + CONST]
+ mov eax, dword [rax + rbx*CONST]
+ shr eax, CONST
+ and eax, CONST
+LABEL16:
+ pop rbx
+ ret
+LABEL4:
+ mov eax, CONST
+ cmp rsi, CONST
+ cjmp LABEL16
+ mov eax, CONST
+ cjmp LABEL16
+ lea rdx, [rsi + CONST]
+ mov eax, CONST
+ cmp rdx, CONST
+ cjmp LABEL16
+ xor eax, eax
+ cmp rsi, CONST
+ cjmp LABEL16
+ mov eax, CONST
+ cmp rsi, CONST
+ cjmp LABEL16
+ mov eax, CONST
+ cjmp LABEL16
+ cmp rsi, CONST
+ pop rbx
+ sete al
+ cmp rsi, CONST
+ sete dl
+ or eax, edx
+ ret
+LABEL6:
+ call CONST
+ mov rax, qword [rax]
+ movzx eax, word [rax + rbx*CONST]
+ pop rbx
+ and eax, CONST
+ ret

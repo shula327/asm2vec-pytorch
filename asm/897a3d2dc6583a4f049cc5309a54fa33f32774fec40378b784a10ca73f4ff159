@@ -1,0 +1,16 @@
+ .name fcn.0004ceb0
+ .offset 000000000004ceb0
+ .file perl5.30.0
+ push rbx
+ mov rbx, rsi
+ call CONST
+ movzx eax, word [rbx + CONST]
+ mov rdx, rax
+ and ax, CONST
+ and edx, CONST
+ mov word [rbx + CONST], ax
+ mov qword [rbx + CONST], rdx
+ mov rax, qword [rip + CONST]
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

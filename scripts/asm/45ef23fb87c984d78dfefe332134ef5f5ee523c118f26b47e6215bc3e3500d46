@@ -1,0 +1,27 @@
+ .name fcn.000074d0
+ .offset 00000000000074d0
+ .file install
+ push r12
+ mov rcx, rdx
+ mov rdx, rsi
+ mov esi, CONST
+ call CONST
+ mov r12d, eax
+ test eax, eax
+ cjmp LABEL7
+LABEL16:
+ mov eax, r12d
+ pop r12
+ ret
+LABEL7:
+ call CONST
+ mov eax, dword [rax]
+ cmp eax, CONST
+ cjmp LABEL14
+ cmp eax, CONST
+ cjmp LABEL16
+LABEL14:
+ xor r12d, r12d
+ mov eax, r12d
+ pop r12
+ ret

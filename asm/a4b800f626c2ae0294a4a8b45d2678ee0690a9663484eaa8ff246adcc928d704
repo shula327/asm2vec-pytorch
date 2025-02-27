@@ -1,0 +1,118 @@
+ .name fcn.0003d744
+ .offset 000000000003d744
+ .file localedef
+ push rbp
+ mov rbp, rsp
+ push r14
+ mov r14, rdi
+ push r13
+ push r12
+ mov r12, rsi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rbp + CONST], rax
+ xor eax, eax
+ call CONST
+ mov rdi, r12
+ mov rbx, rax
+ call CONST
+ test rbx, rbx
+ cjmp LABEL17
+ cmp byte [r14 + rbx + CONST], CONST
+ cjmp LABEL19
+LABEL17:
+ lea rax, qword [rbx + rax + CONST]
+ mov rcx, rsp
+ mov rdx, rax
+ and rax, CONST
+ sub rcx, rax
+ and rdx, CONST
+ mov rax, rcx
+ cmp rsp, rax
+ cjmp LABEL28
+LABEL32:
+ sub rsp, CONST
+ or qword [rsp + CONST], CONST
+ cmp rsp, rax
+ cjmp LABEL32
+LABEL28:
+ and edx, CONST
+ sub rsp, rdx
+ test rdx, rdx
+ cjmp LABEL36
+ or qword [rsp + rdx + CONST], CONST
+LABEL36:
+ lea r13, qword [rsp + CONST]
+ mov rsi, r14
+ and r13, CONST
+ mov rdi, r13
+ call CONST
+ mov byte [rax], CONST
+ lea rdi, qword [rax + CONST]
+LABEL86:
+ mov rsi, r12
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, r13
+ mov rbx, rax
+ call CONST
+ test rax, rax
+ cjmp LABEL52
+LABEL92:
+ mov rcx, qword [rbp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL55
+ lea rsp, qword [rbp + CONST]
+ pop rbx
+ pop r12
+ pop r13
+ pop r14
+ pop rbp
+ ret
+LABEL19:
+ lea rax, qword [rbx + rax + CONST]
+ mov rcx, rsp
+ mov rdx, rax
+ and rax, CONST
+ sub rcx, rax
+ and rdx, CONST
+ mov rax, rcx
+ cmp rsp, rax
+ cjmp LABEL71
+LABEL75:
+ sub rsp, CONST
+ or qword [rsp + CONST], CONST
+ cmp rsp, rax
+ cjmp LABEL75
+LABEL71:
+ and edx, CONST
+ sub rsp, rdx
+ test rdx, rdx
+ cjmp LABEL79
+LABEL100:
+ lea r13, qword [rsp + CONST]
+ mov rsi, r14
+ and r13, CONST
+ mov rdi, r13
+ call CONST
+ mov rdi, rax
+ jmp LABEL86
+LABEL52:
+ mov dword [rbx], CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, r13
+ call CONST
+ test rax, rax
+ cjmp LABEL92
+ mov dword [rbx], CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, r13
+ mov byte [rbx + CONST], CONST
+ call CONST
+ jmp LABEL92
+LABEL79:
+ or qword [rsp + rdx + CONST], CONST
+ jmp LABEL100
+LABEL55:
+ call CONST

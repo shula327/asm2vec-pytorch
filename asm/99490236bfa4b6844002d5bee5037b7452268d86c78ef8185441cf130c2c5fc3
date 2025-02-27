@@ -1,0 +1,21 @@
+ .name fcn.001a2ce0
+ .offset 00000000001a2ce0
+ .file perl5.30.0
+ mov rcx, qword [rsi]
+ mov rax, qword [rcx + CONST]
+ mov r8, rax
+ sub r8, qword [rcx + CONST]
+ cmp r8, rdx
+ cjmp LABEL5
+ cmp rax, rdx
+ cmovae rdx, rax
+ lea rdx, qword [rax + rdx + CONST]
+ test byte [rsi + CONST], CONST
+ cjmp LABEL10
+ cmp rdx, rax
+ cjmp LABEL5
+LABEL10:
+ jmp CONST
+LABEL5:
+ mov rax, qword [rsi + CONST]
+ ret

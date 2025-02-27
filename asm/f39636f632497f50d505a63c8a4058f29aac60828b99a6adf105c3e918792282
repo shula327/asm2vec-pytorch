@@ -1,0 +1,18 @@
+ .name entry.fini0
+ .offset 0000000000003140
+ .file sdiff
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL1
+ push rbp
+ cmp qword [rip + CONST], CONST
+ mov rbp, rsp
+ cjmp LABEL5
+ mov rdi, qword [rip + CONST]
+ call CONST
+LABEL5:
+ call CONST
+ mov byte [rip + CONST], CONST
+ pop rbp
+ ret
+LABEL1:
+ ret

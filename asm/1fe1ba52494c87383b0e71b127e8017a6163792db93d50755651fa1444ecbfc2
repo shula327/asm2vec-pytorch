@@ -1,0 +1,15 @@
+ .name fcn.0001b5e0
+ .offset 000000000001b5e0
+ .file dpkg
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ cmp byte [rdi], CONST
+ cjmp LABEL4
+ jmp CONST
+LABEL4:
+ lea rax, [rip + CONST]
+ ret
+LABEL2:
+ lea rax, [rip + CONST]
+ ret

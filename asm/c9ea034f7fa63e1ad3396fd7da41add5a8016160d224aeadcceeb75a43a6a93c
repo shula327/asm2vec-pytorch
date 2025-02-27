@@ -1,0 +1,29 @@
+ .name fcn.0001b7b0
+ .offset 000000000001b7b0
+ .file dpkg
+ endbr64
+ lea rax, [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL3
+ cmp byte [rdi], CONST
+ lea rax, [rip + CONST]
+ cjmp LABEL3
+ sub rsp, CONST
+ call CONST
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL10
+ add rsp, CONST
+ ret
+LABEL10:
+ mov dword [rax + CONST], CONST
+ mov byte [rip + CONST], CONST
+ add rsp, CONST
+ ret
+LABEL3:
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL18
+ ret
+LABEL18:
+ mov dword [rax + CONST], CONST
+ mov byte [rip + CONST], CONST
+ ret

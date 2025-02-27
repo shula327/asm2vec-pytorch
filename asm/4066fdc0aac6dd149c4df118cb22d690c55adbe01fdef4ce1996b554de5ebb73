@@ -1,0 +1,15 @@
+ .name fcn.000069d0
+ .offset 00000000000069d0
+ .file gzip
+ mov eax, dword [rip + CONST]
+ push rbp
+ mov ebp, edi
+ test eax, eax
+ cjmp LABEL4
+ mov rdi, qword [rip + CONST]
+ mov dword [rip + CONST], CONST
+ call CONST
+ mov qword [rip + CONST], CONST
+LABEL4:
+ mov edi, ebp
+ call CONST

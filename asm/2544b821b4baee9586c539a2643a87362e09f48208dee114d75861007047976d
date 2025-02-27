@@ -1,0 +1,35 @@
+ .name fcn.000142d0
+ .offset 00000000000142d0
+ .file install
+ endbr64
+ sub rsp, CONST
+ mov dword [rsp + CONST], edx
+ cmp ecx, CONST
+ cjmp LABEL4
+ cmp ecx, CONST
+ cjmp LABEL6
+ test ecx, ecx
+ cjmp LABEL8
+ lea rcx, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL6:
+ lea rdx, [rsp + CONST]
+ lea rcx, [rip + CONST]
+ call CONST
+ add rsp, CONST
+ ret
+LABEL8:
+ lea rdx, [rsp + CONST]
+ lea rcx, [rip + CONST]
+ call CONST
+ add rsp, CONST
+ ret
+LABEL4:
+ lea rdx, [rsp + CONST]
+ lea rcx, [rip + CONST]
+ call CONST
+ add rsp, CONST
+ ret

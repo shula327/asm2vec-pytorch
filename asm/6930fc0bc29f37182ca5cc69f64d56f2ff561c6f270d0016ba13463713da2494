@@ -1,0 +1,24 @@
+ .name fcn.00025340
+ .offset 0000000000025340
+ .file dpkg
+ endbr64
+ cmp byte [rdi], CONST
+ cjmp LABEL2
+ ret
+LABEL2:
+ push rbp
+ mov rbp, rdi
+ mov edi, dword [rdi + CONST]
+ mov esi, CONST
+ call CONST
+ mov rsi, qword [rbp + CONST]
+ mov edi, dword [rbp + CONST]
+ mov edx, CONST
+ call CONST
+ lea rsi, [rbp + CONST]
+ mov edi, CONST
+ xor edx, edx
+ call CONST
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

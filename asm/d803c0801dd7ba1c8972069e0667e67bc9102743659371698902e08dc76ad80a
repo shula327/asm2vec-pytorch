@@ -1,0 +1,32 @@
+ .name fcn.0000fc20
+ .offset 000000000000fc20
+ .file dpkg
+ endbr64
+ push rbp
+ cmp qword [rdi], CONST
+ cjmp LABEL3
+ mov edi, CONST
+ call CONST
+ mov rdi, qword [rax + CONST]
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov rsi, rax
+ call CONST
+ xor eax, eax
+ pop rbp
+ ret
+LABEL3:
+ mov rax, qword [rip + CONST]
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ mov rbp, qword [rax]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST

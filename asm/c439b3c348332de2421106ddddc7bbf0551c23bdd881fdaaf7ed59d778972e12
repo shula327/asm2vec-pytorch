@@ -1,0 +1,28 @@
+ .name fcn.000583e0
+ .offset 00000000000583e0
+ .file bash
+ sub rsp, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+LABEL12:
+ add rsp, CONST
+ ret
+LABEL4:
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL9
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL12
+LABEL9:
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ lea rdx, qword [rip + CONST]
+ test rax, rax
+ lea rax, qword [rip + CONST]
+ cmovne rax, rdx
+ add rsp, CONST
+ ret

@@ -1,0 +1,20 @@
+ .name sym.PerlIOCrlf_binmode
+ .offset 0000000000193c40
+ .file perl5.30.0
+ endbr64
+ mov rdx, qword [rsi]
+ mov eax, dword [rdx + CONST]
+ test ah, CONST
+ cjmp LABEL4
+ jmp CONST
+LABEL4:
+ and ah, CONST
+ sub rsp, CONST
+ mov dword [rdx + CONST], eax
+ mov qword [rsp + CONST], rsi
+ mov qword [rsp], rdi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ mov rdi, qword [rsp]
+ add rsp, CONST
+ jmp CONST

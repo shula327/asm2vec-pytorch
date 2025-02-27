@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/root/dailu_code/asm2vec-pytorch/')))
 import torch
 import torch.nn as nn
 import click
@@ -6,8 +9,8 @@ import asm2vec
 @click.command()
 @click.option('-i', '--input', 'ipath', help='target function', required=True)
 @click.option('-m', '--model', 'mpath', help='model path', required=True)
-@click.option('-e', '--epochs', default=10, help='training epochs', show_default=True)
-@click.option('-n', '--neg-sample-num', 'neg_sample_num', default=25, help='negative sampling amount', show_default=True)
+@click.option('-e', '--epochs', default=500, help='training epochs', show_default=True)
+@click.option('-n', '--neg-sample-num', 'neg_sample_num', default=10, help='negative sampling amount', show_default=True)
 @click.option('-l', '--limit', help='limit the amount of output probability result', type=int)
 @click.option('-c', '--device', default='auto', help='hardware device to be used: cpu / cuda / auto', show_default=True)
 @click.option('-lr', '--learning-rate', 'lr', default=0.02, help="learning rate", show_default=True)

@@ -1,0 +1,18 @@
+ .name fcn.0000cbc0
+ .offset 000000000000cbc0
+ .file install
+ endbr64
+ sub rsp, CONST
+ lea r8, [rip + CONST]
+ xor esi, esi
+ mov edi, CONST
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ call CONST
+ mov qword [rip + CONST], rax
+ test rax, rax
+ cjmp LABEL10
+ add rsp, CONST
+ ret
+LABEL10:
+ call CONST

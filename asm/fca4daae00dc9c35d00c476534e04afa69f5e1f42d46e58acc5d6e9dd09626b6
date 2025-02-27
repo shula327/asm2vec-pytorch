@@ -1,0 +1,58 @@
+ .name fcn.00015400
+ .offset 0000000000015400
+ .file install
+ endbr64
+ push r15
+ mov r15d, ecx
+ push r14
+ mov r14d, esi
+ mov rsi, r9
+ push r13
+ mov r13d, edi
+ mov rdi, r8
+ push r12
+ mov r12, rdx
+ push rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL14
+ mov rbp, rax
+ test r12, r12
+ cjmp LABEL17
+ mov r9, rax
+ lea r8, [rip + CONST]
+ mov ecx, r15d
+ mov rdx, r12
+ mov esi, r14d
+ mov edi, r13d
+ xor eax, eax
+ call CONST
+LABEL39:
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ jmp CONST
+LABEL17:
+ mov rcx, rax
+ lea rdx, [rip + CONST]
+ mov esi, r14d
+ mov edi, r13d
+ xor eax, eax
+ call CONST
+ jmp LABEL39
+LABEL14:
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov r12, rax
+ call CONST
+ mov rdx, r12
+ xor edi, edi
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ call CONST

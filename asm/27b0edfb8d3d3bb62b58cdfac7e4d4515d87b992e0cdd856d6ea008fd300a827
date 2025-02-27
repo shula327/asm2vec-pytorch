@@ -1,0 +1,26 @@
+ .name fcn.00003210
+ .offset 0000000000003210
+ .file fmt
+ push rbp
+ mov rbp, rdi
+ lea rdi, qword [rip + CONST]
+ push rbx
+ sub rsp, CONST
+ mov esi, dword [rip + CONST]
+ call CONST
+ mov rbx, qword [rip + CONST]
+ cmp rbx, rbp
+ cjmp LABEL9
+ nop word [rax + rax]
+LABEL16:
+ mov esi, dword [rip + CONST]
+ mov rdi, rbx
+ call CONST
+ mov rbx, qword [rbx + CONST]
+ cmp rbp, rbx
+ cjmp LABEL16
+LABEL9:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

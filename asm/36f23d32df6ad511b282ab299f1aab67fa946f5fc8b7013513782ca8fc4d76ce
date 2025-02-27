@@ -1,0 +1,16 @@
+ .name fcn.000568d0
+ .offset 00000000000568d0
+ .file bash
+ sub rsp, CONST
+ call CONST
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL3
+ nop word [rax + rax]
+LABEL8:
+ call CONST
+ call CONST
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL8
+LABEL3:
+ add rsp, CONST
+ ret

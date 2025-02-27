@@ -1,0 +1,20 @@
+ .name fcn.000bd060
+ .offset 00000000000bd060
+ .file bash
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ call CONST
+ mov eax, dword [rbp]
+ mov dword [rip + CONST], eax
+ mov eax, dword [rbx]
+ mov dword [rip + CONST], eax
+ call CONST
+ and qword [rip + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

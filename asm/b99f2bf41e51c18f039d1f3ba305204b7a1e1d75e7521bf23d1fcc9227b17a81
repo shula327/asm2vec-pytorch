@@ -1,0 +1,124 @@
+ .name sym.Perl_my_strftime
+ .offset 00000000000e3480
+ .file perl5.30.0
+ endbr64
+ push r15
+ mov r15d, edx
+ push r14
+ mov r14d, ecx
+ push r13
+ push r12
+ mov r12, rsi
+ push rbp
+ mov ebp, r8d
+ push rbx
+ mov ebx, r9d
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov r13, rsp
+ mov rsi, r13
+ call CONST
+ mov eax, dword [rsp + CONST]
+ mov rdi, r13
+ mov dword [rsp + CONST], ebp
+ mov dword [rsp], r15d
+ mov dword [rsp + CONST], eax
+ mov eax, dword [rsp + CONST]
+ mov dword [rsp + CONST], r14d
+ mov dword [rsp + CONST], eax
+ mov eax, dword [rsp + CONST]
+ mov dword [rsp + CONST], ebx
+ mov dword [rsp + CONST], eax
+ mov eax, dword [rsp + CONST]
+ mov dword [rsp + CONST], eax
+ mov eax, dword [rsp + CONST]
+ mov dword [rsp + CONST], eax
+ call CONST
+ movdqa xmm0, xmmword [rsp]
+ movdqa xmm1, xmmword [rsp + CONST]
+ lea rdi, [rsp + CONST]
+ movdqa xmm2, xmmword [rsp + CONST]
+ mov rax, qword [rsp + CONST]
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm1
+ movaps xmmword [rsp + CONST], xmm2
+ mov qword [rsp + CONST], rax
+ call CONST
+ mov rax, qword [rsp + CONST]
+ mov edi, CONST
+ mov qword [rsp + CONST], rax
+ mov rax, qword [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ call CONST
+ mov rdx, r12
+ mov rcx, r13
+ mov esi, CONST
+ mov rdi, rax
+ mov rbp, rax
+ call CONST
+ lea edx, [rax + CONST]
+ cmp edx, CONST
+ cjmp LABEL59
+ test eax, eax
+ cjmp LABEL61
+ cmp byte [r12], CONST
+ cjmp LABEL59
+LABEL61:
+ mov rdi, r12
+ call CONST
+ mov rdi, rbp
+ lea ebx, [rax + CONST]
+ mov r14, rax
+ movsxd r15, ebx
+ imul r14d, r14d, CONST
+ mov rsi, r15
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL75
+ jmp LABEL76
+LABEL93:
+ cmp r14d, ebx
+ cjmp LABEL78
+ add ebx, ebx
+ mov rdi, rbp
+ movsxd r15, ebx
+ mov rsi, r15
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL76
+LABEL75:
+ mov rcx, r13
+ mov rdx, r12
+ mov rsi, r15
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL93
+ cmp ebx, eax
+ cjmp LABEL93
+ nop
+LABEL59:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL99
+ add rsp, CONST
+ mov rax, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL78:
+ mov rdi, rbp
+ call CONST
+LABEL76:
+ xor ebp, ebp
+ jmp LABEL59
+LABEL99:
+ call CONST

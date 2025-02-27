@@ -1,0 +1,32 @@
+ .name fcn.000bdb80
+ .offset 00000000000bdb80
+ .file bash
+ push rbp
+ mov ebp, edi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ jmp LABEL5
+LABEL15:
+ call CONST
+ cmp dword [rax], CONST
+ cjmp LABEL8
+ mov dword [rax], CONST
+LABEL5:
+ mov rdx, rbx
+ mov esi, CONST
+ mov edi, ebp
+ call CONST
+ test eax, eax
+ cjmp LABEL15
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ ret

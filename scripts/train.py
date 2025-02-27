@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/root/dailu_code/asm2vec-pytorch/')))
 import torch
 import click
 import asm2vec

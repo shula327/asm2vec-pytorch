@@ -1,0 +1,38 @@
+ .name fcn.0001ba70
+ .offset 000000000001ba70
+ .file dpkg
+ endbr64
+ push rbp
+ lea rsi, [rip + CONST]
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rdi, qword [rdi + CONST]
+ call CONST
+ mov qword [rbx + CONST], rax
+ test rax, rax
+ cjmp LABEL10
+ mov rdi, rax
+ call CONST
+ mov esi, CONST
+ mov edi, eax
+ call CONST
+ mov rcx, qword [rbx + CONST]
+ mov edx, CONST
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ add rsp, CONST
+ mov esi, CONST
+ pop rbx
+ pop rbp
+ jmp CONST
+LABEL10:
+ mov rbp, qword [rbx + CONST]
+ lea rsi, [rip + CONST]
+ mov edx, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST

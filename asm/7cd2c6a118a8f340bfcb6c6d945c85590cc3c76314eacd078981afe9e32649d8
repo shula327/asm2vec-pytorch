@@ -1,0 +1,55 @@
+ .name fcn.0002c230
+ .offset 000000000002c230
+ .file dpkg
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL1
+ ret
+LABEL1:
+ push r12
+ mov r12, rsi
+ mov rsi, rdx
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ test al, al
+ cjmp LABEL11
+LABEL27:
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL14
+ mov rdi, rbp
+ call rax
+LABEL14:
+ test r12, r12
+ cjmp LABEL18
+ cmp dword [rbp + CONST], CONST
+ cjmp LABEL20
+LABEL18:
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL11:
+ mov rdi, rbp
+ call CONST
+ jmp LABEL27
+LABEL20:
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL18
+ cmp dword [r12 + CONST], CONST
+ cjmp LABEL34
+LABEL43:
+ add rsp, CONST
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL34:
+ mov esi, CONST
+ mov rdi, r12
+ call CONST
+ jmp LABEL43

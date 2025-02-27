@@ -1,0 +1,53 @@
+ .name fcn.00008170
+ .offset 0000000000008170
+ .file sha384sum
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ mov rax, qword [rdi + CONST]
+ mov rcx, qword [r12 + CONST]
+ cmp rax, CONST
+ mov rsi, rax
+ sbb rbp, rbp
+ and rbp, CONST
+ add rbp, CONST
+ cmp rax, CONST
+ sbb rdx, rdx
+ and rdx, CONST
+ add rdx, CONST
+ cmp rax, CONST
+ sbb rdi, rdi
+ and rdi, CONST
+ add rdi, CONST
+ cmp rax, CONST
+ sbb r8, r8
+ and r8, CONST
+ add r8, CONST
+ add rsi, qword [r12 + CONST]
+ mov qword [r12 + CONST], rsi
+ cjmp LABEL25
+ add rcx, CONST
+ mov qword [r12 + CONST], rcx
+LABEL25:
+ mov r9, rsi
+ shl rcx, CONST
+ lea r13, qword [r12 + CONST]
+ sub rdx, rax
+ shr r9, CONST
+ shl rsi, CONST
+ or rcx, r9
+ bswap rsi
+ bswap rcx
+ mov qword [r12 + r8*CONST + CONST], rcx
+ mov qword [r12 + rdi*CONST + CONST], rsi
+ lea rdi, qword [r13 + rax]
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, r13
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

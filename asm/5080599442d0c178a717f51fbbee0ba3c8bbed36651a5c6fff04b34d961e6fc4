@@ -1,0 +1,19 @@
+ .name fcn.0002de70
+ .offset 000000000002de70
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov qword [rdi], CONST
+ mov qword [rdi + CONST], rsi
+ test rsi, rsi
+ cjmp LABEL6
+ mov qword [rdi + CONST], CONST
+ pop rbx
+ ret
+LABEL6:
+ mov rdi, rsi
+ call CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret

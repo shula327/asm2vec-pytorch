@@ -1,0 +1,89 @@
+ .name fcn.000365a0
+ .offset 00000000000365a0
+ .file find
+ push r15
+ push r14
+ mov r14, r9
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ mov rbp, rcx
+ push rbx
+ mov rbx, rdx
+ mov rdx, r8
+ shr rdx, CONST
+ mov edi, edx
+ sub rsp, CONST
+ mov r9, qword [rsp + CONST]
+ mov ecx, dword [rsp + CONST]
+ mov rax, r9
+ shr rax, CONST
+ or dil, al
+ cjmp LABEL19
+ test rbx, rbx
+ cjmp LABEL19
+ mov r10, rbx
+ mov r12, r8
+ add r10, r8
+ cjmp LABEL19
+ test r8, r8
+ cjmp LABEL27
+ mov qword [rsp + CONST], rsi
+ xor r15d, r15d
+ test rbx, rbx
+ cjmp LABEL31
+LABEL75:
+ movzx ecx, cl
+ mov rdx, r10
+ mov rsi, rbp
+ mov rdi, r13
+ push rcx
+ mov rcx, r14
+ push qword [rsp + CONST]
+ mov r8, qword [rsp + CONST]
+ call CONST
+ mov rdi, r15
+ mov r12, rax
+ call CONST
+ pop rax
+ pop rdx
+LABEL77:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL31:
+ mov rdi, r10
+ mov dword [rsp + CONST], ecx
+ mov qword [rsp + CONST], r9
+ mov qword [rsp + CONST], r10
+ call CONST
+ mov r15, rax
+ test rax, rax
+ cjmp LABEL19
+ mov rsi, qword [rsp + CONST]
+ mov rdx, rbx
+ mov rdi, rax
+ call CONST
+ mov rsi, rbp
+ lea rdi, qword [r15 + rbx]
+ mov rdx, r12
+ call CONST
+ mov rbp, r15
+ mov r10, qword [rsp + CONST]
+ mov r9, qword [rsp + CONST]
+ mov ecx, dword [rsp + CONST]
+ jmp LABEL75
+LABEL19:
+ mov r12, -2
+ jmp LABEL77
+LABEL27:
+ mov rbp, rsi
+ xor r15d, r15d
+ jmp LABEL75

@@ -1,0 +1,46 @@
+ .name fcn.00027b10
+ .offset 0000000000027b10
+ .file find
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov rcx, rbx
+ xor edx, edx
+ add rax, CONST
+ jmp LABEL6
+LABEL15:
+ mov byte [rcx], r8b
+ add rcx, CONST
+ cmp rax, rsi
+ cjmp LABEL10
+LABEL36:
+ mov rdx, rsi
+LABEL6:
+ movzx r8d, byte [rbx + rdx]
+ lea rsi, qword [rdx + CONST]
+ cmp r8b, CONST
+ cjmp LABEL15
+ lea rdi, qword [rdx + CONST]
+ cmp rdi, rax
+ cjmp LABEL15
+ movzx r9d, byte [rbx + rsi]
+ lea r10d, dword [r9 + CONST]
+ cmp r10b, CONST
+ cjmp LABEL15
+ movzx r10d, byte [rbx + rdx + CONST]
+ lea r11d, dword [r10 + CONST]
+ cmp r11b, CONST
+ cjmp LABEL15
+ movzx edx, byte [rbx + rdx + CONST]
+ lea r11d, dword [rdx + CONST]
+ cmp r11b, CONST
+ cjmp LABEL15
+ lea edx, dword [r10 + r9*CONST]
+ add rcx, CONST
+ mov rsi, rdi
+ lea edx, dword [r11 + rdx*CONST + CONST]
+ mov byte [rcx + CONST], dl
+ jmp LABEL36
+LABEL10:
+ pop rbx
+ ret

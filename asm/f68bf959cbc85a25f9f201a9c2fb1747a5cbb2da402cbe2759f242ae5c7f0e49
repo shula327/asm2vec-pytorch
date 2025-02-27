@@ -1,0 +1,115 @@
+ .name fcn.0010d7f0
+ .offset 000000000010d7f0
+ .file perl5.30.0
+ pxor xmm3, xmm3
+ movapd xmm2, xmm0
+ movapd xmm1, xmm0
+ cmpltsd xmm2, xmm3
+ xorpd xmm1, xmmword [rip + CONST]
+ andpd xmm1, xmm2
+ andnpd xmm2, xmm0
+ orpd xmm1, xmm2
+ ucomisd xmm1, xmm3
+ cjmp LABEL9
+ cjmp LABEL10
+LABEL9:
+ movsd xmm2, qword [rip + CONST]
+ comisd xmm2, xmm1
+ cjmp LABEL10
+ movsd xmm4, qword [rip + CONST]
+ comisd xmm1, xmm4
+ cjmp LABEL16
+ cvttsd2si rcx, xmm1
+ test rcx, rcx
+ cjmp LABEL19
+LABEL76:
+ pxor xmm2, xmm2
+ cvtsi2sd xmm2, rcx
+LABEL85:
+ ucomisd xmm2, xmm1
+ cjmp LABEL23
+ cjmp LABEL24
+LABEL23:
+ addsd xmm1, qword [rip + CONST]
+ comisd xmm1, xmm4
+ cjmp LABEL27
+ cvttsd2si rcx, xmm1
+LABEL90:
+ mov rdx, rcx
+ and edx, CONST
+ cjmp LABEL24
+ test rcx, rcx
+ cjmp LABEL33
+ pxor xmm2, xmm2
+ cvtsi2sd xmm2, rcx
+LABEL97:
+ ucomisd xmm2, xmm1
+ cjmp LABEL24
+ cjmp LABEL24
+ sub rcx, CONST
+ nop dword [rax]
+LABEL24:
+ movabs r9, CONST
+ mov r8, rdi
+ nop dword [rax]
+LABEL59:
+ mov rax, rcx
+ mov r11, rcx
+ mov r10, r8
+ sub r8, CONST
+ mul r9
+ shr rdx, CONST
+ lea rax, qword [rdx + rdx*CONST]
+ add rax, rax
+ sub r11, rax
+ mov rax, r11
+ add eax, CONST
+ mov byte [r8], al
+ mov rax, rcx
+ mov rcx, rdx
+ cmp rax, CONST
+ cjmp LABEL59
+ comisd xmm3, xmm0
+ cjmp LABEL61
+ mov byte [r8 + CONST], CONST
+ lea r8, qword [r10 + CONST]
+LABEL61:
+ sub rdi, r8
+ mov rax, r8
+ mov qword [rsi], rdi
+ ret
+LABEL10:
+ xor r8d, r8d
+ mov rax, r8
+ ret
+LABEL16:
+ movapd xmm2, xmm1
+ subsd xmm2, xmm4
+ cvttsd2si rcx, xmm2
+ btc rcx, CONST
+ test rcx, rcx
+ cjmp LABEL76
+LABEL19:
+ mov rax, rcx
+ mov rdx, rcx
+ pxor xmm2, xmm2
+ shr rax, CONST
+ and edx, CONST
+ or rax, rdx
+ cvtsi2sd xmm2, rax
+ addsd xmm2, xmm2
+ jmp LABEL85
+LABEL27:
+ movapd xmm2, xmm1
+ subsd xmm2, xmm4
+ cvttsd2si rcx, xmm2
+ btc rcx, CONST
+ jmp LABEL90
+LABEL33:
+ mov rax, rcx
+ pxor xmm2, xmm2
+ shr rax, CONST
+ or rax, rdx
+ cvtsi2sd xmm2, rax
+ addsd xmm2, xmm2
+ jmp LABEL97

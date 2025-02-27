@@ -1,0 +1,54 @@
+ .name fcn.000053d0
+ .offset 00000000000053d0
+ .file cksum
+ endbr64
+ push rbx
+ mov r10d, CONST
+ sub rsp, CONST
+ mov qword [rsp + CONST], r8
+ lea r11, [rsp + CONST]
+ lea r8, [rsp + CONST]
+ mov qword [rsp + CONST], r9
+ xor r9d, r9d
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ lea rax, [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ mov rbx, rax
+ jmp LABEL18
+LABEL30:
+ mov eax, r10d
+ add r10d, CONST
+ add rax, rbx
+ mov rax, qword [rax]
+ mov qword [r8 + r9*CONST], rax
+ test rax, rax
+ cjmp LABEL25
+LABEL36:
+ add r9, CONST
+ cmp r9, CONST
+ cjmp LABEL25
+LABEL18:
+ cmp r10d, CONST
+ cjmp LABEL30
+ mov rax, r11
+ add r11, CONST
+ mov rax, qword [rax]
+ mov qword [r8 + r9*CONST], rax
+ test rax, rax
+ cjmp LABEL36
+ nop dword [rax]
+LABEL25:
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL41
+ add rsp, CONST
+ pop rbx
+ ret
+LABEL41:
+ call CONST

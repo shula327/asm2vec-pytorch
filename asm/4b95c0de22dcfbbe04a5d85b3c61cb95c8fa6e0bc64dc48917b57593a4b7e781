@@ -1,0 +1,79 @@
+ .name fcn.000c7470
+ .offset 00000000000c7470
+ .file bash
+ push r13
+ mov r13d, esi
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ test rdi, rdi
+ cjmp LABEL8
+ cmp byte [rdi], CONST
+ cjmp LABEL10
+LABEL8:
+ mov edi, CONST
+ xor ebx, ebx
+LABEL55:
+ call CONST
+ mov edx, CONST
+ mov byte [rax], CONST
+ mov rbp, rax
+ mov eax, CONST
+ test r13b, CONST
+ cjmp LABEL19
+LABEL67:
+ add rax, rbp
+ and r13d, CONST
+ cjmp LABEL22
+LABEL62:
+ movabs rcx, CONST
+ lea r13d, dword [rdx + CONST]
+ mov byte [rax + CONST], CONST
+ mov qword [rax], rcx
+ movsxd rdi, r13d
+ mov ecx, CONST
+ mov word [rax + CONST], cx
+ add rdi, rbp
+ test r12, r12
+ cjmp LABEL32
+ mov rsi, r12
+ call CONST
+ lea edi, dword [rbx + r13]
+ movsxd rdi, edi
+ add rdi, rbp
+LABEL32:
+ mov dword [rdi], CONST
+ mov rsi, rbp
+ xor eax, eax
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp qword [rip + CONST]
+LABEL10:
+ call CONST
+ lea edi, dword [rax + CONST]
+ mov ebx, eax
+ movsxd rdi, edi
+ jmp LABEL55
+LABEL22:
+ movabs rcx, CONST
+ add edx, CONST
+ mov byte [rax + CONST], CONST
+ mov qword [rax], rcx
+ movsxd rax, edx
+ add rax, rbp
+ jmp LABEL62
+LABEL19:
+ movabs rax, CONST
+ mov edx, CONST
+ mov qword [rbp + CONST], rax
+ mov eax, CONST
+ jmp LABEL67

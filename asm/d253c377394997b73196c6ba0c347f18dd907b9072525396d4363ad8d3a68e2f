@@ -1,0 +1,74 @@
+ .name fcn.00007a40
+ .offset 0000000000007a40
+ .file ls
+ test dil, dil
+ cjmp LABEL1
+ mov eax, esi
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL5
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL8
+LABEL12:
+ ret
+LABEL1:
+ xor eax, eax
+ cmp edx, CONST
+ cjmp LABEL12
+ cmp edx, CONST
+ sete cl
+ cmp edx, CONST
+ sete al
+ or ecx, eax
+LABEL40:
+ mov eax, CONST
+ test cl, cl
+ cjmp LABEL12
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL12
+ test dil, dil
+ cjmp LABEL25
+ and esi, CONST
+ mov eax, CONST
+ cmp esi, CONST
+ cjmp LABEL29
+ mov eax, CONST
+ cmp esi, CONST
+ cjmp LABEL32
+ cmp esi, CONST
+ sete al
+LABEL49:
+ neg eax
+ and eax, CONST
+ ret
+LABEL5:
+ cmp eax, CONST
+ sete cl
+ jmp LABEL40
+LABEL25:
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL43
+ mov eax, CONST
+ cmp edx, CONST
+ cjmp LABEL46
+ cmp edx, CONST
+ sete al
+ jmp LABEL49
+LABEL8:
+ and esi, CONST
+ cmp esi, CONST
+ sbb eax, eax
+ not eax
+ and eax, CONST
+ ret
+LABEL32:
+ ret
+LABEL46:
+ ret
+LABEL29:
+ ret
+LABEL43:
+ ret

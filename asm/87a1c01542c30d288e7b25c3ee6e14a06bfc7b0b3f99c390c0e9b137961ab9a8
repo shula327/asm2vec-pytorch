@@ -1,0 +1,21 @@
+ .name fcn.000058b0
+ .offset 00000000000058b0
+ .file diff3
+ push rbp
+ mov rdx, rsi
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ xor esi, esi
+ sub rsp, CONST
+ call CONST
+ mov rsi, rax
+ sub rsi, rbp
+ add rsi, CONST
+ test rax, rax
+ mov rax, rbx
+ cmovne rax, rsi
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

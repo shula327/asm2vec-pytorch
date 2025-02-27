@@ -1,0 +1,34 @@
+ .name fcn.000574a0
+ .offset 00000000000574a0
+ .file bash
+ push r12
+ call CONST
+ cmp dword [rip + CONST], CONST
+ mov r12, rax
+ cjmp LABEL4
+ jmp LABEL5
+LABEL18:
+ call CONST
+ call CONST
+LABEL23:
+ mov dword [rip + CONST], CONST
+ test r12, r12
+ setne dl
+ xor r12d, r12d
+ test rax, rax
+ setne r12b
+ and r12, rdx
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL5
+LABEL4:
+ test r12, r12
+ cjmp LABEL18
+ add dword [rip + CONST], CONST
+ call CONST
+ call CONST
+ sub dword [rip + CONST], CONST
+ jmp LABEL23
+LABEL5:
+ mov rax, r12
+ pop r12
+ ret

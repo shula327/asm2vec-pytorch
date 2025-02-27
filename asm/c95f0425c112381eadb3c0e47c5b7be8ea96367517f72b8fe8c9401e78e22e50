@@ -1,0 +1,54 @@
+ .name fcn.0000e700
+ .offset 000000000000e700
+ .file partx
+ push r12
+ mov r9, qword [rdi + CONST]
+ mov rax, qword [rdi + CONST]
+ test r9, r9
+ cjmp LABEL4
+ test rax, rax
+ cjmp LABEL6
+ xor edx, edx
+ cmp byte [rax], CONST
+ lea r12, qword [rdi + CONST]
+ mov ecx, CONST
+ sete dl
+ sub rsp, CONST
+ mov esi, CONST
+ mov rdi, r12
+ add rax, rdx
+ lea r8, qword [rip + CONST]
+ mov edx, CONST
+ push rax
+ xor eax, eax
+ call CONST
+ pop rdx
+ pop rcx
+ test eax, eax
+ cjmp LABEL24
+ cmp eax, CONST
+ cjmp LABEL26
+LABEL45:
+ mov rax, r12
+ pop r12
+ ret
+LABEL26:
+ call CONST
+ xor r12d, r12d
+ mov dword [rax], CONST
+ mov rax, r12
+ pop r12
+ ret
+LABEL4:
+ mov r12, rax
+ mov rax, r12
+ pop r12
+ ret
+LABEL6:
+ mov r12, r9
+ mov rax, r12
+ pop r12
+ ret
+LABEL24:
+ xor r12d, r12d
+ jmp LABEL45

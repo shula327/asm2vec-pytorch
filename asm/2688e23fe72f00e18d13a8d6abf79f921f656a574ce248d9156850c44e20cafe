@@ -1,0 +1,125 @@
+ .name fcn.0019eb20
+ .offset 000000000019eb20
+ .file perl5.30.0
+ push r13
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ cmp edi, CONST
+ cjmp LABEL9
+ mov ebx, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ jmp LABEL13
+LABEL20:
+ mov edx, dword [rsi + rax*CONST]
+LABEL13:
+ mov ecx, eax
+ cmp edx, ebx
+ cjmp LABEL17
+ add rax, CONST
+ cmp rax, CONST
+ cjmp LABEL20
+ mov edi, dword [rip + CONST]
+ mov r8d, CONST
+ mov byte [rsp + CONST], CONST
+ movabs rax, CONST
+ mov qword [rsp + CONST], rax
+ mov ebp, CONST
+ mov word [rsp + CONST], r8w
+ call CONST
+ mov r12, rax
+ mov eax, ebx
+ test ebx, ebx
+ cjmp LABEL32
+ neg eax
+ mov ebp, CONST
+LABEL32:
+ cmp eax, CONST
+ cjmp LABEL36
+ mov ecx, CONST
+ nop dword [rax]
+LABEL45:
+ mov eax, eax
+ add rbp, CONST
+ mov rdx, rax
+ imul rax, rcx
+ shr rax, CONST
+ cmp edx, CONST
+ cjmp LABEL45
+ mov rdi, rbp
+ call CONST
+ sub rsp, CONST
+ mov rsi, rbp
+ mov r9d, ebx
+ mov r13, rax
+ lea rax, qword [rsp + CONST]
+ mov edx, CONST
+ mov rcx, -1
+ push rax
+ mov rdi, r13
+ lea r8, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ pop rsi
+ pop rdi
+ test rbp, rbp
+ cjmp LABEL63
+LABEL102:
+ cdqe
+ cmp rax, rbp
+ cjmp LABEL66
+LABEL63:
+ mov edx, CONST
+ mov rsi, r13
+ mov rdi, r12
+ call CONST
+LABEL83:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL73
+ add rsp, CONST
+ mov rax, r13
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL17:
+ lea rax, qword [rip + CONST]
+ mov r13, qword [rax + rcx*CONST]
+ jmp LABEL83
+LABEL9:
+ lea r13, qword [rip + CONST]
+ jmp LABEL83
+LABEL36:
+ mov rdi, rbp
+ call CONST
+ sub rsp, CONST
+ mov r9d, ebx
+ mov rsi, rbp
+ mov r13, rax
+ lea rax, qword [rsp + CONST]
+ mov rcx, -1
+ mov edx, CONST
+ push rax
+ lea r8, qword [rip + CONST]
+ mov rdi, r13
+ xor eax, eax
+ call CONST
+ pop rdx
+ pop rcx
+ jmp LABEL102
+LABEL73:
+ call CONST
+LABEL66:
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

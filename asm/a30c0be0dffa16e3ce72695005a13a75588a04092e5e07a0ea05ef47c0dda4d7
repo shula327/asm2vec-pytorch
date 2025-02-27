@@ -1,0 +1,137 @@
+ .name fcn.00005740
+ .offset 0000000000005740
+ .file dpkg-query
+ push r15
+ push r14
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ test rax, rax
+ cjmp LABEL10
+ mov rdx, qword [rax + CONST]
+ test rdx, rdx
+ cjmp LABEL13
+ mov r14, qword [rdx + CONST]
+ mov rdx, qword [rax]
+ test rdx, rdx
+ cjmp LABEL17
+LABEL93:
+ mov rax, qword [rax + CONST]
+ mov r12, qword [rdx + CONST]
+ test rax, rax
+ cjmp LABEL21
+LABEL97:
+ mov r15, qword [rax + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rcx, r14
+ mov edi, CONST
+ mov rsi, rax
+ mov rdx, r15
+ xor eax, eax
+ call CONST
+ mov rax, qword [r13 + CONST]
+ mov edx, CONST
+ xor edi, edi
+ lea rsi, qword [rip + CONST]
+ mov rax, qword [rax + CONST]
+ mov r14, qword [rax + CONST]
+ call CONST
+ mov rcx, r12
+ mov edi, CONST
+ mov rsi, rax
+ mov rdx, r14
+ xor eax, eax
+ call CONST
+LABEL10:
+ mov rdi, r13
+ xor ebx, ebx
+ lea r14, qword [rip + CONST]
+ call CONST
+ mov r12, rax
+ jmp LABEL51
+LABEL66:
+ mov esi, CONST
+ mov rdi, rbp
+ add ebx, CONST
+ call CONST
+ mov rsi, r15
+ mov rdi, rax
+ call CONST
+LABEL51:
+ mov rdi, r12
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL63
+ mov r15, qword [rip + CONST]
+ test ebx, ebx
+ cjmp LABEL66
+ mov rcx, r15
+ mov edx, CONST
+ mov esi, CONST
+ mov rdi, r14
+ call CONST
+ mov r15, qword [rip + CONST]
+ jmp LABEL66
+LABEL63:
+ mov rdi, r12
+ call CONST
+ test ebx, ebx
+ cjmp LABEL77
+LABEL122:
+ xor eax, eax
+ cmp qword [r13 + CONST], CONST
+ setne al
+ add rsp, CONST
+ add eax, ebx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL13:
+ mov rdx, qword [rax]
+ mov r14, qword [rdi + CONST]
+ test rdx, rdx
+ cjmp LABEL93
+LABEL17:
+ mov rax, qword [rax + CONST]
+ mov r12, qword [r13 + CONST]
+ test rax, rax
+ cjmp LABEL97
+LABEL21:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdx, r14
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdx, r12
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+ jmp LABEL10
+LABEL77:
+ mov rdx, qword [r13 + CONST]
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ call CONST
+ jmp LABEL122

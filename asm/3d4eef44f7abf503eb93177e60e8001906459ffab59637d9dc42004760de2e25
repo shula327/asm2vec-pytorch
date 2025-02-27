@@ -1,0 +1,33 @@
+ .name fcn.00010620
+ .offset 0000000000010620
+ .file dpkg
+ endbr64
+ push r12
+ test sil, sil
+ lea rax, [rip + CONST]
+ mov rcx, rdi
+ push rbp
+ lea rdx, [rip + CONST]
+ mov r12, rdi
+ mov ebp, esi
+ push rbx
+ cmove rdx, rax
+ xor eax, eax
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ call CONST
+ mov edi, CONST
+ call CONST
+ mov rdi, r12
+ mov rbx, rax
+ call CONST
+ mov byte [rbx + CONST], bpl
+ mov qword [rbx + CONST], rax
+ mov rax, qword [rip + CONST]
+ mov qword [rbx], CONST
+ mov qword [rip + CONST], rbx
+ mov qword [rax], rbx
+ pop rbx
+ pop rbp
+ pop r12
+ ret

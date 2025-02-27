@@ -1,0 +1,57 @@
+ .name fcn.0000b1e0
+ .offset 000000000000b1e0
+ .file gzip
+ push rbp
+ mov ecx, edi
+ push rbx
+ mov ebx, edi
+ sub rsp, CONST
+ movzx esi, word [rip + CONST]
+ mov eax, dword [rip + CONST]
+ shl esi, cl
+ mov ecx, dword [rip + CONST]
+ cmp ecx, edi
+ cjmp LABEL10
+ lea rbp, qword [rip + CONST]
+ jmp LABEL12
+LABEL28:
+ lea eax, dword [rdx + CONST]
+ mov dword [rip + CONST], eax
+ movzx eax, byte [rbp + rdx]
+ mov dword [rip + CONST], eax
+LABEL37:
+ mov dword [rip + CONST], CONST
+ mov ecx, CONST
+ cmp ebx, CONST
+ cjmp LABEL10
+LABEL12:
+ sub ebx, ecx
+ mov edx, dword [rip + CONST]
+ mov ecx, ebx
+ shl eax, cl
+ or esi, eax
+ cmp edx, dword [rip + CONST]
+ mov word [rip + CONST], si
+ cjmp LABEL28
+ mov edi, CONST
+ call CONST
+ mov dword [rip + CONST], eax
+ cmp eax, -1
+ cjmp LABEL33
+ mov dword [rip + CONST], CONST
+ movzx esi, word [rip + CONST]
+ xor eax, eax
+ jmp LABEL37
+LABEL10:
+ sub ecx, ebx
+ shr eax, cl
+ mov dword [rip + CONST], ecx
+ or eax, esi
+ mov word [rip + CONST], ax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL33:
+ movzx esi, word [rip + CONST]
+ jmp LABEL37

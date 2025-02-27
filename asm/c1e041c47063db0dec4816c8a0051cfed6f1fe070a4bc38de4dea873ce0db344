@@ -1,0 +1,30 @@
+ .name fcn.00076f90
+ .offset 0000000000076f90
+ .file bash
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL7
+ sub eax, CONST
+ mov rdx, qword [rip + CONST]
+ mov dword [rip + CONST], eax
+ cdqe
+ mov rax, qword [rdx + rax*CONST]
+LABEL24:
+ mov rdx, qword [rip + CONST]
+ mov qword [rax + CONST], rbp
+ mov qword [rax + CONST], rbx
+ mov qword [rax], rdx
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL7:
+ mov edi, CONST
+ call CONST
+ jmp LABEL24

@@ -1,0 +1,34 @@
+ .name fcn.0002aab0
+ .offset 000000000002aab0
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rcx
+ movabs rcx, CONST
+ push rbx
+ mov rbx, rdx
+ movabs rdx, CONST
+ sub rsp, CONST
+ call CONST
+ cmp rax, rbx
+ cjmp LABEL10
+ cmp rax, rbp
+ cjmp LABEL12
+LABEL27:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL12:
+ call CONST
+ mov dword [rax], CONST
+ add rsp, CONST
+ movabs rax, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL10:
+ call CONST
+ mov dword [rax], CONST
+ movabs rax, CONST
+ jmp LABEL27

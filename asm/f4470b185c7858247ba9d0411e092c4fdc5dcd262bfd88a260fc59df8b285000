@@ -1,0 +1,25 @@
+ .name fcn.00019b60
+ .offset 0000000000019b60
+ .file install
+ endbr64
+ movsx rcx, byte [rdi]
+ test cl, cl
+ cjmp LABEL3
+ xor eax, eax
+ nop
+LABEL11:
+ rol rax, CONST
+ add rdi, CONST
+ add rax, rcx
+ movsx rcx, byte [rdi]
+ test cl, cl
+ cjmp LABEL11
+ xor edx, edx
+ div rsi
+ mov r8, rdx
+ mov rax, r8
+ ret
+LABEL3:
+ xor r8d, r8d
+ mov rax, r8
+ ret

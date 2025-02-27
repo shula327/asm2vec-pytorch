@@ -1,0 +1,38 @@
+ .name fcn.0004ff20
+ .offset 000000000004ff20
+ .file bash
+ cmp qword [rip + CONST], CONST
+ push rbx
+ cjmp LABEL2
+ cmp qword [rip + CONST], CONST
+ cjmp LABEL4
+LABEL25:
+ cmp qword [rip + CONST], CONST
+ cjmp LABEL6
+ pop rbx
+ ret
+LABEL6:
+ mov edi, CONST
+ call CONST
+ pop rbx
+ mov qword [rip + CONST], rax
+ ret
+LABEL2:
+ xor esi, esi
+ xor edi, edi
+ call CONST
+ mov edi, CONST
+ mov dword [rax + CONST], CONST
+ mov rbx, rax
+ mov qword [rip + CONST], rax
+ mov qword [rip + CONST], rax
+ call CONST
+ cmp qword [rip + CONST], CONST
+ mov qword [rbx + CONST], rax
+ cjmp LABEL25
+ nop dword [rax]
+LABEL4:
+ mov edi, CONST
+ call CONST
+ mov qword [rip + CONST], rax
+ jmp LABEL25

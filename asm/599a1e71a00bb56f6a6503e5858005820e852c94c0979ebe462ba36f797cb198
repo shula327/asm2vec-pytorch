@@ -1,0 +1,66 @@
+ .name fcn.00004e40
+ .offset 0000000000004e40
+ .file umount
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+ mov r13, rax
+ call CONST
+ mov r12, rax
+ test rax, rax
+ cjmp LABEL11
+ lea rsi, qword [rip + CONST]
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, r12
+ mov rsi, rax
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL24
+LABEL46:
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+ mov rax, r12
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL24:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov rdi, r12
+ xor r12d, r12d
+ call CONST
+ jmp LABEL46
+LABEL6:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+LABEL57:
+ xor edi, edi
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL11:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ jmp LABEL57

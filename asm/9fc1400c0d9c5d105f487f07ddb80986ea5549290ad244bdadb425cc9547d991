@@ -1,0 +1,28 @@
+ .name fcn.00006a70
+ .offset 0000000000006a70
+ .file gzip
+ mov eax, dword [rip + CONST]
+ mov qword [rip + CONST], -1
+ mov qword [rip + CONST], -1
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL5
+LABEL19:
+ ret
+LABEL5:
+ mov rax, qword [rip + CONST]
+ mov edx, dword [rip + CONST]
+ mov qword [rip + CONST], rax
+ test edx, edx
+ cjmp LABEL11
+LABEL20:
+ mov rax, qword [rip + CONST]
+ mov qword [rip + CONST], rax
+ mov rax, qword [rip + CONST]
+ mov qword [rip + CONST], rax
+ ret
+LABEL11:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL19
+ jmp LABEL20

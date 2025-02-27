@@ -1,0 +1,21 @@
+ .name entry.init0
+ .offset 00000000000065b0
+ .file grep
+LABEL15:
+ lea rdi, [rip + CONST]
+ lea rsi, [rip + CONST]
+ sub rsi, rdi
+ mov rax, rsi
+ shr rsi, CONST
+ sar rax, CONST
+ add rsi, rax
+ sar rsi, CONST
+ cjmp LABEL8
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL8
+ jmp rax
+LABEL8:
+ ret
+ endbr64
+ jmp LABEL15

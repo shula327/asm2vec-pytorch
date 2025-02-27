@@ -1,0 +1,33 @@
+ .name fcn.00017060
+ .offset 0000000000017060
+ .file install
+ and edi, CONST
+ push rbx
+ mov rbx, rsi
+ cjmp LABEL3
+ mov r8, qword [rip + CONST]
+ xor esi, esi
+ lea rcx, qword [rip + CONST]
+ lea rdx, qword [rip + CONST]
+ mov edi, CONST
+ call CONST
+ test rax, rax
+ mov qword [rbx], rax
+ pop rbx
+ setne al
+ ret
+LABEL3:
+ mov edi, CONST
+ call CONST
+ mov qword [rbx], rax
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL20
+ call CONST
+ mov eax, CONST
+ pop rbx
+ ret
+LABEL20:
+ xor eax, eax
+ pop rbx
+ ret

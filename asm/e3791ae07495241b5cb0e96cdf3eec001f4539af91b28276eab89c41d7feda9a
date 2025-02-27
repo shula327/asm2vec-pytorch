@@ -1,0 +1,61 @@
+ .name fcn.00079cd0
+ .offset 0000000000079cd0
+ .file bash
+ movsxd rax, dword [rip + CONST]
+ mov rsi, qword [rip + CONST]
+ push rbp
+ add rax, CONST
+ mov rbp, qword [rsi + rax*CONST]
+ lea r8, qword [rax*CONST]
+ movzx eax, byte [rbp]
+ cmp al, CONST
+ cjmp LABEL8
+ mov edx, eax
+ and edx, CONST
+ cmp dl, CONST
+ cjmp LABEL12
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL14
+LABEL26:
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ nop dword [rax]
+LABEL12:
+ cmp al, CONST
+ cjmp LABEL24
+ cmp al, CONST
+ cjmp LABEL26
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL26
+ mov rdi, rbp
+ call CONST
+ test eax, eax
+ cjmp LABEL26
+LABEL14:
+ mov rdx, qword [rsi + r8 + CONST]
+ mov rsi, qword [rsi + r8 + CONST]
+ mov rdi, rbp
+ xor ecx, ecx
+ call CONST
+ add dword [rip + CONST], CONST
+ pop rbp
+ ret
+LABEL24:
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL26
+LABEL51:
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL26
+ jmp LABEL14
+LABEL8:
+ movzx eax, byte [rbp + CONST]
+ test al, al
+ cjmp LABEL14
+ cmp al, CONST
+ cjmp LABEL26
+ jmp LABEL51

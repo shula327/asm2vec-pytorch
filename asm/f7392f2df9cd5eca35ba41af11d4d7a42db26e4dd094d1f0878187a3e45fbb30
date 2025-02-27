@@ -1,0 +1,20 @@
+ .name fcn.00006f20
+ .offset 0000000000006f20
+ .file ls
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ lea rax, qword [rip + CONST]
+ cmp rdi, rax
+ cjmp LABEL11
+ pop rbx
+ jmp CONST
+LABEL11:
+ pop rbx
+ ret

@@ -1,0 +1,46 @@
+ .name fcn.0004bb30
+ .offset 000000000004bb30
+ .file bash
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdi
+ lea rdi, qword [rsp + CONST]
+ mov dword [rsp + CONST], esi
+ lea rsi, qword [rsp + CONST]
+ mov dword [rsp + CONST], edx
+ mov qword [rsp + CONST], rcx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ xor edi, edi
+ lea rsi, qword [rsp + CONST]
+ call CONST
+ lea rsi, qword [rsp + CONST]
+ mov edi, CONST
+ call CONST
+ test rbx, rbx
+ je CONST
+ mov eax, dword [rbx + CONST]
+ mov dword [rsp + CONST], eax
+ shr eax, CONST
+ and eax, CONST
+ cmp dword [rbx], CONST
+ mov dword [rsp + CONST], eax
+ je CONST
+ mov dword [rsp + CONST], CONST
+ lea rsi, qword [rsp + CONST]
+ mov edx, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor esi, esi
+ lea rdi, qword [rip + CONST]
+ and dword [rax + CONST], CONST
+ call CONST

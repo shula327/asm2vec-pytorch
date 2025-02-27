@@ -1,0 +1,24 @@
+ .name fcn.0002ce80
+ .offset 000000000002ce80
+ .file dpkg
+ endbr64
+ push r12
+ mov esi, CONST
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov r12, qword [rip + CONST]
+ mov rdi, r12
+ call qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL10
+ mov rdi, rax
+ mov rsi, rbp
+ call CONST
+LABEL10:
+ add rsp, CONST
+ mov rsi, rbp
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST

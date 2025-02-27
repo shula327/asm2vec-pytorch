@@ -1,0 +1,17 @@
+ .name fcn.00006e20
+ .offset 0000000000006e20
+ .file diff3
+ sub rsp, CONST
+ mov edi, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+ cmp byte [rax], CONST
+ lea rdx, qword [rip + CONST]
+ cmove rax, rdx
+ add rsp, CONST
+ ret
+LABEL4:
+ lea rax, qword [rip + CONST]
+ add rsp, CONST
+ ret

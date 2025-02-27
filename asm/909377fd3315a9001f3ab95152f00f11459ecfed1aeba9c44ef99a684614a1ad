@@ -1,0 +1,123 @@
+ .name fcn.000a9d20
+ .offset 00000000000a9d20
+ .file perl5.30.0
+ push r15
+ push r14
+ push r13
+ xor r13d, r13d
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rax, qword [rdi + CONST]
+ test rax, rax
+ cjmp LABEL13
+ mov rax, qword [rax + CONST]
+ lea rdx, qword [rip + CONST]
+ cmp rax, rdx
+ setne cl
+ test rax, rax
+ setne dl
+ test cl, dl
+ cjmp LABEL21
+ lea rdx, qword [rip + CONST]
+ cmp rax, rdx
+ cjmp LABEL21
+ movzx r13d, byte [rax + CONST]
+ shr r13b, CONST
+ and r13d, CONST
+LABEL13:
+ mov rax, qword [rbp + CONST]
+ test rax, rax
+ cjmp LABEL30
+ mov rcx, qword [rbp + CONST]
+ sub rcx, rax
+ mov rax, qword [rbp + CONST]
+ add rax, rcx
+ sub rax, qword [rbp + CONST]
+ cmp rax, qword [rbp + CONST]
+ cjmp LABEL30
+ lea rax, qword [rbx + CONST]
+ lea r15, qword [rip + CONST]
+ mov qword [rsp + CONST], rax
+ jmp LABEL41
+LABEL60:
+ mov rcx, qword [r14 + CONST]
+ mov rdx, r15
+ mov esi, CONST
+ mov rdi, rbx
+ xor eax, eax
+ call CONST
+ mov edx, dword [r14 + CONST]
+ cmp edx, CONST
+ cjmp LABEL50
+ sub edx, CONST
+ mov dword [r14 + CONST], edx
+LABEL41:
+ mov rsi, r12
+ mov rdi, rbx
+ call CONST
+ mov r14, rax
+ cmp rax, qword [rsp + CONST]
+ cjmp LABEL58
+ test r13d, r13d
+ cjmp LABEL60
+ mov rsi, r12
+ mov rdi, rbx
+ call CONST
+ mov rsi, r14
+ mov rdi, rbx
+ call CONST
+ mov rsi, qword [rbp + CONST]
+ test rsi, rsi
+ cjmp LABEL69
+ mov edx, CONST
+ mov rdi, rbx
+ call CONST
+LABEL69:
+ mov rsi, qword [rbp + CONST]
+ test rsi, rsi
+ cjmp LABEL75
+ mov edx, CONST
+ mov rdi, rbx
+ call CONST
+LABEL75:
+ mov rsi, qword [rbp + CONST]
+ test rsi, rsi
+ cjmp LABEL60
+ mov edx, CONST
+ mov rdi, rbx
+ call CONST
+ jmp LABEL60
+LABEL58:
+ mov rax, qword [rbp + CONST]
+ test rax, rax
+ cjmp LABEL30
+ mov rcx, qword [rbp + CONST]
+ sub rcx, rax
+ mov rax, qword [rbp + CONST]
+ add rax, rcx
+ sub rax, qword [rbp + CONST]
+ cmp rax, qword [rbp + CONST]
+ cjmp LABEL30
+ mov qword [rbp + CONST], rax
+LABEL30:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL21:
+ xor r13d, r13d
+ jmp LABEL13
+LABEL50:
+ mov rsi, r14
+ mov rdi, rbx
+ call CONST
+ jmp LABEL41

@@ -1,0 +1,16 @@
+ .name fcn.000055a0
+ .offset 00000000000055a0
+ .file setpriv
+ push r13
+ mov r13, rdi
+ push r12
+ mov r12, rsi
+ sub rsp, CONST
+ call CONST
+ mov edi, dword [rip + CONST]
+ mov rcx, r13
+ mov rdx, r12
+ mov dword [rax], CONST
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ call CONST

@@ -1,0 +1,38 @@
+ .name fcn.00010d90
+ .offset 0000000000010d90
+ .file find
+ push r12
+ push rbx
+ mov ebx, edi
+ sub rsp, CONST
+ mov r12, qword [rip + CONST]
+ test r12, r12
+ cjmp LABEL6
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL8
+ test dil, dil
+ cjmp LABEL10
+LABEL8:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret
+LABEL10:
+ mov rdi, r12
+ mov r12, qword [r12 + CONST]
+ call CONST
+ test r12, r12
+ cjmp LABEL10
+ mov qword [rip + CONST], CONST
+LABEL6:
+ movzx edi, bl
+ call CONST
+ mov byte [rip + CONST], bl
+ mov qword [rip + CONST], rax
+ mov r12, rax
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret

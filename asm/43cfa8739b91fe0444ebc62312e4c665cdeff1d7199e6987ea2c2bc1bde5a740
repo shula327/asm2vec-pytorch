@@ -1,0 +1,47 @@
+ .name fcn.00029a10
+ .offset 0000000000029a10
+ .file find
+ push r13
+ mov r13, rsi
+ push r12
+ shl r13, CONST
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov ebx, edx
+ sub rsp, CONST
+ mov rax, qword [rdi]
+ mov rsi, qword [rax + r13]
+ mov rdx, qword [rax + r13 + CONST]
+ call CONST
+ cmp rax, -1
+ cjmp LABEL15
+ mov rdi, qword [r12]
+ mov rcx, rax
+ mov edx, ebx
+ shl rcx, CONST
+ and edx, CONST
+ add rcx, rdi
+ mov esi, edx
+ mov edx, dword [rcx + CONST]
+ shl esi, CONST
+ and edx, CONST
+ or edx, esi
+ mov dword [rcx + CONST], edx
+ or bx, word [rdi + r13 + CONST]
+ and edx, CONST
+ and ebx, CONST
+ shl ebx, CONST
+ or ebx, CONST
+ or ebx, edx
+ mov rdx, qword [r12 + CONST]
+ mov dword [rcx + CONST], ebx
+ mov qword [rdx + rax*CONST], rbp
+LABEL15:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

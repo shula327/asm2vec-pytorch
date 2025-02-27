@@ -1,0 +1,21 @@
+ .name fcn.0002a890
+ .offset 000000000002a890
+ .file dpkg
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi + CONST]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ pxor xmm0, xmm0
+ movups xmmword [rbx], xmm0
+ movups xmmword [rbx + CONST], xmm0
+ movups xmmword [rbx + CONST], xmm0
+ movups xmmword [rbx + CONST], xmm0
+ movups xmmword [rbx + CONST], xmm0
+ pop rbx
+ ret

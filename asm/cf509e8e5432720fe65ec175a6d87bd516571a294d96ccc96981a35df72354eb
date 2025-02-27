@@ -1,0 +1,43 @@
+ .name fcn.0000cb40
+ .offset 000000000000cb40
+ .file install
+ endbr64
+ push r13
+ mov r13, rdi
+ mov edi, CONST
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ call CONST
+ mov rdi, r13
+ mov rbp, rax
+ call CONST
+ mov rdi, qword [rip + CONST]
+ mov rsi, rbp
+ mov qword [rbp], r12
+ mov qword [rbp + CONST], rax
+ mov qword [rbp + CONST], rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL21
+ mov rbx, rax
+ xor eax, eax
+ cmp rbp, rbx
+ cjmp LABEL25
+ mov rdi, qword [rbp + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rax, qword [rbx + CONST]
+LABEL25:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL21:
+ call CONST

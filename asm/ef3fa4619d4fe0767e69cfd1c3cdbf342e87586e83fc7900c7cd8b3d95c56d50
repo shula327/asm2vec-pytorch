@@ -1,0 +1,122 @@
+ .name fcn.000082c0
+ .offset 00000000000082c0
+ .file lsipc
+ push r13
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rdi + CONST]
+ test rdi, rdi
+ cjmp LABEL8
+ mov r13d, dword [r12]
+ test r13d, r13d
+ cjmp LABEL8
+ mov esi, CONST
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL16
+ mov qword [r12 + CONST], rax
+ xor ebx, ebx
+ jmp LABEL19
+LABEL63:
+ mov rbp, qword [r12 + CONST]
+ mov r13d, dword [r12]
+LABEL19:
+ mov rax, rbx
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, ebx
+ shl rax, CONST
+ mov edi, r13d
+ add rbp, rax
+ xor eax, eax
+ call CONST
+ mov dword [rbp], eax
+ test eax, eax
+ cjmp LABEL33
+ mov edi, dword [r12]
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, ebx
+ xor eax, eax
+ call CONST
+ mov dword [rbp + CONST], eax
+ test eax, eax
+ cjmp LABEL42
+ mov edi, dword [r12]
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, ebx
+ xor eax, eax
+ call CONST
+ mov dword [rbp + CONST], eax
+ test eax, eax
+ cjmp LABEL51
+ mov edi, dword [r12]
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, ebx
+ xor eax, eax
+ call CONST
+ mov dword [rbp + CONST], eax
+ test eax, eax
+ cjmp LABEL60
+ add rbx, CONST
+ cmp rbx, qword [r12 + CONST]
+ cjmp LABEL63
+LABEL8:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL16:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ call CONST
+LABEL33:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL42:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL51:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL60:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ lea rdx, qword [rip + CONST]
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST

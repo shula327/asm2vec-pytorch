@@ -1,0 +1,32 @@
+ .name fcn.000013e0
+ .offset 00000000000013e0
+ .file locale-check
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12, rsi
+ push rbp
+ mov ebp, edi
+ mov rdi, rsi
+ call CONST
+ test rax, rax
+ cjmp LABEL9
+ lea rsi, qword [rip + CONST]
+ mov edi, ebp
+ call CONST
+ test rax, rax
+ cjmp LABEL14
+LABEL9:
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL14:
+ pop rbp
+ mov rcx, r13
+ mov rdx, r12
+ mov edi, CONST
+ pop r12
+ lea rsi, qword [rip + CONST]
+ pop r13
+ jmp CONST

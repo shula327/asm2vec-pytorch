@@ -1,0 +1,93 @@
+ .name fcn.00019ff0
+ .offset 0000000000019ff0
+ .file install
+ endbr64
+ push r15
+ push r14
+ mov r14, rdi
+ push r13
+ lea r13, [rsi + CONST]
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov rcx, qword [rdi]
+ mov r12, qword [rdi + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbx, qword [rdi + CONST]
+ lea r15, [rsp + CONST]
+ jmp LABEL18
+LABEL36:
+ cmp rbx, rbp
+ cjmp LABEL20
+LABEL61:
+ mov rax, rbx
+ xor edx, edx
+ sub rax, rbp
+ div r13
+ mov rdi, rdx
+ mov rsi, rax
+ sub rbx, rdx
+ mov rax, r12
+ xor edx, edx
+ div r13
+ cmp r12, rbx
+ cjmp LABEL32
+ lea rbx, [rdi + CONST]
+ mov r12, rdx
+LABEL18:
+ cmp rbx, rbp
+ cjmp LABEL36
+ mov rax, rbx
+ xor edx, edx
+ nop
+LABEL44:
+ shl rax, CONST
+ add rdx, CONST
+ add rax, CONST
+ cmp rbp, rax
+ cjmp LABEL44
+ mov rdi, rcx
+ mov rsi, r15
+ mov qword [rsp + CONST], rcx
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ mov rdx, r15
+ nop dword [rax + rax]
+LABEL59:
+ movzx eax, byte [rdx]
+ shl rbx, CONST
+ shl r12, CONST
+ add rdx, CONST
+ add rbx, CONST
+ add r12, rax
+ cmp rbp, rbx
+ cjmp LABEL59
+ cmp rbx, rbp
+ cjmp LABEL61
+LABEL20:
+ mov qword [r14 + CONST], CONST
+ mov qword [r14 + CONST], CONST
+LABEL79:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL66
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL32:
+ mov qword [r14 + CONST], rax
+ mov r12, rdx
+ mov qword [r14 + CONST], rsi
+ jmp LABEL79
+LABEL66:
+ call CONST

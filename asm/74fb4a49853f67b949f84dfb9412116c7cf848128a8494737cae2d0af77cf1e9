@@ -1,0 +1,59 @@
+ .name fcn.00006e30
+ .offset 0000000000006e30
+ .file setpriv
+ endbr64
+ push r12
+ mov r10, rsi
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdx
+ mov qword [rsp + CONST], rcx
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], r9
+ test al, al
+ cjmp LABEL11
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm1
+ movaps xmmword [rsp + CONST], xmm2
+ movaps xmmword [rsp + CONST], xmm3
+ movaps xmmword [rsp + CONST], xmm4
+ movaps xmmword [rsp + CONST], xmm5
+ movaps xmmword [rsp + CONST], xmm6
+ movaps xmmword [rsp + CONST], xmm7
+LABEL11:
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, [rsp + CONST]
+ mov rdx, r10
+ xor r12d, r12d
+ mov qword [rsp + CONST], rax
+ lea rcx, [rsp + CONST]
+ lea rax, [rsp + CONST]
+ mov esi, CONST
+ lea rdi, [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ call CONST
+ test eax, eax
+ cjmp LABEL36
+ mov rsi, qword [rsp + CONST]
+ mov rdi, rbp
+ movsxd rdx, eax
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ mov r12, rax
+ call CONST
+LABEL36:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL46
+ add rsp, CONST
+ mov rax, r12
+ pop rbp
+ pop r12
+ ret
+LABEL46:
+ call CONST

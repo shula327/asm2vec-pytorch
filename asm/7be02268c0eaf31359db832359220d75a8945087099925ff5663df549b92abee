@@ -1,0 +1,80 @@
+ .name fcn.000a2df0
+ .offset 00000000000a2df0
+ .file bash
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test edi, CONST
+ cjmp LABEL5
+ mov byte [rsp + CONST], CONST
+ mov eax, CONST
+LABEL5:
+ test dil, CONST
+ cjmp LABEL9
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL9:
+ test dil, CONST
+ cjmp LABEL14
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL14:
+ cdqe
+ mov byte [rsp + rax + CONST], CONST
+ xor eax, eax
+ test dil, CONST
+ cjmp LABEL22
+ mov byte [rsp + CONST], CONST
+ mov eax, CONST
+LABEL22:
+ test dil, CONST
+ cjmp LABEL26
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL26:
+ test dil, CONST
+ cjmp LABEL31
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL31:
+ cdqe
+ mov byte [rsp + rax + CONST], CONST
+ xor eax, eax
+ test dil, CONST
+ cjmp LABEL39
+ mov byte [rsp + CONST], CONST
+ mov eax, CONST
+LABEL39:
+ test dil, CONST
+ cjmp LABEL43
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL43:
+ and edi, CONST
+ cjmp LABEL48
+ movsxd rdx, eax
+ add eax, CONST
+ mov byte [rsp + rdx + CONST], CONST
+LABEL48:
+ cdqe
+ lea rcx, qword [rsp + CONST]
+ lea rdx, qword [rsp + CONST]
+ mov edi, CONST
+ mov byte [rsp + rax + CONST], CONST
+ lea r8, qword [rsp + CONST]
+ xor eax, eax
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL63
+ add rsp, CONST
+ ret
+LABEL63:
+ call CONST

@@ -1,0 +1,19 @@
+ .name fcn.00025d40
+ .offset 0000000000025d40
+ .file find
+ mov r8d, edi
+ mov rdi, rdx
+ mov edx, esi
+ shl edx, CONST
+ and edx, CONST
+ or edx, CONST
+ and esi, CONST
+ cjmp LABEL7
+ mov rsi, rdi
+ xor eax, eax
+ mov edi, r8d
+ jmp CONST
+LABEL7:
+ mov esi, edx
+ xor eax, eax
+ jmp CONST

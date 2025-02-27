@@ -1,0 +1,37 @@
+ .name fcn.00028830
+ .offset 0000000000028830
+ .file find
+ mov rax, r8
+ lea r8, qword [rsi + rsi*CONST]
+ mov rsi, qword [rdi + CONST]
+ lea r8, qword [rsi + r8*CONST]
+ mov rsi, qword [r8 + CONST]
+ cmp rsi, rax
+ cjmp LABEL6
+ mov r8, qword [r8 + CONST]
+ cmp r8, rax
+ cjmp LABEL9
+ xor r10d, r10d
+ cmp rsi, rax
+ sete r10b
+ cmp r8, rax
+ cjmp LABEL14
+ xor r8d, r8d
+ cmp rsi, rax
+ cjmp LABEL17
+LABEL28:
+ mov eax, r8d
+ ret
+LABEL14:
+ or r10d, CONST
+LABEL17:
+ mov r8, r9
+ mov esi, r10d
+ jmp CONST
+LABEL9:
+ mov r8d, CONST
+ mov eax, r8d
+ ret
+LABEL6:
+ mov r8d, CONST
+ jmp LABEL28

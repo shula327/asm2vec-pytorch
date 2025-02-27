@@ -1,0 +1,17 @@
+ .name sym.Perl_sv_dup_inc
+ .offset 000000000011b5a0
+ .file perl5.30.0
+ endbr64
+ xor eax, eax
+ test rsi, rsi
+ cjmp LABEL3
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ add dword [rax + CONST], CONST
+LABEL7:
+ add rsp, CONST
+ ret
+LABEL3:
+ ret

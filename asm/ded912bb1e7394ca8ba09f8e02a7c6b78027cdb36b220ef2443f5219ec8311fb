@@ -1,0 +1,19 @@
+ .name fcn.0001fe00
+ .offset 000000000001fe00
+ .file dpkg
+ endbr64
+ push rbp
+ call CONST
+ mov esi, CONST
+ mov rdi, rax
+ mov rbp, rax
+ call CONST
+ test rax, rax
+ cjmp LABEL8
+ mov byte [rax], CONST
+ mov rdi, rbp
+ call CONST
+LABEL8:
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

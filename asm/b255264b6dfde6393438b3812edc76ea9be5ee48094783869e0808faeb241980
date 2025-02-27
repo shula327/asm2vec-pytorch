@@ -1,0 +1,15 @@
+ .name fcn.00006580
+ .offset 0000000000006580
+ .file diff3
+ push rbx
+ mov rbx, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL4
+ test rbx, rbx
+ cjmp LABEL6
+LABEL4:
+ pop rbx
+ ret
+LABEL6:
+ call CONST

@@ -1,0 +1,19 @@
+ .name fcn.00009e10
+ .offset 0000000000009e10
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, qword [rip + CONST]
+ test rbx, rbx
+ cjmp LABEL4
+ nop dword [rax]
+LABEL10:
+ mov rdi, rbx
+ mov rbx, qword [rbx]
+ call CONST
+ test rbx, rbx
+ cjmp LABEL10
+LABEL4:
+ mov qword [rip + CONST], CONST
+ pop rbx
+ ret

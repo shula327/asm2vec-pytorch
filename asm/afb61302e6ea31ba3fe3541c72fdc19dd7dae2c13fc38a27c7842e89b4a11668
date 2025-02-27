@@ -1,0 +1,115 @@
+ .name fcn.0012a600
+ .offset 000000000012a600
+ .file perl5.30.0
+ push r12
+ xor ecx, ecx
+ mov r12, rdi
+ push rbp
+ mov rbp, rsi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ mov edx, dword [rbp + CONST]
+ mov eax, edx
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL15
+ mov rax, qword [rbp]
+ mov rbx, qword [rbp + CONST]
+ mov rax, qword [rax + CONST]
+ mov qword [rsp], rax
+LABEL75:
+ and edx, CONST
+ cjmp LABEL21
+ test rax, rax
+ cjmp LABEL23
+ mov rdx, qword [rbp]
+ mov qword [rdx + CONST], rax
+ and dword [rbp + CONST], CONST
+LABEL21:
+ mov edx, eax
+ test eax, eax
+ cjmp LABEL29
+ jmp LABEL30
+LABEL36:
+ not byte [rbx]
+ add rbx, CONST
+ sub edx, CONST
+ cjmp LABEL30
+LABEL29:
+ test bl, CONST
+ cjmp LABEL36
+ cmp edx, CONST
+ cjmp LABEL38
+ sub edx, CONST
+ mov ecx, edx
+ shr ecx, CONST
+ mov eax, ecx
+ lea rax, qword [rbx + rax*CONST + CONST]
+LABEL47:
+ not qword [rbx]
+ add rbx, CONST
+ cmp rbx, rax
+ cjmp LABEL47
+ neg ecx
+ lea edx, dword [rdx + rcx*CONST]
+LABEL88:
+ test edx, edx
+ cjmp LABEL30
+ sub edx, CONST
+ lea rdx, qword [rax + rdx + CONST]
+ nop dword [rax]
+LABEL58:
+ not byte [rax]
+ add rax, CONST
+ cmp rax, rdx
+ cjmp LABEL58
+LABEL30:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL61
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL15:
+ mov rdx, rsp
+ xor ecx, ecx
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+ mov edx, dword [rbp + CONST]
+ mov rbx, rax
+ mov rax, qword [rsp]
+ jmp LABEL75
+LABEL23:
+ mov rdx, rsp
+ mov rsi, rbx
+ mov rdi, r12
+ call CONST
+ test rax, rax
+ cjmp LABEL81
+ mov rax, qword [rsp]
+ mov rdx, qword [rbp]
+ mov qword [rdx + CONST], rax
+ and dword [rbp + CONST], CONST
+ jmp LABEL21
+LABEL38:
+ mov rax, rbx
+ jmp LABEL88
+LABEL81:
+ mov rax, qword [r12 + CONST]
+ lea rdx, qword [rip + CONST]
+ lea rsi, qword [rip + CONST]
+ mov rdi, r12
+ movzx eax, word [rax + CONST]
+ and eax, CONST
+ mov rdx, qword [rdx + rax*CONST]
+ xor eax, eax
+ call CONST
+LABEL61:
+ call CONST

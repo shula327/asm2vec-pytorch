@@ -1,0 +1,23 @@
+ .name fcn.00004140
+ .offset 0000000000004140
+ .file diff3
+ sub rsp, CONST
+ mov rdi, qword [rip + CONST]
+ test byte [rdi], CONST
+ cjmp LABEL3
+ call CONST
+ test eax, eax
+ cjmp LABEL6
+ add rsp, CONST
+ ret
+LABEL3:
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL6:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ call CONST
+ mov rdi, rax
+ call CONST
+ nop word cs:[rax + rax]

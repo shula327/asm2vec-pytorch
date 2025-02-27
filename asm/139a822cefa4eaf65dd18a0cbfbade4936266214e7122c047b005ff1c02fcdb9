@@ -1,0 +1,52 @@
+ .name fcn.000040a0
+ .offset 00000000000040a0
+ .file diff3
+ push r13
+ mov r13, rcx
+ mov rcx, rdi
+ push r12
+ mov r12, rdx
+ mov edx, CONST
+ push rbp
+ mov ebp, esi
+ mov esi, CONST
+ push rbx
+ mov rbx, rdi
+ lea rdi, qword [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ test bpl, bpl
+ cjmp LABEL15
+ cmp r13, CONST
+ cjmp LABEL17
+ add rsp, CONST
+ lea r8, qword [r12 + r13 + CONST]
+ mov rcx, r12
+ mov rdi, rbx
+ lea rdx, qword [rip + CONST]
+ pop rbx
+ mov esi, CONST
+ pop rbp
+ xor eax, eax
+ pop r12
+ pop r13
+ jmp CONST
+LABEL15:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL17:
+ add rsp, CONST
+ mov rcx, r12
+ mov rdi, rbx
+ mov esi, CONST
+ pop rbx
+ lea rdx, qword [rip + CONST]
+ pop rbp
+ xor eax, eax
+ pop r12
+ pop r13
+ jmp CONST

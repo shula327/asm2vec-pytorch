@@ -1,0 +1,17 @@
+ .name fcn.000036d0
+ .offset 00000000000036d0
+ .file test
+ movzx eax, byte [rdi + CONST]
+ sub eax, CONST
+ cmp al, CONST
+ cjmp LABEL3
+ lea rdx, qword [rip + CONST]
+ movzx eax, al
+ movsxd rax, dword [rdx + rax*CONST]
+ add rax, rdx
+ jmp rax
+ mov eax, CONST
+ ret
+LABEL3:
+ xor eax, eax
+ ret

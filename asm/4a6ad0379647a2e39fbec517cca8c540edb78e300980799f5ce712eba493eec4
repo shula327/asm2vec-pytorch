@@ -1,0 +1,30 @@
+ .name fcn.0001a150
+ .offset 000000000001a150
+ .file install
+ endbr64
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rdi]
+ call CONST
+ mov r12d, eax
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov rdx, CONST
+ mov r13d, dword [rax]
+ mov rbx, rax
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov dword [rbx], r13d
+ add rsp, CONST
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

@@ -1,0 +1,16 @@
+ .name fcn.00010ea0
+ .offset 0000000000010ea0
+ .file dpkg
+ endbr64
+ push r12
+ mov r12d, edi
+ test byte [rip + CONST], CONST
+ cjmp LABEL4
+ call CONST
+ cmp dword [rax], CONST
+ mov eax, CONST
+ cmove r12d, eax
+LABEL4:
+ mov eax, r12d
+ pop r12
+ ret

@@ -1,0 +1,18 @@
+ .name sym._obstack_memory_used
+ .offset 0000000000025750
+ .file grep
+ endbr64
+ mov rax, qword [rdi + CONST]
+ xor r8d, r8d
+ test rax, rax
+ cjmp LABEL4
+LABEL10:
+ mov rdx, qword [rax]
+ sub rdx, rax
+ mov rax, qword [rax + CONST]
+ add r8, rdx
+ test rax, rax
+ cjmp LABEL10
+LABEL4:
+ mov rax, r8
+ ret

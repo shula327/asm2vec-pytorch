@@ -1,0 +1,26 @@
+ .name fcn.0002ab30
+ .offset 000000000002ab30
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi + CONST]
+ test rdi, rdi
+ cjmp LABEL5
+ call CONST
+ test rax, rax
+ cjmp LABEL5
+ mov eax, dword [rax + CONST]
+ mov dword [rbx + CONST], eax
+LABEL5:
+ mov rdi, qword [rbx + CONST]
+ test rdi, rdi
+ cjmp LABEL13
+ call CONST
+ test rax, rax
+ cjmp LABEL13
+ mov eax, dword [rax + CONST]
+ mov dword [rbx + CONST], eax
+LABEL13:
+ pop rbx
+ ret

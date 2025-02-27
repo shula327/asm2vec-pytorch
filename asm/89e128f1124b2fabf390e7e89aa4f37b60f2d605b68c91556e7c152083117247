@@ -1,0 +1,39 @@
+ .name fcn.00004170
+ .offset 0000000000004170
+ .file sdiff
+ movzx edx, byte [rdi]
+ mov rax, rdi
+ cmp dl, CONST
+ cjmp LABEL3
+ nop dword [rax + rax]
+LABEL8:
+ add rax, CONST
+ movzx edx, byte [rax]
+ cmp dl, CONST
+ cjmp LABEL8
+LABEL3:
+ test dl, dl
+ cjmp LABEL10
+ mov rcx, rax
+ xor esi, esi
+ jmp LABEL13
+LABEL23:
+ test sil, sil
+ cjmp LABEL15
+ mov rax, rcx
+ xor esi, esi
+LABEL15:
+ add rcx, CONST
+ movzx edx, byte [rcx]
+ test dl, dl
+ cjmp LABEL10
+LABEL13:
+ cmp dl, CONST
+ cjmp LABEL23
+ add rcx, CONST
+ movzx edx, byte [rcx]
+ mov esi, CONST
+ test dl, dl
+ cjmp LABEL13
+LABEL10:
+ ret

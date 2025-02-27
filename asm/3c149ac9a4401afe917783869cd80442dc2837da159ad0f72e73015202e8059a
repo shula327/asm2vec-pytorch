@@ -1,0 +1,24 @@
+ .name sym.Perl_hv_fill
+ .offset 00000000000f8210
+ .file perl5.30.0
+ endbr64
+ mov rcx, qword [rsi]
+ mov rax, qword [rcx + CONST]
+ cmp rax, CONST
+ cjmp LABEL4
+ mov rdx, qword [rsi + CONST]
+ xor eax, eax
+ test rdx, rdx
+ cjmp LABEL4
+ mov rax, qword [rcx + CONST]
+ lea rcx, [rdx + rax*CONST]
+ lea rax, [rax*CONST + CONST]
+ sar rax, CONST
+LABEL17:
+ cmp qword [rdx], CONST
+ sbb rax, CONST
+ add rdx, CONST
+ cmp rcx, rdx
+ cjmp LABEL17
+LABEL4:
+ ret

@@ -1,0 +1,60 @@
+ .name fcn.00057f40
+ .offset 0000000000057f40
+ .file bash
+ movsxd rax, dword [rip + CONST]
+ cmp eax, edi
+ cjmp LABEL2
+ mov dword [rip + CONST], eax
+ mov dword [rip + CONST], edi
+LABEL37:
+ mov rdx, qword [rip + CONST]
+ cmp eax, -1
+ cjmp LABEL7
+ cmp edi, eax
+ cjmp LABEL7
+ mov rax, qword [rdx + rax*CONST]
+ test rax, rax
+ cjmp LABEL7
+ cmp dword [rax + CONST], CONST
+ cjmp LABEL14
+LABEL7:
+ movsxd rax, edi
+ sub rsp, CONST
+ mov rax, qword [rdx + rax*CONST]
+ mov eax, dword [rax + CONST]
+ cmp eax, CONST
+ cjmp LABEL20
+LABEL47:
+ mov esi, CONST
+ cmp eax, CONST
+ cjmp LABEL23
+ mov edi, dword [rip + CONST]
+LABEL23:
+ call CONST
+ cmp eax, -1
+ cjmp LABEL27
+LABEL41:
+ mov dword [rip + CONST], eax
+ add rsp, CONST
+ ret
+LABEL27:
+ mov eax, dword [rip + CONST]
+ mov dword [rip + CONST], eax
+ add rsp, CONST
+ ret
+LABEL14:
+ ret
+LABEL2:
+ movsxd rax, dword [rip + CONST]
+ jmp LABEL37
+LABEL20:
+ mov esi, CONST
+ call CONST
+ cmp eax, -1
+ cjmp LABEL41
+ movsxd rdx, dword [rip + CONST]
+ mov rax, qword [rip + CONST]
+ mov rax, qword [rax + rdx*CONST]
+ mov rdi, rdx
+ mov eax, dword [rax + CONST]
+ jmp LABEL47

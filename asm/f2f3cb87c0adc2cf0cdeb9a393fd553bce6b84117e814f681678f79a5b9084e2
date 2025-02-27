@@ -1,0 +1,15 @@
+ .name fcn.00074c80
+ .offset 0000000000074c80
+ .file bash
+ movsxd rdi, edi
+ lea rax, qword [rip + CONST]
+ mov rdi, qword [rax + rdi*CONST]
+ cmp rdi, CONST
+ cjmp LABEL4
+ lea rax, qword [rip + CONST]
+ cmp rdi, rax
+ cjmp LABEL7
+LABEL4:
+ ret
+LABEL7:
+ jmp CONST

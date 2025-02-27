@@ -1,0 +1,20 @@
+ .name fcn.0002bd20
+ .offset 000000000002bd20
+ .file dpkg
+ endbr64
+ mov rax, qword [rip + CONST]
+ mov rsi, rdi
+ test rax, rax
+ cjmp LABEL4
+ jmp LABEL5
+LABEL10:
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL5
+LABEL4:
+ cmp qword [rax + CONST], rsi
+ cjmp LABEL10
+ ret
+LABEL5:
+ lea rdi, [rip + CONST]
+ jmp CONST

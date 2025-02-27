@@ -1,0 +1,232 @@
+ .name fcn.000a4a70
+ .offset 00000000000a4a70
+ .file bash
+ push r15
+ push r14
+ push r13
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov dword [rdx], CONST
+ movsx r14d, byte [rdi]
+ lea eax, dword [r14 + CONST]
+ cmp al, CONST
+ cjmp LABEL12
+ lea rsi, qword [rip + CONST]
+ movzx eax, al
+ lea r12, qword [rdi + CONST]
+ mov rbp, rdi
+ movsxd rax, dword [rsi + rax*CONST]
+ add rax, rsi
+ jmp rax
+ test rcx, rcx
+ cjmp LABEL21
+ nop dword [rax]
+LABEL12:
+ mov byte [rbx], CONST
+ xor r12d, r12d
+LABEL58:
+ add rsp, CONST
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+ sub r14d, CONST
+ sete al
+ test rcx, rcx
+ setne dl
+ and eax, edx
+ movsx edx, byte [rdi + CONST]
+ lea ecx, dword [rdx + CONST]
+ cmp cl, CONST
+ cjmp LABEL42
+ movzx eax, al
+ add eax, CONST
+ add rax, CONST
+ lea rsi, qword [rdi + rax]
+ jmp LABEL47
+LABEL55:
+ cmp r12, rsi
+ cjmp LABEL49
+LABEL47:
+ add r12, CONST
+ lea r14d, dword [rdx + r14*CONST + CONST]
+ movsx edx, byte [r12]
+ lea ecx, dword [rdx + CONST]
+ cmp cl, CONST
+ cjmp LABEL55
+ sub r12d, ebp
+LABEL184:
+ mov byte [rbx], r14b
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ xor r15d, r15d
+ cmp r14d, CONST
+ mov r13, rdx
+ setne r15b
+ call CONST
+ lea r15d, dword [r15*CONST + CONST]
+ xor edi, edi
+ movsxd r15, r15d
+ mov r8, qword [rax]
+ mov rax, r12
+ lea r9, qword [rbp + r15 + CONST]
+ jmp LABEL73
+LABEL88:
+ sub ecx, CONST
+ movsxd rdx, ecx
+LABEL94:
+ add rdi, rdx
+ add rax, CONST
+LABEL73:
+ movzx esi, byte [rax]
+ movzx edx, sil
+ test byte [r8 + rdx*CONST + CONST], CONST
+ cjmp LABEL81
+ cmp rax, r9
+ cjmp LABEL81
+ lea edx, dword [rsi + CONST]
+ shl rdi, CONST
+ movsx ecx, sil
+ cmp dl, CONST
+ cjmp LABEL88
+ sub esi, CONST
+ cmp sil, CONST
+ cjmp LABEL91
+ sub ecx, CONST
+ movsxd rdx, ecx
+ jmp LABEL94
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ test rcx, rcx
+ cjmp LABEL12
+ mov dword [rcx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ mov byte [rbx], CONST
+ mov r12d, CONST
+ jmp LABEL58
+ call CONST
+ mov rcx, r12
+ xor esi, esi
+ movzx edx, byte [rcx]
+ mov r9, qword [rax]
+ lea rax, qword [rbp + CONST]
+ movzx edi, dl
+ test byte [r9 + rdi*CONST + CONST], CONST
+ cjmp LABEL132
+LABEL147:
+ cmp rcx, rax
+ cjmp LABEL134
+ shl esi, CONST
+ lea edi, dword [rdx + CONST]
+ mov r8d, esi
+ movsx esi, dl
+ cmp dil, CONST
+ cjmp LABEL140
+ sub esi, CONST
+LABEL173:
+ movzx edx, byte [rcx + CONST]
+ add rcx, CONST
+ add esi, r8d
+ movzx edi, dl
+ test byte [r9 + rdi*CONST + CONST], CONST
+ cjmp LABEL147
+LABEL132:
+ mov rax, rcx
+ nop word [rax + rax]
+LABEL134:
+ cmp rax, r12
+ cjmp LABEL151
+ mov r12d, eax
+ mov byte [rbx], sil
+ sub r12d, ebp
+ jmp LABEL58
+LABEL91:
+ sub ecx, CONST
+ movsxd rdx, ecx
+ jmp LABEL94
+LABEL81:
+ cmp r12, rax
+ cjmp LABEL160
+ mov r12d, eax
+ sub r12d, ebp
+ cmp rdi, CONST
+ cjmp LABEL164
+ mov byte [rbx], dil
+ jmp LABEL58
+LABEL140:
+ sub edx, CONST
+ lea r10d, dword [rsi + CONST]
+ lea edi, dword [rsi + CONST]
+ cmp dl, CONST
+ mov esi, r10d
+ cmova esi, edi
+ jmp LABEL173
+LABEL21:
+ mov byte [rbx], r14b
+ mov r12d, CONST
+ jmp LABEL58
+LABEL164:
+ mov rsi, rbx
+ call CONST
+ movsxd rdx, eax
+ mov byte [rbx + rdx], CONST
+ mov dword [r13], eax
+ jmp LABEL58
+LABEL49:
+ mov r12d, eax
+ jmp LABEL184
+LABEL160:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ xor r12d, r12d
+ call CONST
+ mov esi, r14d
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov byte [rbx], CONST
+ jmp LABEL58
+LABEL151:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ xor r12d, r12d
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov byte [rbx], CONST
+ jmp LABEL58
+LABEL42:
+ mov r12d, CONST
+ jmp LABEL184

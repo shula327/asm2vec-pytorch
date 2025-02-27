@@ -1,0 +1,123 @@
+ .name fcn.00079250
+ .offset 0000000000079250
+ .file bash
+LABEL18:
+ push rax
+ pop rax
+ xor eax, eax
+ sub rsp, CONST
+ call CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ mov dword [rip + CONST], CONST
+ call CONST
+ nop dword [rax + rax]
+LABEL103:
+ push rbp
+ lea rsi, qword [rip + CONST]
+ mov rbp, rdi
+ mov edx, CONST
+ xor edi, edi
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ call LABEL18
+ nop word cs:[rax + rax]
+ nop dword [rax]
+ push r13
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, edx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ and ecx, CONST
+ cjmp LABEL33
+ lea r13, qword [rsp + CONST]
+ xor esi, esi
+ mov rdx, r13
+ call CONST
+ mov ecx, dword [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ test ecx, ecx
+ cjmp LABEL41
+LABEL77:
+ xor eax, eax
+LABEL81:
+ mov rbx, qword [rsp + CONST]
+ xor rbx, qword fs:[CONST]
+ cjmp LABEL45
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL33:
+ lea rsi, qword [rsp + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL55
+ lea rsi, qword [rsp + CONST]
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL60
+ mov rax, qword [rsp + CONST]
+LABEL76:
+ mov rsi, qword [rsp + CONST]
+ cmp ebx, CONST
+ cjmp LABEL64
+ lea rcx, qword [rip + CONST]
+ movsxd rdx, dword [rcx + rbx*CONST]
+ add rdx, rcx
+ jmp rdx
+LABEL41:
+ mov rdx, r13
+ xor esi, esi
+ mov rdi, r12
+ call CONST
+ mov edx, dword [rsp + CONST]
+ mov qword [rsp + CONST], rax
+ test edx, edx
+ cjmp LABEL76
+ jmp LABEL77
+ cmp rax, rsi
+ setle al
+ movzx eax, al
+ jmp LABEL81
+ cmp rax, rsi
+ setge al
+ movzx eax, al
+ jmp LABEL81
+ cmp rax, rsi
+ setl al
+ movzx eax, al
+ jmp LABEL81
+ cmp rax, rsi
+ setg al
+ movzx eax, al
+ jmp LABEL81
+ cmp rax, rsi
+ setne al
+ movzx eax, al
+ jmp LABEL81
+LABEL64:
+ cmp rax, rsi
+ sete al
+ movzx eax, al
+ jmp LABEL81
+LABEL55:
+ mov rdi, rbp
+ call LABEL103
+LABEL45:
+ call CONST
+LABEL60:
+ mov rdi, r12
+ call LABEL103
+ nop word cs:[rax + rax]
+ nop dword [rax]

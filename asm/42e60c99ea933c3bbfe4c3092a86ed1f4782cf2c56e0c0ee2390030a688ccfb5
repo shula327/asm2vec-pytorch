@@ -1,0 +1,72 @@
+ .name sym.Perl_multiconcat_stringify
+ .offset 00000000000d8eb0
+ .file perl5.30.0
+ endbr64
+ push r15
+ mov ecx, CONST
+ xor edx, edx
+ push r14
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rsi + CONST]
+ lea rsi, [rip + CONST]
+ call CONST
+ mov r14, qword [rbx + CONST]
+ mov r15, qword [rbx]
+ mov r12, rax
+ mov rbp, qword [rbx + CONST]
+ test r14, r14
+ cjmp LABEL19
+LABEL64:
+ push CONST
+ mov rcx, rbp
+ mov rdx, r14
+ xor r9d, r9d
+ push CONST
+ mov r8d, CONST
+ mov rsi, r12
+ mov rdi, r13
+ add rbx, CONST
+ lea rbp, [r15 + CONST]
+ call CONST
+ pop rax
+ pop rdx
+ test r15, r15
+ cjmp LABEL34
+ lea r14, [rip + CONST]
+ nop word cs:[rax + rax]
+LABEL46:
+ mov rcx, qword [rbx]
+ mov rdx, r14
+ mov rsi, r12
+ mov rdi, r13
+ xor eax, eax
+ sub rbp, CONST
+ add rbx, CONST
+ call CONST
+ cmp rbp, CONST
+ cjmp LABEL46
+LABEL34:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL19:
+ mov r8d, CONST
+ mov rsi, rax
+ mov rdi, r13
+ mov r14, qword [rbx + CONST]
+ mov ecx, CONST
+ lea rdx, [rip + CONST]
+ mov rbp, qword [rbx + CONST]
+ call CONST
+ jmp LABEL64

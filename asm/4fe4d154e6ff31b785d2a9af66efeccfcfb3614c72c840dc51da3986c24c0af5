@@ -1,0 +1,155 @@
+ .name fcn.000f73b0
+ .offset 00000000000f73b0
+ .file perl5.30.0
+ movabs rcx, CONST
+ lea rax, qword [rsi + CONST]
+ movabs rdx, CONST
+ imul rcx, rsi
+ imul rax, rdx
+ xor rax, qword [rip + CONST]
+ movabs rdx, CONST
+ add rcx, rdx
+ xor rcx, qword [rip + CONST]
+ cmp rsi, CONST
+ cjmp LABEL10
+ mov rdx, rsi
+ shr rdx, CONST
+ cmp rdx, CONST
+ cjmp LABEL14
+ cmp rdx, CONST
+ cjmp LABEL16
+ cmp rdx, CONST
+ cjmp LABEL18
+LABEL141:
+ lea r8, qword [rip + CONST]
+ and esi, CONST
+ movsxd rdx, dword [r8 + rsi*CONST]
+ add rdx, r8
+ jmp rdx
+LABEL10:
+ movabs r9, CONST
+ lea r11, qword [rsi + CONST]
+ push r14
+ movabs r8, CONST
+ imul r9, rsi
+ shr r11, CONST
+ push r13
+ mov r13d, CONST
+ movabs r14, CONST
+ imul r8, rsi
+ lea r10, qword [r11 + CONST]
+ push r12
+ movabs rdx, CONST
+ shl r10, CONST
+ push rbp
+ mov r12d, CONST
+ add r9, r14
+ mov r14, qword [rip + CONST]
+ push rbx
+ add r10, rdi
+ add r8, rdx
+ mov ebx, CONST
+ mov rdx, rdi
+ mov ebp, CONST
+ xor r14, r9
+ xor r8, qword [rip + CONST]
+ nop dword [rax + rax]
+LABEL73:
+ mov r9, qword [rdx]
+ add rdx, CONST
+ imul r9, rbx
+ add rax, r9
+ mov r9, qword [rdx + CONST]
+ ror rax, CONST
+ imul r9, r13
+ xor rax, r8
+ add rcx, r9
+ mov r9, qword [rdx + CONST]
+ ror rcx, CONST
+ imul r9, r12
+ xor rcx, r14
+ add r9, r14
+ rol r9, CONST
+ lea r14, qword [rax + r9]
+ mov r9, qword [rdx + CONST]
+ imul r9, rbp
+ add r8, r9
+ ror r8, CONST
+ sub r8, rcx
+ cmp r10, rdx
+ cjmp LABEL73
+ mov r9, rsi
+ mov rbp, r11
+ lea rdx, qword [rsi + CONST]
+ neg r11
+ shl rbp, CONST
+ and r9d, CONST
+ shl r11, CONST
+ shr r9, CONST
+ cmp r9, CONST
+ cjmp LABEL83
+ cmp r9, CONST
+ cjmp LABEL85
+ cmp r9, CONST
+ cjmp LABEL87
+LABEL116:
+ add rdx, r11
+ lea rdi, qword [rip + CONST]
+ and esi, CONST
+ ror r8, CONST
+ movabs r11, CONST
+ sub r8, rcx
+ imul rdx, r11
+ xor rdx, rax
+ movsxd rax, dword [rdi + rsi*CONST]
+ add rax, rdi
+ jmp rax
+LABEL85:
+ imul rbx, qword [r10]
+ lea r10, qword [rdi + rbp + CONST]
+ add rax, rbx
+ ror rax, CONST
+ xor rax, r8
+LABEL83:
+ mov edi, CONST
+ imul rdi, qword [r10]
+ add r10, CONST
+ add rcx, rdi
+ ror rcx, CONST
+ xor rcx, r14
+LABEL87:
+ mov r9d, CONST
+ imul r9, qword [r10]
+ add r10, CONST
+ add r14, r9
+ rol r14, CONST
+ add r14, rax
+ jmp LABEL116
+LABEL16:
+ movabs rdx, CONST
+ imul rdx, qword [rdi]
+ add rdi, CONST
+ add rax, rdx
+ ror rax, CONST
+ xor rax, rcx
+ rol rcx, CONST
+ add rcx, rax
+LABEL14:
+ movabs rdx, CONST
+ imul rdx, qword [rdi]
+ add rdi, CONST
+ add rax, rdx
+ ror rax, CONST
+ xor rax, rcx
+ rol rcx, CONST
+ add rcx, rax
+LABEL18:
+ movabs rdx, CONST
+ imul rdx, qword [rdi]
+ add rdi, CONST
+ add rax, rdx
+ ror rax, CONST
+ xor rax, rcx
+ rol rcx, CONST
+ add rcx, rax
+ jmp LABEL141

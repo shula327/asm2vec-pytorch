@@ -1,0 +1,15 @@
+ .name fcn.0001dd70
+ .offset 000000000001dd70
+ .file dpkg
+ endbr64
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL3
+ ret
+LABEL3:
+ sub rsp, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ ret

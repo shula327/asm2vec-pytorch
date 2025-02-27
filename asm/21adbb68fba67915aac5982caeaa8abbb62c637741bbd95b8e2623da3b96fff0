@@ -1,0 +1,23 @@
+ .name fcn.000054f0
+ .offset 00000000000054f0
+ .file gzip
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ call CONST
+ mov rdx, qword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ lea rsi, qword [rip + CONST]
+ mov r12d, dword [rax]
+ mov rbx, rax
+ xor eax, eax
+ call CONST
+ mov rdi, rbp
+ mov dword [rbx], r12d
+ call CONST
+ pop rbx
+ pop rbp
+ mov dword [rip + CONST], CONST
+ pop r12
+ ret

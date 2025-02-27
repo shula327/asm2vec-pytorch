@@ -1,0 +1,22 @@
+ .name fcn.0001c870
+ .offset 000000000001c870
+ .file dpkg
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ mov qword [rip + CONST], rdi
+ mov rax, rdi
+ ret
+LABEL2:
+ sub rsp, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ cjmp LABEL10
+LABEL15:
+ mov qword [rip + CONST], rax
+ add rsp, CONST
+ ret
+LABEL10:
+ lea rax, [rip + CONST]
+ jmp LABEL15

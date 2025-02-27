@@ -1,0 +1,34 @@
+ .name fcn.00004f30
+ .offset 0000000000004f30
+ .file setpriv
+ cmp esi, CONST
+ cjmp LABEL1
+ lea eax, [rsi + CONST]
+ and eax, CONST
+ cjmp LABEL4
+ push rax
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST
+LABEL1:
+ mov edx, edx
+ xor r8d, r8d
+ xor ecx, ecx
+ cmp edi, CONST
+ cjmp LABEL18
+ mov esi, CONST
+ mov edi, CONST
+ xor eax, eax
+ jmp CONST
+LABEL4:
+ jmp CONST
+LABEL18:
+ mov esi, CONST
+ mov edi, CONST
+ xor eax, eax
+ jmp CONST

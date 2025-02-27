@@ -1,0 +1,20 @@
+ .name fcn.00007f90
+ .offset 0000000000007f90
+ .file ls
+ cmp qword [rip + CONST], CONST
+ cjmp LABEL1
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rsi + CONST]
+ jmp CONST
+LABEL1:
+ lea rsi, qword [rip + CONST]
+ sub rsp, CONST
+ lea rdi, qword [rsi + CONST]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rsi + CONST]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ add rsp, CONST
+ lea rdi, qword [rsi + CONST]
+ jmp CONST

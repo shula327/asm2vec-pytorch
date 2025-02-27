@@ -1,0 +1,27 @@
+ .name fcn.0001ca60
+ .offset 000000000001ca60
+ .file find
+ mov edx, dword [rsi + CONST]
+ xor eax, eax
+ test edx, edx
+ cjmp LABEL3
+ mov eax, dword [rdi]
+ mov edx, dword [rdi + CONST]
+ xor eax, dword [rsi]
+ xor edx, dword [rsi + CONST]
+ or eax, edx
+ mov edx, dword [rdi + CONST]
+ xor edx, dword [rsi + CONST]
+ or eax, edx
+ mov edx, dword [rdi + CONST]
+ xor edx, dword [rsi + CONST]
+ or eax, edx
+ mov edx, dword [rdi + CONST]
+ xor edx, dword [rsi + CONST]
+ or eax, edx
+ mov edx, dword [rdi + CONST]
+ xor edx, dword [rsi + CONST]
+ or eax, edx
+ sete al
+LABEL3:
+ ret

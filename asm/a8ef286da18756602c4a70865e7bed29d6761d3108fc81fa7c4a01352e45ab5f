@@ -1,0 +1,14 @@
+ .name fcn.000914b0
+ .offset 00000000000914b0
+ .file bash
+ push rbp
+ mov rbp, rdi
+ mov rdi, qword [rip + CONST]
+ test rdi, rdi
+ cjmp LABEL4
+ call CONST
+LABEL4:
+ mov qword [rip + CONST], CONST
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

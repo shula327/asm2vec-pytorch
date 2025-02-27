@@ -1,0 +1,45 @@
+ .name sym.Perl_pp_hintseval
+ .offset 00000000001514b0
+ .file perl5.30.0
+ endbr64
+ push rbp
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov rbp, qword [rdi]
+ mov rax, qword [rdi + CONST]
+ sub rax, rbp
+ test rax, rax
+ cjmp LABEL9
+LABEL37:
+ mov rax, qword [rbx + CONST]
+ mov rsi, qword [rax + CONST]
+ test rsi, rsi
+ cjmp LABEL13
+LABEL31:
+ mov rdi, rbx
+ add rbp, CONST
+ call CONST
+ mov rdi, rbx
+ mov rsi, rax
+ call CONST
+ mov qword [rbp], rax
+ mov rax, qword [rbx + CONST]
+ mov qword [rbx], rbp
+ mov rax, qword [rax]
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL13:
+ mov rdx, qword [rax + CONST]
+ mov rax, qword [rbx + CONST]
+ mov rsi, qword [rax + rdx*CONST]
+ jmp LABEL31
+LABEL9:
+ mov rdx, rbp
+ mov rsi, rbp
+ mov ecx, CONST
+ call CONST
+ mov rbp, rax
+ jmp LABEL37

@@ -1,0 +1,35 @@
+ .name fcn.00015fc0
+ .offset 0000000000015fc0
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rdi
+ cmp esi, CONST
+ cjmp LABEL4
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL6
+ mov esi, CONST
+ call CONST
+LABEL23:
+ mov rdi, rbp
+ call CONST
+ mov edi, CONST
+ lea rsi, [rip + CONST]
+ xor eax, eax
+ call CONST
+ call CONST
+ pop rbp
+ mov edi, eax
+ jmp CONST
+LABEL6:
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL20
+ mov esi, CONST
+ call CONST
+ jmp LABEL23
+LABEL20:
+ mov esi, CONST
+LABEL4:
+ mov rdi, rbp
+ call CONST
+ jmp LABEL23

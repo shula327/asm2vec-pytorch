@@ -1,0 +1,41 @@
+ .name fcn.000da350
+ .offset 00000000000da350
+ .file bash
+ push r13
+ push r12
+ push rbp
+ sub rsp, CONST
+ or qword [rsp], CONST
+ sub rsp, CONST
+ mov edx, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbp, rsi
+ mov r13, rsp
+ mov r12, rdi
+ mov rsi, r13
+ mov rdi, rbp
+ call CONST
+ test rax, rax
+ cjmp LABEL17
+ mov rsi, rbp
+ mov rdi, r12
+ call CONST
+LABEL33:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL23
+ add rsp, CONST
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL17:
+ mov rsi, r13
+ mov rdi, r12
+ mov byte [rsp + rax], CONST
+ call CONST
+ jmp LABEL33
+LABEL23:
+ call CONST

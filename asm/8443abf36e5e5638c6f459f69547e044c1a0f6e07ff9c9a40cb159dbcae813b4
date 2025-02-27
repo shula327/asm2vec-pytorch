@@ -1,0 +1,36 @@
+ .name fcn.00021d00
+ .offset 0000000000021d00
+ .file grep
+ endbr64
+ mov rax, rsi
+ push rbx
+ mul rdx
+ mov rsi, rax
+ seto al
+ test rsi, rsi
+ cjmp LABEL7
+ movzx eax, al
+ test rax, rax
+ cjmp LABEL7
+ mov rbx, rsi
+ test rsi, rsi
+ cjmp LABEL13
+ test rdi, rdi
+ cjmp LABEL15
+LABEL13:
+ mov rsi, rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL19
+ test rbx, rbx
+ cjmp LABEL7
+LABEL19:
+ pop rbx
+ ret
+LABEL15:
+ call CONST
+ xor eax, eax
+ pop rbx
+ ret
+LABEL7:
+ call CONST

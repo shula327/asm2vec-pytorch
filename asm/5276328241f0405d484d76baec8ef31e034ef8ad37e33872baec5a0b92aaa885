@@ -1,0 +1,27 @@
+ .name fcn.00011330
+ .offset 0000000000011330
+ .file dpkg
+ endbr64
+ push rbp
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov rbp, rax
+ jmp LABEL6
+LABEL16:
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ mov dword [rax], CONST
+ mov dword [rax + CONST], CONST
+LABEL6:
+ mov rdi, rbp
+ call CONST
+ mov rbx, rax
+ test rax, rax
+ cjmp LABEL16
+ add rsp, CONST
+ mov rdi, rbp
+ pop rbx
+ pop rbp
+ jmp CONST

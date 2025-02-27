@@ -1,0 +1,68 @@
+ .name fcn.0002a2c0
+ .offset 000000000002a2c0
+ .file dpkg
+ endbr64
+ push r12
+ mov ecx, CONST
+ mov r12, rdi
+ push rbp
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rbp, rsp
+ mov rdi, rbp
+ mov eax, dword [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ xor eax, eax
+ rep stosq qword [rdi], rax
+ lea rdi, [rsp + CONST]
+ call CONST
+ lea rdx, [rip + CONST]
+ mov rsi, rbp
+ mov edi, CONST
+ mov qword [rsp], CONST
+ mov dword [rsp + CONST], CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL25
+ lea rdx, [rip + CONST]
+ mov rsi, rbp
+ mov edi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL31
+ xor edx, edx
+ mov esi, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov eax, dword [rip + CONST]
+ sub eax, CONST
+ mov dword [rip + CONST], eax
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL41
+ add rsp, CONST
+ pop rbp
+ pop r12
+ ret
+LABEL25:
+ mov edi, CONST
+LABEL60:
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov rbp, rax
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL41:
+ call CONST
+LABEL31:
+ mov edi, CONST
+ jmp LABEL60

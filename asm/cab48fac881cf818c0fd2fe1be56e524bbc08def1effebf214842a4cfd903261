@@ -1,0 +1,49 @@
+ .name fcn.0001bb90
+ .offset 000000000001bb90
+ .file grep
+LABEL11:
+ call CONST
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rsi, qword [rdi + CONST]
+ mov rdi, r12
+ call qword [rbp + CONST]
+ cmp rax, qword [rbp + CONST]
+ cjmp LABEL11
+ mov rbx, rax
+ shl rbx, CONST
+ add rbx, qword [rbp]
+ mov rsi, qword [rbx]
+ test rsi, rsi
+ cjmp LABEL17
+ jmp LABEL18
+LABEL28:
+ mov rsi, qword [rbx]
+LABEL17:
+ cmp rsi, r12
+ cjmp LABEL21
+ mov rdi, r12
+ call qword [rbp + CONST]
+ test al, al
+ cjmp LABEL25
+ mov rbx, qword [rbx + CONST]
+ test rbx, rbx
+ cjmp LABEL28
+LABEL18:
+ pop rbx
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL25:
+ mov r12, qword [rbx]
+LABEL21:
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ ret

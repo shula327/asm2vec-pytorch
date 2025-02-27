@@ -1,0 +1,23 @@
+ .name fcn.0009b2e0
+ .offset 000000000009b2e0
+ .file bash
+ push rbx
+ mov ebx, edi
+ mov edi, esi
+ call CONST
+ mov rdx, rax
+ test rax, rax
+ cjmp LABEL6
+LABEL17:
+ movsxd rsi, ebx
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ pop rbx
+ jmp CONST
+LABEL6:
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdx, rax
+ jmp LABEL17

@@ -1,0 +1,29 @@
+ .name fcn.0002bd60
+ .offset 000000000002bd60
+ .file dpkg
+ endbr64
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rbx, qword [rip + CONST]
+ test rbx, rbx
+ cjmp LABEL6
+ mov rbp, rdi
+ jmp LABEL8
+LABEL14:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL6
+LABEL8:
+ mov rdi, qword [rbx + CONST]
+ cmp qword [rdi + CONST], CONST
+ cjmp LABEL14
+ call rbp
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL8
+LABEL6:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

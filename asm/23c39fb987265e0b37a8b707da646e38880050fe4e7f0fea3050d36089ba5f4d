@@ -1,0 +1,23 @@
+ .name fcn.00023d90
+ .offset 0000000000023d90
+ .file dpkg
+ endbr64
+ push rbp
+ mov ebp, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL5
+ pop rbp
+ ret
+LABEL5:
+ mov eax, dword [rip + CONST]
+ lea rsi, [rip + CONST]
+ mov edx, CONST
+ lea rdi, [rip + CONST]
+ add eax, CONST
+ mov dword [rip + CONST], eax
+ call CONST
+ mov esi, ebp
+ mov rdi, rax
+ xor eax, eax
+ call CONST

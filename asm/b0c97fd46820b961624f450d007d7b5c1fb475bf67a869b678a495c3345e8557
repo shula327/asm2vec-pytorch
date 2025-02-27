@@ -1,0 +1,29 @@
+ .name fcn.0002d7b0
+ .offset 000000000002d7b0
+ .file find
+ push rbp
+ mov rbp, rdi
+ mov rdi, rsi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL8
+ movzx ecx, byte [rbx]
+ mov rdx, rcx
+ shl rax, cl
+ shr rdx, CONST
+ and edx, CONST
+ or qword [rbp + rdx], rax
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ ret
+LABEL8:
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ ret

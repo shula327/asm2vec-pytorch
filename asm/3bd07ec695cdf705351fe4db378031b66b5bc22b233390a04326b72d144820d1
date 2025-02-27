@@ -1,0 +1,14 @@
+ .name fcn.00003dd0
+ .offset 0000000000003dd0
+ .file diff3
+ push rbx
+ mov rbx, rdi
+ call CONST
+ mov rcx, rbx
+ mov edi, CONST
+ lea rdx, qword [rip + CONST]
+ mov esi, dword [rax]
+ xor eax, eax
+ call CONST
+ nop word cs:[rax + rax]
+ nop dword [rax]

@@ -1,0 +1,27 @@
+ .name fcn.00004700
+ .offset 0000000000004700
+ .file bunzip2
+ sub rsp, CONST
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ mov r8d, eax
+ mov eax, CONST
+ test r8d, r8d
+ cjmp LABEL11
+ mov eax, dword [rsp + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ setne al
+LABEL11:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL18
+ add rsp, CONST
+ ret
+LABEL18:
+ call CONST

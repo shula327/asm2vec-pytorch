@@ -1,0 +1,63 @@
+ .name fcn.00031e10
+ .offset 0000000000031e10
+ .file bash
+ push rbp
+ xor edx, edx
+ lea rsi, qword [rip + CONST]
+ mov ebp, edi
+ call CONST
+ test rax, rax
+ cjmp LABEL6
+LABEL14:
+ pop rbp
+ ret
+LABEL6:
+ xor edx, edx
+ lea rsi, qword [rip + CONST]
+ mov edi, ebp
+ call CONST
+ test rax, rax
+ cjmp LABEL14
+ mov edx, dword [rip + CONST]
+ cmp edx, CONST
+ cjmp LABEL17
+ cjmp LABEL18
+ cmp edx, CONST
+ cjmp LABEL20
+ cmp edx, CONST
+ cjmp LABEL14
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL14
+ mov rbp, qword [rax]
+ mov rdi, rbp
+ call CONST
+ lea rdi, qword [rax + CONST]
+ call CONST
+ mov rsi, rbp
+ pop rbp
+ mov rdi, rax
+ jmp CONST
+LABEL18:
+ cmp edx, CONST
+ cjmp LABEL14
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL14
+ lea rsi, qword [rip + CONST]
+ mov rdi, rax
+ pop rbp
+ jmp CONST
+LABEL20:
+ cmp edx, CONST
+ cjmp LABEL14
+ movsxd rdi, dword [rip + CONST]
+ pop rbp
+ jmp CONST
+LABEL17:
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL14
+ mov rdi, rax
+ pop rbp
+ jmp CONST

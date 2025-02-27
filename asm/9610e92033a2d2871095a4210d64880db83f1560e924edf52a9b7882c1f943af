@@ -1,0 +1,121 @@
+ .name fcn.00018530
+ .offset 0000000000018530
+ .file grep
+ endbr64
+ push rbx
+ cmp byte [rdx + CONST], CONST
+ mov qword [rdx + CONST], rdi
+ mov qword [rdx + CONST], rsi
+ mov qword [rdx + CONST], CONST
+ mov byte [rdx + CONST], CONST
+ cjmp LABEL7
+ cmp qword [rdx + CONST], CONST
+ mov rbx, rdx
+ cjmp LABEL10
+LABEL83:
+ mov rdi, rbx
+ call CONST
+ mov rdi, rbx
+ mov qword [rbx + CONST], rax
+ mov rax, qword [rbx + CONST]
+ mov qword [rbx + CONST], rax
+ call CONST
+ mov rax, qword [rbx + CONST]
+ lea rdx, [rax + CONST]
+ test rdx, CONST
+ cjmp LABEL21
+ jmp LABEL22
+LABEL33:
+ mov rdi, rbx
+ call CONST
+ mov esi, CONST
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ lea rdx, [rax + CONST]
+ test rdx, CONST
+ cjmp LABEL22
+LABEL21:
+ test rax, rax
+ cjmp LABEL33
+LABEL22:
+ cmp rax, CONST
+ cjmp LABEL35
+ nop dword [rax]
+LABEL63:
+ mov rdi, rbx
+ call CONST
+ mov rdi, rbx
+ mov qword [rbx + CONST], rax
+ call CONST
+ mov rax, qword [rbx + CONST]
+ lea rdx, [rax + CONST]
+ test rdx, CONST
+ cjmp LABEL45
+ jmp LABEL46
+LABEL57:
+ mov rdi, rbx
+ call CONST
+ mov esi, CONST
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ lea rdx, [rax + CONST]
+ test rdx, CONST
+ cjmp LABEL46
+LABEL45:
+ test rax, rax
+ cjmp LABEL57
+LABEL46:
+ mov esi, CONST
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ cmp rax, CONST
+ cjmp LABEL63
+LABEL35:
+ cmp rax, CONST
+ cjmp LABEL65
+ mov rsi, qword [rbx + CONST]
+ mov rdi, rbx
+ not rsi
+ call CONST
+ mov esi, CONST
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ test rax, rax
+ cjmp LABEL75
+ add rax, CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret
+LABEL10:
+ mov esi, CONST
+ mov rdi, rdx
+ call CONST
+ jmp LABEL83
+LABEL75:
+ mov rdi, rbx
+ mov esi, CONST
+ call CONST
+ mov rax, qword [rbx + CONST]
+ add rax, CONST
+ mov qword [rbx + CONST], rax
+ pop rbx
+ ret
+LABEL7:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ call CONST
+LABEL65:
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ call CONST
+ nop word [rax + rax]

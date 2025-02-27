@@ -1,0 +1,38 @@
+ .name fcn.000394d0
+ .offset 00000000000394d0
+ .file localedef
+ push r15
+ push r14
+ push r13
+ mov r13d, edx
+ push r12
+ movzx r15d, r13b
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov eax, dword [r8]
+ mov r14, qword [rdi + CONST]
+ mov rdi, rsi
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], rcx
+ mov dword [rsp + CONST], eax
+ call CONST
+ mov ecx, r15d
+ mov rsi, r12
+ mov rdi, rbp
+ mov rdx, rax
+ mov qword [rsp], rax
+ call CONST
+ mov r9, qword [rsp]
+ mov r8, qword [rsp + CONST]
+ test rax, rax
+ mov rbx, rax
+ cjmp LABEL28
+ cmp r13b, CONST
+ cjmp LABEL28
+LABEL28:
+ cmp byte [rip + CONST], CONST
+ mov eax, dword [rbx + CONST]
+ je CONST

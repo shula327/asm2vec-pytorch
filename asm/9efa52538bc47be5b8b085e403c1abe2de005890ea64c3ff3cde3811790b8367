@@ -1,0 +1,25 @@
+ .name fcn.0002f110
+ .offset 000000000002f110
+ .file dpkg
+ endbr64
+ cmp dword [rip + CONST], CONST
+ movzx eax, byte [rip + CONST]
+ push r12
+ mov r12, rdi
+ cjmp LABEL5
+LABEL19:
+ test al, al
+ lea rax, [rip + CONST]
+ cmove r12, rax
+ mov rax, r12
+ pop r12
+ ret
+LABEL5:
+ lea rdi, [rip + CONST]
+ call CONST
+ test rax, rax
+ mov rdi, rax
+ lea rax, [rip + CONST]
+ cmove rdi, rax
+ call CONST
+ jmp LABEL19

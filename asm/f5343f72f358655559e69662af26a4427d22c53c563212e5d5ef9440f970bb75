@@ -1,0 +1,139 @@
+ .name fcn.00006c10
+ .offset 0000000000006c10
+ .file diff3
+ push r15
+ mov r15, rsi
+ push r14
+ push r13
+ push r12
+ mov r12, rdx
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdi
+ mov rdi, rdx
+ call CONST
+ mov ebx, eax
+ call CONST
+ mov r14, rax
+ cmp ebx, CONST
+ cjmp LABEL16
+ cmp ebx, CONST
+ cjmp LABEL18
+ test ebx, ebx
+ cjmp LABEL20
+ mov esi, CONST
+ mov edi, CONST
+ call CONST
+ cmp eax, CONST
+ setne bl
+LABEL101:
+ mov esi, CONST
+ mov edi, CONST
+ call CONST
+ cmp eax, CONST
+ setne bpl
+LABEL109:
+ xor esi, esi
+ xor edi, edi
+ call CONST
+ test eax, eax
+ cjmp LABEL35
+ xor edi, edi
+ call CONST
+ mov r13d, eax
+ test al, al
+ cjmp LABEL40
+ test bpl, bpl
+ cjmp LABEL42
+LABEL75:
+ test bl, bl
+ cjmp LABEL44
+ mov edi, CONST
+ call CONST
+ mov ebx, eax
+ test al, al
+ cjmp LABEL49
+LABEL44:
+ mov rdi, qword [rsp + CONST]
+ mov rdx, r12
+ mov rsi, r15
+ call CONST
+ mov r12, rax
+LABEL112:
+ mov r15d, dword [r14]
+ test bl, bl
+ cjmp LABEL57
+LABEL106:
+ test bpl, bpl
+ cjmp LABEL59
+ test r13b, r13b
+ cjmp LABEL61
+LABEL89:
+ test r12, r12
+ cjmp LABEL63
+LABEL93:
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL35:
+ xor r13d, r13d
+ test bpl, bpl
+ cjmp LABEL75
+LABEL42:
+ mov edi, CONST
+ call CONST
+ mov ebp, eax
+ test al, al
+ cjmp LABEL75
+ mov r15d, dword [r14]
+ xor r12d, r12d
+ test bl, bl
+ cjmp LABEL84
+ nop word cs:[rax + rax]
+LABEL59:
+ mov edi, CONST
+ call CONST
+ test r13b, r13b
+ cjmp LABEL89
+LABEL61:
+ xor edi, edi
+ call CONST
+ test r12, r12
+ cjmp LABEL93
+LABEL63:
+ mov dword [r14], r15d
+ jmp LABEL93
+LABEL20:
+ xor ebx, ebx
+ xor ebp, ebp
+ xor r13d, r13d
+ jmp LABEL44
+LABEL18:
+ xor ebx, ebx
+ jmp LABEL101
+LABEL49:
+ mov r15d, dword [r14]
+ xor r12d, r12d
+LABEL57:
+ mov edi, CONST
+ call CONST
+ jmp LABEL106
+LABEL16:
+ xor ebx, ebx
+ xor ebp, ebp
+ jmp LABEL109
+LABEL40:
+ mov r13d, CONST
+ xor r12d, r12d
+ jmp LABEL112
+LABEL84:
+ mov edi, CONST
+ call CONST
+ jmp LABEL59

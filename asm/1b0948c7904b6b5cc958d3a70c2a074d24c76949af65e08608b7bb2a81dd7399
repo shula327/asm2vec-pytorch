@@ -1,0 +1,75 @@
+ .name fcn.0001aae0
+ .offset 000000000001aae0
+ .file grep
+ endbr64
+ push r14
+ mov r14, rdi
+ push r13
+ lea r13, [rip + CONST]
+ push r12
+ push rbp
+ mov ebp, edx
+ and edx, CONST
+ push rbx
+ mov rbx, rsi
+ cjmp LABEL11
+ mov r13, qword [rip + CONST]
+LABEL11:
+ mov edx, ebp
+ mov rsi, rbx
+ mov rdi, r14
+ call r13
+ test eax, eax
+ sete r8b
+ test ebp, CONST
+ cjmp LABEL20
+ movzx ecx, byte [rbx]
+ test cl, cl
+ cjmp LABEL20
+LABEL53:
+ test eax, eax
+ cjmp LABEL25
+LABEL33:
+ mov r12, rbx
+ mov eax, ecx
+ add rbx, CONST
+ movzx ecx, byte [rbx]
+ cmp al, CONST
+ cjmp LABEL31
+ test cl, cl
+ cjmp LABEL33
+ xor r8d, r8d
+LABEL20:
+ pop rbx
+ mov eax, r8d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL46:
+ movzx ecx, byte [rbx + CONST]
+ mov r12, rbx
+ add rbx, CONST
+LABEL31:
+ cmp cl, CONST
+ cjmp LABEL46
+ mov edx, ebp
+ mov rsi, rbx
+ mov rdi, r14
+ call r13
+ movzx ecx, byte [r12 + CONST]
+ test cl, cl
+ cjmp LABEL53
+ test eax, eax
+ sete r8b
+ jmp LABEL20
+LABEL25:
+ mov r8d, CONST
+ pop rbx
+ pop rbp
+ mov eax, r8d
+ pop r12
+ pop r13
+ pop r14
+ ret

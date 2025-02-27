@@ -1,0 +1,64 @@
+ .name sym.PerlIOUnix_refcnt_dec
+ .offset 0000000000197900
+ .file perl5.30.0
+ endbr64
+ push r12
+ push rbp
+ mov ebp, edi
+ sub rsp, CONST
+ test edi, edi
+ cjmp LABEL6
+ lea rdi, [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL10
+ mov edx, dword [rip + CONST]
+ cmp edx, ebp
+ cjmp LABEL13
+ mov rdx, qword [rip + CONST]
+ movsxd rax, ebp
+ lea rax, [rdx + rax*CONST]
+ mov r12d, dword [rax]
+ test r12d, r12d
+ cjmp LABEL19
+ sub r12d, CONST
+ lea rdi, [rip + CONST]
+ mov dword [rax], r12d
+ call CONST
+ test eax, eax
+ cjmp LABEL25
+ add rsp, CONST
+ mov eax, r12d
+ pop rbp
+ pop r12
+ ret
+LABEL6:
+ mov esi, edi
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL25:
+ mov esi, eax
+ mov ecx, CONST
+ lea rdx, [rip + CONST]
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ call CONST
+LABEL19:
+ mov edx, r12d
+ mov esi, ebp
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL13:
+ mov esi, ebp
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL10:
+ mov esi, eax
+ mov ecx, CONST
+ lea rdx, [rip + CONST]
+ xor eax, eax
+ lea rdi, [rip + CONST]
+ call CONST

@@ -1,0 +1,47 @@
+ .name fcn.00004b00
+ .offset 0000000000004b00
+ .file diff3
+ push rbx
+ test rdi, rdi
+ cjmp LABEL2
+ mov esi, CONST
+ mov rbx, rdi
+ call CONST
+ test rax, rax
+ cjmp LABEL7
+ lea r8, qword [rax + CONST]
+ mov rdx, r8
+ sub rdx, rbx
+ cmp rdx, CONST
+ cjmp LABEL7
+ lea rsi, qword [rax + CONST]
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta dl
+ sbb dl, CONST
+ test dl, dl
+ cjmp LABEL7
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, r8
+ mov rbx, r8
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta dl
+ sbb dl, CONST
+ test dl, dl
+ cjmp LABEL7
+ lea rbx, qword [rax + CONST]
+ mov qword [rip + CONST], rbx
+LABEL7:
+ mov qword [rip + CONST], rbx
+ mov qword [rip + CONST], rbx
+ pop rbx
+ ret
+LABEL2:
+ mov rcx, qword [rip + CONST]
+ mov edx, CONST
+ mov esi, CONST
+ lea rdi, qword [rip + CONST]
+ call CONST
+ call CONST

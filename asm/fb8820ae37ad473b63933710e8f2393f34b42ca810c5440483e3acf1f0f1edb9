@@ -1,0 +1,73 @@
+ .name fcn.00008350
+ .offset 0000000000008350
+ .file install
+ endbr64
+ push r12
+ mov r8d, esi
+ movzx esi, dl
+ push rbp
+ movzx edx, r8b
+ mov rbp, rdi
+ push rbx
+ cmp byte [rcx + CONST], CONST
+ cjmp LABEL9
+LABEL21:
+ mov rdi, rbp
+ call CONST
+ test al, al
+ cjmp LABEL13
+LABEL31:
+ mov r12d, CONST
+LABEL36:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL9:
+ cmp byte [rcx + CONST], CONST
+ cjmp LABEL21
+ cmp byte [rcx + CONST], CONST
+ cjmp LABEL23
+ pop rbx
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL23:
+ call CONST
+ mov r12d, eax
+ test al, al
+ cjmp LABEL31
+ call CONST
+ mov rbx, rax
+ mov eax, dword [rax]
+ cmp eax, CONST
+ cjmp LABEL36
+ cmp eax, CONST
+ cjmp LABEL38
+ jmp LABEL36
+LABEL13:
+ call CONST
+ mov rbx, rax
+LABEL38:
+ mov rdx, rbp
+ mov esi, CONST
+ xor edi, edi
+ call CONST
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov r12, rax
+ call CONST
+ mov esi, dword [rbx]
+ mov rcx, r12
+ xor edi, edi
+ mov rdx, rax
+ xor r12d, r12d
+ xor eax, eax
+ call CONST
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret

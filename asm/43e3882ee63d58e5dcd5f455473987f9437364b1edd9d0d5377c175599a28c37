@@ -1,0 +1,107 @@
+ .name fcn.00089f90
+ .offset 0000000000089f90
+ .file perl5.30.0
+ push r13
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, edx
+ xor edx, edx
+ sub rsp, CONST
+ call CONST
+ movzx edx, byte [rax]
+ mov rcx, rax
+ cmp dl, CONST
+ cjmp LABEL12
+ movzx edx, byte [rax + CONST]
+ lea rcx, qword [rax + CONST]
+LABEL12:
+ sub edx, CONST
+ cmp edx, CONST
+ cjmp LABEL17
+LABEL86:
+ mov rdx, qword [rbp + CONST]
+ xor ebx, ebx
+LABEL72:
+ movzx ecx, byte [rdx + CONST]
+ mov qword [rdx + rcx*CONST + CONST], rbx
+ mov rdx, qword [rbp + CONST]
+ movzx ecx, byte [rdx + CONST]
+ mov dword [rdx + rcx*CONST + CONST], CONST
+ mov rdx, qword [rbp + CONST]
+ add byte [rdx + CONST], CONST
+LABEL87:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL17:
+ movzx r9d, byte [rcx + CONST]
+ add rcx, CONST
+ cmp r9b, CONST
+ mov edx, r9d
+ sete r8b
+ cmp r9b, CONST
+ sete sil
+ or r8b, sil
+ cjmp LABEL17
+ lea esi, dword [r9 + CONST]
+ cmp esi, CONST
+ cjmp LABEL17
+ cmp r9b, CONST
+ cjmp LABEL46
+ movsxd r9, r9d
+ lea rcx, qword [rip + CONST]
+ mov ecx, dword [rcx + r9*CONST]
+ and ecx, CONST
+ cmp ecx, CONST
+ lea ecx, dword [rdx + CONST]
+ sete sil
+ and ecx, CONST
+ sete cl
+ or sil, cl
+ cjmp LABEL46
+ test dl, dl
+ cjmp LABEL59
+LABEL46:
+ mov rbx, qword [rbp + CONST]
+ mov rsi, rax
+ mov rdi, rbp
+ lea rdx, qword [rbx + CONST]
+ call CONST
+ mov rdx, qword [rbp + CONST]
+ mov rbx, qword [rdx + CONST]
+ mov r12, qword [rbx + CONST]
+ mov ecx, dword [r12 + CONST]
+ mov esi, ecx
+ and esi, CONST
+ cmp esi, CONST
+ cjmp LABEL72
+ cmp cl, CONST
+ cjmp LABEL74
+LABEL94:
+ mov r13, qword [r12]
+ mov rsi, r12
+ mov rdi, rbp
+ mov qword [rsp + CONST], rax
+ call CONST
+ mov rax, qword [rsp + CONST]
+ movsd qword [r13 + CONST], xmm0
+ or dword [r12 + CONST], CONST
+ mov rdx, qword [rbp + CONST]
+ jmp LABEL72
+LABEL59:
+ test ebx, ebx
+ cjmp LABEL86
+ jmp LABEL87
+LABEL74:
+ mov edx, CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov qword [rsp + CONST], rax
+ call CONST
+ mov rax, qword [rsp + CONST]
+ jmp LABEL94

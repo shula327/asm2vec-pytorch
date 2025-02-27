@@ -1,0 +1,30 @@
+ .name fcn.0002a050
+ .offset 000000000002a050
+ .file find
+ xor eax, eax
+ test rdi, rdi
+ cjmp LABEL2
+ lea rcx, qword [rdi + CONST]
+ mov rdi, qword [rsi]
+ xor esi, esi
+ jmp LABEL6
+LABEL13:
+ lea rax, qword [rcx + rsi]
+ shr rax, CONST
+ cmp qword [rdi + rax*CONST], rdx
+ cjmp LABEL10
+ mov rcx, rax
+LABEL6:
+ cmp rcx, rsi
+ cjmp LABEL13
+ xor eax, eax
+ cmp rdx, qword [rdi + rsi*CONST]
+ cjmp LABEL16
+LABEL2:
+ ret
+LABEL10:
+ lea rsi, qword [rax + CONST]
+ jmp LABEL6
+LABEL16:
+ lea rax, qword [rsi + CONST]
+ ret

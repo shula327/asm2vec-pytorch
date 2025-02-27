@@ -1,0 +1,77 @@
+ .name fcn.00005bd0
+ .offset 0000000000005bd0
+ .file dpkg-query
+ push r15
+ push r14
+ push r13
+ mov r13d, esi
+ push r12
+ mov r12, r9
+ push rbp
+ mov rbp, r8
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ mov esi, dword [rdi + CONST]
+ mov rdi, r8
+ mov dword [rsp + CONST], ecx
+ mov r14, qword [rsp + CONST]
+ mov dword [rsp + CONST], edx
+ lea rdx, qword [rsp + CONST]
+ mov r15, qword [rsp + CONST]
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ mov esi, dword [rbx + CONST]
+ lea rdx, qword [rsp + CONST]
+ mov rdi, r12
+ call CONST
+ mov esi, dword [rbx + CONST]
+ lea rdx, qword [rsp + CONST]
+ mov rdi, r14
+ call CONST
+ mov esi, dword [rsp + CONST]
+ lea rdx, qword [rsp + CONST]
+ mov rdi, r15
+ call CONST
+ push r15
+ mov eax, dword [rsp + CONST]
+ mov edx, r13d
+ lea rsi, qword [rip + CONST]
+ mov edi, CONST
+ push rax
+ push r14
+ mov eax, dword [rsp + CONST]
+ push rax
+ mov eax, dword [rsp + CONST]
+ push rax
+ push r12
+ mov eax, dword [rsp + CONST]
+ push rax
+ mov eax, dword [rsp + CONST]
+ push rax
+ push rbp
+ mov eax, dword [rsp + CONST]
+ push rax
+ mov ecx, dword [rsp + CONST]
+ xor eax, eax
+ mov r10d, dword [rsp + CONST]
+ mov r9d, dword [rsp + CONST]
+ mov r8d, ecx
+ mov ecx, r10d
+ call CONST
+ add rsp, CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL63
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL63:
+ call CONST

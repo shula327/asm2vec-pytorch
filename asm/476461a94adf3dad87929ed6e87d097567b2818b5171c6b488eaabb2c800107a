@@ -1,0 +1,37 @@
+ .name fcn.0000ed50
+ .offset 000000000000ed50
+ .file install
+ endbr64
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ call CONST
+ test rax, rax
+ mov rbx, rax
+ sete al
+ movzx eax, al
+ lea rdi, [rbx + rax + CONST]
+ call CONST
+ mov r8, rax
+ test rax, rax
+ cjmp LABEL14
+ mov rdx, rbx
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ mov r8, rax
+ test rbx, rbx
+ cjmp LABEL21
+LABEL30:
+ mov byte [r8 + rbx], CONST
+LABEL14:
+ add rsp, CONST
+ mov rax, r8
+ pop rbx
+ pop rbp
+ ret
+LABEL21:
+ mov byte [rax], CONST
+ mov ebx, CONST
+ jmp LABEL30

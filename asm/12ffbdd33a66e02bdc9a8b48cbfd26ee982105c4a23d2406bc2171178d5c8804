@@ -1,0 +1,27 @@
+ .name fcn.00003340
+ .offset 0000000000003340
+ .file sdiff
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL2
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL5
+ mov rdi, qword [rip + CONST]
+ jmp CONST
+LABEL5:
+ ret
+LABEL2:
+ sub rsp, CONST
+ mov edi, dword [rip + CONST]
+ mov esi, CONST
+ call CONST
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL15
+ mov rdi, qword [rip + CONST]
+ add rsp, CONST
+ jmp CONST
+LABEL15:
+ add rsp, CONST
+ ret

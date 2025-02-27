@@ -1,0 +1,18 @@
+ .name fcn.00029590
+ .offset 0000000000029590
+ .file dpkg
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov rdi, qword [rdi]
+ call CONST
+ xor eax, eax
+ mov qword [rbx], CONST
+ mov rdi, qword [rbx + CONST]
+ mov qword [rbx + CONST], CONST
+ mov word [rbx + CONST], ax
+ call CONST
+ mov qword [rbx + CONST], CONST
+ mov qword [rbx + CONST], CONST
+ pop rbx
+ ret

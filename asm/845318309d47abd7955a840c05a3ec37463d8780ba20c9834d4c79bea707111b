@@ -1,0 +1,28 @@
+ .name fcn.00028460
+ .offset 0000000000028460
+ .file find
+ test rdi, rdi
+ sete al
+ test rsi, rsi
+ sete dl
+ or al, dl
+ cjmp LABEL5
+ mov rdx, qword [rdi + CONST]
+ cmp rdx, qword [rsi + CONST]
+ cjmp LABEL8
+LABEL14:
+ ret
+LABEL16:
+ mov rcx, qword [rsi + CONST]
+ mov r8, qword [rdi + CONST]
+ mov rcx, qword [rcx + rdx*CONST]
+ cmp qword [r8 + rdx*CONST], rcx
+ cjmp LABEL14
+LABEL8:
+ sub rdx, CONST
+ cjmp LABEL16
+ mov eax, CONST
+ ret
+LABEL5:
+ xor eax, eax
+ ret

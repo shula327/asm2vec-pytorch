@@ -1,0 +1,71 @@
+ .name fcn.0012a840
+ .offset 000000000012a840
+ .file perl5.30.0
+ push r13
+ mov r13, rsi
+ push r12
+ mov r12, rdx
+ push rbp
+ mov rbp, rdi
+ test cl, cl
+ cjmp LABEL7
+ sub rsp, CONST
+ xor r9d, r9d
+ xor r8d, r8d
+ xor ecx, ecx
+ push CONST
+ push CONST
+ push CONST
+ call CONST
+ add rsp, CONST
+ test rax, rax
+ cjmp LABEL18
+LABEL7:
+ sub rsp, CONST
+ xor r9d, r9d
+ xor r8d, r8d
+ xor ecx, ecx
+ push CONST
+ mov rdx, r12
+ mov rsi, r13
+ mov rdi, rbp
+ push CONST
+ push CONST
+ call CONST
+ add rsp, CONST
+ test rax, rax
+ cjmp LABEL32
+ cmp qword [rax + CONST], CONST
+ lea rcx, qword [rax + CONST]
+ cjmp LABEL32
+ mov rdx, r12
+ mov rsi, r13
+ mov rdi, rbp
+ xor r8d, r8d
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL18:
+ mov rdx, r12
+ mov rsi, r13
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL32:
+ mov rdx, r12
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ xor eax, eax
+ call CONST
+ nop word [rax + rax]
+ push rax
+ pop rax
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ xor eax, eax
+ sub rsp, CONST
+ call CONST
+ nop dword [rax + rax]

@@ -1,0 +1,45 @@
+ .name fcn.0002e570
+ .offset 000000000002e570
+ .file dpkg
+ endbr64
+ push rbx
+ mov eax, CONST
+ mov ebx, esi
+ test esi, esi
+ cjmp LABEL5
+ pop rbx
+ ret
+LABEL5:
+ mov rsi, rdx
+ call CONST
+ cmp ebx, CONST
+ cjmp LABEL11
+ lea rsi, [rip + CONST]
+ mov ecx, ebx
+ movsxd rdx, dword [rsi + rcx*CONST]
+ add rdx, rsi
+ notrack jmp rdx
+ not eax
+ shr eax, CONST
+ pop rbx
+ ret
+ test eax, eax
+ pop rbx
+ sete al
+ ret
+ test eax, eax
+ pop rbx
+ setg al
+ ret
+ test eax, eax
+ pop rbx
+ setle al
+ ret
+LABEL11:
+ mov r8d, ebx
+ lea rcx, [rip + CONST]
+ xor eax, eax
+ mov esi, CONST
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ call CONST

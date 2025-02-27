@@ -1,0 +1,29 @@
+ .name fcn.0010d9f0
+ .offset 000000000010d9f0
+ .file perl5.30.0
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ call CONST
+ mov rdx, qword [rbx + CONST]
+ mov qword [rax + CONST], CONST
+ lea r8, qword [rax + CONST]
+ lea rcx, qword [rax + CONST]
+ mov qword [rbx + CONST], rax
+ mov qword [rax], rdx
+ mov rdx, r8
+ nop dword [rax]
+LABEL16:
+ add rdx, CONST
+ mov dword [rdx + CONST], CONST
+ mov qword [rdx + CONST], rdx
+ cmp rcx, rdx
+ cjmp LABEL16
+ mov qword [rax + CONST], CONST
+ mov dword [rax + CONST], CONST
+ mov rax, qword [rax + CONST]
+ add qword [rbx + CONST], CONST
+ mov qword [rbx + CONST], rax
+ mov rax, r8
+ pop rbx
+ ret

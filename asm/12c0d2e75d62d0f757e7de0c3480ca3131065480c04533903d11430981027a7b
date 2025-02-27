@@ -1,0 +1,21 @@
+ .name fcn.00021250
+ .offset 0000000000021250
+ .file grep
+ endbr64
+ push rbp
+ mov rdx, rsi
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ xor esi, esi
+ sub rsp, CONST
+ call CONST
+ mov rdx, rax
+ sub rax, rbp
+ add rax, CONST
+ test rdx, rdx
+ cmove rax, rbx
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

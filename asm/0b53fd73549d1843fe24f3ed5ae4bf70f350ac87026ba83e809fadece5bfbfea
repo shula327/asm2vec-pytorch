@@ -1,0 +1,61 @@
+ .name fcn.00010400
+ .offset 0000000000010400
+ .file dpkg
+ endbr64
+ cmp qword [rip + CONST], CONST
+ push r12
+ mov r12d, edi
+ push rbp
+ push rbx
+ cjmp LABEL6
+ mov rbp, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ call CONST
+ mov rax, qword [rip + CONST]
+ test rax, rax
+ cjmp LABEL6
+ lea rbx, [rip + CONST]
+ nop dword [rax]
+LABEL33:
+ mov rcx, qword [rax + CONST]
+ mov rdx, rbx
+ mov esi, CONST
+ xor eax, eax
+ mov rdi, qword [rip + CONST]
+ call CONST
+ mov rax, qword [rip + CONST]
+ mov rdi, qword [rax + CONST]
+ call CONST
+ mov rax, qword [rip + CONST]
+ mov rax, qword [rax]
+ mov qword [rip + CONST], rax
+ test rax, rax
+ cjmp LABEL33
+LABEL6:
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL35
+LABEL53:
+ mov eax, dword [rip + CONST]
+ pop rbx
+ pop rbp
+ test eax, eax
+ mov eax, CONST
+ cmovne r12d, eax
+ mov eax, r12d
+ pop r12
+ ret
+LABEL35:
+ mov rbp, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ mov rsi, rbp
+ call CONST
+ jmp LABEL53

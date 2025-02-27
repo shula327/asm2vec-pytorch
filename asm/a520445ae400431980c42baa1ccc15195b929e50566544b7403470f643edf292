@@ -1,0 +1,83 @@
+ .name fcn.001a1cd0
+ .offset 00000000001a1cd0
+ .file perl5.30.0
+ lea r8, qword [rip + CONST]
+ lea rax, qword [rdi + CONST]
+ movzx ecx, byte [r8 + rdx]
+ mov byte [rdi], cl
+ cmp rdx, CONST
+ cjmp LABEL5
+ nop dword [rax]
+LABEL40:
+ movzx ecx, byte [rsi]
+ add rax, CONST
+ sub rdx, CONST
+ add rsi, CONST
+ shr cl, CONST
+ and ecx, CONST
+ movzx ecx, byte [r8 + rcx]
+ mov byte [rax + CONST], cl
+ movzx ecx, byte [rsi + CONST]
+ movzx edi, byte [rsi + CONST]
+ shl ecx, CONST
+ shr dil, CONST
+ and ecx, CONST
+ movzx edi, dil
+ or ecx, edi
+ movsxd rcx, ecx
+ movzx ecx, byte [r8 + rcx]
+ mov byte [rax + CONST], cl
+ movzx ecx, byte [rsi + CONST]
+ movzx edi, byte [rsi + CONST]
+ shl ecx, CONST
+ shr dil, CONST
+ and ecx, CONST
+ movzx edi, dil
+ or ecx, edi
+ movsxd rcx, ecx
+ movzx ecx, byte [r8 + rcx]
+ mov byte [rax + CONST], cl
+ movzx ecx, byte [rsi + CONST]
+ and ecx, CONST
+ movzx ecx, byte [r8 + rcx]
+ mov byte [rax + CONST], cl
+ cmp rdx, CONST
+ cjmp LABEL40
+LABEL5:
+ test rdx, rdx
+ cjmp LABEL42
+ xor ecx, ecx
+ xor r9d, r9d
+ cmp rdx, CONST
+ cjmp LABEL46
+LABEL74:
+ movzx edi, byte [rsi]
+ movsxd rcx, ecx
+ add rax, CONST
+ shr dil, CONST
+ and edi, CONST
+ movzx edx, byte [r8 + rdi]
+ mov byte [rax + CONST], dl
+ movzx edx, byte [rsi]
+ shl edx, CONST
+ and edx, CONST
+ or edx, r9d
+ movsxd rdx, edx
+ movzx edx, byte [r8 + rdx]
+ mov byte [rax + CONST], dl
+ movzx edx, byte [r8 + rcx]
+ mov byte [rax + CONST], dl
+ movzx edx, byte [rip + CONST]
+ mov byte [rax + CONST], dl
+LABEL42:
+ mov byte [rax], CONST
+ add rax, CONST
+ ret
+LABEL46:
+ movzx ecx, byte [rsi + CONST]
+ mov edx, ecx
+ shl ecx, CONST
+ shr dl, CONST
+ and ecx, CONST
+ movzx r9d, dl
+ jmp LABEL74

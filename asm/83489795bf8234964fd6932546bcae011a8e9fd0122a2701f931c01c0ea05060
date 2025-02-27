@@ -1,0 +1,36 @@
+ .name fcn.000d5da0
+ .offset 00000000000d5da0
+ .file bash
+ mov edx, dword [rip + CONST]
+ mov eax, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL3
+ mov edx, dword [rip + CONST]
+ cmp edx, -1
+ cjmp LABEL3
+ cmp edx, eax
+ cmovg edx, eax
+ mov dword [rip + CONST], edx
+ mov edx, dword [rip + CONST]
+ test edx, edx
+ cjmp LABEL12
+LABEL23:
+ cmp edx, CONST
+ cjmp LABEL14
+ cmp dword [rip + CONST], eax
+ mov edx, CONST
+ cmove eax, edx
+ mov dword [rip + CONST], eax
+LABEL14:
+ ret
+LABEL3:
+ mov edx, dword [rip + CONST]
+ mov dword [rip + CONST], eax
+ test edx, edx
+ cjmp LABEL23
+LABEL12:
+ lea rax, qword [rip + CONST]
+ cmp qword [rip + CONST], rax
+ cjmp LABEL14
+ mov dword [rip + CONST], CONST
+ ret

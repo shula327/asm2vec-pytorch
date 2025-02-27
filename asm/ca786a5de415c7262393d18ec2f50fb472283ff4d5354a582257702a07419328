@@ -1,0 +1,60 @@
+ .name fcn.0001f320
+ .offset 000000000001f320
+ .file dpkg
+ endbr64
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ cmp byte [rdi], CONST
+ cjmp LABEL10
+ call CONST
+ test rax, rax
+ cjmp LABEL13
+ mov eax, dword [rax + CONST]
+LABEL40:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL17
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ call CONST
+ lea r12, [rbp + CONST]
+ mov edx, CONST
+ mov rsi, rsp
+ mov dword [rax], CONST
+ mov rdi, r12
+ mov rbx, rax
+ call CONST
+ mov rdx, qword [rsp]
+ cmp r12, rdx
+ cjmp LABEL33
+ cmp byte [rdx], CONST
+ cjmp LABEL33
+ test rax, rax
+ cjmp LABEL33
+ mov edx, dword [rbx]
+ test edx, edx
+ cjmp LABEL40
+LABEL33:
+ lea rsi, [rip + CONST]
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ call CONST
+ mov rsi, rbp
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL13:
+ mov eax, CONST
+ jmp LABEL40
+LABEL17:
+ call CONST

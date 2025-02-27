@@ -1,0 +1,100 @@
+ .name fcn.000c81a0
+ .offset 00000000000c81a0
+ .file perl5.30.0
+ push r15
+ lea r15d, dword [rcx + CONST]
+ push r14
+ lea r14, qword [rip + CONST]
+ push r13
+ push r12
+ mov r12d, ecx
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ mov r13, qword [rsi + CONST]
+ mov qword [rsp + CONST], rdx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rax, qword [rsi + CONST]
+ mov qword [rsp + CONST], r13
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ mov dword [rsp + CONST], CONST
+ mov dword [rsp + CONST], CONST
+ movzx eax, byte [r13]
+ cmp al, CONST
+ cjmp LABEL25
+ cmp al, CONST
+ cjmp LABEL27
+ sub eax, CONST
+ cmp al, CONST
+ cjmp LABEL27
+ movzx eax, al
+ movsxd rax, dword [r14 + rax*CONST]
+ add rax, r14
+ jmp rax
+LABEL25:
+ cmp al, CONST
+ je CONST
+LABEL27:
+ mov qword [rsp + CONST], CONST
+ mov eax, dword [rbx]
+ mov edx, eax
+ shr edx, CONST
+ mov ecx, edx
+ and ecx, CONST
+ mov byte [rsp + CONST], cl
+ jne CONST
+ mov edx, CONST
+ mov rdi, rbp
+ mov rsi, rbx
+ mov r12, qword [rbx + CONST]
+ call CONST
+ mov rax, qword [rbx + CONST]
+ xor edi, edi
+ mov byte [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ xor r14d, r14d
+ mov byte [rax + r12*CONST], CONST
+ mov rax, qword [rbx + CONST]
+ mov qword [rsp + CONST], r12
+ mov byte [rax + r12*CONST + CONST], CONST
+ mov rax, qword [rbx + CONST]
+ mov rdx, qword [rsp + CONST]
+ mov byte [rsp + CONST], CONST
+ mov byte [rsp + CONST], CONST
+ mov word [rax + rdx*CONST + CONST], di
+ mov rax, qword [rbx + CONST]
+ mov rdx, qword [rsp + CONST]
+ mov r12, qword [rbx + CONST]
+ mov byte [rsp + CONST], CONST
+ add qword [rbx + CONST], CONST
+ lea rax, qword [rax + rdx*CONST]
+ mov byte [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ add rax, CONST
+ mov qword [rsp + CONST], rax
+ mov qword [rsp + CONST], r12
+ mov qword [rsp + CONST], CONST
+ mov byte [rsp + CONST], CONST
+ mov dword [rsp + CONST], r15d
+ mov r15, r13
+ mov r13, rax
+ mov rsi, qword [rbx + CONST]
+ cmp rsi, r12
+ jbe CONST
+ mov qword [rsp + CONST], CONST
+ movzx eax, byte [r12]
+ cmp al, CONST
+ jle CONST
+ sub eax, CONST
+ cmp al, CONST
+ ja CONST
+ lea rdx, qword [rip + CONST]
+ movzx eax, al
+ movsxd rax, dword [rdx + rax*CONST]
+ add rax, rdx
+ jmp rax

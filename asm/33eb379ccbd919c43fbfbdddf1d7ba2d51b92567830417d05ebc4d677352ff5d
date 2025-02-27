@@ -1,0 +1,30 @@
+ .name fcn.00002ee0
+ .offset 0000000000002ee0
+ .file ionice
+ shl esi, CONST
+ mov r8d, ecx
+ sub rsp, CONST
+ xor eax, eax
+ mov ecx, esi
+ mov esi, r8d
+ or ecx, edx
+ mov edx, edi
+ mov edi, CONST
+ call CONST
+ cmp eax, -1
+ cjmp LABEL11
+LABEL16:
+ add rsp, CONST
+ ret
+LABEL11:
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL16
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov edi, CONST
+ mov rsi, rax
+ xor eax, eax
+ call CONST

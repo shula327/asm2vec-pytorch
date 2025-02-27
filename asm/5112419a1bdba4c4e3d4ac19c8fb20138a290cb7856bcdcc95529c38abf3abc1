@@ -1,0 +1,38 @@
+ .name fcn.0000b420
+ .offset 000000000000b420
+ .file dpkg
+ endbr64
+ mov eax, dword [rip + CONST]
+ push rbp
+ mov rbp, qword [rsi]
+ mov rcx, qword [rsi + CONST]
+ lea edx, [rax + CONST]
+ mov r8, qword [rsi + CONST]
+ mov dword [rip + CONST], edx
+ test eax, eax
+ cjmp LABEL9
+ pop rbp
+ ret
+LABEL9:
+ sub rsp, CONST
+ lea rdx, [rip + CONST]
+ mov rdi, rbp
+ push CONST
+ lea r9, [rip + CONST]
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rbp
+ xor esi, esi
+ call CONST
+ mov esi, CONST
+ mov rdi, rbp
+ call CONST
+ lea rdi, [rbp + CONST]
+ call CONST
+ mov rdi, rbp
+ call CONST
+ pop rax
+ sub dword [rip + CONST], CONST
+ pop rdx
+ pop rbp
+ ret

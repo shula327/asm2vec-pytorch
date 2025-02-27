@@ -1,0 +1,66 @@
+ .name fcn.00002850
+ .offset 0000000000002850
+ .file basename
+ push r13
+ mov r13d, edx
+ push r12
+ push rbp
+ push rbx
+ mov rbx, rsi
+ sub rsp, CONST
+ call CONST
+ mov rdi, rax
+ mov rbp, rax
+ call CONST
+ test rbx, rbx
+ cjmp LABEL12
+ cmp byte [rbp], CONST
+ cjmp LABEL14
+LABEL12:
+ mov rsi, qword [rip + CONST]
+ mov rdi, rbp
+ call CONST
+ cmp r13b, CONST
+ mov rdi, qword [rip + CONST]
+ sbb esi, esi
+ mov rax, qword [rdi + CONST]
+ and esi, CONST
+ cmp rax, qword [rdi + CONST]
+ cjmp LABEL24
+ lea rdx, qword [rax + CONST]
+ mov qword [rdi + CONST], rdx
+ mov byte [rax], sil
+LABEL52:
+ add rsp, CONST
+ mov rdi, rbp
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST
+LABEL14:
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbx
+ lea r12, qword [rbp + rax]
+ call CONST
+ add rax, rbx
+LABEL49:
+ cmp rbp, r12
+ cjmp LABEL12
+ cmp rbx, rax
+ cjmp LABEL44
+ sub r12, CONST
+ sub rax, CONST
+ movzx ecx, byte [rax]
+ cmp byte [r12], cl
+ cjmp LABEL49
+ jmp LABEL12
+LABEL24:
+ call CONST
+ jmp LABEL52
+LABEL44:
+ cmp rbp, r12
+ cjmp LABEL12
+ mov byte [r12], CONST
+ jmp LABEL12

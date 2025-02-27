@@ -1,0 +1,35 @@
+ .name fcn.00069a50
+ .offset 0000000000069a50
+ .file bash
+ test rdi, rdi
+ cjmp LABEL1
+ cmp byte [rdi], CONST
+ cjmp LABEL1
+ push r12
+ push rbp
+ sub rsp, CONST
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL10
+ mov rdi, rax
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ test r12, r12
+ cjmp LABEL10
+ add rsp, CONST
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL10:
+ add rsp, CONST
+ xor eax, eax
+ pop rbp
+ pop r12
+ ret
+LABEL1:
+ xor eax, eax
+ ret

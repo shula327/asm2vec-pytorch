@@ -1,0 +1,17 @@
+ .name fcn.00007a20
+ .offset 0000000000007a20
+ .file grep
+ push rbx
+ mov rcx, qword [rip + CONST]
+ mov rbx, rsi
+ mov rdx, rsi
+ mov esi, CONST
+ call CONST
+ cmp rbx, rax
+ cjmp LABEL7
+ call CONST
+ mov eax, dword [rax]
+ mov dword [rip + CONST], eax
+LABEL7:
+ pop rbx
+ ret

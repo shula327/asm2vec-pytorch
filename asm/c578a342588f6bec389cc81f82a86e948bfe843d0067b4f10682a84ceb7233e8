@@ -1,0 +1,18 @@
+ .name fcn.00016cc0
+ .offset 0000000000016cc0
+ .file ls
+ test rdi, rdi
+ cjmp LABEL1
+ push rbx
+ mov rbx, rdi
+ nop dword [rax]
+LABEL9:
+ mov rdi, rbx
+ mov rbx, qword [rbx]
+ call CONST
+ test rbx, rbx
+ cjmp LABEL9
+ pop rbx
+ ret
+LABEL1:
+ ret

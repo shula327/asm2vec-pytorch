@@ -1,0 +1,33 @@
+ .name fcn.00006dc0
+ .offset 0000000000006dc0
+ .file diff3
+ sub rsp, CONST
+ xor esi, esi
+ call CONST
+ mov rdx, rax
+ mov eax, CONST
+ test rdx, rdx
+ cjmp LABEL6
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rdx
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta cl
+ sbb cl, CONST
+ xor eax, eax
+ test cl, cl
+ cjmp LABEL15
+LABEL6:
+ add rsp, CONST
+ ret
+LABEL15:
+ mov ecx, CONST
+ lea rdi, qword [rip + CONST]
+ mov rsi, rdx
+ repe cmpsb byte [rsi], byte ptr [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ setne al
+ add rsp, CONST
+ ret

@@ -1,0 +1,24 @@
+ .name fcn.000080a0
+ .offset 00000000000080a0
+ .file logger
+ push rbp
+ mov rbp, rdi
+ push rbx
+ sub rsp, CONST
+ mov rdi, qword [rdi]
+ test rdi, rdi
+ cjmp LABEL6
+ mov rbx, rbp
+ nop dword [rax]
+LABEL13:
+ call CONST
+ mov rdi, qword [rbx + CONST]
+ add rbx, CONST
+ test rdi, rdi
+ cjmp LABEL13
+LABEL6:
+ mov qword [rbp], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

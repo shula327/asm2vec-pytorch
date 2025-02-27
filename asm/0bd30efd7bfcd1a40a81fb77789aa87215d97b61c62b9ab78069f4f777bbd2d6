@@ -1,0 +1,48 @@
+ .name fcn.00004bf0
+ .offset 0000000000004bf0
+ .file sdiff
+ push r12
+ mov rsi, rdi
+ mov edx, CONST
+ push rbp
+ mov rbp, rdi
+ xor edi, edi
+ push rbx
+ call CONST
+ mov rbx, rax
+ cmp rbp, rax
+ cjmp LABEL10
+ mov rsi, rbp
+ mov rdi, rax
+ call CONST
+ test al, al
+ cjmp LABEL15
+LABEL10:
+ mov rax, rbx
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL15:
+ mov rdi, rbx
+ call CONST
+ mov rdi, rbp
+ mov r12, rax
+ call CONST
+ lea rdi, qword [r12 + rax + CONST]
+ call CONST
+ mov r9, rbp
+ mov r8, rbx
+ mov esi, CONST
+ mov r12, rax
+ mov rdi, rax
+ xor eax, eax
+ mov rdx, -1
+ mov rbx, r12
+ lea rcx, qword [rip + CONST]
+ call CONST
+ mov rax, rbx
+ pop rbx
+ pop rbp
+ pop r12
+ ret

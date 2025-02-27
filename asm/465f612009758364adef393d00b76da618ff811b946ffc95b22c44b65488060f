@@ -1,0 +1,22 @@
+ .name sym.PerlIOStdio_mode
+ .offset 00000000001986f0
+ .file perl5.30.0
+ endbr64
+ mov rax, rsi
+ mov rdx, rsi
+ test rdi, rdi
+ cjmp LABEL4
+ movzx ecx, byte [rdi]
+ test cl, cl
+ cjmp LABEL4
+ nop word cs:[rax + rax]
+LABEL14:
+ add rdi, CONST
+ mov byte [rdx], cl
+ add rdx, CONST
+ movzx ecx, byte [rdi]
+ test cl, cl
+ cjmp LABEL14
+LABEL4:
+ mov byte [rdx], CONST
+ ret

@@ -1,0 +1,49 @@
+ .name fcn.00014170
+ .offset 0000000000014170
+ .file dpkg
+ endbr64
+ push r12
+ mov ecx, CONST
+ mov r12, rdi
+ mov rax, rsi
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta dl
+ sbb dl, CONST
+ test dl, dl
+ cjmp LABEL10
+ mov rsi, rax
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ repe cmpsb byte [rsi], byte [rdi]
+ seta al
+ sbb al, CONST
+ test al, al
+ cjmp LABEL18
+LABEL10:
+ pop r12
+ ret
+LABEL18:
+ mov edi, CONST
+ xor eax, eax
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, r12
+ call CONST
+ test eax, eax
+ cjmp LABEL28
+ mov rdx, r12
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ pop r12
+ jmp CONST
+LABEL28:
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ call CONST
+ mov rsi, r12
+ mov rdi, rax
+ xor eax, eax
+ call CONST

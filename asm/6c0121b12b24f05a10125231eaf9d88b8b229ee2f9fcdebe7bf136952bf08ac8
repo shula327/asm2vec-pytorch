@@ -1,0 +1,26 @@
+ .name fcn.00010890
+ .offset 0000000000010890
+ .file dpkg
+ cmp edi, CONST
+ cjmp LABEL1
+ cmp edi, CONST
+ cjmp LABEL3
+ test edi, edi
+ cjmp LABEL5
+ push rax
+ mov r8d, edi
+ lea rcx, [rip + CONST]
+ mov esi, CONST
+ lea rdx, [rip + CONST]
+ lea rdi, [rip + CONST]
+ xor eax, eax
+ call CONST
+LABEL3:
+ lea rax, [rip + CONST]
+ ret
+LABEL5:
+ lea rax, [rip + CONST]
+ ret
+LABEL1:
+ lea rax, [rip + CONST]
+ ret

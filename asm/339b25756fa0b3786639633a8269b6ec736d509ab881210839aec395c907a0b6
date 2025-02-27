@@ -1,0 +1,21 @@
+ .name fcn.000037e0
+ .offset 00000000000037e0
+ .file bunzip2
+ push rax
+ pop rax
+ xor eax, eax
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ sub rsp, CONST
+ mov r8, rdi
+ mov rcx, qword [rip + CONST]
+ mov rdi, qword [rip + CONST]
+ call CONST
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL11
+LABEL15:
+ mov edi, CONST
+ call CONST
+LABEL11:
+ call CONST
+ jmp LABEL15

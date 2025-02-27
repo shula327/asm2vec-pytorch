@@ -1,0 +1,62 @@
+ .name fcn.000047f0
+ .offset 00000000000047f0
+ .file bunzip2
+ push rbx
+ lea rsi, [rip + CONST]
+ mov rax, rsi
+LABEL9:
+ mov ecx, dword [rax]
+ add rax, CONST
+ lea edx, [rcx + CONST]
+ not ecx
+ and edx, ecx
+ and edx, CONST
+ cjmp LABEL9
+ mov ecx, edx
+ shr ecx, CONST
+ test edx, CONST
+ cmove edx, ecx
+ lea rcx, [rax + CONST]
+ cmove rax, rcx
+ mov ebx, edx
+ add bl, dl
+ mov ebx, CONST
+ sbb rax, CONST
+ sub rax, rsi
+ mov esi, dword [rip + CONST]
+ cmp esi, eax
+ cjmp LABEL23
+ jmp LABEL24
+LABEL51:
+ mov rsi, qword [rip + CONST]
+ mov edi, CONST
+ add ebx, CONST
+ call CONST
+ lea rax, [rip + CONST]
+ mov esi, dword [rip + CONST]
+ mov rdi, rax
+LABEL38:
+ mov ecx, dword [rax]
+ add rax, CONST
+ lea edx, [rcx + CONST]
+ not ecx
+ and edx, ecx
+ and edx, CONST
+ cjmp LABEL38
+ mov ecx, edx
+ shr ecx, CONST
+ test edx, CONST
+ cmove edx, ecx
+ lea rcx, [rax + CONST]
+ cmove rax, rcx
+ mov ecx, edx
+ add cl, dl
+ sbb rax, CONST
+ sub rax, rdi
+LABEL23:
+ sub esi, eax
+ cmp ebx, esi
+ cjmp LABEL51
+LABEL24:
+ pop rbx
+ ret

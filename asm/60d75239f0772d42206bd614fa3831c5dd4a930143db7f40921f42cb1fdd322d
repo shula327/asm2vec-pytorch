@@ -1,0 +1,25 @@
+ .name fcn.00021b40
+ .offset 0000000000021b40
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, qword [rip + CONST]
+ mov esi, edi
+ and edi, CONST
+ mov rax, qword [rbp]
+ mov qword [rip + CONST], rax
+ cjmp LABEL7
+ mov qword [rbp + CONST], CONST
+ mov qword [rbp + CONST], CONST
+LABEL7:
+ mov rdi, rbp
+ call CONST
+ mov rdi, qword [rbp + CONST]
+ lea rax, [rip + CONST]
+ cmp rdi, rax
+ cjmp LABEL15
+ call CONST
+LABEL15:
+ mov rdi, rbp
+ pop rbp
+ jmp CONST

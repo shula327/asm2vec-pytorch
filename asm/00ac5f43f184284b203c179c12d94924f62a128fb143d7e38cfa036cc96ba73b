@@ -1,0 +1,13 @@
+ .name fcn.00019f70
+ .offset 0000000000019f70
+ .file install
+ endbr64
+ push rbx
+ mov rbx, rdi
+ mov edi, CONST
+ call CONST
+ mov qword [rax], rbx
+ mov qword [rax + CONST], CONST
+ mov qword [rax + CONST], CONST
+ pop rbx
+ ret

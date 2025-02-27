@@ -1,0 +1,67 @@
+ .name fcn.00031950
+ .offset 0000000000031950
+ .file bash
+ mov eax, dword [rip + CONST]
+ test eax, eax
+ cjmp LABEL2
+ cmp dword [rip + CONST], CONST
+ cjmp LABEL2
+ movsxd rax, dword [rip + CONST]
+ mov rsi, qword [rip + CONST]
+ mov rcx, qword [rip + CONST]
+ movzx edx, byte [rsi + rax]
+ cmp rax, rcx
+ cjmp LABEL10
+ jmp LABEL11
+LABEL17:
+ add rax, CONST
+ movzx edx, byte [rsi + rax]
+ cmp rcx, rax
+ cjmp LABEL11
+LABEL10:
+ cmp dl, CONST
+ cjmp LABEL17
+ cmp dl, CONST
+ cjmp LABEL17
+LABEL11:
+ xor eax, eax
+ cmp dl, CONST
+ cjmp LABEL22
+LABEL2:
+ mov ecx, dword [rip + CONST]
+ cmp ecx, CONST
+ cjmp LABEL25
+ test ecx, ecx
+ cjmp LABEL27
+ movabs rdx, CONST
+ mov eax, CONST
+ shl rax, cl
+ test rax, rdx
+ cjmp LABEL32
+ movabs rdx, CONST
+ test rax, rdx
+ cjmp LABEL35
+LABEL27:
+ xor eax, eax
+LABEL22:
+ ret
+LABEL32:
+ mov eax, CONST
+ ret
+LABEL25:
+ cmp ecx, CONST
+ cjmp LABEL32
+ sub ecx, CONST
+ cmp ecx, CONST
+ cjmp LABEL27
+ mov eax, CONST
+ shl rax, cl
+ test eax, CONST
+ setne al
+ movzx eax, al
+ ret
+LABEL35:
+ xor eax, eax
+ cmp dword [rip + CONST], CONST
+ setne al
+ ret

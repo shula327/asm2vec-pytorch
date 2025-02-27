@@ -1,0 +1,22 @@
+ .name sym.Perl_mg_find
+ .offset 00000000000e7a70
+ .file perl5.30.0
+ endbr64
+ test rdi, rdi
+ cjmp LABEL2
+ mov rax, qword [rdi]
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL6
+LABEL12:
+ movsx edx, byte [rax + CONST]
+ cmp esi, edx
+ cjmp LABEL6
+ mov rax, qword [rax]
+ test rax, rax
+ cjmp LABEL12
+ ret
+LABEL2:
+ xor eax, eax
+LABEL6:
+ ret

@@ -1,0 +1,21 @@
+ .name fcn.0001c4c0
+ .offset 000000000001c4c0
+ .file dpkg
+ endbr64
+ push rbp
+ mov rbp, rsi
+ mov esi, CONST
+ push rbx
+ mov rbx, rdi
+ sub rsp, CONST
+ call CONST
+ movsxd rax, dword [rbx + CONST]
+ mov rdx, qword [rbx + CONST]
+ lea ecx, [rax + CONST]
+ mov dword [rbx + CONST], ecx
+ mov qword [rdx + rax*CONST], rbp
+ mov qword [rdx + rax*CONST + CONST], CONST
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret

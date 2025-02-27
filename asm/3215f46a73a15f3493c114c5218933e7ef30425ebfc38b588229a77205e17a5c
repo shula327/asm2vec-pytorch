@@ -1,0 +1,42 @@
+ .name sym.PerlIO_pop
+ .offset 0000000000193b30
+ .file perl5.30.0
+ endbr64
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov rbp, qword [rsi]
+ test rbp, rbp
+ cjmp LABEL6
+ mov rax, qword [rbp + CONST]
+ mov rbx, rsi
+ test rax, rax
+ cjmp LABEL10
+ mov rax, qword [rax + CONST]
+ test rax, rax
+ cjmp LABEL10
+ call rax
+ test rax, rax
+ cjmp LABEL6
+LABEL10:
+ mov rax, qword [rbx + CONST]
+ mov eax, dword [rax + CONST]
+ test eax, eax
+ cjmp LABEL20
+ mov rax, qword [rbx]
+ mov dword [rax + CONST], CONST
+ mov rax, qword [rbx]
+ mov qword [rax + CONST], CONST
+LABEL6:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL20:
+ mov rax, qword [rbp]
+ mov rdi, rbp
+ mov qword [rbx], rax
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ jmp CONST

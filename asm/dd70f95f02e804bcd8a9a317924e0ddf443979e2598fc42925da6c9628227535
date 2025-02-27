@@ -1,0 +1,36 @@
+ .name fcn.0001cb90
+ .offset 000000000001cb90
+ .file find
+ movsxd r8, edi
+ mov eax, edi
+ mov r9d, edi
+ push r12
+ imul r8, r8, CONST
+ sar eax, CONST
+ xor ecx, ecx
+ mov r12, rsi
+ lea rsi, qword [rip + CONST]
+ sar r8, CONST
+ sub r8d, eax
+ imul eax, r8d, CONST
+ add r8d, CONST
+ sub r9d, eax
+ mov eax, r8d
+ mov edx, r9d
+ sar eax, CONST
+ sar edx, CONST
+ xor r8d, eax
+ xor r9d, edx
+ cmp edi, CONST
+ mov rdi, r12
+ setge cl
+ sub r9d, edx
+ sub r8d, eax
+ mov rdx, -1
+ add rcx, rsi
+ xor eax, eax
+ mov esi, CONST
+ call CONST
+ mov rax, r12
+ pop r12
+ ret

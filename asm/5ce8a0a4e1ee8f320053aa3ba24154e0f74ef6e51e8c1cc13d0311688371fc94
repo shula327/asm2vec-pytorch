@@ -1,0 +1,30 @@
+ .name fcn.00016760
+ .offset 0000000000016760
+ .file dpkg
+ push r12
+ mov esi, CONST
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, CONST
+ call CONST
+ mov rdi, rax
+ mov r12, rax
+ call CONST
+ mov rdi, rbp
+ sar eax, CONST
+ sub ebx, eax
+ call CONST
+ test ebx, ebx
+ mov ecx, CONST
+ mov rdx, r12
+ cmovg ecx, ebx
+ mov r9, rax
+ pop rbx
+ mov edi, CONST
+ pop rbp
+ lea r8, [rip + CONST]
+ xor eax, eax
+ lea rsi, [rip + CONST]
+ pop r12
+ jmp CONST

@@ -1,0 +1,38 @@
+ .name fcn.0002a100
+ .offset 000000000002a100
+ .file dpkg
+ endbr64
+ push r12
+ mov r12, rdi
+ push rbx
+ sub rsp, CONST
+ movzx ebx, byte [rdi]
+ cmp bl, CONST
+ cjmp LABEL7
+ cmp bl, CONST
+ cjmp LABEL7
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret
+LABEL7:
+ mov rdi, r12
+ call CONST
+ lea rax, [r12 + rax + CONST]
+ cmp byte [rax], bl
+ cjmp LABEL19
+ mov byte [rax], CONST
+ add r12, CONST
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret
+LABEL19:
+ xor r12d, r12d
+ add rsp, CONST
+ mov rax, r12
+ pop rbx
+ pop r12
+ ret

@@ -1,0 +1,55 @@
+ .name fcn.000b1f90
+ .offset 00000000000b1f90
+ .file perl5.30.0
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, rdx
+ sub rsp, CONST
+ mov rsi, qword [rdx + CONST]
+ xor edx, edx
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ call CONST
+ cmp byte [rbx + CONST], CONST
+ mov qword [rsp], rax
+ mov rcx, rax
+ cjmp LABEL16
+ mov rdx, rsp
+ mov rsi, rbx
+ mov rdi, rbp
+ call CONST
+ mov rcx, qword [rsp]
+LABEL16:
+ mov rdx, rbx
+ xor r9d, r9d
+ xor r8d, r8d
+ mov rsi, r12
+ mov rdi, rbp
+ call CONST
+ mov edx, dword [rbx + CONST]
+ mov qword [rbx + CONST], CONST
+ test edx, edx
+ cjmp LABEL31
+ or byte [rbx], CONST
+ mov byte [rbx + CONST], CONST
+LABEL44:
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL36
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL31:
+ mov eax, dword [r12 + CONST]
+ test eax, eax
+ cjmp LABEL44
+ mov byte [rbx + CONST], CONST
+ jmp LABEL44
+LABEL36:
+ call CONST

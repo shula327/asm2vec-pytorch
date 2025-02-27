@@ -1,0 +1,35 @@
+ .name fcn.00027c70
+ .offset 0000000000027c70
+ .file dpkg
+ endbr64
+ mov eax, dword [rdi + CONST]
+ cmp eax, esi
+ cjmp LABEL3
+ mov rdx, qword [rdi]
+ mov r9d, dword [rdx + CONST]
+ test eax, eax
+ cjmp LABEL7
+ add r9d, CONST
+ mov dword [rdx + CONST], r9d
+LABEL16:
+ test r9d, r9d
+ cjmp LABEL11
+ mov dword [rdi + CONST], esi
+ mov byte [rdi + CONST], CONST
+LABEL3:
+ ret
+LABEL7:
+ test esi, esi
+ cjmp LABEL16
+ sub r9d, CONST
+ mov dword [rdx + CONST], r9d
+ jmp LABEL16
+LABEL11:
+ push rax
+ mov r8, qword [rdx + CONST]
+ xor eax, eax
+ lea rcx, [rip + CONST]
+ lea rdx, [rip + CONST]
+ mov esi, CONST
+ lea rdi, [rip + CONST]
+ call CONST

@@ -1,0 +1,26 @@
+ .name fcn.00003800
+ .offset 0000000000003800
+ .file nsenter
+ mov ecx, dword [rip + CONST]
+ test ecx, ecx
+ cjmp LABEL2
+ mov rdx, rsi
+ lea rax, qword [rip + CONST]
+LABEL10:
+ cmp edi, ecx
+ cjmp LABEL6
+ mov ecx, dword [rax + CONST]
+ add rax, CONST
+ test ecx, ecx
+ cjmp LABEL10
+LABEL2:
+ sub rsp, CONST
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL6:
+ mov rsi, qword [rax + CONST]
+ lea rdi, qword [rax + CONST]
+ jmp CONST

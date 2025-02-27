@@ -1,0 +1,98 @@
+ .name fcn.00002e70
+ .offset 0000000000002e70
+ .file nproc
+ endbr64
+ push rbp
+ push rbx
+ sub rsp, CONST
+ cmp edi, CONST
+ cjmp LABEL5
+ cmp edi, CONST
+ cjmp LABEL7
+ mov edi, CONST
+ call CONST
+ cmp rax, CONST
+ cjmp LABEL11
+LABEL63:
+ test rax, rax
+ mov edx, CONST
+ cmovle rax, rdx
+LABEL52:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL5:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL23
+ call CONST
+ lea rdi, [rip + CONST]
+ mov rbx, rax
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL30
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ mov rax, CONST
+ cmove rbp, rax
+LABEL83:
+ test rbx, rbx
+ cjmp LABEL37
+LABEL79:
+ call CONST
+ test rax, rax
+ cjmp LABEL40
+ cmp rax, rbp
+ cmova rax, rbp
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL40:
+ mov edi, CONST
+ call CONST
+ mov rdx, rax
+ mov eax, CONST
+ test rdx, rdx
+ cjmp LABEL52
+ cmp rdx, rbp
+ mov rax, rbp
+ cmovbe rax, rdx
+ jmp LABEL52
+LABEL11:
+ call CONST
+ mov rdx, rax
+ mov eax, CONST
+ test rdx, rdx
+ cjmp LABEL52
+ mov rax, rdx
+ jmp LABEL63
+LABEL37:
+ cmp rbp, rbx
+ mov rax, rbx
+ cmovbe rax, rbp
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ ret
+LABEL23:
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ test rax, rax
+ cjmp LABEL7
+ call CONST
+ mov rbp, rax
+ test rax, rax
+ cjmp LABEL79
+LABEL7:
+ mov rbp, CONST
+ jmp LABEL79
+LABEL30:
+ mov rbp, CONST
+ jmp LABEL83

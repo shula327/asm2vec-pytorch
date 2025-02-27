@@ -1,0 +1,16 @@
+ .name fcn.00007310
+ .offset 0000000000007310
+ .file ls
+ push r12
+ mov r12, rsi
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ call CONST
+ mov rsi, r12
+ mov rdi, rbp
+ mov dword [rax], CONST
+ add rsp, CONST
+ pop rbp
+ pop r12
+ jmp CONST

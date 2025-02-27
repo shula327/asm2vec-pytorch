@@ -1,0 +1,24 @@
+ .name fcn.0000aeb0
+ .offset 000000000000aeb0
+ .file diff3
+ add rdi, CONST
+ cjmp LABEL1
+ sub rsp, CONST
+ call CONST
+ xor edx, edx
+ test rax, rax
+ cjmp LABEL6
+ lea rdx, qword [rax + CONST]
+ and rdx, CONST
+ add rdx, CONST
+ mov rcx, rdx
+ sub rcx, rax
+ mov byte [rdx + CONST], cl
+LABEL6:
+ mov rax, rdx
+ add rsp, CONST
+ ret
+LABEL1:
+ xor edx, edx
+ mov rax, rdx
+ ret

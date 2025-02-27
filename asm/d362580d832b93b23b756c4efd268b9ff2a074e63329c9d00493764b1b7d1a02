@@ -1,0 +1,19 @@
+ .name fcn.00024ec0
+ .offset 0000000000024ec0
+ .file find
+ test edi, edi
+ cjmp LABEL1
+ ret
+LABEL1:
+ sub rsp, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL6
+ add rsp, CONST
+ ret
+LABEL6:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST

@@ -1,0 +1,30 @@
+ .name fcn.00004bc0
+ .offset 0000000000004bc0
+ .file update-alternatives
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ test esi, esi
+ cjmp LABEL5
+ lea eax, dword [rsi + CONST]
+ movsxd rdx, eax
+ mov eax, eax
+ shl rdx, CONST
+ shl rax, CONST
+ lea rbp, qword [rdi + rdx + CONST]
+ lea rbx, qword [rdi + rdx]
+ sub rbp, rax
+ nop word [rax + rax]
+LABEL19:
+ mov rdi, qword [rbx]
+ sub rbx, CONST
+ call CONST
+ cmp rbx, rbp
+ cjmp LABEL19
+LABEL5:
+ pop rbx
+ mov rdi, r12
+ pop rbp
+ pop r12
+ jmp CONST

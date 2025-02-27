@@ -1,0 +1,67 @@
+ .name fcn.001afb30
+ .offset 00000000001afb30
+ .file perl5.30.0
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdx
+ mov qword [rsp + CONST], rcx
+ mov qword [rsp + CONST], r8
+ mov qword [rsp + CONST], r9
+ test al, al
+ cjmp LABEL8
+ movaps xmmword [rsp + CONST], xmm0
+ movaps xmmword [rsp + CONST], xmm1
+ movaps xmmword [rsp + CONST], xmm2
+ movaps xmmword [rsp + CONST], xmm3
+ movaps xmmword [rsp + CONST], xmm4
+ movaps xmmword [rsp + CONST], xmm5
+ movaps xmmword [rsp + CONST], xmm6
+ movaps xmmword [rsp + CONST], xmm7
+LABEL8:
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ lea rax, qword [rsp + CONST]
+ lea rsi, qword [rip + CONST]
+ mov rdi, rbp
+ mov qword [rsp + CONST], rax
+ lea rdx, qword [rsp + CONST]
+ lea rax, qword [rsp + CONST]
+ mov dword [rsp + CONST], CONST
+ mov dword [rsp + CONST], CONST
+ mov qword [rsp + CONST], rax
+ call CONST
+ mov rsi, rax
+ mov eax, dword [rax + CONST]
+ and eax, CONST
+ cmp eax, CONST
+ cjmp LABEL34
+ mov rax, qword [rsi]
+ mov rdx, qword [rsi + CONST]
+ mov rcx, qword [rax + CONST]
+LABEL58:
+ movsxd rsi, dword [rip + CONST]
+ mov rax, qword [rbp + CONST]
+ add rcx, CONST
+ mov rdi, rbp
+ mov qword [rsp + CONST], rcx
+ mov rax, qword [rax + rsi*CONST]
+ mov rsi, qword [rax]
+ call CONST
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL48
+ add rsp, CONST
+ pop rbp
+ ret
+LABEL34:
+ lea rdx, qword [rsp + CONST]
+ mov ecx, CONST
+ mov rdi, rbp
+ call CONST
+ mov rcx, qword [rsp + CONST]
+ mov rdx, rax
+ jmp LABEL58
+LABEL48:
+ call CONST

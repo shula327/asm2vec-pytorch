@@ -1,0 +1,45 @@
+ .name fcn.000053c0
+ .offset 00000000000053c0
+ .file setpriv
+ mov qword [rsi], CONST
+ test rdi, rdi
+ cjmp LABEL2
+ movzx eax, byte [rdi]
+ cmp al, CONST
+ cjmp LABEL5
+ nop dword [rax + rax]
+LABEL11:
+ movzx eax, byte [rdi + CONST]
+ mov r8, rdi
+ add rdi, CONST
+ cmp al, CONST
+ cjmp LABEL11
+LABEL33:
+ mov qword [rsi], CONST
+ movzx eax, byte [r8 + CONST]
+ cmp al, CONST
+ cjmp LABEL15
+ test al, al
+ cjmp LABEL15
+ mov eax, CONST
+LABEL25:
+ mov qword [rsi], rax
+ movzx edx, byte [rdi + rax + CONST]
+ add rax, CONST
+ test dl, dl
+ cjmp LABEL15
+ cmp dl, CONST
+ cjmp LABEL25
+LABEL15:
+ mov rax, r8
+ ret
+LABEL5:
+ xor r8d, r8d
+ test al, al
+ cjmp LABEL15
+ mov r8, rdi
+ add rdi, CONST
+ jmp LABEL33
+LABEL2:
+ xor r8d, r8d
+ jmp LABEL15

@@ -1,0 +1,60 @@
+ .name fcn.00185930
+ .offset 0000000000185930
+ .file perl5.30.0
+ push r14
+ push r13
+ push r12
+ mov r12d, ecx
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov ebx, edx
+ xor edx, edx
+ call CONST
+ mov esi, ebx
+ mov rdi, rbp
+ mov r14, rax
+ call CONST
+ mov esi, r12d
+ mov rdi, rbp
+ mov r13, rax
+ call CONST
+ mov rdi, rbp
+ mov esi, CONST
+ mov rbx, rax
+ call CONST
+ sub rsp, CONST
+ mov r9, r14
+ mov rdi, rbp
+ push CONST
+ mov r12, rax
+ mov r8d, CONST
+ mov ecx, CONST
+ lea rdx, qword [rip + CONST]
+ mov rsi, rax
+ call CONST
+ mov r9, r13
+ mov rsi, r12
+ mov rdi, rbp
+ mov r8d, CONST
+ mov ecx, CONST
+ lea rdx, qword [rip + CONST]
+ mov dword [rsp], CONST
+ call CONST
+ mov r9, rbx
+ mov rsi, r12
+ mov rdi, rbp
+ lea rdx, qword [rip + CONST]
+ mov r8d, CONST
+ mov ecx, CONST
+ mov dword [rsp], CONST
+ call CONST
+ pop rax
+ mov rax, r12
+ pop rdx
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret

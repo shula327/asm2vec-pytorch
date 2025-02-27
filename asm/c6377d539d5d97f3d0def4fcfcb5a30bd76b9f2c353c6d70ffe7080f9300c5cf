@@ -1,0 +1,19 @@
+ .name fcn.0002aa70
+ .offset 000000000002aa70
+ .file dpkg
+ endbr64
+ push rbx
+ mov rcx, CONST
+ mov rbx, rdx
+ xor edx, edx
+ call CONST
+ cmp rax, rbx
+ cjmp LABEL7
+ pop rbx
+ ret
+LABEL7:
+ call CONST
+ mov dword [rax], CONST
+ mov rax, CONST
+ pop rbx
+ ret

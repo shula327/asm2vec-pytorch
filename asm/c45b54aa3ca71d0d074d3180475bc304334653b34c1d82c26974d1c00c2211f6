@@ -1,0 +1,14 @@
+ .name fcn.000041b0
+ .offset 00000000000041b0
+ .file mkdir
+ push rbx
+ mov rbx, rsi
+ mov rsi, rdi
+ mov edi, CONST
+ call CONST
+ mov rsi, qword [rbx + CONST]
+ mov rdi, qword [rip + CONST]
+ mov rdx, rax
+ pop rbx
+ xor eax, eax
+ jmp CONST

@@ -1,0 +1,14 @@
+ .name fcn.0004d080
+ .offset 000000000004d080
+ .file bash
+ test rdi, rdi
+ cjmp LABEL1
+ mov eax, dword [rdi + CONST]
+ test eax, eax
+ cjmp LABEL1
+ mov rax, rdx
+ or rax, rsi
+ cjmp LABEL1
+ jmp CONST
+LABEL1:
+ ret

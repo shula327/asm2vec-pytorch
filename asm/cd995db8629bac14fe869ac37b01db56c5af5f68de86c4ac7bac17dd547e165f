@@ -1,0 +1,25 @@
+ .name fcn.00003bf0
+ .offset 0000000000003bf0
+ .file wdctl
+ sub rsp, CONST
+ cmp dword [rip + CONST], edi
+ cjmp LABEL2
+ movsxd rdi, edi
+ lea rax, qword [rip + CONST]
+ mov eax, dword [rax + rdi*CONST]
+ cmp eax, CONST
+ cjmp LABEL7
+ add rsp, CONST
+ ret
+LABEL2:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST
+LABEL7:
+ lea rcx, qword [rip + CONST]
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ lea rdi, qword [rip + CONST]
+ call CONST

@@ -1,0 +1,78 @@
+ .name fcn.000035d0
+ .offset 00000000000035d0
+ .file bunzip2
+ push r13
+ mov r10d, CONST
+ push r12
+ push rbp
+ xor ebp, ebp
+ push rbx
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov qword [rsp + CONST], rsi
+ lea rbx, [rsp + CONST]
+ lea r9, [rsp + CONST]
+ mov r12, rbx
+ lea r13, [rsp + CONST]
+ mov r11, rbx
+LABEL66:
+ mov rcx, r13
+ mov rsi, r9
+ xor edx, edx
+ nop dword [rax]
+LABEL33:
+ movzx eax, byte [rcx]
+ shl edx, CONST
+ mov r8, rcx
+ sub rcx, CONST
+ add eax, edx
+ mov rdx, rax
+ imul rax, r10
+ shr rax, CONST
+ mov byte [rcx + CONST], al
+ lea eax, [rax + rax*CONST]
+ add eax, eax
+ sub edx, eax
+ cmp r8, r9
+ cjmp LABEL33
+ add edx, CONST
+ lea eax, [rbp + CONST]
+ mov byte [r12], dl
+ nop dword [rax + rax]
+LABEL42:
+ cmp byte [rsi], CONST
+ cjmp LABEL39
+ add rsi, CONST
+ cmp r11, rsi
+ cjmp LABEL42
+ cdqe
+ mov byte [rdi + rax], CONST
+ add rbx, rax
+ movsxd rax, ebp
+ add rax, rdi
+ jmp LABEL48
+LABEL54:
+ movzx edx, byte [rbx + CONST]
+ add rdi, CONST
+LABEL48:
+ mov byte [rdi], dl
+ sub rbx, CONST
+ cmp rax, rdi
+ cjmp LABEL54
+ mov rax, qword [rsp + CONST]
+ xor rax, qword fs:[CONST]
+ cjmp LABEL57
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret
+LABEL39:
+ add r12, CONST
+ mov ebp, eax
+ jmp LABEL66
+LABEL57:
+ call CONST

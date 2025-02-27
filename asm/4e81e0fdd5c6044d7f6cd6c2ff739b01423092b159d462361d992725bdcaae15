@@ -1,0 +1,46 @@
+ .name fcn.00018e90
+ .offset 0000000000018e90
+ .file install
+LABEL38:
+ push rbx
+ test edi, edi
+ cjmp LABEL2
+ mov eax, edi
+ cmp edi, CONST
+ cjmp LABEL5
+LABEL17:
+ pop rbx
+ ret
+LABEL5:
+ mov r8, qword [rsi]
+ mov rbx, rsi
+ mov ecx, CONST
+ lea rdi, [rip + CONST]
+ mov rsi, r8
+ repe cmpsb byte [rsi], byte [rdi]
+ seta dl
+ sbb dl, CONST
+ test dl, dl
+ cjmp LABEL17
+ mov rdi, r8
+ call CONST
+ mov qword [rbx], CONST
+ call CONST
+ mov dword [rax], CONST
+ mov eax, CONST
+ pop rbx
+ ret
+LABEL2:
+ call CONST
+ mov dword [rax], CONST
+ mov eax, CONST
+ pop rbx
+ ret
+ endbr64
+ push rbp
+ mov rbp, rsi
+ call CONST
+ mov rsi, rbp
+ pop rbp
+ mov edi, eax
+ jmp LABEL38

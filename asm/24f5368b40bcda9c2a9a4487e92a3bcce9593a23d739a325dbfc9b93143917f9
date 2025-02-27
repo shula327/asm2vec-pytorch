@@ -1,0 +1,24 @@
+ .name fcn.00050810
+ .offset 0000000000050810
+ .file bash
+ push rbp
+ mov rbp, rdi
+ sub rsp, CONST
+ mov rdx, qword [rip + CONST]
+ test rdx, rdx
+ cjmp LABEL5
+LABEL18:
+ add rsp, CONST
+ mov rdi, rbp
+ xor r8d, r8d
+ mov ecx, CONST
+ pop rbp
+ jmp CONST
+LABEL5:
+ mov edi, CONST
+ mov qword [rsp + CONST], rsi
+ call CONST
+ mov rsi, qword [rsp + CONST]
+ mov qword [rip + CONST], rax
+ mov rdx, rax
+ jmp LABEL18

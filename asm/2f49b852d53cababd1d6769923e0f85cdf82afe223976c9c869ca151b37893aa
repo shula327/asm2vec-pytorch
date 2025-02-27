@@ -1,0 +1,15 @@
+ .name fcn.00024f90
+ .offset 0000000000024f90
+ .file dpkg
+ endbr64
+ push rbp
+ lea rsi, [rip + CONST]
+ mov rbp, qword [rdi]
+ mov edx, CONST
+ lea rdi, [rip + CONST]
+ call CONST
+ mov rsi, rbp
+ pop rbp
+ mov rdi, rax
+ xor eax, eax
+ jmp CONST

@@ -1,0 +1,31 @@
+ .name fcn.00003680
+ .offset 0000000000003680
+ .file nsenter
+ push rbx
+ mov rbx, rsi
+ mov rsi, rdi
+ mov edi, CONST
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ mov rdx, rsp
+ call CONST
+ test eax, eax
+ cjmp LABEL11
+ mov rdx, qword [rsp + CONST]
+ mov qword [rbx], rdx
+LABEL23:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL16
+ add rsp, CONST
+ pop rbx
+ ret
+LABEL11:
+ call CONST
+ mov eax, dword [rax]
+ neg eax
+ jmp LABEL23
+LABEL16:
+ call CONST

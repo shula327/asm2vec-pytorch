@@ -1,0 +1,20 @@
+ .name fcn.00090f80
+ .offset 0000000000090f80
+ .file bash
+ mov eax, dword [rip + CONST]
+ mov ecx, eax
+ or ecx, dword [rip + CONST]
+ cjmp LABEL3
+ ret
+LABEL3:
+ sub rsp, CONST
+ mov edx, CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+ mov eax, dword [rip + CONST]
+ add rsp, CONST
+ ret

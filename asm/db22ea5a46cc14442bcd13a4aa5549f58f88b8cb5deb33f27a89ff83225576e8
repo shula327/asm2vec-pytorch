@@ -1,0 +1,59 @@
+ .name sym._obstack_free
+ .offset 00000000000256b0
+ .file grep
+LABEL32:
+ call CONST
+ endbr64
+ push r12
+ mov r12, rsi
+ push rbp
+ push rbx
+ mov rsi, qword [rdi + CONST]
+ mov rbx, rdi
+ test rsi, rsi
+ cjmp LABEL9
+ jmp LABEL10
+LABEL25:
+ mov rdi, qword [rbx + CONST]
+ call rax
+ or byte [rbx + CONST], CONST
+ test rbp, rbp
+ cjmp LABEL10
+LABEL30:
+ mov rsi, rbp
+LABEL9:
+ cmp rsi, r12
+ cjmp LABEL18
+ mov rax, qword [rsi]
+ cmp rax, r12
+ cjmp LABEL21
+LABEL18:
+ mov rbp, qword [rsi + CONST]
+ mov rax, qword [rbx + CONST]
+ test byte [rbx + CONST], CONST
+ cjmp LABEL25
+ mov rdi, rsi
+ call rax
+ or byte [rbx + CONST], CONST
+ test rbp, rbp
+ cjmp LABEL30
+LABEL10:
+ test r12, r12
+ cjmp LABEL32
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL21:
+ movq xmm1, r12
+ movq xmm0, rsi
+ movq xmm2, rax
+ punpcklqdq xmm0, xmm1
+ movups xmmword [rbx + CONST], xmm0
+ movq xmm0, r12
+ punpcklqdq xmm0, xmm2
+ movups xmmword [rbx + CONST], xmm0
+ pop rbx
+ pop rbp
+ pop r12
+ ret

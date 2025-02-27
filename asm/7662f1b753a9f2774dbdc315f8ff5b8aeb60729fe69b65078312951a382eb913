@@ -1,0 +1,63 @@
+ .name fcn.00021d50
+ .offset 0000000000021d50
+ .file grep
+ endbr64
+ push rbx
+ mov rcx, rdx
+ mov r8, qword [rsi]
+ test rdi, rdi
+ cjmp LABEL5
+ movabs rax, CONST
+ xor edx, edx
+ div rcx
+ cmp rax, r8
+ cjmp LABEL10
+ mov rax, r8
+ shr rax, CONST
+ lea rbx, [rax + r8 + CONST]
+ mov qword [rsi], rbx
+ imul rbx, rcx
+ test rbx, rbx
+ cjmp LABEL17
+LABEL39:
+ mov rsi, rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL21
+ test rbx, rbx
+ cjmp LABEL10
+LABEL21:
+ pop rbx
+ ret
+LABEL5:
+ test r8, r8
+ cjmp LABEL27
+LABEL47:
+ mov rax, rcx
+ mul r8
+ mov rcx, rax
+ seto al
+ movzx eax, al
+ test rcx, rcx
+ cjmp LABEL10
+ test rax, rax
+ cjmp LABEL10
+ mov qword [rsi], r8
+ mov rbx, rcx
+ jmp LABEL39
+LABEL27:
+ xor edx, edx
+ mov eax, CONST
+ xor r8d, r8d
+ div rcx
+ cmp rcx, CONST
+ seta r8b
+ add r8, rax
+ jmp LABEL47
+LABEL17:
+ call CONST
+ xor eax, eax
+ pop rbx
+ ret
+LABEL10:
+ call CONST

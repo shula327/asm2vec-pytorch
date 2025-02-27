@@ -1,0 +1,60 @@
+ .name fcn.00014b80
+ .offset 0000000000014b80
+ .file install
+ push r12
+ push rbp
+ mov rbp, rdi
+ push rbx
+ mov rbx, qword [rsi]
+ mov rdx, qword [rbx + CONST]
+ mov rax, qword [rbx + CONST]
+ cmp rdx, CONST
+ cjmp LABEL8
+ cmp rdx, CONST
+ cjmp LABEL10
+ cmp rax, CONST
+ cjmp LABEL12
+LABEL46:
+ mov rdx, qword [rbp + CONST]
+ mov rax, qword [rbp + CONST]
+ xor r12d, r12d
+ mov qword [rbx + CONST], rdx
+ mov qword [rbx + CONST], rax
+LABEL25:
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL8:
+ mov r12d, CONST
+ cmp rax, CONST
+ cjmp LABEL25
+ mov rcx, qword [rdi + CONST]
+ mov rdx, qword [rdi + CONST]
+ mov qword [rbx], rcx
+ mov qword [rbx + CONST], rdx
+LABEL12:
+ xor r12d, r12d
+ cmp rax, CONST
+ cjmp LABEL25
+ lea rdi, qword [rbx + CONST]
+ call CONST
+ mov eax, r12d
+ pop rbx
+ pop rbp
+ pop r12
+ ret
+LABEL10:
+ cmp rax, CONST
+ cjmp LABEL41
+ mov rdi, rbx
+ call CONST
+ mov rax, qword [rbx + CONST]
+ cmp rax, CONST
+ cjmp LABEL46
+ jmp LABEL12
+LABEL41:
+ mov qword [rsi], CONST
+ xor r12d, r12d
+ jmp LABEL25

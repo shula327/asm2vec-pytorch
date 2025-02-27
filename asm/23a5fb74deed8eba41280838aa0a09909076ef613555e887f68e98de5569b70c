@@ -1,0 +1,62 @@
+ .name fcn.00049660
+ .offset 0000000000049660
+ .file perl5.30.0
+ movzx edx, word [rsi + CONST]
+ and dx, CONST
+LABEL46:
+ cmp dx, CONST
+ cjmp LABEL3
+LABEL13:
+ cjmp LABEL4
+ test dx, dx
+ cjmp LABEL6
+ test byte [rsi + CONST], CONST
+ cjmp LABEL6
+ mov rsi, qword [rsi + CONST]
+ movzx edx, word [rsi + CONST]
+ and dx, CONST
+ cmp dx, CONST
+ cjmp LABEL13
+LABEL3:
+ mov rax, rsi
+ ret
+LABEL4:
+ cmp dx, CONST
+ cjmp LABEL17
+ add dx, CONST
+ and dx, CONST
+ cmp dx, CONST
+ cjmp LABEL6
+LABEL17:
+ test byte [rsi + CONST], CONST
+ cjmp LABEL6
+ mov rcx, qword [rsi + CONST]
+ nop dword [rax]
+LABEL42:
+ movzx edx, word [rcx + CONST]
+ and dx, CONST
+ cmp dx, CONST
+ cjmp LABEL29
+ cmp dx, CONST
+ cjmp LABEL29
+ test dx, dx
+ cjmp LABEL29
+ cmp qword [rsi + CONST], rcx
+ cjmp LABEL35
+LABEL6:
+ xor eax, eax
+ ret
+LABEL29:
+ test byte [rcx + CONST], CONST
+ cjmp LABEL39
+ mov rcx, qword [rcx + CONST]
+ test rcx, rcx
+ cjmp LABEL42
+LABEL39:
+ mov rsi, qword [rsi + CONST]
+ movzx edx, word [rsi + CONST]
+ and dx, CONST
+ jmp LABEL46
+LABEL35:
+ mov rsi, rcx
+ jmp LABEL46

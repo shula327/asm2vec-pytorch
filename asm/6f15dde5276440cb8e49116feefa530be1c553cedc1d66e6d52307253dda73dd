@@ -1,0 +1,139 @@
+ .name fcn.000d37b0
+ .offset 00000000000d37b0
+ .file bash
+ push r15
+ push r14
+ mov r14d, esi
+ push r13
+ mov r13d, edi
+ push r12
+ mov r12d, ecx
+ push rbp
+ mov rbp, rdx
+ push rbx
+ sub rsp, CONST
+ mov r15d, dword [rip + CONST]
+ test esi, esi
+ cjmp LABEL13
+ mov dword [rsp + CONST], CONST
+ xor ebx, ebx
+ test edi, edi
+ cjmp LABEL17
+ nop dword [rax + rax]
+LABEL62:
+ test r14d, r14d
+ cjmp LABEL20
+ cmp dword [rip + CONST], r15d
+ cjmp LABEL22
+LABEL20:
+ cmp dword [rsp + CONST], CONST
+ mov rdi, qword [rip + CONST]
+ cjmp LABEL25
+ mov esi, r15d
+ xor edx, edx
+ call CONST
+ mov r15d, eax
+ jmp LABEL30
+LABEL50:
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, r15d
+ call CONST
+ cmp r15d, eax
+ mov r15d, eax
+ setne dl
+ test dl, dl
+ cjmp LABEL39
+LABEL30:
+ mov edx, dword [rip + CONST]
+ mov r8d, r12d
+ mov rcx, rbp
+ mov esi, r15d
+ mov rdi, qword [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL47
+ mov rdi, qword [rip + CONST]
+ test bl, bl
+ cjmp LABEL50
+ xor edx, edx
+ mov esi, r15d
+ call CONST
+ cmp r15d, eax
+ mov r15d, eax
+ setne dl
+ test dl, dl
+ cjmp LABEL30
+LABEL39:
+ test r13d, r13d
+ cjmp LABEL17
+ test r15d, r15d
+ cjmp LABEL62
+ test bl, bl
+ cjmp LABEL62
+LABEL22:
+ call CONST
+ add rsp, CONST
+ mov eax, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL47:
+ sub r13d, CONST
+ mov eax, r15d
+ test bl, bl
+ cjmp LABEL78
+ cmp r14d, CONST
+ cjmp LABEL80
+LABEL107:
+ mov dword [rip + CONST], eax
+ test r13d, r13d
+ cjmp LABEL62
+LABEL17:
+ add rsp, CONST
+ xor eax, eax
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ pop r15
+ ret
+LABEL25:
+ mov esi, r15d
+ xor ecx, ecx
+ mov edx, CONST
+ call CONST
+ mov r15d, eax
+ jmp LABEL30
+LABEL78:
+ cmp r14d, -1
+ cjmp LABEL100
+LABEL113:
+ mov dword [rip + CONST], eax
+ jmp LABEL39
+LABEL80:
+ mov rdi, qword [rip + CONST]
+ xor edx, edx
+ mov esi, r15d
+ call CONST
+ jmp LABEL107
+LABEL100:
+ mov rdi, qword [rip + CONST]
+ xor ecx, ecx
+ mov edx, CONST
+ mov esi, r15d
+ call CONST
+ jmp LABEL113
+LABEL13:
+ test edi, edi
+ cjmp LABEL17
+ mov dword [rsp + CONST], CONST
+ mov ebx, CONST
+ test r15d, r15d
+ cjmp LABEL62
+ jmp LABEL22

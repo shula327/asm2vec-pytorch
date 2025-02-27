@@ -1,0 +1,35 @@
+ .name fcn.00044b60
+ .offset 0000000000044b60
+ .file bash
+ push rbp
+ xor esi, esi
+ xor eax, eax
+ lea rdi, qword [rip + CONST]
+ call CONST
+ test eax, eax
+ cjmp LABEL6
+ cjmp LABEL7
+ pop rbp
+ ret
+LABEL6:
+ mov ebp, eax
+ mov edi, eax
+ xor esi, esi
+ call CONST
+ mov edi, ebp
+ pop rbp
+ jmp CONST
+LABEL7:
+ call CONST
+ mov edi, dword [rax]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ xor edi, edi
+ mov edx, CONST
+ mov rbp, rax
+ call CONST
+ mov rsi, rbp
+ pop rbp
+ mov rdi, rax
+ xor eax, eax
+ jmp CONST

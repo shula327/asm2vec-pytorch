@@ -1,0 +1,14 @@
+ .name fcn.00022870
+ .offset 0000000000022870
+ .file grep
+ endbr64
+ mov rdx, qword [rsi]
+ mov rcx, qword [rdi]
+ mov eax, CONST
+ mov rdx, qword [rdx + CONST]
+ cmp qword [rcx + CONST], rdx
+ cjmp LABEL6
+ seta al
+ movzx eax, al
+LABEL6:
+ ret

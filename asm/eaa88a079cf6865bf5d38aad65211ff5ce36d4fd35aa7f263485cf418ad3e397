@@ -1,0 +1,15 @@
+ .name sym.Perl_av_len
+ .offset 00000000000ff720
+ .file perl5.30.0
+ endbr64
+ test byte [rsi + CONST], CONST
+ cjmp LABEL2
+ mov rax, qword [rsi]
+ mov rax, qword [rax + CONST]
+ ret
+LABEL2:
+ sub rsp, CONST
+ call CONST
+ add rsp, CONST
+ cdqe
+ ret

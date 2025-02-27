@@ -1,0 +1,40 @@
+ .name fcn.00053e10
+ .offset 0000000000053e10
+ .file perl5.30.0
+LABEL31:
+ movzx eax, byte [CONST]
+ ud2
+ push r15
+ mov r10, rcx
+ lea r11, qword [rip + CONST]
+ push r14
+ push r13
+ mov r13d, CONST
+ push r12
+ push rbp
+ push rbx
+ sub rsp, CONST
+ mov qword [rsp + CONST], rdi
+ mov qword [rsp + CONST], rsi
+ mov qword [rsp + CONST], rdx
+ mov byte [rsp + CONST], r8b
+ mov dword [rsp + CONST], CONST
+ mov byte [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov qword [rsp + CONST], CONST
+ mov ebp, dword [rsp + CONST]
+ mov r15, qword [rsp + CONST]
+ test ebp, ebp
+ cjmp LABEL23
+ mov rax, qword [rsp + CONST]
+ lea rdx, qword [rip + CONST]
+ mov qword [rax], CONST
+ movsxd rax, dword [rdx + r10*CONST]
+ add rax, rdx
+ jmp rax
+LABEL23:
+ cmp r10, CONST
+ cjmp LABEL31
+ movsxd rax, dword [r11 + r10*CONST]
+ add rax, r11
+ jmp rax

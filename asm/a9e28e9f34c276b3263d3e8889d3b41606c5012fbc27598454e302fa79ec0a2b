@@ -1,0 +1,69 @@
+ .name fcn.0001b920
+ .offset 000000000001b920
+ .file dpkg
+ endbr64
+ cmp byte [rip + CONST], CONST
+ cjmp LABEL2
+ ret
+LABEL2:
+ push r13
+ lea rdi, [rip + CONST]
+ lea r13, [rip + CONST]
+ push r12
+ push rbp
+ push rbx
+ lea rbx, [rip + CONST]
+ sub rsp, CONST
+ call CONST
+ xor esi, esi
+ mov rdi, rax
+ mov r12, rax
+ call CONST
+ mov rdi, rax
+ mov rbp, rax
+ call CONST
+ jmp LABEL20
+LABEL27:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL23
+LABEL20:
+ mov eax, dword [rbx + CONST]
+ sub eax, CONST
+ cmp eax, CONST
+ cjmp LABEL27
+ mov rcx, qword [rbx + CONST]
+ mov rdi, qword [rbp + CONST]
+ xor eax, eax
+ mov rdx, r13
+ mov esi, CONST
+ call CONST
+ test eax, eax
+ cjmp LABEL27
+ lea rdi, [rip + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ call CONST
+ mov rdi, rax
+ xor eax, eax
+ call CONST
+LABEL23:
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ mov rdi, rbp
+ call CONST
+ call CONST
+ mov rdi, rax
+ call CONST
+ mov byte [rip + CONST], CONST
+ add rsp, CONST
+ mov rdi, r12
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ jmp CONST

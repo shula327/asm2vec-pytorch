@@ -1,0 +1,27 @@
+ .name fcn.00029880
+ .offset 0000000000029880
+ .file dpkg
+ endbr64
+ cmp byte [rdi + CONST], CONST
+ cjmp LABEL2
+ mov eax, dword [rdi + CONST]
+ add eax, CONST
+ mov dword [rdi + CONST], eax
+ imul eax, eax, CONST
+ cdq
+ idiv dword [rdi + CONST]
+ cmp dword [rdi + CONST], eax
+ cjmp LABEL2
+ imul edx, eax, CONST
+ add edx, CONST
+ cmp edx, CONST
+ cjmp LABEL2
+ mov dword [rdi + CONST], eax
+ mov rdx, qword [rdi]
+ mov ecx, eax
+ lea rsi, [rip + CONST]
+ mov edi, CONST
+ xor eax, eax
+ jmp CONST
+LABEL2:
+ ret

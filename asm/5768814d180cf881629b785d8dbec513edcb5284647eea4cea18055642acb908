@@ -1,0 +1,16 @@
+ .name fcn.00025040
+ .offset 0000000000025040
+ .file grep
+ endbr64
+ cmp edx, CONST
+ cjmp LABEL2
+ mov word [rsi + CONST], dx
+ xor eax, eax
+ ret
+LABEL2:
+ sub rsp, CONST
+ call CONST
+ mov dword [rax], CONST
+ mov eax, CONST
+ add rsp, CONST
+ ret

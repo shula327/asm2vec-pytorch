@@ -1,0 +1,40 @@
+ .name fcn.0019ecd0
+ .offset 000000000019ecd0
+ .file perl5.30.0
+ test rsi, rsi
+ cjmp LABEL1
+ push r12
+ xor ecx, ecx
+ mov r12, rdi
+ xor edx, edx
+ push rbp
+ xor edi, edi
+ mov rbp, rsi
+ push rbx
+ call CONST
+ test rax, rax
+ cjmp LABEL12
+ pop rbx
+ mov rdi, rbp
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL1:
+ ret
+LABEL12:
+ call CONST
+ xor edi, edi
+ mov ebx, dword [rax]
+ call CONST
+ mov r9, rbp
+ mov ecx, CONST
+ mov rdi, r12
+ mov r8, rax
+ push rax
+ xor eax, eax
+ lea rdx, qword [rip + CONST]
+ push rbx
+ lea rsi, qword [rip + CONST]
+ call CONST
+ nop word cs:[rax + rax]
+ nop

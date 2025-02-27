@@ -1,0 +1,37 @@
+ .name fcn.0000ad80
+ .offset 000000000000ad80
+ .file find
+ push r13
+ mov r13, rdx
+ push r12
+ mov r12d, esi
+ push rbp
+ mov rbp, rdi
+ mov edi, CONST
+ push rbx
+ sub rsp, CONST
+ call CONST
+ mov edi, r12d
+ xor edx, edx
+ mov rsi, r13
+ mov qword [rbp], rax
+ mov rbx, rax
+ mov qword [rax + CONST], CONST
+ xor eax, eax
+ call CONST
+ mov dword [rbx], eax
+ mov rax, qword [rbp]
+ mov edi, dword [rax]
+ xor eax, eax
+ test edi, edi
+ cjmp LABEL23
+ mov esi, CONST
+ call CONST
+ mov eax, CONST
+LABEL23:
+ add rsp, CONST
+ pop rbx
+ pop rbp
+ pop r12
+ pop r13
+ ret

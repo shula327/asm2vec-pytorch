@@ -1,0 +1,51 @@
+ .name fcn.0002f350
+ .offset 000000000002f350
+ .file dpkg
+ push r12
+ push rbx
+ mov rbx, rdi
+ add rdi, CONST
+ sub rsp, CONST
+ cmp rdi, rsi
+ cjmp LABEL6
+ cmp byte [rsi + CONST], CONST
+ lea rax, qword [rsi + CONST]
+ cjmp LABEL9
+ nop dword [rax]
+LABEL13:
+ sub rax, CONST
+ cmp byte [rax], CONST
+ cjmp LABEL13
+LABEL9:
+ cmp rdi, rax
+ cjmp LABEL6
+ lea rdi, qword [rdx + CONST]
+ cmp rax, rdi
+ cjmp LABEL6
+ mov qword [r9], rax
+ add rax, CONST
+ sub rsi, rax
+ mov qword [rcx], rax
+ mov dword [r8], esi
+ add rsp, CONST
+ pop rbx
+ pop r12
+ ret
+LABEL6:
+ sub rdx, rbx
+ mov ecx, CONST
+ lea rsi, qword [rip + CONST]
+ cmp rdx, CONST
+ lea rdi, qword [rip + CONST]
+ cmovle ecx, edx
+ mov edx, CONST
+ mov r12d, ecx
+ call CONST
+ mov rdi, qword [rsp + CONST]
+ mov r8, rbx
+ mov ecx, r12d
+ mov rsi, rax
+ lea rdx, qword [rip + CONST]
+ xor eax, eax
+ call CONST
+ nop dword [rax + rax]

@@ -1,0 +1,28 @@
+ .name fcn.00070400
+ .offset 0000000000070400
+ .file perl5.30.0
+ push r12
+ mov r12, rdi
+ push rbp
+ push rbx
+ lea rbx, qword [rip + CONST]
+ call CONST
+ lea rsi, qword [rip + CONST]
+ mov rbp, rax
+ mov rax, qword [r12 + CONST]
+ mov rdi, rbp
+ mov rdx, qword [rax]
+ xor eax, eax
+ call CONST
+ lea rsi, qword [rip + CONST]
+ nop dword [rax]
+LABEL20:
+ add rbx, CONST
+ mov rdi, rbp
+ call CONST
+ mov rsi, qword [rbx]
+ test rsi, rsi
+ cjmp LABEL20
+ mov rdi, r12
+ call CONST
+ nop dword [rax]

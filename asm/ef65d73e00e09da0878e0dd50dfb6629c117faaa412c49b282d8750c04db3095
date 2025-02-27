@@ -1,0 +1,16 @@
+ .name fcn.0000ecf0
+ .offset 000000000000ecf0
+ .file dpkg
+ endbr64
+ cmp dword [rdi + CONST], CONST
+ cjmp LABEL2
+ sub rsp, CONST
+ mov rdx, qword [rsi + CONST]
+ lea rsi, [rdi + CONST]
+ call CONST
+ add rsp, CONST
+ xor eax, CONST
+ ret
+LABEL2:
+ xor eax, eax
+ ret

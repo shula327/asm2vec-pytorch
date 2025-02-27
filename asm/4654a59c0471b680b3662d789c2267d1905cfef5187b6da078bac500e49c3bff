@@ -1,0 +1,27 @@
+ .name fcn.0000efa0
+ .offset 000000000000efa0
+ .file install
+ endbr64
+ sub rsp, CONST
+ mov rax, qword fs:[CONST]
+ mov qword [rsp + CONST], rax
+ xor eax, eax
+ test rdi, rdi
+ cjmp LABEL6
+ mov rax, qword [rdx + CONST]
+ mov qword [rsp], rsi
+ mov rsi, rsp
+ mov qword [rsp + CONST], rax
+ mov rax, qword [rdx]
+ mov qword [rsp + CONST], rax
+ call CONST
+ test rax, rax
+ setne al
+LABEL6:
+ mov rcx, qword [rsp + CONST]
+ xor rcx, qword fs:[CONST]
+ cjmp LABEL18
+ add rsp, CONST
+ ret
+LABEL18:
+ call CONST

@@ -1,0 +1,68 @@
+ .name sym.Perl_mg_size
+ .offset 00000000000e7930
+ .file perl5.30.0
+ endbr64
+ push r14
+ push r13
+ mov r13, rdi
+ push r12
+ push rbp
+ mov rbp, rsi
+ push rbx
+ mov rax, qword [rsi]
+ mov r12, qword [rax + CONST]
+ test r12, r12
+ cjmp LABEL11
+ nop
+LABEL20:
+ mov rbx, qword [r12 + CONST]
+ test rbx, rbx
+ cjmp LABEL15
+ cmp qword [rbx + CONST], CONST
+ cjmp LABEL17
+LABEL15:
+ mov r12, qword [r12]
+ test r12, r12
+ cjmp LABEL20
+LABEL11:
+ cmp byte [rbp + CONST], CONST
+ cjmp LABEL22
+ mov r12d, dword [rax + CONST]
+ pop rbx
+ pop rbp
+ mov eax, r12d
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL17:
+ mov rdi, r13
+ xor edx, edx
+ mov esi, CONST
+ call CONST
+ mov ecx, CONST
+ mov rdx, rbp
+ mov rdi, r13
+ mov esi, eax
+ mov r14d, eax
+ call CONST
+ mov rdx, r12
+ mov rsi, rbp
+ mov rdi, r13
+ call qword [rbx + CONST]
+ movsxd rsi, r14d
+ mov rdi, r13
+ mov r12d, eax
+ call CONST
+ pop rbx
+ mov eax, r12d
+ pop rbp
+ pop r12
+ pop r13
+ pop r14
+ ret
+LABEL22:
+ lea rsi, [rip + CONST]
+ mov rdi, r13
+ xor eax, eax
+ call CONST

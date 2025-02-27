@@ -1,0 +1,38 @@
+ .name fcn.00012110
+ .offset 0000000000012110
+ .file dpkg
+ push r12
+ mov edx, CONST
+ push rbp
+ push rbx
+ mov rbx, rsi
+ mov rsi, rdi
+ lea rdi, [rip + CONST]
+ call CONST
+ jmp LABEL8
+LABEL16:
+ mov rdi, qword [rbx + CONST]
+ call CONST
+ mov r12d, eax
+ test eax, eax
+ cjmp LABEL13
+LABEL8:
+ mov rbx, qword [rbx]
+ test rbx, rbx
+ cjmp LABEL16
+ pop rbx
+ lea rdi, [rip + CONST]
+ pop rbp
+ pop r12
+ jmp CONST
+LABEL13:
+ mov rbp, qword [rbx + CONST]
+ mov edx, CONST
+ lea rsi, [rip + CONST]
+ xor edi, edi
+ call CONST
+ mov edx, r12d
+ mov rdi, rax
+ mov rsi, rbp
+ xor eax, eax
+ call CONST

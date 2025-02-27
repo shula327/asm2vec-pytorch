@@ -1,0 +1,36 @@
+ .name fcn.00006b40
+ .offset 0000000000006b40
+ .file ls
+ mov edi, edi
+ lea rax, qword [rip + CONST]
+ xor r8d, r8d
+ shl rdi, CONST
+ add rdi, rax
+ mov rax, qword [rdi]
+ test rax, rax
+ cjmp LABEL7
+ mov rdx, qword [rdi + CONST]
+ cmp rax, CONST
+ cjmp LABEL10
+ mov r8d, CONST
+ cmp rax, CONST
+ cjmp LABEL13
+LABEL7:
+ mov eax, r8d
+ ret
+LABEL10:
+ cmp byte [rdx], CONST
+ setne r8b
+ mov eax, r8d
+ ret
+LABEL13:
+ movzx eax, byte [rdx]
+ sub eax, CONST
+ cjmp LABEL22
+ movzx eax, byte [rdx + CONST]
+ sub eax, CONST
+LABEL22:
+ test eax, eax
+ setne r8b
+ mov eax, r8d
+ ret
